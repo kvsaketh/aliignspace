@@ -1,0 +1,177 @@
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  darkMode: ["class"],
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+        // Aliignspace Brand Colors
+        coral: {
+          50: "#fdf4f1",
+          100: "#fbe8e1",
+          200: "#f6d0c3",
+          300: "#eeb09a",
+          400: "#e3876a",
+          500: "#E07A5F",
+          600: "#c44d32",
+          700: "#a33c28",
+          800: "#863326",
+          900: "#6f2d23",
+          950: "#3c1510",
+        },
+        "coral-light": "#F4A261",
+        peach: "#F2CC8F",
+        salmon: "#E29578",
+        terracotta: {
+          50: "#fdf4f1",
+          100: "#fbe8e1",
+          200: "#f6d0c3",
+          300: "#eeb09a",
+          400: "#e3876a",
+          500: "#D4765F",
+          600: "#c44d32",
+          700: "#a33c28",
+          800: "#863326",
+          900: "#6f2d23",
+          950: "#3c1510",
+        },
+        cream: {
+          50: "#FFFBF7",
+          100: "#FDF6F0",
+          200: "#f5ede0",
+          300: "#ede0cc",
+          400: "#e0cbaa",
+          500: "#d4b68a",
+          600: "#c49d6e",
+          700: "#a37d54",
+          800: "#856646",
+          900: "#6d543b",
+          950: "#3a2c1f",
+        },
+        "warm-white": "#FFFBF7",
+        stone: {
+          50: "#faf7f4",
+          100: "#f5ede0",
+          200: "#EDE0D4",
+          300: "#dccbb8",
+          400: "#c9b096",
+          500: "#b8987a",
+          600: "#a68264",
+          700: "#8a6a52",
+          800: "#725846",
+          900: "#5e4a3b",
+          950: "#33261e",
+        },
+        charcoal: "#2B2D42",
+        slate: {
+          50: "#f4f4f7",
+          100: "#e4e4eb",
+          200: "#cbcbd8",
+          300: "#a8a9be",
+          400: "#7e80a0",
+          500: "#4A4E69",
+          600: "#42455f",
+          700: "#383a50",
+          800: "#313344",
+          900: "#2c2d3a",
+          950: "#1a1a24",
+        },
+        "aliign-muted": "#8D99AE",
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+        "2xl": "16px",
+        xl: "12px",
+        DEFAULT: "8px",
+        full: "9999px",
+      },
+      fontFamily: {
+        serif: ["var(--font-playfair)", "Georgia", "serif"],
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        label: ["var(--font-space-grotesk)", "system-ui", "sans-serif"],
+      },
+      boxShadow: {
+        soft: "0 4px 20px rgba(224, 122, 95, 0.08)",
+        card: "0 8px 32px rgba(43, 45, 66, 0.12)",
+        elevated: "0 16px 48px rgba(43, 45, 66, 0.16)",
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "fade-in": {
+          from: { opacity: "0" },
+          to: { opacity: "1" },
+        },
+        "fade-in-up": {
+          from: { opacity: "0", transform: "translateY(40px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+        "scale-in": {
+          from: { opacity: "0", transform: "scale(0.95)" },
+          to: { opacity: "1", transform: "scale(1)" },
+        },
+        "slide-in": {
+          from: { transform: "translateX(-100%)" },
+          to: { transform: "translateX(0)" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in": "fade-in 0.5s ease-out",
+        "fade-in-up": "fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "scale-in": "scale-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "slide-in": "slide-in 0.3s ease-out",
+      },
+    },
+  },
+  plugins: [require("tailwindcss-animate")],
+};
+
+export default config;

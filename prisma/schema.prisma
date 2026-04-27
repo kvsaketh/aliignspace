@@ -1,0 +1,351 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String        @id @default(cuid())
+  email     String        @unique
+  password  String
+  name      String?
+  role      Role          @default(EDITOR)
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+  versions  PageVersion[]
+  pages     Page[]
+  posts     Post[]
+
+  @@map("users")
+}
+
+model Page {
+  id        String        @id @default(cuid())
+  title     String
+  slug      String        @unique
+  status    PageStatus    @default(DRAFT)
+  seoId     String?       @unique
+  authorId  String?
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+  versions  PageVersion[]
+  revisions Revision[]
+  author    User?         @relation(fields: [authorId], references: [id])
+  seo       SEO?          @relation(fields: [seoId], references: [id])
+  sections  Section[]
+
+  @@map("pages")
+}
+
+model Section {
+  id        String   @id @default(cuid())
+  pageId    String
+  type      String
+  order     Int
+  props     Json
+  config    Json?    // background, padding, fullWidth, etc.
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  page      Page     @relation(fields: [pageId], references: [id], onDelete: Cascade)
+  widgets   Widget[]
+
+  @@index([pageId, order])
+  @@map("sections")
+}
+
+model GlobalBlock {
+  id        String          @id @default(cuid())
+  type      GlobalBlockType
+  name      String
+  content   Json
+  isActive  Boolean         @default(true)
+  createdAt DateTime        @default(now())
+  updatedAt DateTime        @updatedAt
+
+  @@unique([type, name])
+  @@map("global_blocks")
+}
+
+model SEO {
+  id              String   @id @default(cuid())
+  metaTitle       String?
+  metaDescription String?
+  ogImage         String?
+  schema          Json?
+  canonicalUrl    String?
+  noIndex         Boolean  @default(false)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  page            Page?
+  post            Post?
+
+  @@map("seo")
+}
+
+model Media {
+  id           String   @id @default(cuid())
+  url          String
+  thumbnailUrl String?
+  key          String   @unique
+  filename     String
+  alt          String?
+  mimeType     String
+  size         Int
+  width        Int?
+  height       Int?
+  folder       String   @default("uncategorized")
+  caption      String?
+  usedIn       Json?    // Array of { pageId, widgetId }
+  // YouTube / Video support
+  videoUrl     String?  // YouTube/Vimeo embed URL
+  videoType    String?  // YOUTUBE | VIMEO | UPLOAD
+  videoId      String?  // Extracted video ID for YouTube
+  duration     String?  // Video duration (e.g. "3:42")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@map("media")
+}
+
+model PageVersion {
+  id        String   @id @default(cuid())
+  pageId    String
+  snapshot  Json
+  authorId  String?
+  createdAt DateTime @default(now())
+  author    User?    @relation(fields: [authorId], references: [id])
+  page      Page     @relation(fields: [pageId], references: [id], onDelete: Cascade)
+
+  @@index([pageId, createdAt])
+  @@map("page_versions")
+}
+
+model Widget {
+  id         String   @id @default(cuid())
+  sectionId  String
+  section    Section  @relation(fields: [sectionId], references: [id], onDelete: Cascade)
+  type       String   // "heading", "text", "image", "button", "container", "column"
+  order      Int
+  parentId   String?  // For nesting: widgets inside containers/columns
+  content    Json     // All widget-specific data (text, mediaIds, links, etc.)
+  style      Json?    // Colors, spacing, typography, effects
+  responsive Json?    // Breakpoint overrides
+  animation  Json?    // Entrance animation config
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([sectionId, order])
+  @@index([parentId])
+  @@map("widgets")
+}
+
+model Revision {
+  id        String   @id @default(cuid())
+  pageId    String
+  page      Page     @relation(fields: [pageId], references: [id], onDelete: Cascade)
+  name      String
+  data      Json     // Full page snapshot
+  createdAt DateTime @default(now())
+
+  @@index([pageId, createdAt])
+  @@map("revisions")
+}
+
+model Post {
+  id            String     @id @default(cuid())
+  title         String
+  slug          String     @unique
+  content       Json
+  excerpt       String?
+  featuredImage String?
+  status        PostStatus @default(DRAFT)
+  publishedAt   DateTime?
+  authorId      String?
+  seoId         String?    @unique
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+  author        User?      @relation(fields: [authorId], references: [id])
+  seo           SEO?       @relation(fields: [seoId], references: [id])
+  categories    Category[] @relation("CategoryToPost")
+  tags          Tag[]      @relation("PostToTag")
+
+  @@map("posts")
+}
+
+model Category {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  slug        String   @unique
+  description String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  posts       Post[]   @relation("CategoryToPost")
+
+  @@map("categories")
+}
+
+model Tag {
+  id        String   @id @default(cuid())
+  name      String   @unique
+  slug      String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  posts     Post[]   @relation("PostToTag")
+
+  @@map("tags")
+}
+
+model Menu {
+  id        String       @id @default(cuid())
+  name      String       @unique
+  location  MenuLocation @default(HEADER)
+  items     Json
+  isActive  Boolean      @default(true)
+  createdAt DateTime     @default(now())
+  updatedAt DateTime     @updatedAt
+
+  @@map("menus")
+}
+
+// ============================================================
+// AERTSEN REPLICATION MODELS
+// ============================================================
+
+model Testimonial {
+  id          String   @id @default(cuid())
+  type        String   @default("GOOGLE") // GOOGLE | VIDEO
+  name        String
+  location    String?
+  review      String?  @db.Text // For Google reviews
+  rating      Int?     @default(5) // 1-5
+  videoUrl    String?  // YouTube URL for video testimonials
+  avatarUrl   String?
+  isActive    Boolean  @default(true)
+  sortOrder   Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("testimonials")
+}
+
+model FAQ {
+  id          String   @id @default(cuid())
+  question    String
+  answer      String   @db.Text
+  category    String   @default("general")
+  sortOrder   Int      @default(0)
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("faqs")
+}
+
+model Milestone {
+  id          String   @id @default(cuid())
+  number      String   // "1000"
+  suffix      String?  // "+"
+  label       String   // "Projects Delivered"
+  sortOrder   Int      @default(0)
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("milestones")
+}
+
+model TimelineEvent {
+  id          String   @id @default(cuid())
+  date        String   // "Nov 2019"
+  title       String
+  description String?  @db.Text
+  sortOrder   Int      @default(0)
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("timeline_events")
+}
+
+model Service {
+  id            String   @id @default(cuid())
+  title         String
+  slug          String   @unique
+  description   String   @db.Text
+  shortDesc     String?  // Card description
+  icon          String?  // Media URL
+  image         String?  // Card image URL
+  heroImage     String?  // Detail page hero
+  features      Json?    // Array of feature strings
+  processSteps  Json?    // Array of { number, title, description, checklist[] }
+  stats         Json?    // { priceRange, deliveryTime, warranty }
+  gallery       Json?    // Array of image URLs for detail page
+  sortOrder     Int      @default(0)
+  isActive      Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@map("services")
+}
+
+enum Role {
+  ADMIN
+  EDITOR
+  SEO
+}
+
+enum PageStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum GlobalBlockType {
+  HEADER
+  FOOTER
+  STORY
+}
+
+enum PostStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum MenuLocation {
+  HEADER
+  FOOTER
+}
+
+model PortfolioProject {
+  id            String     @id @default(cuid())
+  title         String
+  slug          String     @unique
+  category      String
+  location      String?
+  description   String?
+  image         String
+  images        Json       @default("[]")
+  // Legacy video fields (keep for compatibility)
+  videoUrl      String?
+  videoType     String?
+  // New enhanced video support
+  mainVideoUrl  String?    // Main YouTube video for detail page
+  mainVideoType String?    // YOUTUBE | VIMEO
+  galleryImages Json?      // Array of { url, caption, alt }
+  // Project metadata
+  clientName    String?
+  projectType   String?    // 3BHK, Villa, etc.
+  budget        String?    // e.g. "₹ 27 Lakhs"
+  area          String?    // e.g. "2,400 sq ft"
+  featured      Boolean    @default(false)
+  status        PostStatus @default(DRAFT)
+  sortOrder     Int        @default(0)
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+
+  @@map("portfolio_projects")
+}

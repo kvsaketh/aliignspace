@@ -1,0 +1,53 @@
+import { Metadata } from "next";
+import { getOrCreateAertsenHomePage } from "@/lib/cms-page";
+import { PageRenderer } from "@/components/page-renderer";
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
+
+export const metadata: Metadata = {
+  title: "ALIIGNSPACE — Best Interior Designers in Hyderabad & Nellore",
+  description:
+    "ALIIGNSPACE is a premium interior design studio in Hyderabad & Nellore. 150+ homes transformed. 60–90 day delivery. Transparent pricing. Est. 2021. Spaces Crafted with Trust.",
+  keywords: [
+    "interior designers hyderabad",
+    "interior design hyderabad",
+    "interior designers nellore",
+    "modular kitchen hyderabad",
+    "home interiors hyderabad",
+    "ALIIGNSPACE",
+  ],
+  openGraph: {
+    title: "ALIIGNSPACE — Spaces Crafted with Trust",
+    description:
+      "Premium interior design studio crafting beautiful homes across Hyderabad & Nellore. 150+ projects. 60–90 day delivery.",
+    siteName: "ALIIGNSPACE",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&q=80",
+        width: 1200,
+        height: 630,
+        alt: "ALIIGNSPACE — Premium Interior Design",
+      },
+    ],
+  },
+};
+
+export const dynamic = "force-dynamic";
+
+export default async function HomePage() {
+  const page = await getOrCreateAertsenHomePage();
+  const sections = page.sections.map((s) => ({
+    ...s,
+    props: s.props as Record<string, any>,
+  }));
+
+  return (
+    <>
+      <Header />
+      <PageRenderer sections={sections} />
+      <Footer />
+    </>
+  );
+}
