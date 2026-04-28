@@ -88,9 +88,12 @@ export default async function HomePage() {
         <VideoTestimonialsBlock />
         <AertsenFinalCTA
           title="Ready to Transform Your Space?"
-          subtitle="Book a free consultation with our design experts today."
-          buttonText="Get Free Consultation"
-          buttonUrl="/contact"
+          body="Book a free consultation with our design experts today."
+          buttons={[
+            { label: "Get Free Consultation", url: "/contact", type: "primary" },
+            { label: "Call Us", url: "tel:+919030444503", type: "phone" },
+            { label: "WhatsApp", url: "https://wa.me/919030444503", type: "whatsapp" },
+          ]}
         />
       </main>
       <Footer />
