@@ -283,6 +283,7 @@ model Service {
   processSteps  Json?    // Array of { number, title, description, checklist[] }
   stats         Json?    // { priceRange, deliveryTime, warranty }
   gallery       Json?    // Array of image URLs for detail page
+  content       Json?    // Rich detail-page content: { tagline, heroStats, intro, inclusions, materials, designStyles, pricingTiers, whyChoose, faqs, testimonial }
   sortOrder     Int      @default(0)
   isActive      Boolean  @default(true)
   createdAt     DateTime @default(now())
