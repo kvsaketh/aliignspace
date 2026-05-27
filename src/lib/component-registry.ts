@@ -1487,7 +1487,7 @@ export const componentRegistry: ComponentSchema[] = [
     ],
   },
 
-  // New V2 Components (Aertsen-inspired)
+  // New V2 Components (Aliignspace-inspired)
   {
     type: "stats-v2",
     label: "Stats V2 (Large Typography)",
@@ -1627,10 +1627,10 @@ export const componentRegistry: ComponentSchema[] = [
     ],
   },
 
-  // Aertsen Replication Components
+  // Aliignspace Replication Components
   {
-    type: "aertsen-hero-slider",
-    label: "Aertsen Hero Slider",
+    type: "aliignspace-hero-slider",
+    label: "Aliignspace Hero Slider",
     description: "Full-screen hero slider with Ken Burns effect and animated content",
     icon: "Images",
     fields: [
@@ -1650,8 +1650,8 @@ export const componentRegistry: ComponentSchema[] = [
     ],
   },
   {
-    type: "aertsen-services-grid",
-    label: "Aertsen Services Grid",
+    type: "aliignspace-services-grid",
+    label: "Aliignspace Services Grid",
     description: "Numbered services grid with hover effects and icons",
     icon: "Grid3X3",
     fields: [
@@ -1692,8 +1692,8 @@ export const componentRegistry: ComponentSchema[] = [
     ],
   },
   {
-    type: "aertsen-milestones",
-    label: "Aertsen Milestones",
+    type: "aliignspace-milestones",
+    label: "Aliignspace Milestones",
     description: "Company milestones timeline with year markers",
     icon: "Flag",
     fields: [
@@ -1713,8 +1713,8 @@ export const componentRegistry: ComponentSchema[] = [
     ],
   },
   {
-    type: "aertsen-why-choose",
-    label: "Aertsen Why Choose",
+    type: "aliignspace-why-choose",
+    label: "Aliignspace Why Choose",
     description: "Why choose us section with feature cards",
     icon: "Award",
     fields: [
@@ -1741,8 +1741,8 @@ export const componentRegistry: ComponentSchema[] = [
     ],
   },
   {
-    type: "aertsen-portfolio-slider",
-    label: "Aertsen Portfolio Slider",
+    type: "aliignspace-portfolio-slider",
+    label: "Aliignspace Portfolio Slider",
     description: "Full-width portfolio project showcase slider",
     icon: "Slideshow",
     fields: [
@@ -1769,8 +1769,8 @@ export const componentRegistry: ComponentSchema[] = [
     ],
   },
   {
-    type: "aertsen-process-wheel",
-    label: "Aertsen Process Wheel",
+    type: "aliignspace-process-wheel",
+    label: "Aliignspace Process Wheel",
     description: "Circular process visualization with numbered steps",
     icon: "RefreshCw",
     fields: [
@@ -1797,8 +1797,8 @@ export const componentRegistry: ComponentSchema[] = [
     ],
   },
   {
-    type: "aertsen-factory",
-    label: "Aertsen Factory",
+    type: "aliignspace-factory",
+    label: "Aliignspace Factory",
     description: "Factory showcase section with stats and image",
     icon: "Factory",
     fields: [
@@ -1837,8 +1837,8 @@ export const componentRegistry: ComponentSchema[] = [
     ],
   },
   {
-    type: "aertsen-google-reviews",
-    label: "Aertsen Google Reviews",
+    type: "aliignspace-google-reviews",
+    label: "Aliignspace Google Reviews",
     description: "Google reviews display with ratings and testimonials",
     icon: "Star",
     fields: [
@@ -1878,8 +1878,8 @@ export const componentRegistry: ComponentSchema[] = [
     ],
   },
   {
-    type: "aertsen-video-testimonials",
-    label: "Aertsen Video Testimonials",
+    type: "aliignspace-video-testimonials",
+    label: "Aliignspace Video Testimonials",
     description: "Video testimonial cards with thumbnails and quotes",
     icon: "Video",
     fields: [
@@ -1906,8 +1906,8 @@ export const componentRegistry: ComponentSchema[] = [
     ],
   },
   {
-    type: "aertsen-final-cta",
-    label: "Aertsen Final CTA",
+    type: "aliignspace-final-cta",
+    label: "Aliignspace Final CTA",
     description: "Final call-to-action banner for page bottom",
     icon: "Megaphone",
     fields: [
@@ -1942,8 +1942,8 @@ export const componentRegistry: ComponentSchema[] = [
     ],
   },
   {
-    type: "aertsen-faq",
-    label: "Aertsen FAQ",
+    type: "aliignspace-faq",
+    label: "Aliignspace FAQ",
     description: "FAQ accordion section for common questions",
     icon: "HelpCircle",
     fields: [
@@ -1970,8 +1970,8 @@ export const componentRegistry: ComponentSchema[] = [
     ],
   },
   {
-    type: "aertsen-about-hero",
-    label: "Aertsen About Hero",
+    type: "aliignspace-about-hero",
+    label: "Aliignspace About Hero",
     description: "About page hero with serif typography and accent word",
     icon: "Layout",
     fields: [
@@ -2006,8 +2006,8 @@ export const componentRegistry: ComponentSchema[] = [
     ],
   },
   {
-    type: "aertsen-who-we-are",
-    label: "Aertsen Who We Are",
+    type: "aliignspace-who-we-are",
+    label: "Aliignspace Who We Are",
     description: "Who we are section with stats and image",
     icon: "Users",
     fields: [
@@ -2053,8 +2053,8 @@ export const componentRegistry: ComponentSchema[] = [
     ],
   },
   {
-    type: "aertsen-story",
-    label: "Aertsen Story",
+    type: "aliignspace-story",
+    label: "Aliignspace Story",
     description: "Company story section with narrative and image",
     icon: "BookOpen",
     fields: [
@@ -2087,8 +2087,8 @@ export const componentRegistry: ComponentSchema[] = [
     ],
   },
   {
-    type: "aertsen-vision-mission",
-    label: "Aertsen Vision & Mission",
+    type: "aliignspace-vision-mission",
+    label: "Aliignspace Vision & Mission",
     description: "Vision and mission cards section",
     icon: "Target",
     fields: [
@@ -2114,8 +2114,8 @@ export const componentRegistry: ComponentSchema[] = [
     ],
   },
   {
-    type: "aertsen-promises",
-    label: "Aertsen Promises",
+    type: "aliignspace-promises",
+    label: "Aliignspace Promises",
     description: "Company promises grid with icons",
     icon: "ShieldCheck",
     fields: [
@@ -2141,8 +2141,8 @@ export const componentRegistry: ComponentSchema[] = [
     ],
   },
   {
-    type: "aertsen-founders",
-    label: "Aertsen Founders",
+    type: "aliignspace-founders",
+    label: "Aliignspace Founders",
     description: "Founders profile cards with bio and image",
     icon: "Users",
     fields: [
@@ -2168,8 +2168,8 @@ export const componentRegistry: ComponentSchema[] = [
     ],
   },
   {
-    type: "aertsen-timeline",
-    label: "Aertsen Timeline",
+    type: "aliignspace-timeline",
+    label: "Aliignspace Timeline",
     description: "Company history timeline with events",
     icon: "Clock",
     fields: [
@@ -2195,8 +2195,8 @@ export const componentRegistry: ComponentSchema[] = [
     ],
   },
   {
-    type: "aertsen-factory-video",
-    label: "Aertsen Factory Video",
+    type: "aliignspace-factory-video",
+    label: "Aliignspace Factory Video",
     description: "Factory tour video section with thumbnail",
     icon: "PlayCircle",
     fields: [
@@ -2228,8 +2228,8 @@ export const componentRegistry: ComponentSchema[] = [
     ],
   },
   {
-    type: "aertsen-about-cta",
-    label: "Aertsen About CTA",
+    type: "aliignspace-about-cta",
+    label: "Aliignspace About CTA",
     description: "Call-to-action section for about page",
     icon: "ArrowRightCircle",
     fields: [
@@ -2263,8 +2263,8 @@ export const componentRegistry: ComponentSchema[] = [
     ],
   },
   {
-    type: "aertsen-services-hero",
-    label: "Aertsen Services Hero",
+    type: "aliignspace-services-hero",
+    label: "Aliignspace Services Hero",
     description: "Services page hero with accent typography",
     icon: "Layout",
     fields: [
@@ -2298,8 +2298,8 @@ export const componentRegistry: ComponentSchema[] = [
     ],
   },
   {
-    type: "aertsen-services-cards",
-    label: "Aertsen Services Cards",
+    type: "aliignspace-services-cards",
+    label: "Aliignspace Services Cards",
     description: "Services cards grid with images and icons",
     icon: "Grid3X3",
     fields: [
@@ -2325,8 +2325,8 @@ export const componentRegistry: ComponentSchema[] = [
     ],
   },
   {
-    type: "aertsen-services-cta",
-    label: "Aertsen Services CTA",
+    type: "aliignspace-services-cta",
+    label: "Aliignspace Services CTA",
     description: "Services page call-to-action section",
     icon: "Phone",
     fields: [
@@ -2360,8 +2360,8 @@ export const componentRegistry: ComponentSchema[] = [
     ],
   },
   {
-    type: "aertsen-portfolio-hero",
-    label: "Aertsen Portfolio Hero",
+    type: "aliignspace-portfolio-hero",
+    label: "Aliignspace Portfolio Hero",
     description: "Portfolio page hero with serif typography",
     icon: "Layout",
     fields: [
@@ -2395,8 +2395,8 @@ export const componentRegistry: ComponentSchema[] = [
     ],
   },
   {
-    type: "aertsen-project-list",
-    label: "Aertsen Project List",
+    type: "aliignspace-project-list",
+    label: "Aliignspace Project List",
     description: "Alternating project list with image sliders",
     icon: "List",
     fields: [
@@ -2409,8 +2409,8 @@ export const componentRegistry: ComponentSchema[] = [
     ],
   },
   {
-    type: "aertsen-project-detail",
-    label: "Aertsen Project Detail",
+    type: "aliignspace-project-detail",
+    label: "Aliignspace Project Detail",
     description: "Individual project detail page content",
     icon: "FileImage",
     fields: [

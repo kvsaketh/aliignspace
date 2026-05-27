@@ -489,16 +489,16 @@ export async function updatePageSections(pageId: string, sections: any[]): Promi
   return page as PageWithRelations;
 }
 
-// ─── Aertsen Default Page Configurations ───────────────────────────────────────
+// ─── Aliignspace Default Page Configurations ───────────────────────────────────────
 
-export const defaultAertsenHomePage = {
+export const defaultAliignspaceHomePage = {
   title: "Home",
   slug: "home",
   status: "PUBLISHED",
   sections: [
     {
-      id: "aertsen-hero-slider",
-      type: "aertsen-hero-slider",
+      id: "aliignspace-hero-slider",
+      type: "aliignspace-hero-slider",
       order: 0,
       props: {
         slides: [
@@ -517,8 +517,8 @@ export const defaultAertsenHomePage = {
       },
     },
     {
-      id: "aertsen-services-grid",
-      type: "aertsen-services-grid",
+      id: "aliignspace-services-grid",
+      type: "aliignspace-services-grid",
       order: 1,
       props: {
         label: "What We Do",
@@ -536,8 +536,8 @@ export const defaultAertsenHomePage = {
       },
     },
     {
-      id: "aertsen-milestones",
-      type: "aertsen-milestones",
+      id: "aliignspace-milestones",
+      type: "aliignspace-milestones",
       order: 2,
       props: {
         title: "Our Journey",
@@ -550,8 +550,8 @@ export const defaultAertsenHomePage = {
       },
     },
     {
-      id: "aertsen-why-choose",
-      type: "aertsen-why-choose",
+      id: "aliignspace-why-choose",
+      type: "aliignspace-why-choose",
       order: 3,
       props: {
         title: "Why Choose Us",
@@ -567,8 +567,8 @@ export const defaultAertsenHomePage = {
       },
     },
     {
-      id: "aertsen-portfolio-slider",
-      type: "aertsen-portfolio-slider",
+      id: "aliignspace-portfolio-slider",
+      type: "aliignspace-portfolio-slider",
       order: 4,
       props: {
         title: "Our Work",
@@ -582,8 +582,8 @@ export const defaultAertsenHomePage = {
       },
     },
     {
-      id: "aertsen-process-wheel",
-      type: "aertsen-process-wheel",
+      id: "aliignspace-process-wheel",
+      type: "aliignspace-process-wheel",
       order: 5,
       props: {
         title: "Steps to give your home an ALIIGNSPACE Makeover",
@@ -597,8 +597,8 @@ export const defaultAertsenHomePage = {
       },
     },
     {
-      id: "aertsen-factory",
-      type: "aertsen-factory",
+      id: "aliignspace-factory",
+      type: "aliignspace-factory",
       order: 6,
       props: {
         title: "Our Factory",
@@ -612,8 +612,8 @@ export const defaultAertsenHomePage = {
       },
     },
     {
-      id: "aertsen-google-reviews",
-      type: "aertsen-google-reviews",
+      id: "aliignspace-google-reviews",
+      type: "aliignspace-google-reviews",
       order: 7,
       props: {
         title: "Loved by Homeowners Across Hyderabad",
@@ -631,8 +631,8 @@ export const defaultAertsenHomePage = {
       },
     },
     {
-      id: "aertsen-video-testimonials",
-      type: "aertsen-video-testimonials",
+      id: "aliignspace-video-testimonials",
+      type: "aliignspace-video-testimonials",
       order: 8,
       props: {
         title: "Video Testimonials",
@@ -645,8 +645,8 @@ export const defaultAertsenHomePage = {
       },
     },
     {
-      id: "aertsen-final-cta",
-      type: "aertsen-final-cta",
+      id: "aliignspace-final-cta",
+      type: "aliignspace-final-cta",
       order: 9,
       props: {
         title: "Ready to Transform Your Space?",
@@ -656,8 +656,8 @@ export const defaultAertsenHomePage = {
       },
     },
     {
-      id: "aertsen-faq",
-      type: "aertsen-faq",
+      id: "aliignspace-faq",
+      type: "aliignspace-faq",
       order: 10,
       props: {
         title: "Frequently Asked Questions",
@@ -678,14 +678,14 @@ export const defaultAertsenHomePage = {
   },
 };
 
-export const defaultAertsenAboutPage = {
+export const defaultAliignspaceAboutPage = {
   title: "About Us",
   slug: "about",
   status: "PUBLISHED",
   sections: [
     {
-      id: "aertsen-about-hero",
-      type: "aertsen-about-hero",
+      id: "aliignspace-about-hero",
+      type: "aliignspace-about-hero",
       order: 0,
       props: {
         eyebrow: "About Us",
@@ -695,8 +695,8 @@ export const defaultAertsenAboutPage = {
       },
     },
     {
-      id: "aertsen-who-we-are",
-      type: "aertsen-who-we-are",
+      id: "aliignspace-who-we-are",
+      type: "aliignspace-who-we-are",
       order: 1,
       props: {
         label: "Who We Are",
@@ -716,8 +716,8 @@ export const defaultAertsenAboutPage = {
       },
     },
     {
-      id: "aertsen-story",
-      type: "aertsen-story",
+      id: "aliignspace-story",
+      type: "aliignspace-story",
       order: 2,
       props: {
         title: "Our Story",
@@ -727,8 +727,8 @@ export const defaultAertsenAboutPage = {
       },
     },
     {
-      id: "aertsen-vision-mission",
-      type: "aertsen-vision-mission",
+      id: "aliignspace-vision-mission",
+      type: "aliignspace-vision-mission",
       order: 3,
       props: {
         title: "Vision & Mission",
@@ -737,8 +737,8 @@ export const defaultAertsenAboutPage = {
       },
     },
     {
-      id: "aertsen-promises",
-      type: "aertsen-promises",
+      id: "aliignspace-promises",
+      type: "aliignspace-promises",
       order: 4,
       props: {
         title: "Our Promises",
@@ -752,8 +752,8 @@ export const defaultAertsenAboutPage = {
       },
     },
     {
-      id: "aertsen-founders",
-      type: "aertsen-founders",
+      id: "aliignspace-founders",
+      type: "aliignspace-founders",
       order: 5,
       props: {
         title: "Meet Our Founders",
@@ -765,8 +765,8 @@ export const defaultAertsenAboutPage = {
       },
     },
     {
-      id: "aertsen-timeline",
-      type: "aertsen-timeline",
+      id: "aliignspace-timeline",
+      type: "aliignspace-timeline",
       order: 6,
       props: {
         title: "Our Journey",
@@ -780,8 +780,8 @@ export const defaultAertsenAboutPage = {
       },
     },
     {
-      id: "aertsen-factory-video",
-      type: "aertsen-factory-video",
+      id: "aliignspace-factory-video",
+      type: "aliignspace-factory-video",
       order: 7,
       props: {
         title: "Inside Our Factory",
@@ -791,8 +791,8 @@ export const defaultAertsenAboutPage = {
       },
     },
     {
-      id: "aertsen-about-cta",
-      type: "aertsen-about-cta",
+      id: "aliignspace-about-cta",
+      type: "aliignspace-about-cta",
       order: 8,
       props: {
         title: "Ready to Begin Your Journey?",
@@ -809,14 +809,14 @@ export const defaultAertsenAboutPage = {
   },
 };
 
-export const defaultAertsenServicesPage = {
+export const defaultAliignspaceServicesPage = {
   title: "Services",
   slug: "services",
   status: "PUBLISHED",
   sections: [
     {
-      id: "aertsen-services-hero",
-      type: "aertsen-services-hero",
+      id: "aliignspace-services-hero",
+      type: "aliignspace-services-hero",
       order: 0,
       props: {
         eyebrow: "Our Services",
@@ -826,8 +826,8 @@ export const defaultAertsenServicesPage = {
       },
     },
     {
-      id: "aertsen-services-cards",
-      type: "aertsen-services-cards",
+      id: "aliignspace-services-cards",
+      type: "aliignspace-services-cards",
       order: 1,
       props: {
         title: "What We Offer",
@@ -843,8 +843,8 @@ export const defaultAertsenServicesPage = {
       },
     },
     {
-      id: "aertsen-services-cta",
-      type: "aertsen-services-cta",
+      id: "aliignspace-services-cta",
+      type: "aliignspace-services-cta",
       order: 2,
       props: {
         title: "Not Sure Where to Start?",
@@ -861,14 +861,14 @@ export const defaultAertsenServicesPage = {
   },
 };
 
-export const defaultAertsenPortfolioPage = {
+export const defaultAliignspacePortfolioPage = {
   title: "Portfolio",
   slug: "portfolio",
   status: "PUBLISHED",
   sections: [
     {
-      id: "aertsen-portfolio-hero",
-      type: "aertsen-portfolio-hero",
+      id: "aliignspace-portfolio-hero",
+      type: "aliignspace-portfolio-hero",
       order: 0,
       props: {
         eyebrow: "Our Work",
@@ -878,8 +878,8 @@ export const defaultAertsenPortfolioPage = {
       },
     },
     {
-      id: "aertsen-project-list",
-      type: "aertsen-project-list",
+      id: "aliignspace-project-list",
+      type: "aliignspace-project-list",
       order: 1,
       props: {
         projects: [
@@ -920,9 +920,9 @@ export const defaultAertsenPortfolioPage = {
   },
 };
 
-// ─── Aertsen Page Helpers ──────────────────────────────────────────────────────
+// ─── Aliignspace Page Helpers ──────────────────────────────────────────────────────
 
-export async function getOrCreateAertsenHomePage(): Promise<PageWithRelations> {
+export async function getOrCreateAliignspaceHomePage(): Promise<PageWithRelations> {
   const page = await prisma.page.findUnique({
     where: { slug: "home" },
     include: {
@@ -937,14 +937,14 @@ export async function getOrCreateAertsenHomePage(): Promise<PageWithRelations> {
 
   const newPage = await prisma.page.create({
     data: {
-      title: defaultAertsenHomePage.title,
-      slug: defaultAertsenHomePage.slug,
-      status: defaultAertsenHomePage.status as any,
+      title: defaultAliignspaceHomePage.title,
+      slug: defaultAliignspaceHomePage.slug,
+      status: defaultAliignspaceHomePage.status as any,
       seo: {
-        create: defaultAertsenHomePage.seo,
+        create: defaultAliignspaceHomePage.seo,
       },
       sections: {
-        create: defaultAertsenHomePage.sections.map((section) => ({
+        create: defaultAliignspaceHomePage.sections.map((section) => ({
           type: section.type,
           order: section.order,
           props: section.props || {},
@@ -960,7 +960,7 @@ export async function getOrCreateAertsenHomePage(): Promise<PageWithRelations> {
   return newPage as PageWithRelations;
 }
 
-export async function getOrCreateAertsenAboutPage(): Promise<PageWithRelations> {
+export async function getOrCreateAliignspaceAboutPage(): Promise<PageWithRelations> {
   const page = await prisma.page.findUnique({
     where: { slug: "about" },
     include: {
@@ -975,14 +975,14 @@ export async function getOrCreateAertsenAboutPage(): Promise<PageWithRelations> 
 
   const newPage = await prisma.page.create({
     data: {
-      title: defaultAertsenAboutPage.title,
-      slug: defaultAertsenAboutPage.slug,
-      status: defaultAertsenAboutPage.status as any,
+      title: defaultAliignspaceAboutPage.title,
+      slug: defaultAliignspaceAboutPage.slug,
+      status: defaultAliignspaceAboutPage.status as any,
       seo: {
-        create: defaultAertsenAboutPage.seo,
+        create: defaultAliignspaceAboutPage.seo,
       },
       sections: {
-        create: defaultAertsenAboutPage.sections.map((section) => ({
+        create: defaultAliignspaceAboutPage.sections.map((section) => ({
           type: section.type,
           order: section.order,
           props: section.props || {},
@@ -998,7 +998,7 @@ export async function getOrCreateAertsenAboutPage(): Promise<PageWithRelations> 
   return newPage as PageWithRelations;
 }
 
-export async function getOrCreateAertsenServicesPage(): Promise<PageWithRelations> {
+export async function getOrCreateAliignspaceServicesPage(): Promise<PageWithRelations> {
   const page = await prisma.page.findUnique({
     where: { slug: "services" },
     include: {
@@ -1013,14 +1013,14 @@ export async function getOrCreateAertsenServicesPage(): Promise<PageWithRelation
 
   const newPage = await prisma.page.create({
     data: {
-      title: defaultAertsenServicesPage.title,
-      slug: defaultAertsenServicesPage.slug,
-      status: defaultAertsenServicesPage.status as any,
+      title: defaultAliignspaceServicesPage.title,
+      slug: defaultAliignspaceServicesPage.slug,
+      status: defaultAliignspaceServicesPage.status as any,
       seo: {
-        create: defaultAertsenServicesPage.seo,
+        create: defaultAliignspaceServicesPage.seo,
       },
       sections: {
-        create: defaultAertsenServicesPage.sections.map((section) => ({
+        create: defaultAliignspaceServicesPage.sections.map((section) => ({
           type: section.type,
           order: section.order,
           props: section.props || {},
@@ -1036,7 +1036,7 @@ export async function getOrCreateAertsenServicesPage(): Promise<PageWithRelation
   return newPage as PageWithRelations;
 }
 
-export async function getOrCreateAertsenPortfolioPage(): Promise<PageWithRelations> {
+export async function getOrCreateAliignspacePortfolioPage(): Promise<PageWithRelations> {
   const page = await prisma.page.findUnique({
     where: { slug: "portfolio" },
     include: {
@@ -1051,14 +1051,14 @@ export async function getOrCreateAertsenPortfolioPage(): Promise<PageWithRelatio
 
   const newPage = await prisma.page.create({
     data: {
-      title: defaultAertsenPortfolioPage.title,
-      slug: defaultAertsenPortfolioPage.slug,
-      status: defaultAertsenPortfolioPage.status as any,
+      title: defaultAliignspacePortfolioPage.title,
+      slug: defaultAliignspacePortfolioPage.slug,
+      status: defaultAliignspacePortfolioPage.status as any,
       seo: {
-        create: defaultAertsenPortfolioPage.seo,
+        create: defaultAliignspacePortfolioPage.seo,
       },
       sections: {
-        create: defaultAertsenPortfolioPage.sections.map((section) => ({
+        create: defaultAliignspacePortfolioPage.sections.map((section) => ({
           type: section.type,
           order: section.order,
           props: section.props || {},

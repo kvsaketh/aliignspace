@@ -13,33 +13,33 @@ import { ConsultationBlock } from "@/components/blocks/consultation";
 import { AboutHero } from "@/components/blocks/AboutHero";
 import { StorySection } from "@/components/blocks/StorySection";
 
-// Aertsen Replication Components
-import { AertsenHeroSlider } from "@/components/blocks/aertsen-hero-slider";
-import { AertsenServicesGrid } from "@/components/blocks/aertsen-services-grid";
-import { AertsenMilestones } from "@/components/blocks/aertsen-milestones";
-import { AertsenWhyChoose } from "@/components/blocks/aertsen-why-choose";
-import { AertsenPortfolioSlider } from "@/components/blocks/aertsen-portfolio-slider";
-import { AertsenProcessWheel } from "@/components/blocks/aertsen-process-wheel";
-import { AertsenFactory } from "@/components/blocks/aertsen-factory";
-import { AertsenGoogleReviews } from "@/components/blocks/aertsen-google-reviews";
-import { AertsenVideoTestimonials } from "@/components/blocks/aertsen-video-testimonials";
-import { AertsenFinalCTA } from "@/components/blocks/aertsen-final-cta";
-import { AertsenFAQ } from "@/components/blocks/aertsen-faq";
-import { AertsenAboutHero } from "@/components/blocks/aertsen-about-hero";
-import { AertsenWhoWeAre } from "@/components/blocks/aertsen-who-we-are";
-import { AertsenStory } from "@/components/blocks/aertsen-story";
-import { AertsenVisionMission } from "@/components/blocks/aertsen-vision-mission";
-import { AertsenPromises } from "@/components/blocks/aertsen-promises";
-import { AertsenFounders } from "@/components/blocks/aertsen-founders";
-import { AertsenTimeline } from "@/components/blocks/aertsen-timeline";
-import { AertsenFactoryVideo } from "@/components/blocks/aertsen-factory-video";
-import { AertsenAboutCTA } from "@/components/blocks/aertsen-about-cta";
-import { AertsenServicesHero } from "@/components/blocks/aertsen-services-hero";
-import { AertsenServicesCards } from "@/components/blocks/aertsen-services-cards";
-import { AertsenServicesCTA } from "@/components/blocks/aertsen-services-cta";
-import { AertsenPortfolioHero } from "@/components/blocks/aertsen-portfolio-hero";
-import { AertsenProjectList } from "@/components/blocks/aertsen-project-list";
-import { AertsenProjectDetail } from "@/components/blocks/aertsen-project-detail";
+// Aliignspace Replication Components
+import { AliignspaceHeroSlider } from "@/components/blocks/aliignspace-hero-slider";
+import { AliignspaceServicesGrid } from "@/components/blocks/aliignspace-services-grid";
+import { AliignspaceMilestones } from "@/components/blocks/aliignspace-milestones";
+import { AliignspaceWhyChoose } from "@/components/blocks/aliignspace-why-choose";
+import { AliignspacePortfolioSlider } from "@/components/blocks/aliignspace-portfolio-slider";
+import { AliignspaceProcessWheel } from "@/components/blocks/aliignspace-process-wheel";
+import { AliignspaceFactory } from "@/components/blocks/aliignspace-factory";
+import { AliignspaceGoogleReviews } from "@/components/blocks/aliignspace-google-reviews";
+import { AliignspaceVideoTestimonials } from "@/components/blocks/aliignspace-video-testimonials";
+import { AliignspaceFinalCTA } from "@/components/blocks/aliignspace-final-cta";
+import { AliignspaceFAQ } from "@/components/blocks/aliignspace-faq";
+import { AliignspaceAboutHero } from "@/components/blocks/aliignspace-about-hero";
+import { AliignspaceWhoWeAre } from "@/components/blocks/aliignspace-who-we-are";
+import { AliignspaceStory } from "@/components/blocks/aliignspace-story";
+import { AliignspaceVisionMission } from "@/components/blocks/aliignspace-vision-mission";
+import { AliignspacePromises } from "@/components/blocks/aliignspace-promises";
+import { AliignspaceFounders } from "@/components/blocks/aliignspace-founders";
+import { AliignspaceTimeline } from "@/components/blocks/aliignspace-timeline";
+import { AliignspaceFactoryVideo } from "@/components/blocks/aliignspace-factory-video";
+import { AliignspaceAboutCTA } from "@/components/blocks/aliignspace-about-cta";
+import { AliignspaceServicesHero } from "@/components/blocks/aliignspace-services-hero";
+import { AliignspaceServicesCards } from "@/components/blocks/aliignspace-services-cards";
+import { AliignspaceServicesCTA } from "@/components/blocks/aliignspace-services-cta";
+import { AliignspacePortfolioHero } from "@/components/blocks/aliignspace-portfolio-hero";
+import { AliignspaceProjectList } from "@/components/blocks/aliignspace-project-list";
+import { AliignspaceProjectDetail } from "@/components/blocks/aliignspace-project-detail";
 
 // Section types supported by the CMS
 export type SectionType =
@@ -56,33 +56,33 @@ export type SectionType =
   | "consultation"
   | "about_hero"
   | "about_story"
-  // Aertsen Replication
-  | "aertsen-hero-slider"
-  | "aertsen-services-grid"
-  | "aertsen-milestones"
-  | "aertsen-why-choose"
-  | "aertsen-portfolio-slider"
-  | "aertsen-process-wheel"
-  | "aertsen-factory"
-  | "aertsen-google-reviews"
-  | "aertsen-video-testimonials"
-  | "aertsen-final-cta"
-  | "aertsen-faq"
-  | "aertsen-about-hero"
-  | "aertsen-who-we-are"
-  | "aertsen-story"
-  | "aertsen-vision-mission"
-  | "aertsen-promises"
-  | "aertsen-founders"
-  | "aertsen-timeline"
-  | "aertsen-factory-video"
-  | "aertsen-about-cta"
-  | "aertsen-services-hero"
-  | "aertsen-services-cards"
-  | "aertsen-services-cta"
-  | "aertsen-portfolio-hero"
-  | "aertsen-project-list"
-  | "aertsen-project-detail";
+  // Aliignspace Replication
+  | "aliignspace-hero-slider"
+  | "aliignspace-services-grid"
+  | "aliignspace-milestones"
+  | "aliignspace-why-choose"
+  | "aliignspace-portfolio-slider"
+  | "aliignspace-process-wheel"
+  | "aliignspace-factory"
+  | "aliignspace-google-reviews"
+  | "aliignspace-video-testimonials"
+  | "aliignspace-final-cta"
+  | "aliignspace-faq"
+  | "aliignspace-about-hero"
+  | "aliignspace-who-we-are"
+  | "aliignspace-story"
+  | "aliignspace-vision-mission"
+  | "aliignspace-promises"
+  | "aliignspace-founders"
+  | "aliignspace-timeline"
+  | "aliignspace-factory-video"
+  | "aliignspace-about-cta"
+  | "aliignspace-services-hero"
+  | "aliignspace-services-cards"
+  | "aliignspace-services-cta"
+  | "aliignspace-portfolio-hero"
+  | "aliignspace-project-list"
+  | "aliignspace-project-detail";
 
 // Props interfaces for each section type with index signature for Prisma JSON
 export interface HeroPremiumProps extends Record<string, unknown> {
@@ -261,13 +261,13 @@ export interface HomeAboutPremiumProps extends Record<string, unknown> {
   videoUrl?: string;
 }
 
-// Aertsen Props Interfaces
-export interface AertsenHeroSliderProps extends Record<string, unknown> {
+// Aliignspace Props Interfaces
+export interface AliignspaceHeroSliderProps extends Record<string, unknown> {
   slides?: { image?: string; videoUrl?: string; title: string; subtitle: string }[];
   autoPlayInterval?: number;
 }
 
-export interface AertsenServicesGridProps extends Record<string, unknown> {
+export interface AliignspaceServicesGridProps extends Record<string, unknown> {
   label?: string;
   title?: string;
   subtitle?: string;
@@ -275,30 +275,30 @@ export interface AertsenServicesGridProps extends Record<string, unknown> {
   services?: { number: string; title: string; description: string; icon?: string; link?: string }[];
 }
 
-export interface AertsenMilestonesProps extends Record<string, unknown> {
+export interface AliignspaceMilestonesProps extends Record<string, unknown> {
   title?: string;
   milestones?: { year: string; title: string; description: string }[];
 }
 
-export interface AertsenWhyChooseProps extends Record<string, unknown> {
+export interface AliignspaceWhyChooseProps extends Record<string, unknown> {
   title?: string;
   subtitle?: string;
   features?: { title: string; description: string; icon?: string }[];
 }
 
-export interface AertsenPortfolioSliderProps extends Record<string, unknown> {
+export interface AliignspacePortfolioSliderProps extends Record<string, unknown> {
   title?: string;
   subtitle?: string;
   projects?: { title: string; location: string; image: string; link?: string }[];
 }
 
-export interface AertsenProcessWheelProps extends Record<string, unknown> {
+export interface AliignspaceProcessWheelProps extends Record<string, unknown> {
   title?: string;
   subtitle?: string;
   steps?: { number: string; title: string; description: string }[];
 }
 
-export interface AertsenFactoryProps extends Record<string, unknown> {
+export interface AliignspaceFactoryProps extends Record<string, unknown> {
   title?: string;
   subtitle?: string;
   description?: string;
@@ -306,7 +306,7 @@ export interface AertsenFactoryProps extends Record<string, unknown> {
   stats?: { label: string; value: string }[];
 }
 
-export interface AertsenGoogleReviewsProps extends Record<string, unknown> {
+export interface AliignspaceGoogleReviewsProps extends Record<string, unknown> {
   title?: string;
   subtitle?: string;
   rating?: number;
@@ -314,33 +314,33 @@ export interface AertsenGoogleReviewsProps extends Record<string, unknown> {
   reviews?: { name: string; rating: number; text: string; date?: string }[];
 }
 
-export interface AertsenVideoTestimonialsProps extends Record<string, unknown> {
+export interface AliignspaceVideoTestimonialsProps extends Record<string, unknown> {
   title?: string;
   subtitle?: string;
   videos?: { videoUrl: string; thumbnailUrl: string; clientName: string; quote?: string }[];
 }
 
-export interface AertsenFinalCtaProps extends Record<string, unknown> {
+export interface AliignspaceFinalCtaProps extends Record<string, unknown> {
   title?: string;
   subtitle?: string;
   buttonText?: string;
   buttonUrl?: string;
 }
 
-export interface AertsenFaqProps extends Record<string, unknown> {
+export interface AliignspaceFaqProps extends Record<string, unknown> {
   title?: string;
   subtitle?: string;
   faqs?: { question: string; answer: string }[];
 }
 
-export interface AertsenAboutHeroProps extends Record<string, unknown> {
+export interface AliignspaceAboutHeroProps extends Record<string, unknown> {
   eyebrow?: string;
   title?: string;
   accentWord?: string;
   subtitle?: string;
 }
 
-export interface AertsenWhoWeAreProps extends Record<string, unknown> {
+export interface AliignspaceWhoWeAreProps extends Record<string, unknown> {
   label?: string;
   title?: string;
   accentWord?: string;
@@ -349,79 +349,79 @@ export interface AertsenWhoWeAreProps extends Record<string, unknown> {
   image?: string;
 }
 
-export interface AertsenStoryProps extends Record<string, unknown> {
+export interface AliignspaceStoryProps extends Record<string, unknown> {
   title?: string;
   subtitle?: string;
   content?: string;
   image?: string;
 }
 
-export interface AertsenVisionMissionProps extends Record<string, unknown> {
+export interface AliignspaceVisionMissionProps extends Record<string, unknown> {
   title?: string;
   vision?: string;
   mission?: string;
 }
 
-export interface AertsenPromisesProps extends Record<string, unknown> {
+export interface AliignspacePromisesProps extends Record<string, unknown> {
   title?: string;
   subtitle?: string;
   promises?: { title: string; description: string; icon?: string }[];
 }
 
-export interface AertsenFoundersProps extends Record<string, unknown> {
+export interface AliignspaceFoundersProps extends Record<string, unknown> {
   title?: string;
   subtitle?: string;
   founders?: { name: string; role: string; bio?: string; image?: string }[];
 }
 
-export interface AertsenTimelineProps extends Record<string, unknown> {
+export interface AliignspaceTimelineProps extends Record<string, unknown> {
   title?: string;
   subtitle?: string;
   events?: { year: string; title: string; description: string }[];
 }
 
-export interface AertsenFactoryVideoProps extends Record<string, unknown> {
+export interface AliignspaceFactoryVideoProps extends Record<string, unknown> {
   title?: string;
   subtitle?: string;
   videoUrl?: string;
   thumbnail?: string;
 }
 
-export interface AertsenAboutCtaProps extends Record<string, unknown> {
+export interface AliignspaceAboutCtaProps extends Record<string, unknown> {
   title?: string;
   subtitle?: string;
   buttonText?: string;
   buttonUrl?: string;
 }
 
-export interface AertsenServicesHeroProps extends Record<string, unknown> {
+export interface AliignspaceServicesHeroProps extends Record<string, unknown> {
   eyebrow?: string;
   title?: string;
   accentWord?: string;
   subtitle?: string;
 }
 
-export interface AertsenServicesCardsProps extends Record<string, unknown> {
+export interface AliignspaceServicesCardsProps extends Record<string, unknown> {
   title?: string;
   subtitle?: string;
   services?: { title: string; description: string; image?: string; icon?: string }[];
 }
 
-export interface AertsenServicesCtaProps extends Record<string, unknown> {
+export interface AliignspaceServicesCtaProps extends Record<string, unknown> {
   title?: string;
   subtitle?: string;
   buttonText?: string;
   buttonUrl?: string;
 }
 
-export interface AertsenPortfolioHeroProps extends Record<string, unknown> {
+export interface AliignspacePortfolioHeroProps extends Record<string, unknown> {
   eyebrow?: string;
   title?: string;
   accentWord?: string;
   subtitle?: string;
 }
 
-export interface AertsenProjectListProps extends Record<string, unknown> {
+export interface AliignspaceProjectListProps extends Record<string, unknown> {
   projects?: {
     title: string;
     location: string;
@@ -433,7 +433,7 @@ export interface AertsenProjectListProps extends Record<string, unknown> {
   }[];
 }
 
-export interface AertsenProjectDetailProps extends Record<string, unknown> {
+export interface AliignspaceProjectDetailProps extends Record<string, unknown> {
   title: string;
   location: string;
   description: string;
@@ -461,32 +461,32 @@ export type SectionProps =
   | ConsultationProps
   | AboutHeroProps
   | AboutStoryProps
-  | AertsenHeroSliderProps
-  | AertsenServicesGridProps
-  | AertsenMilestonesProps
-  | AertsenWhyChooseProps
-  | AertsenPortfolioSliderProps
-  | AertsenProcessWheelProps
-  | AertsenFactoryProps
-  | AertsenGoogleReviewsProps
-  | AertsenVideoTestimonialsProps
-  | AertsenFinalCtaProps
-  | AertsenFaqProps
-  | AertsenAboutHeroProps
-  | AertsenWhoWeAreProps
-  | AertsenStoryProps
-  | AertsenVisionMissionProps
-  | AertsenPromisesProps
-  | AertsenFoundersProps
-  | AertsenTimelineProps
-  | AertsenFactoryVideoProps
-  | AertsenAboutCtaProps
-  | AertsenServicesHeroProps
-  | AertsenServicesCardsProps
-  | AertsenServicesCtaProps
-  | AertsenPortfolioHeroProps
-  | AertsenProjectListProps
-  | AertsenProjectDetailProps;
+  | AliignspaceHeroSliderProps
+  | AliignspaceServicesGridProps
+  | AliignspaceMilestonesProps
+  | AliignspaceWhyChooseProps
+  | AliignspacePortfolioSliderProps
+  | AliignspaceProcessWheelProps
+  | AliignspaceFactoryProps
+  | AliignspaceGoogleReviewsProps
+  | AliignspaceVideoTestimonialsProps
+  | AliignspaceFinalCtaProps
+  | AliignspaceFaqProps
+  | AliignspaceAboutHeroProps
+  | AliignspaceWhoWeAreProps
+  | AliignspaceStoryProps
+  | AliignspaceVisionMissionProps
+  | AliignspacePromisesProps
+  | AliignspaceFoundersProps
+  | AliignspaceTimelineProps
+  | AliignspaceFactoryVideoProps
+  | AliignspaceAboutCtaProps
+  | AliignspaceServicesHeroProps
+  | AliignspaceServicesCardsProps
+  | AliignspaceServicesCtaProps
+  | AliignspacePortfolioHeroProps
+  | AliignspaceProjectListProps
+  | AliignspaceProjectDetailProps;
 
 // Section configuration interface
 export interface SectionConfig {
@@ -898,8 +898,8 @@ export const defaultSectionProps: Record<SectionType, SectionProps> = {
     backgroundColor: "cream",
     spacing: "normal",
   },
-  // Aertsen Replication Defaults
-  "aertsen-hero-slider": {
+  // Aliignspace Replication Defaults
+  "aliignspace-hero-slider": {
     slides: [
       {
         image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1920&q=80",
@@ -914,7 +914,7 @@ export const defaultSectionProps: Record<SectionType, SectionProps> = {
     ],
     autoPlayInterval: 6000,
   },
-  "aertsen-services-grid": {
+  "aliignspace-services-grid": {
     label: "What We Do",
     title: "Our",
     accentWord: "Services",
@@ -925,7 +925,7 @@ export const defaultSectionProps: Record<SectionType, SectionProps> = {
       { number: "03", title: "Living Spaces", description: "Elegant living rooms that balance comfort with sophisticated aesthetics.", icon: "sofa", link: "#" },
     ],
   },
-  "aertsen-milestones": {
+  "aliignspace-milestones": {
     title: "Our Journey",
     milestones: [
       { year: "2021", title: "Founded", description: "ALIIGNSPACE was established with a vision to transform homes." },
@@ -934,7 +934,7 @@ export const defaultSectionProps: Record<SectionType, SectionProps> = {
       { year: "2024", title: "500+ Homes", description: "Transformed over 500 homes across Telangana and AP." },
     ],
   },
-  "aertsen-why-choose": {
+  "aliignspace-why-choose": {
     title: "Why Choose Us",
     subtitle: "The ALIIGNSPACE Difference",
     features: [
@@ -943,7 +943,7 @@ export const defaultSectionProps: Record<SectionType, SectionProps> = {
       { title: "On-Time Delivery", description: "Guaranteed project completion within committed timelines.", icon: "clock" },
     ],
   },
-  "aertsen-portfolio-slider": {
+  "aliignspace-portfolio-slider": {
     title: "Our Work",
     subtitle: "Finest Projects We've Crafted",
     projects: [
@@ -951,7 +951,7 @@ export const defaultSectionProps: Record<SectionType, SectionProps> = {
       { title: "Banjara Hills Villa", location: "Hyderabad", image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&q=80", link: "#" },
     ],
   },
-  "aertsen-process-wheel": {
+  "aliignspace-process-wheel": {
     title: "Steps to give your home an ALIIGNSPACE Makeover",
     subtitle: "Our Process",
     steps: [
@@ -961,7 +961,7 @@ export const defaultSectionProps: Record<SectionType, SectionProps> = {
       { number: "04", title: "Handover", description: "On-time delivery with quality checks and final walkthrough." },
     ],
   },
-  "aertsen-factory": {
+  "aliignspace-factory": {
     title: "Our Factory",
     subtitle: "Where craftsmanship comes to life",
     description: "State-of-the-art manufacturing facility with precision machinery and skilled artisans.",
@@ -971,7 +971,7 @@ export const defaultSectionProps: Record<SectionType, SectionProps> = {
       { label: "Quality Checks", value: "15+ stages" },
     ],
   },
-  "aertsen-google-reviews": {
+  "aliignspace-google-reviews": {
     title: "Loved by Homeowners Across Hyderabad",
     subtitle: "Real reviews from real clients",
     rating: 4.9,
@@ -981,20 +981,20 @@ export const defaultSectionProps: Record<SectionType, SectionProps> = {
       { name: "Rajesh Kumar", rating: 5, text: "Professional team with excellent attention to detail.", date: "1 month ago" },
     ],
   },
-  "aertsen-video-testimonials": {
+  "aliignspace-video-testimonials": {
     title: "Video Testimonials",
     subtitle: "Hear from our happy clients",
     videos: [
       { videoUrl: "", thumbnailUrl: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80", clientName: "Priya Sharma", quote: "Transformed our home beautifully!" },
     ],
   },
-  "aertsen-final-cta": {
+  "aliignspace-final-cta": {
     title: "Ready to Transform Your Space?",
     subtitle: "Book a free consultation with our design experts today.",
     buttonText: "Get Free Consultation",
     buttonUrl: "/contact",
   },
-  "aertsen-faq": {
+  "aliignspace-faq": {
     title: "Frequently Asked Questions",
     subtitle: "Everything you need to know about our services",
     faqs: [
@@ -1002,18 +1002,18 @@ export const defaultSectionProps: Record<SectionType, SectionProps> = {
       { question: "Do you offer free consultations?", answer: "Yes, we offer free initial consultations to understand your requirements." },
     ],
   },
-  "aertsen-about-hero": {
+  "aliignspace-about-hero": {
     eyebrow: "About Us",
     title: "Crafting Interiors with",
     accentWord: "Purpose",
     subtitle: "We believe every space has a story. Our mission is to tell yours through design that blends beauty, function, and soul.",
   },
-  "aertsen-who-we-are": {
+  "aliignspace-who-we-are": {
     label: "Who We Are",
     title: "Designing spaces that reflect",
     accentWord: "you",
     body: [
-      "At Aertsen, we don't just design interiors—we curate experiences. Every project begins with listening, understanding, and imagining what a space could become.",
+      "At Aliignspace, we don't just design interiors—we curate experiences. Every project begins with listening, understanding, and imagining what a space could become.",
       "From Hyderabad to homes across India, our team of architects, interior designers, and craftsmen work in unison to deliver spaces that are as functional as they are beautiful.",
     ],
     stats: [
@@ -1024,18 +1024,18 @@ export const defaultSectionProps: Record<SectionType, SectionProps> = {
     ],
     image: "https://images.unsplash.com/photo-1600210492493-0946911123ea?w=800&q=80",
   },
-  "aertsen-story": {
+  "aliignspace-story": {
     title: "Our Story",
     subtitle: "From a small studio to a trusted name in interiors",
     content: "Founded in 2021, ALIIGNSPACE began with a simple belief: every estimate explained, every timeline in writing, and what you approve is exactly what you get.",
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
   },
-  "aertsen-vision-mission": {
+  "aliignspace-vision-mission": {
     title: "Vision & Mission",
     vision: "To be India's most trusted interior design partner, creating spaces that inspire and endure.",
     mission: "To deliver transparent, high-quality interior solutions that transform houses into homes through creativity, craftsmanship, and care.",
   },
-  "aertsen-promises": {
+  "aliignspace-promises": {
     title: "Our Promises",
     subtitle: "What you can expect from every ALIIGNSPACE project",
     promises: [
@@ -1045,14 +1045,14 @@ export const defaultSectionProps: Record<SectionType, SectionProps> = {
       { title: "Lifetime Support", description: "Our relationship doesn't end at handover.", icon: "heart-handshake" },
     ],
   },
-  "aertsen-founders": {
+  "aliignspace-founders": {
     title: "Meet Our Founders",
     subtitle: "The visionaries behind ALIIGNSPACE",
     founders: [
       { name: "Ar. Samhitha Nagasamudra", role: "Founder & Principal Designer", bio: "An architect with a passion for creating spaces that tell stories.", image: "" },
     ],
   },
-  "aertsen-timeline": {
+  "aliignspace-timeline": {
     title: "Our Journey",
     subtitle: "Milestones that shaped who we are today",
     events: [
@@ -1062,25 +1062,25 @@ export const defaultSectionProps: Record<SectionType, SectionProps> = {
       { year: "2024", title: "500+ Homes", description: "Crossed the milestone of 500 transformed homes." },
     ],
   },
-  "aertsen-factory-video": {
+  "aliignspace-factory-video": {
     title: "Inside Our Factory",
     subtitle: "See where the magic happens",
     videoUrl: "",
     thumbnail: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&q=80",
   },
-  "aertsen-about-cta": {
+  "aliignspace-about-cta": {
     title: "Ready to Begin Your Journey?",
     subtitle: "Let's create a space that truly reflects you.",
     buttonText: "Book a Consultation",
     buttonUrl: "/contact",
   },
-  "aertsen-services-hero": {
+  "aliignspace-services-hero": {
     eyebrow: "Our Services",
     title: "Interior Solutions Crafted with",
     accentWord: "Care",
     subtitle: "From concept to completion, we handle every detail so you can enjoy the transformation.",
   },
-  "aertsen-services-cards": {
+  "aliignspace-services-cards": {
     title: "What We Offer",
     subtitle: "Comprehensive interior solutions for every need",
     services: [
@@ -1089,19 +1089,19 @@ export const defaultSectionProps: Record<SectionType, SectionProps> = {
       { title: "Living Room Design", description: "Statement spaces that balance comfort and style.", image: "https://images.unsplash.com/photo-1617806118233-18e1de247200?w=600&q=80", icon: "sofa" },
     ],
   },
-  "aertsen-services-cta": {
+  "aliignspace-services-cta": {
     title: "Not Sure Where to Start?",
     subtitle: "Our design experts are here to guide you through every step.",
     buttonText: "Get Free Consultation",
     buttonUrl: "/contact",
   },
-  "aertsen-portfolio-hero": {
+  "aliignspace-portfolio-hero": {
     eyebrow: "Our Work",
     title: "Crafting Interiors with",
     accentWord: "Purpose",
     subtitle: "We believe every space has a story. Our mission is to tell yours through design that blends beauty, function, and soul.",
   },
-  "aertsen-project-list": {
+  "aliignspace-project-list": {
     projects: [
       {
         title: "The Residence at Jubilee Hills",
@@ -1131,7 +1131,7 @@ export const defaultSectionProps: Record<SectionType, SectionProps> = {
       },
     ],
   },
-  "aertsen-project-detail": {
+  "aliignspace-project-detail": {
     title: "The Residence at Jubilee Hills",
     location: "Jubilee Hills, Hyderabad",
     description: "A complete transformation of a 4,500 sq ft penthouse into a serene modern sanctuary. Warm oak paneling, curated art walls, and floor-to-ceiling windows frame the city skyline. Every detail was considered—from the custom joinery to the hand-selected stone surfaces—to create a home that feels both luxurious and deeply personal.",
@@ -1167,33 +1167,33 @@ export const sectionComponentMap: Record<SectionType, ComponentType<any>> = {
   consultation: ConsultationBlock,
   "about_hero": AboutHero,
   "about_story": StorySection,
-  // Aertsen Replication
-  "aertsen-hero-slider": AertsenHeroSlider,
-  "aertsen-services-grid": AertsenServicesGrid,
-  "aertsen-milestones": AertsenMilestones,
-  "aertsen-why-choose": AertsenWhyChoose,
-  "aertsen-portfolio-slider": AertsenPortfolioSlider,
-  "aertsen-process-wheel": AertsenProcessWheel,
-  "aertsen-factory": AertsenFactory,
-  "aertsen-google-reviews": AertsenGoogleReviews,
-  "aertsen-video-testimonials": AertsenVideoTestimonials,
-  "aertsen-final-cta": AertsenFinalCTA,
-  "aertsen-faq": AertsenFAQ,
-  "aertsen-about-hero": AertsenAboutHero,
-  "aertsen-who-we-are": AertsenWhoWeAre,
-  "aertsen-story": AertsenStory,
-  "aertsen-vision-mission": AertsenVisionMission,
-  "aertsen-promises": AertsenPromises,
-  "aertsen-founders": AertsenFounders,
-  "aertsen-timeline": AertsenTimeline,
-  "aertsen-factory-video": AertsenFactoryVideo,
-  "aertsen-about-cta": AertsenAboutCTA,
-  "aertsen-services-hero": AertsenServicesHero,
-  "aertsen-services-cards": AertsenServicesCards,
-  "aertsen-services-cta": AertsenServicesCTA,
-  "aertsen-portfolio-hero": AertsenPortfolioHero,
-  "aertsen-project-list": AertsenProjectList,
-  "aertsen-project-detail": AertsenProjectDetail,
+  // Aliignspace Replication
+  "aliignspace-hero-slider": AliignspaceHeroSlider,
+  "aliignspace-services-grid": AliignspaceServicesGrid,
+  "aliignspace-milestones": AliignspaceMilestones,
+  "aliignspace-why-choose": AliignspaceWhyChoose,
+  "aliignspace-portfolio-slider": AliignspacePortfolioSlider,
+  "aliignspace-process-wheel": AliignspaceProcessWheel,
+  "aliignspace-factory": AliignspaceFactory,
+  "aliignspace-google-reviews": AliignspaceGoogleReviews,
+  "aliignspace-video-testimonials": AliignspaceVideoTestimonials,
+  "aliignspace-final-cta": AliignspaceFinalCTA,
+  "aliignspace-faq": AliignspaceFAQ,
+  "aliignspace-about-hero": AliignspaceAboutHero,
+  "aliignspace-who-we-are": AliignspaceWhoWeAre,
+  "aliignspace-story": AliignspaceStory,
+  "aliignspace-vision-mission": AliignspaceVisionMission,
+  "aliignspace-promises": AliignspacePromises,
+  "aliignspace-founders": AliignspaceFounders,
+  "aliignspace-timeline": AliignspaceTimeline,
+  "aliignspace-factory-video": AliignspaceFactoryVideo,
+  "aliignspace-about-cta": AliignspaceAboutCTA,
+  "aliignspace-services-hero": AliignspaceServicesHero,
+  "aliignspace-services-cards": AliignspaceServicesCards,
+  "aliignspace-services-cta": AliignspaceServicesCTA,
+  "aliignspace-portfolio-hero": AliignspacePortfolioHero,
+  "aliignspace-project-list": AliignspaceProjectList,
+  "aliignspace-project-detail": AliignspaceProjectDetail,
 };
 
 // Helper function to get component by section type
@@ -1231,33 +1231,33 @@ export const sectionTypeLabels: Record<SectionType, string> = {
   consultation: "Consultation",
   "about_hero": "About Hero",
   "about_story": "About Story",
-  // Aertsen Replication
-  "aertsen-hero-slider": "Aertsen Hero Slider",
-  "aertsen-services-grid": "Aertsen Services Grid",
-  "aertsen-milestones": "Aertsen Milestones",
-  "aertsen-why-choose": "Aertsen Why Choose",
-  "aertsen-portfolio-slider": "Aertsen Portfolio Slider",
-  "aertsen-process-wheel": "Aertsen Process Wheel",
-  "aertsen-factory": "Aertsen Factory",
-  "aertsen-google-reviews": "Aertsen Google Reviews",
-  "aertsen-video-testimonials": "Aertsen Video Testimonials",
-  "aertsen-final-cta": "Aertsen Final CTA",
-  "aertsen-faq": "Aertsen FAQ",
-  "aertsen-about-hero": "Aertsen About Hero",
-  "aertsen-who-we-are": "Aertsen Who We Are",
-  "aertsen-story": "Aertsen Story",
-  "aertsen-vision-mission": "Aertsen Vision & Mission",
-  "aertsen-promises": "Aertsen Promises",
-  "aertsen-founders": "Aertsen Founders",
-  "aertsen-timeline": "Aertsen Timeline",
-  "aertsen-factory-video": "Aertsen Factory Video",
-  "aertsen-about-cta": "Aertsen About CTA",
-  "aertsen-services-hero": "Aertsen Services Hero",
-  "aertsen-services-cards": "Aertsen Services Cards",
-  "aertsen-services-cta": "Aertsen Services CTA",
-  "aertsen-portfolio-hero": "Aertsen Portfolio Hero",
-  "aertsen-project-list": "Aertsen Project List",
-  "aertsen-project-detail": "Aertsen Project Detail",
+  // Aliignspace Replication
+  "aliignspace-hero-slider": "Aliignspace Hero Slider",
+  "aliignspace-services-grid": "Aliignspace Services Grid",
+  "aliignspace-milestones": "Aliignspace Milestones",
+  "aliignspace-why-choose": "Aliignspace Why Choose",
+  "aliignspace-portfolio-slider": "Aliignspace Portfolio Slider",
+  "aliignspace-process-wheel": "Aliignspace Process Wheel",
+  "aliignspace-factory": "Aliignspace Factory",
+  "aliignspace-google-reviews": "Aliignspace Google Reviews",
+  "aliignspace-video-testimonials": "Aliignspace Video Testimonials",
+  "aliignspace-final-cta": "Aliignspace Final CTA",
+  "aliignspace-faq": "Aliignspace FAQ",
+  "aliignspace-about-hero": "Aliignspace About Hero",
+  "aliignspace-who-we-are": "Aliignspace Who We Are",
+  "aliignspace-story": "Aliignspace Story",
+  "aliignspace-vision-mission": "Aliignspace Vision & Mission",
+  "aliignspace-promises": "Aliignspace Promises",
+  "aliignspace-founders": "Aliignspace Founders",
+  "aliignspace-timeline": "Aliignspace Timeline",
+  "aliignspace-factory-video": "Aliignspace Factory Video",
+  "aliignspace-about-cta": "Aliignspace About CTA",
+  "aliignspace-services-hero": "Aliignspace Services Hero",
+  "aliignspace-services-cards": "Aliignspace Services Cards",
+  "aliignspace-services-cta": "Aliignspace Services CTA",
+  "aliignspace-portfolio-hero": "Aliignspace Portfolio Hero",
+  "aliignspace-project-list": "Aliignspace Project List",
+  "aliignspace-project-detail": "Aliignspace Project Detail",
 };
 
 // Backward-compatible alias for getDefaultSectionProps

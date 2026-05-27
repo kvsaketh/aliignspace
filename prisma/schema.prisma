@@ -327,7 +327,7 @@ model PortfolioProject {
   slug          String     @unique
   category      String
   location      String?
-  description   String?
+  description   String?    @db.Text
   image         String
   images        Json       @default("[]")
   // Legacy video fields (keep for compatibility)

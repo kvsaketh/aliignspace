@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { getOrCreateAertsenHomePage } from "@/lib/cms-page";
+import { getOrCreateAliignspaceHomePage } from "@/lib/cms-page";
 import { PageRenderer } from "@/components/page-renderer";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 export const dynamic = "force-dynamic";
 
 export default async function HomePage() {
-  const page = await getOrCreateAertsenHomePage();
+  const page = await getOrCreateAliignspaceHomePage();
   const sections = page.sections.map((s) => ({
     ...s,
     props: s.props as Record<string, any>,

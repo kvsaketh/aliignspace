@@ -38,7 +38,7 @@ export default async function PortfolioPage() {
           <div className="absolute inset-0 z-0">
             <Image
               src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1920&q=80"
-              alt="Aertsen portfolio"
+              alt="Aliignspace portfolio"
               fill
               className="object-cover"
               priority

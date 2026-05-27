@@ -11,7 +11,7 @@ interface WhatsAppFloatProps {
 
 export function WhatsAppFloat({
   phone = "919030444503",
-  message = "Hi Aertsen! I'm interested in a free interior design consultation.",
+  message = "Hi Aliignspace! I'm interested in a free interior design consultation.",
 }: WhatsAppFloatProps) {
   const encodedMessage = encodeURIComponent(message);
   const href = `https://wa.me/${phone}?text=${encodedMessage}`;

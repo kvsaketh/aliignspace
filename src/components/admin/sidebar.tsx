@@ -40,7 +40,7 @@ const navigation = [
   { name: "Global Settings", href: "/admin/settings", icon: Globe },
   { name: "Users", href: "/admin/users", icon: Users },
   { name: "System", href: "/admin/system", icon: Settings },
-  { name: "Aertsen Seed", href: "/admin/aertsen-seed", icon: Sparkles },
+  { name: "Aliignspace Seed", href: "/admin/aliignspace-seed", icon: Sparkles },
 ];
 
 export function AdminSidebar() {

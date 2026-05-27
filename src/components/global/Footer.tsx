@@ -40,17 +40,17 @@ const POLICIES = [
 const SOCIAL = [
   {
     label: "Instagram",
-    href: "https://instagram.com/aertsen",
+    href: "https://instagram.com/aliignspace",
     icon: <Instagram className="w-4 h-4" />,
   },
   {
     label: "Facebook",
-    href: "https://facebook.com/aertsen",
+    href: "https://facebook.com/aliignspace",
     icon: <Facebook className="w-4 h-4" />,
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/company/aertsen",
+    href: "https://linkedin.com/company/aliignspace",
     icon: <Linkedin className="w-4 h-4" />,
   },
 ];
@@ -119,7 +119,7 @@ function MainFooter() {
         <div className="lg:col-span-4">
           <Link href="/" className="inline-block mb-5">
             <span className="font-serif text-2xl tracking-[0.15em] text-white">
-              aertsen
+              aliignspace
             </span>
           </Link>
           <p className="text-white/50 text-sm leading-relaxed mb-6 max-w-xs">
@@ -225,10 +225,10 @@ function MainFooter() {
                 <Mail className="w-4 h-4 text-[#D46546]" />
               </div>
               <a
-                href="mailto:hello@aertsen.in"
+                href="mailto:hello@aliignspace.in"
                 className="text-sm text-white/70 hover:text-white transition-colors"
               >
-                hello@aertsen.in
+                hello@aliignspace.in
               </a>
             </li>
           </ul>
@@ -249,7 +249,7 @@ function FooterBottom() {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
           <p className="text-xs text-white/30 text-center lg:text-left">
             Copyright &copy; {year}{" "}
-            <span className="text-white/50 font-medium">Aertsen</span>. All Rights Reserved.
+            <span className="text-white/50 font-medium">Aliignspace</span>. All Rights Reserved.
           </p>
 
           <div className="flex items-center gap-5">

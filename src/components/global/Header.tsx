@@ -52,7 +52,7 @@ function MobileDrawer({ open, onClose }: { open: boolean; onClose: () => void })
             {/* Drawer header */}
             <div className="flex items-center justify-between px-6 py-5 border-b border-white/10">
               <span className="font-serif text-xl tracking-[0.15em] text-white">
-                Aertsen
+                Aliignspace
               </span>
               <button
                 onClick={onClose}
@@ -141,7 +141,7 @@ export function Header() {
                   isScrolled ? "text-[#1A1612]" : "text-white"
                 )}
               >
-                aertsen
+                aliignspace
               </span>
               <span
                 className={cn(

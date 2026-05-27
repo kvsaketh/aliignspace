@@ -1,12 +1,12 @@
 import { Metadata } from "next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { AertsenHeroSlider } from "@/components/blocks/aertsen-hero-slider";
-import { AertsenAboutBrief } from "@/components/blocks/aertsen-about-brief";
-import { AertsenServicesGrid } from "@/components/blocks/aertsen-services-grid";
-import { AertsenProcessWheel } from "@/components/blocks/aertsen-process-wheel";
-import { AertsenGoogleReviews } from "@/components/blocks/aertsen-google-reviews";
-import { AertsenFinalCTA } from "@/components/blocks/aertsen-final-cta";
+import { AliignspaceHeroSlider } from "@/components/blocks/aliignspace-hero-slider";
+import { AliignspaceAboutBrief } from "@/components/blocks/aliignspace-about-brief";
+import { AliignspaceServicesGrid } from "@/components/blocks/aliignspace-services-grid";
+import { AliignspaceProcessWheel } from "@/components/blocks/aliignspace-process-wheel";
+import { AliignspaceGoogleReviews } from "@/components/blocks/aliignspace-google-reviews";
+import { AliignspaceFinalCTA } from "@/components/blocks/aliignspace-final-cta";
 import { HomePortfolioSection } from "@/components/home-portfolio-section";
 import { VideoTestimonialsBlock } from "@/components/blocks/video-testimonials";
 
@@ -22,14 +22,14 @@ export default async function HomePage() {
     <>
       <Header />
       <main>
-        <AertsenHeroSlider
+        <AliignspaceHeroSlider
           slides={[
             { image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1920&q=80", title: "Crafting Timeless Interiors", subtitle: "Where luxury meets functionality in every corner" },
             { image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1920&q=80", title: "Bespoke Design Solutions", subtitle: "Tailored spaces that reflect your unique story" },
             { image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80", title: "Elevated Living Spaces", subtitle: "Transforming houses into extraordinary homes" },
           ]}
         />
-        <AertsenAboutBrief
+        <AliignspaceAboutBrief
           label="Who We Are"
           title="Designing Homes That"
           accentWord="Inspire"
@@ -45,7 +45,7 @@ export default async function HomePage() {
           ]}
         />
         <HomePortfolioSection />
-        <AertsenServicesGrid
+        <AliignspaceServicesGrid
           label="What We Do"
           title="Our"
           accentWord="Services"
@@ -59,7 +59,7 @@ export default async function HomePage() {
             { number: "06", title: "Commercial Spaces", description: "High-impact retail and commercial interiors.", icon: "building", link: "/services/commercial" },
           ]}
         />
-        <AertsenProcessWheel
+        <AliignspaceProcessWheel
           title="From Consultation to Keys in 60–90 Days"
           subtitle="The ALIIGNSPACE Process"
           steps={[
@@ -70,7 +70,7 @@ export default async function HomePage() {
             { number: "05", title: "Happy Handover", description: "Full walkthrough, punch list resolved, deep cleaning done. Keys to your dream home — delivered on schedule." },
           ]}
         />
-        <AertsenGoogleReviews
+        <AliignspaceGoogleReviews
           title="Loved by Homeowners"
           accentWord="Across Hyderabad"
           subtitle="Real reviews from our happy clients"
@@ -86,7 +86,7 @@ export default async function HomePage() {
           ]}
         />
         <VideoTestimonialsBlock />
-        <AertsenFinalCTA
+        <AliignspaceFinalCTA
           title="Ready to Transform Your Space?"
           body="Book a free consultation with our design experts today."
           buttons={[
