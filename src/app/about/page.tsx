@@ -46,6 +46,7 @@ export default function AboutPage() {
               src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1920&q=80"
               alt="ALIIGNSPACE interior design"
               fill
+              sizes="100vw"
               className="object-cover opacity-15"
               priority
             />
@@ -103,6 +104,7 @@ export default function AboutPage() {
                   src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"
                   alt="ALIIGNSPACE beautifully designed interior"
                   fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
                   className="object-cover"
                 />
               </div>

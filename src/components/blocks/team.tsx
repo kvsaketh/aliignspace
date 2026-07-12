@@ -40,6 +40,7 @@ export function TeamBlock({ title = "", subtitle, members = [] }: TeamProps) {
                     src={member.image}
                     alt={member.name}
                     fill
+                    sizes="(min-width: 768px) 25vw, 50vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>

@@ -21,6 +21,7 @@ export function AboutHero({
           src={backgroundImage}
           alt="About Aliignspace"
           fill
+          sizes="100vw"
           className="object-cover"
           priority
         />

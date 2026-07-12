@@ -87,6 +87,7 @@ export function AliignspaceServicesCards({
                   src={service.image || "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80"}
                   alt={service.title}
                   fill
+                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>

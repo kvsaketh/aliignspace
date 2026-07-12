@@ -63,6 +63,7 @@ export function AliignspaceFactoryVideo({
                   src={thumbnail}
                   alt="Video thumbnail"
                   fill
+                  sizes="100vw"
                   className="object-cover"
                 />
                 {/* Overlay */}

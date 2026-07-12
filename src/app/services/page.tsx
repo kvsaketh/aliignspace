@@ -216,6 +216,7 @@ export default async function ServicesPage() {
             src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1920&q=80"
             alt="Elegantly designed ALIIGNSPACE living interior"
             fill
+            sizes="100vw"
             className="object-cover"
             priority
           />
@@ -304,6 +305,7 @@ export default async function ServicesPage() {
                         src={image}
                         alt={s.title}
                         fill
+                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                         className="object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                       <div
