@@ -56,7 +56,7 @@ export default function ContactPage() {
       <Header />
       <main>
         {/* Hero */}
-        <section className="relative pt-32 pb-16 bg-[#1C1917] overflow-hidden">
+        <section className="relative pt-32 pb-16 bg-[#1a1720] overflow-hidden">
           <div className="absolute inset-0 z-0 opacity-10">
             <Image
               src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1920&q=80"
@@ -68,14 +68,14 @@ export default function ContactPage() {
             />
           </div>
           <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full opacity-5 pointer-events-none"
-            style={{ background: "radial-gradient(circle, #D46546 0%, transparent 70%)" }} />
+            style={{ background: "radial-gradient(circle, #c674f3 0%, transparent 70%)" }} />
           <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-            <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#D46546] block mb-4">
+            <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#c674f3] block mb-4">
               Let&apos;s Talk
             </span>
             <h1 className="font-serif text-5xl sm:text-6xl font-medium text-white leading-tight mb-4">
               Start Your{" "}
-              <em className="not-italic italic text-[#D46546]">Dream</em>{" "}
+              <em className="not-italic italic text-[#c674f3]">Dream</em>{" "}
               Project
             </h1>
             <p className="font-sans text-lg text-white/60 max-w-xl">
@@ -85,7 +85,7 @@ export default function ContactPage() {
         </section>
 
         {/* Main Content */}
-        <section className="py-16 lg:py-24 bg-[#F9F5ED]">
+        <section className="py-16 lg:py-24 bg-[#f6f4fb]">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">
 
@@ -93,52 +93,52 @@ export default function ContactPage() {
               <div className="lg:col-span-2 space-y-8">
                 {/* Contact card */}
                 <div className="bg-white p-8 shadow-sm">
-                  <h2 className="font-serif text-2xl font-medium text-[#1C1917] mb-6">
+                  <h2 className="font-serif text-2xl font-medium text-[#1a1720] mb-6">
                     Get in Touch
                   </h2>
                   <ul className="space-y-6">
                     <li className="flex items-start gap-4">
-                      <div className="w-10 h-10 bg-[#D46546]/10 flex items-center justify-center flex-shrink-0">
-                        <Phone className="w-5 h-5 text-[#D46546]" />
+                      <div className="w-10 h-10 bg-[#c674f3]/10 flex items-center justify-center flex-shrink-0">
+                        <Phone className="w-5 h-5 text-[#c674f3]" />
                       </div>
                       <div>
                         <p className="font-sans text-xs text-stone-400 tracking-wider uppercase mb-1">Call / WhatsApp</p>
-                        <a href="tel:+919030444503" className="font-sans text-[#1C1917] font-medium hover:text-[#D46546] transition-colors">
+                        <a href="tel:+919030444503" className="font-sans text-[#1a1720] font-medium hover:text-[#c674f3] transition-colors">
                           +91 90304 44503
                         </a>
                       </div>
                     </li>
                     <li className="flex items-start gap-4">
-                      <div className="w-10 h-10 bg-[#D46546]/10 flex items-center justify-center flex-shrink-0">
-                        <Mail className="w-5 h-5 text-[#D46546]" />
+                      <div className="w-10 h-10 bg-[#c674f3]/10 flex items-center justify-center flex-shrink-0">
+                        <Mail className="w-5 h-5 text-[#c674f3]" />
                       </div>
                       <div>
                         <p className="font-sans text-xs text-stone-400 tracking-wider uppercase mb-1">Email</p>
-                        <a href="mailto:hello@aliignspace.com" className="font-sans text-[#1C1917] font-medium hover:text-[#D46546] transition-colors">
+                        <a href="mailto:hello@aliignspace.com" className="font-sans text-[#1a1720] font-medium hover:text-[#c674f3] transition-colors">
                           hello@aliignspace.com
                         </a>
                       </div>
                     </li>
                     <li className="flex items-start gap-4">
-                      <div className="w-10 h-10 bg-[#D46546]/10 flex items-center justify-center flex-shrink-0">
-                        <MapPin className="w-5 h-5 text-[#D46546]" />
+                      <div className="w-10 h-10 bg-[#c674f3]/10 flex items-center justify-center flex-shrink-0">
+                        <MapPin className="w-5 h-5 text-[#c674f3]" />
                       </div>
                       <div>
                         <p className="font-sans text-xs text-stone-400 tracking-wider uppercase mb-1">Studio Locations</p>
-                        <p className="font-sans text-[#1C1917] font-medium">Hyderabad Studio</p>
+                        <p className="font-sans text-[#1a1720] font-medium">Hyderabad Studio</p>
                         <p className="font-sans text-stone-500 text-sm">NBR Towers, Road No. 36</p>
                         <p className="font-sans text-stone-500 text-sm">Jawahar Colony, Jubilee Hills, 500033</p>
-                        <p className="font-sans text-[#1C1917] font-medium mt-3">Also serving</p>
+                        <p className="font-sans text-[#1a1720] font-medium mt-3">Also serving</p>
                         <p className="font-sans text-stone-500 text-sm">Nellore & across AP & Telangana</p>
                       </div>
                     </li>
                     <li className="flex items-start gap-4">
-                      <div className="w-10 h-10 bg-[#D46546]/10 flex items-center justify-center flex-shrink-0">
-                        <Clock className="w-5 h-5 text-[#D46546]" />
+                      <div className="w-10 h-10 bg-[#c674f3]/10 flex items-center justify-center flex-shrink-0">
+                        <Clock className="w-5 h-5 text-[#c674f3]" />
                       </div>
                       <div>
                         <p className="font-sans text-xs text-stone-400 tracking-wider uppercase mb-1">Working Hours</p>
-                        <p className="font-sans text-[#1C1917] font-medium">Monday – Saturday</p>
+                        <p className="font-sans text-[#1a1720] font-medium">Monday – Saturday</p>
                         <p className="font-sans text-stone-500 text-sm">9:00 AM – 7:00 PM</p>
                       </div>
                     </li>
@@ -159,7 +159,7 @@ export default function ContactPage() {
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label={s.label}
-                          className="w-10 h-10 bg-[#1C1917] text-white flex items-center justify-center hover:bg-[#D46546] transition-colors duration-200"
+                          className="w-10 h-10 bg-[#1a1720] text-white flex items-center justify-center hover:bg-[#c674f3] transition-colors duration-200"
                         >
                           {s.icon}
                         </a>
@@ -191,10 +191,10 @@ export default function ContactPage() {
                 <div className="bg-white p-8 lg:p-10 shadow-sm">
                   {submitted ? (
                     <div className="py-16 text-center">
-                      <div className="w-16 h-16 bg-[#D46546]/10 flex items-center justify-center mx-auto mb-5">
-                        <CheckCircle2 className="w-8 h-8 text-[#D46546]" />
+                      <div className="w-16 h-16 bg-[#c674f3]/10 flex items-center justify-center mx-auto mb-5">
+                        <CheckCircle2 className="w-8 h-8 text-[#c674f3]" />
                       </div>
-                      <h3 className="font-serif text-2xl font-medium text-[#1C1917] mb-3">
+                      <h3 className="font-serif text-2xl font-medium text-[#1a1720] mb-3">
                         Message Received!
                       </h3>
                       <p className="font-sans text-stone-500 mb-8 max-w-sm mx-auto">
@@ -202,7 +202,7 @@ export default function ContactPage() {
                       </p>
                       <button
                         onClick={() => setSubmitted(false)}
-                        className="font-sans text-sm text-[#D46546] hover:underline"
+                        className="font-sans text-sm text-[#c674f3] hover:underline"
                       >
                         Send another message
                       </button>
@@ -210,7 +210,7 @@ export default function ContactPage() {
                   ) : (
                     <>
                       <div className="mb-8">
-                        <h2 className="font-serif text-2xl font-medium text-[#1C1917] mb-1">
+                        <h2 className="font-serif text-2xl font-medium text-[#1a1720] mb-1">
                           Tell us about your project
                         </h2>
                         <p className="font-sans text-stone-400 text-sm">
@@ -230,7 +230,7 @@ export default function ContactPage() {
                               value={form.name}
                               onChange={(e) => set("name", e.target.value)}
                               placeholder="Your name"
-                              className="w-full border border-stone-200 px-4 py-3 font-sans text-sm text-[#1C1917] placeholder-stone-300 focus:outline-none focus:border-[#D46546] transition-colors"
+                              className="w-full border border-stone-200 px-4 py-3 font-sans text-sm text-[#1a1720] placeholder-stone-300 focus:outline-none focus:border-[#c674f3] transition-colors"
                             />
                           </div>
                           <div>
@@ -247,7 +247,7 @@ export default function ContactPage() {
                                 value={form.phone}
                                 onChange={(e) => set("phone", e.target.value)}
                                 placeholder="90304 44503"
-                                className="flex-1 border border-stone-200 px-4 py-3 font-sans text-sm text-[#1C1917] placeholder-stone-300 focus:outline-none focus:border-[#D46546] transition-colors"
+                                className="flex-1 border border-stone-200 px-4 py-3 font-sans text-sm text-[#1a1720] placeholder-stone-300 focus:outline-none focus:border-[#c674f3] transition-colors"
                               />
                             </div>
                           </div>
@@ -263,7 +263,7 @@ export default function ContactPage() {
                               value={form.email}
                               onChange={(e) => set("email", e.target.value)}
                               placeholder="your@email.com"
-                              className="w-full border border-stone-200 px-4 py-3 font-sans text-sm text-[#1C1917] placeholder-stone-300 focus:outline-none focus:border-[#D46546] transition-colors"
+                              className="w-full border border-stone-200 px-4 py-3 font-sans text-sm text-[#1a1720] placeholder-stone-300 focus:outline-none focus:border-[#c674f3] transition-colors"
                             />
                           </div>
                           <div>
@@ -275,7 +275,7 @@ export default function ContactPage() {
                               value={form.city}
                               onChange={(e) => set("city", e.target.value)}
                               placeholder="Hyderabad / Nellore"
-                              className="w-full border border-stone-200 px-4 py-3 font-sans text-sm text-[#1C1917] placeholder-stone-300 focus:outline-none focus:border-[#D46546] transition-colors"
+                              className="w-full border border-stone-200 px-4 py-3 font-sans text-sm text-[#1a1720] placeholder-stone-300 focus:outline-none focus:border-[#c674f3] transition-colors"
                             />
                           </div>
                         </div>
@@ -288,8 +288,8 @@ export default function ContactPage() {
                             <select
                               value={form.projectType}
                               onChange={(e) => set("projectType", e.target.value)}
-                              className="w-full border border-stone-200 px-4 py-3 font-sans text-sm focus:outline-none focus:border-[#D46546] transition-colors bg-white appearance-none"
-                              style={{ color: form.projectType ? "#1C1917" : "#94a3b8" }}
+                              className="w-full border border-stone-200 px-4 py-3 font-sans text-sm focus:outline-none focus:border-[#c674f3] transition-colors bg-white appearance-none"
+                              style={{ color: form.projectType ? "#1a1720" : "#94a3b8" }}
                             >
                               <option value="">Select type</option>
                               {projectTypes.map((t) => (
@@ -304,8 +304,8 @@ export default function ContactPage() {
                             <select
                               value={form.budget}
                               onChange={(e) => set("budget", e.target.value)}
-                              className="w-full border border-stone-200 px-4 py-3 font-sans text-sm focus:outline-none focus:border-[#D46546] transition-colors bg-white appearance-none"
-                              style={{ color: form.budget ? "#1C1917" : "#94a3b8" }}
+                              className="w-full border border-stone-200 px-4 py-3 font-sans text-sm focus:outline-none focus:border-[#c674f3] transition-colors bg-white appearance-none"
+                              style={{ color: form.budget ? "#1a1720" : "#94a3b8" }}
                             >
                               <option value="">Select range</option>
                               {budgetRanges.map((b) => (
@@ -324,14 +324,14 @@ export default function ContactPage() {
                             onChange={(e) => set("message", e.target.value)}
                             placeholder="Tell us more about your project — size, style preferences, timeline..."
                             rows={4}
-                            className="w-full border border-stone-200 px-4 py-3 font-sans text-sm text-[#1C1917] placeholder-stone-300 focus:outline-none focus:border-[#D46546] transition-colors resize-none"
+                            className="w-full border border-stone-200 px-4 py-3 font-sans text-sm text-[#1a1720] placeholder-stone-300 focus:outline-none focus:border-[#c674f3] transition-colors resize-none"
                           />
                         </div>
 
                         <button
                           type="submit"
                           disabled={loading}
-                          className="w-full flex items-center justify-center gap-2 bg-[#D46546] hover:bg-[#c44d32] disabled:opacity-60 text-white font-sans font-semibold text-sm py-4 transition-all duration-300 hover:shadow-lg hover:shadow-[#D46546]/25"
+                          className="w-full flex items-center justify-center gap-2 bg-[#c674f3] hover:bg-[#9b57cf] disabled:opacity-60 text-white font-sans font-semibold text-sm py-4 transition-all duration-300 hover:shadow-lg hover:shadow-[#c674f3]/25"
                         >
                           {loading ? (
                             <span className="flex items-center gap-2">
@@ -365,7 +365,7 @@ export default function ContactPage() {
         <section className="h-80 bg-stone-200 relative overflow-hidden">
           <div className="absolute inset-0 bg-stone-100 flex items-center justify-center">
             <div className="text-center">
-              <MapPin className="w-8 h-8 text-[#D46546] mx-auto mb-2" />
+              <MapPin className="w-8 h-8 text-[#c674f3] mx-auto mb-2" />
               <p className="font-sans text-stone-500 text-sm">
                 Hitech City, Hyderabad · MG Road, Nellore
               </p>
@@ -373,7 +373,7 @@ export default function ContactPage() {
                 href="https://maps.google.com/?q=Hitech+City+Hyderabad"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-[#D46546] text-sm mt-2 hover:underline"
+                className="inline-flex items-center gap-1 text-[#c674f3] text-sm mt-2 hover:underline"
               >
                 Open in Maps <ArrowRight className="w-3 h-3" />
               </a>

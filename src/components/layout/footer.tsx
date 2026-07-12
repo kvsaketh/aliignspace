@@ -44,7 +44,7 @@ const SOCIAL = [
     label: "Instagram",
     href: "https://instagram.com/aliignspace",
     icon: <Instagram className="w-4 h-4" />,
-    color: "hover:bg-gradient-to-br hover:from-[#f09433] hover:via-[#e6683c] hover:to-[#bc1888]",
+    color: "hover:bg-gradient-to-br hover:from-[#f09433] hover:via-[#c674f3] hover:to-[#bc1888]",
   },
   {
     label: "Facebook",
@@ -193,7 +193,7 @@ function CopyrightBar() {
 
 export function Footer() {
   return (
-    <footer className="bg-[#1C1917] text-white relative overflow-hidden">
+    <footer className="bg-[#1a1720] text-white relative overflow-hidden">
       {/* Subtle top terracotta accent line */}
       <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-terracotta-500 to-transparent opacity-60" />
 
@@ -201,12 +201,12 @@ export function Footer() {
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -top-40 -left-40 w-96 h-96 rounded-full opacity-5"
-        style={{ background: "radial-gradient(circle, #d46546 0%, transparent 70%)" }}
+        style={{ background: "radial-gradient(circle, #c674f3 0%, transparent 70%)" }}
       />
       <div
         aria-hidden="true"
         className="pointer-events-none absolute bottom-0 right-0 w-80 h-80 rounded-full opacity-5"
-        style={{ background: "radial-gradient(circle, #d46546 0%, transparent 70%)" }}
+        style={{ background: "radial-gradient(circle, #c674f3 0%, transparent 70%)" }}
       />
 
       {/* ── Main grid ─────────────────────────────────────────────────────── */}

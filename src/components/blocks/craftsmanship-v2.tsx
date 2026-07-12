@@ -67,7 +67,7 @@ function FeatureCard({ feature, index }: { feature: Feature; index: number }) {
         <Icon className="w-6 h-6 text-terracotta-500" />
       </div>
       <div>
-        <h4 className="font-serif text-lg font-medium text-[#1C1917] mb-1">
+        <h4 className="font-serif text-lg font-medium text-[#1a1720] mb-1">
           {feature.title}
         </h4>
         <p className="font-sans text-sm text-stone-600 leading-relaxed">
@@ -104,7 +104,7 @@ export function CraftsmanshipV2({
             </motion.span>
             
             <motion.h2
-              className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#1C1917] leading-tight mb-6"
+              className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#1a1720] leading-tight mb-6"
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 }}

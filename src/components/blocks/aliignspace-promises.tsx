@@ -56,7 +56,7 @@ export function AliignspacePromises({
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-24 lg:py-32 overflow-hidden" style={{ backgroundColor: "#f9f7f4" }}>
+    <section ref={ref} className="py-24 lg:py-32 overflow-hidden" style={{ backgroundColor: "#f7f5fb" }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
           {/* Left: Text with commitments */}
@@ -65,11 +65,11 @@ export function AliignspacePromises({
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
-            <span className="inline-block font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#D46546] mb-4">
+            <span className="inline-block font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#c674f3] mb-4">
               {label}
             </span>
-            <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-[#1A1612] leading-[1.1] tracking-tight mb-10">
-              {title} <span className="italic text-[#D46546]">{accentWord}</span>
+            <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-[#16141f] leading-[1.1] tracking-tight mb-10">
+              {title} <span className="italic text-[#c674f3]">{accentWord}</span>
             </h2>
 
             <div className="space-y-4">
@@ -81,7 +81,7 @@ export function AliignspacePromises({
                   transition={{ duration: 0.5, delay: 0.1 + i * 0.08, ease: [0.16, 1, 0.3, 1] }}
                   className="flex items-start gap-3"
                 >
-                  <span className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center mt-0.5" style={{ backgroundColor: "rgb(255,134,113)" }}>
+                  <span className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center mt-0.5" style={{ backgroundColor: "rgb(198, 116, 243)" }}>
                     <Check className="w-3 h-3 text-white" />
                   </span>
                   <span className="font-sans text-base text-stone-600">{item.text}</span>
@@ -101,7 +101,7 @@ export function AliignspacePromises({
                 className="p-8 rounded-[20px] bg-white border border-stone-100 hover:shadow-lg transition-shadow duration-300"
               >
                 <span className="font-serif text-4xl font-medium text-stone-200">{card.number}</span>
-                <h3 className="font-serif text-xl sm:text-2xl font-medium text-[#1A1612] mt-3 mb-2">
+                <h3 className="font-serif text-xl sm:text-2xl font-medium text-[#16141f] mt-3 mb-2">
                   {card.title}
                 </h3>
                 <p className="font-sans text-base text-stone-600 leading-relaxed">

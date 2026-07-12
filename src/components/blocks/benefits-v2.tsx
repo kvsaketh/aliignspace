@@ -86,7 +86,7 @@ function BenefitCard({ benefit, index }: { benefit: Benefit; index: number }) {
 
         {/* Content */}
         <div className="flex-1 pt-2">
-          <h3 className="font-serif text-xl sm:text-2xl font-medium text-[#1C1917] mb-3 group-hover:text-terracotta-500 transition-colors duration-300">
+          <h3 className="font-serif text-xl sm:text-2xl font-medium text-[#1a1720] mb-3 group-hover:text-terracotta-500 transition-colors duration-300">
             {benefit.title}
           </h3>
           <p className="font-sans text-sm sm:text-base text-stone-600 leading-relaxed mb-4">
@@ -138,7 +138,7 @@ export function BenefitsV2({
             {subtitle}
           </motion.span>
           <motion.h2
-            className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#1C1917] leading-tight"
+            className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#1a1720] leading-tight"
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}

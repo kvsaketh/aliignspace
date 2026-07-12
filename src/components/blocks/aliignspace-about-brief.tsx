@@ -82,8 +82,8 @@ function FloatingImages({ images }: { images: string[] }) {
       </div>
 
       {/* Static decorative blobs — CSS only, no JS */}
-      <div className="absolute -bottom-10 -right-10 w-48 h-48 rounded-full opacity-25 blur-2xl pointer-events-none" style={{ backgroundColor: "rgb(250,202,194)" }} />
-      <div className="absolute top-10 -left-10 w-40 h-40 rounded-full opacity-15 blur-2xl pointer-events-none" style={{ backgroundColor: "rgb(255,134,113)" }} />
+      <div className="absolute -bottom-10 -right-10 w-48 h-48 rounded-full opacity-25 blur-2xl pointer-events-none" style={{ backgroundColor: "rgb(217, 165, 247)" }} />
+      <div className="absolute top-10 -left-10 w-40 h-40 rounded-full opacity-15 blur-2xl pointer-events-none" style={{ backgroundColor: "rgb(198, 116, 243)" }} />
     </div>
   );
 }
@@ -122,7 +122,7 @@ export function AliignspaceAboutBrief({
     <section
       ref={sectionRef}
       className="relative py-24 lg:py-32 overflow-hidden"
-      style={{ backgroundColor: "#f9f7f4" }}
+      style={{ backgroundColor: "#f7f5fb" }}
     >
       {/* Ghost text background */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
@@ -131,7 +131,7 @@ export function AliignspaceAboutBrief({
           animate={{ opacity: 0.04 }}
           transition={{ duration: 1.5, delay: 0.3 }}
           className="font-serif text-[clamp(100px,18vw,280px)] font-bold tracking-tighter whitespace-nowrap"
-          style={{ color: "#1A1612" }}
+          style={{ color: "#16141f" }}
         >
           ALIIGNSPACE
         </motion.span>
@@ -140,10 +140,10 @@ export function AliignspaceAboutBrief({
       {/* Static decorative blobs */}
       <div
         className="absolute top-20 right-[10%] w-24 h-24 rounded-full opacity-20 blur-xl pointer-events-none"
-        style={{ backgroundColor: "rgb(250,202,194)" }}
+        style={{ backgroundColor: "rgb(217, 165, 247)" }}
       />
-      <div className="absolute bottom-40 left-[5%] w-32 h-32 rounded-full opacity-15 blur-xl pointer-events-none" style={{ backgroundColor: "rgb(255,134,113)" }} />
-      <div className="absolute top-[40%] left-[45%] w-16 h-16 rounded-full opacity-10 blur-lg pointer-events-none" style={{ backgroundColor: "rgb(255,134,113)" }} />
+      <div className="absolute bottom-40 left-[5%] w-32 h-32 rounded-full opacity-15 blur-xl pointer-events-none" style={{ backgroundColor: "rgb(198, 116, 243)" }} />
+      <div className="absolute top-[40%] left-[45%] w-16 h-16 rounded-full opacity-10 blur-lg pointer-events-none" style={{ backgroundColor: "rgb(198, 116, 243)" }} />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Main grid: text left, images right */}
@@ -156,7 +156,7 @@ export function AliignspaceAboutBrief({
               animate={isTextInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               className="inline-block font-sans text-xs font-semibold tracking-[0.25em] uppercase mb-6"
-              style={{ color: "rgb(255,134,113)" }}
+              style={{ color: "rgb(198, 116, 243)" }}
             >
               {label}
             </motion.span>
@@ -167,13 +167,13 @@ export function AliignspaceAboutBrief({
               animate={isTextInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
               className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-medium leading-[1.05] tracking-tight mb-8"
-              style={{ color: "#1A1612" }}
+              style={{ color: "#16141f" }}
             >
               {title}{" "}
               <span
                 className="italic bg-clip-text text-transparent"
                 style={{
-                  backgroundImage: "linear-gradient(135deg, rgb(255,134,113) 0%, rgb(250,202,194) 100%)",
+                  backgroundImage: "linear-gradient(135deg, rgb(198, 116, 243) 0%, rgb(217, 165, 247) 100%)",
                 }}
               >
                 {accentWord}
@@ -193,7 +193,7 @@ export function AliignspaceAboutBrief({
                     ease: [0.16, 1, 0.3, 1],
                   }}
                   className="font-sans text-base sm:text-lg leading-relaxed"
-                  style={{ color: "#1A1612", opacity: 0.75 }}
+                  style={{ color: "#16141f", opacity: 0.75 }}
                 >
                   {paragraph}
                 </motion.p>
@@ -207,7 +207,7 @@ export function AliignspaceAboutBrief({
               transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="mt-8 h-[2px] w-24 origin-left"
               style={{
-                background: "linear-gradient(90deg, rgb(255,134,113), rgb(250,202,194))",
+                background: "linear-gradient(90deg, rgb(198, 116, 243), rgb(217, 165, 247))",
               }}
             />
           </div>
@@ -241,13 +241,13 @@ export function AliignspaceAboutBrief({
             >
               <div
                 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight"
-                style={{ color: "#1A1612" }}
+                style={{ color: "#16141f" }}
               >
                 <AnimatedNumber target={stat.number} suffix={stat.suffix} />
               </div>
               <p
                 className="font-sans text-sm sm:text-base mt-2 tracking-wide uppercase"
-                style={{ color: "#1A1612", opacity: 0.5 }}
+                style={{ color: "#16141f", opacity: 0.5 }}
               >
                 {stat.label}
               </p>

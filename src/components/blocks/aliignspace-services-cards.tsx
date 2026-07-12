@@ -68,7 +68,7 @@ export function AliignspaceServicesCards({
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-24 lg:py-32 overflow-hidden" style={{ backgroundColor: "#f9f7f4" }}>
+    <section ref={ref} className="py-24 lg:py-32 overflow-hidden" style={{ backgroundColor: "#f7f5fb" }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, i) => (
@@ -93,7 +93,7 @@ export function AliignspaceServicesCards({
 
               {/* Content */}
               <div className="p-6 sm:p-8">
-                <h3 className="font-serif text-xl sm:text-2xl font-medium text-[#1A1612] mb-3">
+                <h3 className="font-serif text-xl sm:text-2xl font-medium text-[#16141f] mb-3">
                   {service.title}
                 </h3>
                 <p className="font-sans text-base text-stone-600 leading-relaxed mb-5">
@@ -107,7 +107,7 @@ export function AliignspaceServicesCards({
                       <span
                         key={fi}
                         className="px-3 py-1 text-xs font-sans font-medium rounded-full"
-                        style={{ backgroundColor: "rgb(250,202,194)", color: "#1A1612" }}
+                        style={{ backgroundColor: "rgb(217, 165, 247)", color: "#16141f" }}
                       >
                         {feature}
                       </span>
@@ -119,7 +119,7 @@ export function AliignspaceServicesCards({
                 {service.link && (
                   <Link
                     href={service.link}
-                    className="inline-flex items-center gap-2 font-sans text-sm font-medium text-[#D46546] group/link"
+                    className="inline-flex items-center gap-2 font-sans text-sm font-medium text-[#c674f3] group/link"
                   >
                     Explore
                     <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />

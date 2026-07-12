@@ -33,7 +33,7 @@ export function TeamGrid({
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2
-            className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#1C1917] mb-4"
+            className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#1a1720] mb-4"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
           >
@@ -68,7 +68,7 @@ export function TeamGrid({
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
-              <h3 className="font-serif text-xl font-medium text-[#1C1917]">{member.name}</h3>
+              <h3 className="font-serif text-xl font-medium text-[#1a1720]">{member.name}</h3>
               <p className="font-sans text-sm text-terracotta-500">{member.role}</p>
             </motion.div>
           ))}

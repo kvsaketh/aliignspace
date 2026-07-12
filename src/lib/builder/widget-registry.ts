@@ -61,7 +61,7 @@ export const widgetRegistry: WidgetRegistryItem[] = [
       length: "100%",
     },
     defaultStyle: {
-      borderColor: "#EDE0D4",
+      borderColor: "#e6e2f0",
       marginTop: "24px",
       marginBottom: "24px",
     },
@@ -133,7 +133,7 @@ export const widgetRegistry: WidgetRegistryItem[] = [
     },
     defaultStyle: {
       padding: "24px",
-      backgroundColor: "#FFFBF7",
+      backgroundColor: "#fdfcff",
       borderRadius: "16px",
     },
   },
@@ -151,8 +151,8 @@ export const widgetRegistry: WidgetRegistryItem[] = [
       rating: 5,
     },
     defaultStyle: {
-      backgroundColor: "#FDF6F0",
-      borderLeftColor: "#E07A5F",
+      backgroundColor: "#f7f4fc",
+      borderLeftColor: "#c674f3",
       borderLeftWidth: "4px",
       padding: "2rem",
     },
@@ -170,7 +170,7 @@ export const widgetRegistry: WidgetRegistryItem[] = [
       duration: 2,
     },
     defaultStyle: {
-      color: "#E07A5F",
+      color: "#c674f3",
       fontSize: "3rem",
       fontFamily: "var(--font-playfair)",
       fontWeight: 600,
@@ -280,7 +280,7 @@ export const widgetRegistry: WidgetRegistryItem[] = [
       icon: "ArrowRight",
     },
     defaultStyle: {
-      backgroundColor: "#E07A5F",
+      backgroundColor: "#c674f3",
       color: "#ffffff",
       fontSize: "0.875rem",
       fontWeight: 600,

@@ -8,7 +8,30 @@ import { AliignspaceProcessWheel } from "@/components/blocks/aliignspace-process
 import { AliignspaceGoogleReviews } from "@/components/blocks/aliignspace-google-reviews";
 import { AliignspaceFinalCTA } from "@/components/blocks/aliignspace-final-cta";
 import { HomePortfolioSection } from "@/components/home-portfolio-section";
-import { VideoTestimonialsBlock } from "@/components/blocks/video-testimonials";
+import { ClientStoriesSection } from "@/components/client-stories-section";
+import { prisma } from "@/lib/prisma";
+
+interface HeroSlide { image?: string; title: string; subtitle: string }
+
+const FALLBACK_HERO_SLIDES: HeroSlide[] = [
+  { image: "/hero/kitchen.jpg", title: "Crafting Timeless Interiors", subtitle: "Where luxury meets functionality in every corner" },
+  { image: "/hero/dining.jpg", title: "Bespoke Design Solutions", subtitle: "Tailored spaces that reflect your unique story" },
+  { image: "/hero/living-room.jpg", title: "Elevated Living Spaces", subtitle: "Transforming houses into extraordinary homes" },
+  { image: "/hero/kitchen-2.jpg", title: "Precision in Every Detail", subtitle: "Meticulous craftsmanship from concept to completion" },
+];
+
+async function getHeroSlides(): Promise<HeroSlide[]> {
+  try {
+    const block = await prisma.globalBlock.findUnique({
+      where: { type_name: { type: "HERO", name: "main" } },
+    });
+    const slides = (block?.content as { slides?: HeroSlide[] } | null)?.slides;
+    if (slides && slides.length > 0) return slides;
+  } catch {
+    // fall through to defaults
+  }
+  return FALLBACK_HERO_SLIDES;
+}
 
 export const metadata: Metadata = {
   title: "ALIIGNSPACE — Best Interior Designers in Hyderabad & Nellore",
@@ -18,29 +41,25 @@ export const metadata: Metadata = {
 export const dynamic = "force-dynamic";
 
 export default async function HomePage() {
+  const heroSlides = await getHeroSlides();
   return (
     <>
       <Header />
       <main>
-        <AliignspaceHeroSlider
-          slides={[
-            { image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1920&q=80", title: "Crafting Timeless Interiors", subtitle: "Where luxury meets functionality in every corner" },
-            { image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1920&q=80", title: "Bespoke Design Solutions", subtitle: "Tailored spaces that reflect your unique story" },
-            { image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80", title: "Elevated Living Spaces", subtitle: "Transforming houses into extraordinary homes" },
-          ]}
-        />
+        <AliignspaceHeroSlider slides={heroSlides} />
         <AliignspaceAboutBrief
           label="Who We Are"
           title="Designing Homes That"
           accentWord="Inspire"
           body={[
-            "At ALIIGNSPACE, we don't just design interiors — we craft experiences. Every space tells a story, and we're here to help you write yours.",
-            "Founded in 2021 by Ar. Samhitha Nagasamudra and Ar. Murali, we bring transparency, quality, and precision to every project across Hyderabad & Nellore.",
+            "At ALIIGNSPACE, we believe one simple thing — a home is not about expensive decoration; it's about fulfilling each individual's functional requirements, and each day when you see your space, it should inspire you and bring you joy.",
+            "Since 2021, we've been designing spaces that are not just beautiful, but practical, thoughtfully planned, and built to last. We believe the design journey should start with trust and inspiration, which is why we're committed to making every step better — with transparent pricing, honest communication, and uncompromising quality.",
+            "Founded by Samhitha, Murali and Akhil, we're proud to create homes and spaces across Hyderabad, Nellore and Vizag that our clients truly love living in.",
           ]}
           stats={[
             { number: "50", suffix: "+", label: "Homes" },
             { number: "5", suffix: "+", label: "Years" },
-            { number: "2", suffix: "", label: "Cities" },
+            { number: "3", suffix: "", label: "Cities" },
             { number: "4.9", suffix: "★", label: "Rating" },
           ]}
         />
@@ -51,16 +70,14 @@ export default async function HomePage() {
           accentWord="Services"
           subtitle="Comprehensive interior solutions for every space and style"
           services={[
-            { number: "01", title: "Full Home Interiors", description: "Complete turnkey transformation of your entire home.", icon: "home", link: "/services/home-interiors" },
-            { number: "02", title: "Modular Kitchen", description: "Smart kitchens with premium finishes and hardware.", icon: "utensils", link: "/services/modular-kitchen" },
-            { number: "03", title: "Living Room Design", description: "Statement spaces that balance comfort and style.", icon: "sofa", link: "/services/living-room" },
-            { number: "04", title: "Bedroom Design", description: "Serene retreats crafted for rest and relaxation.", icon: "bed", link: "/services/bedroom" },
-            { number: "05", title: "Wardrobe & Storage", description: "Precision-designed storage solutions for every space.", icon: "briefcase", link: "/services/wardrobe" },
-            { number: "06", title: "Commercial Spaces", description: "High-impact retail and commercial interiors.", icon: "building", link: "/services/commercial" },
+            { number: "01", title: "Turnkey Solutions", description: "From woodwork to curtains — complete turnkey décor solutions for your home.", icon: "home", link: "/services/turnkey" },
+            { number: "02", title: "Home Renovation", description: "Thoughtful renovation of existing homes, done right.", icon: "sofa", link: "/services/renovation" },
+            { number: "03", title: "Modular Solutions", description: "Kitchens, wardrobes and storage — engineered to fit your life.", icon: "utensils", link: "/services/modular" },
+            { number: "04", title: "Commercial Space Design", description: "High-impact retail, office and commercial interiors.", icon: "building", link: "/services/commercial" },
           ]}
         />
         <AliignspaceProcessWheel
-          title="From Consultation to Keys in 60–90 Days"
+          title="From Design Start to Final Keys in 75–90 Days"
           subtitle="The ALIIGNSPACE Process"
           steps={[
             { number: "01", title: "Meet Designer", description: "A relaxed consultation at your home or our studio. We listen, understand your lifestyle, and align on vision and budget." },
@@ -70,6 +87,7 @@ export default async function HomePage() {
             { number: "05", title: "Happy Handover", description: "Full walkthrough, punch list resolved, deep cleaning done. Keys to your dream home — delivered on schedule." },
           ]}
         />
+        <ClientStoriesSection />
         <AliignspaceGoogleReviews
           title="Loved by Homeowners"
           accentWord="Across Hyderabad"
@@ -85,7 +103,6 @@ export default async function HomePage() {
             { name: "Thupupalli Ravindra", rating: 4, review: "I was extremely delighted with the team work of Alignspace. Three best qualities they have: 1. Design to actual — 100%. 2. Time schedule — delivered within agreed time. 3. Reasonable pricing and documentation.", location: "Hyderabad", time: "11 months ago" },
           ]}
         />
-        <VideoTestimonialsBlock />
         <AliignspaceFinalCTA
           title="Ready to Transform Your Space?"
           body="Book a free consultation with our design experts today."

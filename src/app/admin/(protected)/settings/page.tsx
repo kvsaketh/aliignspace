@@ -2,6 +2,7 @@ import { prisma } from "@/lib/prisma";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { StoryEditor } from "@/components/admin/StoryEditor";
+import { HeroEditor } from "@/components/admin/HeroEditor";
 
 export default async function SettingsAdminPage() {
   const blocks = await prisma.globalBlock.findMany({ orderBy: { type: "asc" } });
@@ -59,6 +60,9 @@ export default async function SettingsAdminPage() {
           </CardContent>
         </Card>
       </div>
+
+      {/* Hero Backgrounds Editor */}
+      <HeroEditor />
 
       {/* Story Section Editor */}
       <StoryEditor />

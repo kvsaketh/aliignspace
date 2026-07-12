@@ -103,7 +103,7 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
           
           {/* Arrow Icon */}
           <div className="absolute top-4 right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
-            <ArrowUpRight className="w-5 h-5 text-[#1C1917]" />
+            <ArrowUpRight className="w-5 h-5 text-[#1a1720]" />
           </div>
         </div>
 
@@ -115,7 +115,7 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
             </div>
           )}
           <div>
-            <h3 className="text-lg font-medium text-[#1C1917] group-hover:text-terracotta-500 transition-colors mb-1">
+            <h3 className="text-lg font-medium text-[#1a1720] group-hover:text-terracotta-500 transition-colors mb-1">
               {service.title}
             </h3>
             <p className="text-sm text-stone-500 line-clamp-2">
@@ -154,7 +154,7 @@ export function ServicesClean({
           </motion.div>
           
           <motion.h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-serif font-medium text-[#1C1917] mb-4"
+            className="text-3xl sm:text-4xl lg:text-5xl font-serif font-medium text-[#1a1720] mb-4"
             initial={{ opacity: 0, y: 20 }}
             animate={isHeaderInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.1 }}

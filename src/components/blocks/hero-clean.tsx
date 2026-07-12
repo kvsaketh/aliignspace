@@ -51,7 +51,7 @@ export function HeroClean({
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-[0.02]">
         <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, #1C1917 1px, transparent 0)`,
+          backgroundImage: `radial-gradient(circle at 1px 1px, #1a1720 1px, transparent 0)`,
           backgroundSize: "40px 40px",
         }} />
       </div>
@@ -79,7 +79,7 @@ export function HeroClean({
 
             {/* Heading */}
             <motion.h1
-              className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-serif font-medium text-[#1C1917] leading-[1.1] mb-6"
+              className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-serif font-medium text-[#1a1720] leading-[1.1] mb-6"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -107,7 +107,7 @@ export function HeroClean({
             >
               <Link
                 href={buttonUrl}
-                className="group inline-flex items-center gap-2 px-6 py-3 bg-[#1C1917] text-white text-sm font-medium hover:bg-terracotta-500 transition-colors duration-300"
+                className="group inline-flex items-center gap-2 px-6 py-3 bg-[#1a1720] text-white text-sm font-medium hover:bg-terracotta-500 transition-colors duration-300"
               >
                 {buttonText}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -115,7 +115,7 @@ export function HeroClean({
               
               <Link
                 href={secondaryButtonUrl}
-                className="inline-flex items-center gap-2 px-6 py-3 border border-[#1C1917] text-[#1C1917] text-sm font-medium hover:bg-[#1C1917] hover:text-white transition-colors duration-300"
+                className="inline-flex items-center gap-2 px-6 py-3 border border-[#1a1720] text-[#1a1720] text-sm font-medium hover:bg-[#1a1720] hover:text-white transition-colors duration-300"
               >
                 {secondaryButtonText}
               </Link>
@@ -146,7 +146,7 @@ export function HeroClean({
                 { value: "4.9", label: "Rating" },
               ].map((stat, i) => (
                 <div key={i} className="text-center">
-                  <div className="text-2xl sm:text-3xl font-serif font-medium text-[#1C1917]">
+                  <div className="text-2xl sm:text-3xl font-serif font-medium text-[#1a1720]">
                     {stat.value}
                   </div>
                   <div className="text-xs text-stone-500 uppercase tracking-wider">
@@ -193,7 +193,7 @@ export function HeroClean({
               <div className="text-xs text-stone-500 uppercase tracking-wider mb-1">
                 Established
               </div>
-              <div className="text-3xl font-serif font-medium text-[#1C1917]">
+              <div className="text-3xl font-serif font-medium text-[#1a1720]">
                 2021
               </div>
             </motion.div>

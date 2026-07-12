@@ -52,7 +52,7 @@ export function StatsBlock({ stats = defaultStats }: StatsProps) {
         {/* Label */}
         <Reveal direction="fade">
           <div className="text-center mb-14">
-            <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#D46546]">
+            <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#c674f3]">
               Our Numbers
             </span>
           </div>
@@ -64,7 +64,7 @@ export function StatsBlock({ stats = defaultStats }: StatsProps) {
             <Reveal key={index} direction="up" delay={index * 100}>
               <div className="flex flex-col items-center text-center px-6 py-8 relative">
                 {/* Number — animated if numeric, static if string */}
-                <span className="font-serif text-5xl sm:text-6xl lg:text-7xl font-medium text-[#1C1917] leading-none mb-2">
+                <span className="font-serif text-5xl sm:text-6xl lg:text-7xl font-medium text-[#1a1720] leading-none mb-2">
                   {stat.number !== undefined ? (
                     <AnimatedCounter
                       end={stat.number}
@@ -78,7 +78,7 @@ export function StatsBlock({ stats = defaultStats }: StatsProps) {
                 </span>
 
                 {/* Label */}
-                <span className="font-serif text-base sm:text-lg font-medium text-[#1C1917] mt-1 mb-2">
+                <span className="font-serif text-base sm:text-lg font-medium text-[#1a1720] mt-1 mb-2">
                   {stat.label}
                 </span>
 
@@ -91,7 +91,7 @@ export function StatsBlock({ stats = defaultStats }: StatsProps) {
                 )}
 
                 {/* Terracotta accent dot */}
-                <span className="block w-1.5 h-1.5 rounded-full bg-[#D46546] mt-4" />
+                <span className="block w-1.5 h-1.5 rounded-full bg-[#c674f3] mt-4" />
               </div>
             </Reveal>
           ))}

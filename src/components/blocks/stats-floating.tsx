@@ -73,7 +73,7 @@ export function StatsFloating({ stats }: StatsFloatingProps) {
                 <div className="absolute inset-0 bg-gradient-to-br from-terracotta-500/0 to-terracotta-500/0 group-hover:from-terracotta-500/5 group-hover:to-transparent transition-all duration-500" />
                 
                 <motion.div
-                  className="relative font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#1C1917] mb-2"
+                  className="relative font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#1a1720] mb-2"
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 400 }}
                 >

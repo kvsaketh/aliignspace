@@ -36,7 +36,7 @@ const iconMap: Record<string, LucideIcon> = {
 function StatIcon({ name }: { name?: string }) {
   const Icon = iconMap[name || ""];
   if (!Icon) return null;
-  return <Icon className="w-6 h-6 sm:w-7 sm:h-7" style={{ color: "rgb(255,134,113)" }} />;
+  return <Icon className="w-6 h-6 sm:w-7 sm:h-7" style={{ color: "rgb(198, 116, 243)" }} />;
 }
 
 /* ------------------------------------------------------------------ */
@@ -105,7 +105,7 @@ function ConnectingDots({ count }: { count: number }) {
               className="w-full h-full origin-left"
               style={{
                 background:
-                  "linear-gradient(90deg, rgba(255,134,113,0.4), rgba(250,202,194,0.4))",
+                  "linear-gradient(90deg, rgba(198, 116, 243,0.4), rgba(217, 165, 247,0.4))",
               }}
             />
           </div>
@@ -119,13 +119,13 @@ function ConnectingDots({ count }: { count: number }) {
               ease: "backOut",
             }}
             className="absolute w-2 h-2 rounded-full"
-            style={{ backgroundColor: "rgb(255,134,113)" }}
+            style={{ backgroundColor: "rgb(198, 116, 243)" }}
           >
             <motion.div
               animate={{ scale: [1, 2.5, 1], opacity: [0.6, 0, 0.6] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: i * 0.3 }}
               className="absolute inset-0 rounded-full"
-              style={{ backgroundColor: "rgb(255,134,113)" }}
+              style={{ backgroundColor: "rgb(198, 116, 243)" }}
             />
           </motion.div>
         </div>
@@ -176,7 +176,7 @@ export function AliignspaceInfographics({
     <section
       ref={ref}
       className="relative py-24 lg:py-32 overflow-hidden"
-      style={{ backgroundColor: "#1A1612" }}
+      style={{ backgroundColor: "#16141f" }}
     >
       {/* Subtle animated gradient blobs in background */}
       <motion.div
@@ -187,7 +187,7 @@ export function AliignspaceInfographics({
         }}
         transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
         className="absolute top-0 left-[10%] w-[500px] h-[500px] rounded-full opacity-[0.04] blur-[100px] pointer-events-none"
-        style={{ backgroundColor: "rgb(255,134,113)" }}
+        style={{ backgroundColor: "rgb(198, 116, 243)" }}
       />
       <motion.div
         animate={{
@@ -197,7 +197,7 @@ export function AliignspaceInfographics({
         }}
         transition={{ duration: 22, repeat: Infinity, ease: "easeInOut", delay: 4 }}
         className="absolute bottom-0 right-[5%] w-[400px] h-[400px] rounded-full opacity-[0.03] blur-[100px] pointer-events-none"
-        style={{ backgroundColor: "rgb(250,202,194)" }}
+        style={{ backgroundColor: "rgb(217, 165, 247)" }}
       />
       <motion.div
         animate={{
@@ -206,7 +206,7 @@ export function AliignspaceInfographics({
         }}
         transition={{ duration: 15, repeat: Infinity, ease: "easeInOut", delay: 2 }}
         className="absolute top-[30%] right-[30%] w-[300px] h-[300px] rounded-full opacity-[0.03] blur-[80px] pointer-events-none"
-        style={{ backgroundColor: "rgb(255,134,113)" }}
+        style={{ backgroundColor: "rgb(198, 116, 243)" }}
       />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -219,7 +219,7 @@ export function AliignspaceInfographics({
         >
           <span
             className="inline-block font-sans text-xs font-semibold tracking-[0.25em] uppercase mb-4"
-            style={{ color: "rgb(255,134,113)" }}
+            style={{ color: "rgb(198, 116, 243)" }}
           >
             By The Numbers
           </span>
@@ -228,7 +228,7 @@ export function AliignspaceInfographics({
             <span
               className="italic"
               style={{
-                color: "rgb(255,134,113)",
+                color: "rgb(198, 116, 243)",
               }}
             >
               thousands
@@ -264,7 +264,7 @@ export function AliignspaceInfographics({
                 <div
                   className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                   style={{
-                    boxShadow: "0 0 40px rgba(255,134,113,0.08)",
+                    boxShadow: "0 0 40px rgba(198, 116, 243,0.08)",
                   }}
                 />
 
@@ -274,14 +274,14 @@ export function AliignspaceInfographics({
                   <div
                     className="absolute -inset-1 rounded-full opacity-30 group-hover:opacity-60 transition-opacity duration-300"
                     style={{
-                      backgroundColor: "rgb(255,134,113)",
+                      backgroundColor: "rgb(198, 116, 243)",
                     }}
                   />
                   <motion.div
                     whileHover={{ rotate: 10, scale: 1.05 }}
                     transition={{ type: "spring", stiffness: 300, damping: 15 }}
                     className="relative w-14 h-14 rounded-full flex items-center justify-center"
-                    style={{ backgroundColor: "rgba(255,134,113,0.12)" }}
+                    style={{ backgroundColor: "rgba(198, 116, 243,0.12)" }}
                   >
                     <StatIcon name={stat.icon} />
                   </motion.div>
@@ -290,7 +290,7 @@ export function AliignspaceInfographics({
                 {/* Number */}
                 <div
                   className="font-serif text-4xl sm:text-5xl font-medium tracking-tight mb-2"
-                  style={{ color: "#f9f7f4" }}
+                  style={{ color: "#f7f5fb" }}
                 >
                   <AnimatedCounter
                     target={stat.value}
@@ -307,7 +307,7 @@ export function AliignspaceInfographics({
                 {/* Description */}
                 <p
                   className="font-sans text-sm leading-relaxed"
-                  style={{ color: "rgba(249,247,244,0.5)" }}
+                  style={{ color: "rgba(247, 245, 251,0.5)" }}
                 >
                   {stat.description}
                 </p>
@@ -323,7 +323,7 @@ export function AliignspaceInfographics({
                   }}
                   className="mt-6 h-[2px] w-12 origin-left rounded-full"
                   style={{
-                    background: "linear-gradient(90deg, rgb(255,134,113), rgb(250,202,194))",
+                    background: "linear-gradient(90deg, rgb(198, 116, 243), rgb(217, 165, 247))",
                   }}
                 />
               </motion.div>

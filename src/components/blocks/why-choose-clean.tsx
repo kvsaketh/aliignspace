@@ -47,8 +47,8 @@ const defaultFeatures: Feature[] = [
     icon: "award",
   },
   {
-    title: "Transparent Pricing",
-    description: "No hidden costs. Clear quotations with detailed breakdowns.",
+    title: "Honest Communication",
+    description: "Clear, honest updates at every step — no surprises, just steady progress.",
     icon: "shield",
   },
 ];
@@ -92,7 +92,7 @@ export function WhyChooseClean({
             </motion.div>
 
             <motion.h2
-              className="text-3xl sm:text-4xl lg:text-5xl font-serif font-medium text-[#1C1917] mb-6"
+              className="text-3xl sm:text-4xl lg:text-5xl font-serif font-medium text-[#1a1720] mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 }}
@@ -125,7 +125,7 @@ export function WhyChooseClean({
                       <Icon className="w-5 h-5 text-terracotta-500" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-medium text-[#1C1917] mb-1">
+                      <h3 className="text-lg font-medium text-[#1a1720] mb-1">
                         {feature.title}
                       </h3>
                       <p className="text-sm text-stone-500">
@@ -144,11 +144,11 @@ export function WhyChooseClean({
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.7 }}
             >
-              <p className="text-lg font-serif italic text-[#1C1917] mb-4">
+              <p className="text-lg font-serif italic text-[#1a1720] mb-4">
                 &ldquo;{quote}&rdquo;
               </p>
               <footer>
-                <div className="font-medium text-[#1C1917]">{quoteAuthor}</div>
+                <div className="font-medium text-[#1a1720]">{quoteAuthor}</div>
                 <div className="text-sm text-stone-500">{quoteRole}</div>
               </footer>
             </motion.blockquote>

@@ -133,9 +133,9 @@ function MagneticButton({
     "relative inline-flex items-center justify-center px-8 py-4 font-sans font-medium text-base overflow-hidden group transition-colors duration-300 rounded-sm";
 
   const variantClasses = {
-    primary: "bg-[#1C1917] text-white hover:bg-terracotta-600",
+    primary: "bg-[#1a1720] text-white hover:bg-terracotta-600",
     secondary: "bg-terracotta-500 text-white hover:bg-terracotta-600",
-    outline: "border-2 border-[#1C1917] text-[#1C1917] hover:bg-[#1C1917] hover:text-white",
+    outline: "border-2 border-[#1a1720] text-[#1a1720] hover:bg-[#1a1720] hover:text-white",
   };
 
   const Component = href ? motion(Link) : motion.button;
@@ -381,7 +381,7 @@ function AnimatedHeading({
   const words = heading.split(" ");
 
   return (
-    <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-[#1C1917] leading-[1.1] mb-6">
+    <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-[#1a1720] leading-[1.1] mb-6">
       {words.map((word, i) => {
         const isAccent = accentWord && word.toLowerCase().includes(accentWord.toLowerCase());
         return (
@@ -731,7 +731,7 @@ function TimelineLayout(props: HomeAboutPremiumProps) {
                 <span className="text-terracotta-500 font-serif text-2xl font-medium">
                   {milestone.year}
                 </span>
-                <h3 className="font-serif text-xl text-[#1C1917] mt-2">{milestone.title}</h3>
+                <h3 className="font-serif text-xl text-[#1a1720] mt-2">{milestone.title}</h3>
                 <p className="text-stone-600 mt-1">{milestone.description}</p>
               </div>
 

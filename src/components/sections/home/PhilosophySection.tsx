@@ -45,7 +45,7 @@ export function PhilosophySection() {
     <section
       ref={ref}
       className="relative py-24 md:py-32 overflow-hidden"
-      style={{ background: "linear-gradient(135deg, #E07A5F 0%, #D4765F 100%)" }}
+      style={{ background: "linear-gradient(135deg, #c674f3 0%, #b495f5 100%)" }}
     >
       {/* Subtle geometric pattern overlay */}
       <div

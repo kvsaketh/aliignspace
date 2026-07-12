@@ -25,7 +25,7 @@ export function AliignspaceFactoryVideo({
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <section ref={ref} className="py-24 lg:py-32 overflow-hidden" style={{ backgroundColor: "#f9f7f4" }}>
+    <section ref={ref} className="py-24 lg:py-32 overflow-hidden" style={{ backgroundColor: "#f7f5fb" }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Centered Header */}
         <motion.div
@@ -34,11 +34,11 @@ export function AliignspaceFactoryVideo({
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="text-center max-w-3xl mx-auto mb-12 lg:mb-16"
         >
-          <span className="inline-block font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#D46546] mb-4">
+          <span className="inline-block font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#c674f3] mb-4">
             {label}
           </span>
-          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-[#1A1612] leading-[1.1] tracking-tight">
-            {title} <span className="italic text-[#D46546]">{accentWord}</span>
+          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-[#16141f] leading-[1.1] tracking-tight">
+            {title} <span className="italic text-[#c674f3]">{accentWord}</span>
           </h2>
         </motion.div>
 
@@ -76,10 +76,10 @@ export function AliignspaceFactoryVideo({
                   whileTap={{ scale: 0.98 }}
                 >
                   <motion.div
-                    className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-white flex items-center justify-center shadow-2xl group-hover:bg-[#D46546] transition-colors duration-300"
+                    className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-white flex items-center justify-center shadow-2xl group-hover:bg-[#c674f3] transition-colors duration-300"
                     whileHover={{ scale: 1.1 }}
                   >
-                    <Play className="w-8 h-8 sm:w-10 sm:h-10 text-[#1A1612] group-hover:text-white transition-colors duration-300 ml-1" />
+                    <Play className="w-8 h-8 sm:w-10 sm:h-10 text-[#16141f] group-hover:text-white transition-colors duration-300 ml-1" />
                   </motion.div>
                 </motion.button>
               </motion.div>

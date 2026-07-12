@@ -77,12 +77,12 @@ export function TestimonialsBlock({
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-14">
           <Reveal direction="fade">
-            <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#D46546] block mb-4">
+            <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#c674f3] block mb-4">
               Client Stories
             </span>
           </Reveal>
           <Reveal direction="up" delay={80}>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#1C1917] mb-6">
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#1a1720] mb-6">
               {title}
             </h2>
           </Reveal>
@@ -92,7 +92,7 @@ export function TestimonialsBlock({
             <div className="inline-flex items-center gap-4 bg-white px-6 py-3 shadow-sm border border-stone-100">
               <GoogleG />
               <div className="flex items-center gap-2">
-                <span className="font-sans text-2xl font-bold text-[#1C1917]">
+                <span className="font-sans text-2xl font-bold text-[#1a1720]">
                   {rating}
                 </span>
                 <StarRow rating={5} size="md" />
@@ -122,7 +122,7 @@ export function TestimonialsBlock({
                 {/* Footer */}
                 <div className="flex items-center justify-between mt-6 pt-5 border-t border-stone-100">
                   <div>
-                    <span className="font-sans text-sm font-semibold text-[#1C1917] block">
+                    <span className="font-sans text-sm font-semibold text-[#1a1720] block">
                       {review.name}
                     </span>
                     <span className="font-sans text-xs text-stone-400 mt-0.5 block">

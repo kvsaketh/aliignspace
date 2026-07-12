@@ -22,3 +22,4 @@ server.log
 
 # Vercel
 .vercel
+.env*

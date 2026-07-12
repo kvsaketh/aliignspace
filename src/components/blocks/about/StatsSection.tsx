@@ -44,7 +44,7 @@ export function StatsSection({
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2
-            className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#1C1917] mb-4"
+            className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#1a1720] mb-4"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
           >

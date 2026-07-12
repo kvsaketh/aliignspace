@@ -59,7 +59,7 @@ export function FloatingWhatsApp({
         )}
       >
         <WhatsAppIcon className="w-4 h-4 text-[#25D366] flex-shrink-0" />
-        <span className="text-sm font-medium text-[#1C1917] whitespace-nowrap">
+        <span className="text-sm font-medium text-[#1a1720] whitespace-nowrap">
           Chat with us
         </span>
         {/* Dismiss tooltip */}

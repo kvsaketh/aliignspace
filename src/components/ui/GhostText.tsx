@@ -19,7 +19,7 @@ export function GhostText({ text, className, position = "left" }: GhostTextProps
     <span
       className={cn(
         "absolute pointer-events-none select-none font-serif text-[8rem] sm:text-[10rem] md:text-[14rem] lg:text-[18rem] leading-none tracking-tight",
-        "text-[#1A1612]/[0.03] whitespace-nowrap",
+        "text-[#16141f]/[0.03] whitespace-nowrap",
         positionClasses[position],
         className
       )}

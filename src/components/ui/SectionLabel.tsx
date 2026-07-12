@@ -12,11 +12,11 @@ export function SectionLabel({ label, className }: SectionLabelProps) {
     <div className={cn("flex items-center gap-4", className)}>
       <span
         className="block w-10 h-[1px] flex-shrink-0"
-        style={{ backgroundColor: "rgb(255,134,113)" }}
+        style={{ backgroundColor: "rgb(198, 116, 243)" }}
       />
       <span
         className="text-xs font-medium tracking-[0.2em] uppercase"
-        style={{ color: "rgb(255,134,113)" }}
+        style={{ color: "rgb(198, 116, 243)" }}
       >
         {label}
       </span>

@@ -28,7 +28,7 @@ export function AliignspaceAboutCTA({
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-24 lg:py-32 overflow-hidden" style={{ backgroundColor: "#1A1612" }}>
+    <section ref={ref} className="py-24 lg:py-32 overflow-hidden" style={{ backgroundColor: "#16141f" }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -36,11 +36,11 @@ export function AliignspaceAboutCTA({
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="text-center max-w-3xl mx-auto"
         >
-          <span className="inline-block font-sans text-xs font-semibold tracking-[0.25em] uppercase mb-4" style={{ color: "rgb(255,134,113)" }}>
+          <span className="inline-block font-sans text-xs font-semibold tracking-[0.25em] uppercase mb-4" style={{ color: "rgb(198, 116, 243)" }}>
             {label}
           </span>
           <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-white leading-[1.1] tracking-tight mb-6">
-            {title} <span className="italic" style={{ color: "rgb(250,202,194)" }}>{accentWord}</span>
+            {title} <span className="italic" style={{ color: "rgb(217, 165, 247)" }}>{accentWord}</span>
           </h2>
           <p className="font-sans text-lg text-stone-400 leading-relaxed mb-10 max-w-xl mx-auto">
             {body}
@@ -55,8 +55,8 @@ export function AliignspaceAboutCTA({
           >
             <Link
               href={buttonUrl}
-              className="inline-flex items-center gap-3 px-8 py-4 rounded-full font-sans font-medium text-[#1A1612] transition-colors duration-300 group"
-              style={{ backgroundColor: "rgb(255,134,113)" }}
+              className="inline-flex items-center gap-3 px-8 py-4 rounded-full font-sans font-medium text-[#16141f] transition-colors duration-300 group"
+              style={{ backgroundColor: "rgb(198, 116, 243)" }}
             >
               {buttonText}
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

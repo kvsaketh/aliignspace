@@ -68,10 +68,10 @@ function ImageGallery({ images }: { images: string[] }) {
 
         {/* Navigation Arrows */}
         <motion.button
-          className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-[#1C1917] shadow-lg"
+          className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-[#1a1720] shadow-lg"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: isHovered ? 1 : 0, x: isHovered ? 0 : -20 }}
-          whileHover={{ scale: 1.1, backgroundColor: "#d46546", color: "#fff" }}
+          whileHover={{ scale: 1.1, backgroundColor: "#c674f3", color: "#fff" }}
           whileTap={{ scale: 0.95 }}
           onClick={prevImage}
         >
@@ -79,10 +79,10 @@ function ImageGallery({ images }: { images: string[] }) {
         </motion.button>
 
         <motion.button
-          className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-[#1C1917] shadow-lg"
+          className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-[#1a1720] shadow-lg"
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: isHovered ? 1 : 0, x: isHovered ? 0 : 20 }}
-          whileHover={{ scale: 1.1, backgroundColor: "#d46546", color: "#fff" }}
+          whileHover={{ scale: 1.1, backgroundColor: "#c674f3", color: "#fff" }}
           whileTap={{ scale: 0.95 }}
           onClick={nextImage}
         >
@@ -237,7 +237,7 @@ export function AboutPremium({
 
             {/* Heading */}
             <motion.h2
-              className="font-serif text-4xl sm:text-5xl font-medium text-[#1C1917] leading-tight mb-6"
+              className="font-serif text-4xl sm:text-5xl font-medium text-[#1a1720] leading-tight mb-6"
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.4 }}
@@ -295,7 +295,7 @@ export function AboutPremium({
             >
               <Link
                 href="/about"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-[#1C1917] text-white font-sans font-medium hover:bg-terracotta-500 transition-colors duration-300 group"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-[#1a1720] text-white font-sans font-medium hover:bg-terracotta-500 transition-colors duration-300 group"
               >
                 Learn Our Story
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

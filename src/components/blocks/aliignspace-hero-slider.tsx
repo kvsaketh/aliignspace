@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { GradientWave } from "@/components/three/GradientWave";
 
 interface Slide {
   image?: string;
@@ -72,7 +73,7 @@ export function AliignspaceHeroSlider({ slides = defaultSlides, autoPlayInterval
   const counter = `${String(current + 1).padStart(2, "0")} / ${String(slides.length).padStart(2, "0")}`;
 
   return (
-    <section className="relative w-full h-screen min-h-[600px] overflow-hidden bg-[#1A1612]">
+    <section className="relative w-full h-screen min-h-[600px] overflow-hidden bg-[#16141f]">
       {/* Background with Ken Burns */}
       <AnimatePresence initial={false} mode="popLayout">
         <motion.div
@@ -105,9 +106,12 @@ export function AliignspaceHeroSlider({ slides = defaultSlides, autoPlayInterval
         </motion.div>
       </AnimatePresence>
 
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#1A1612]/80 via-[#1A1612]/40 to-transparent z-[1]" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#1A1612]/60 via-transparent to-transparent z-[1]" />
+      {/* Flowing gradient wave (three.js) — logo palette blue → violet → amber */}
+      <GradientWave className="absolute inset-0 z-[1] pointer-events-none mix-blend-screen opacity-70" />
+
+      {/* Legibility scrim ABOVE the wave: keeps the text side dark, colour glows on the right */}
+      <div className="absolute inset-0 z-[2] pointer-events-none bg-gradient-to-r from-[#16141f]/95 via-[#16141f]/60 to-[#16141f]/25" />
+      <div className="absolute inset-0 z-[2] pointer-events-none bg-gradient-to-t from-[#16141f] via-transparent to-transparent" />
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
@@ -120,7 +124,7 @@ export function AliignspaceHeroSlider({ slides = defaultSlides, autoPlayInterval
               exit={{ opacity: 0, x: direction * -40 }}
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             >
-              <p className="font-sans text-sm uppercase tracking-[0.2em] text-[rgb(255,134,113)] mb-4">
+              <p className="font-sans text-sm uppercase tracking-[0.2em] text-[#c674f3] mb-4">
                 {slide.subtitle}
               </p>
               <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-[1.1] mb-8">
@@ -128,7 +132,7 @@ export function AliignspaceHeroSlider({ slides = defaultSlides, autoPlayInterval
               </h1>
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-[#D46546] text-white font-sans text-sm uppercase tracking-wider hover:bg-[rgb(255,134,113)] transition-colors duration-300"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-[#c674f3] text-white font-sans text-sm uppercase tracking-wider hover:bg-[#c674f3] transition-colors duration-300"
               >
                 Book a Consultation
                 <ChevronRight className="w-4 h-4" />
@@ -168,7 +172,7 @@ export function AliignspaceHeroSlider({ slides = defaultSlides, autoPlayInterval
             key={i}
             onClick={() => goTo(i)}
             className={`transition-all duration-300 rounded-full ${
-              i === current ? "w-8 h-2 bg-[#D46546]" : "w-2 h-2 bg-white/40 hover:bg-white/60"
+              i === current ? "w-8 h-2 bg-[#c674f3]" : "w-2 h-2 bg-white/40 hover:bg-white/60"
             }`}
             aria-label={`Go to slide ${i + 1}`}
           />

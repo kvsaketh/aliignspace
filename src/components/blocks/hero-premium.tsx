@@ -199,7 +199,7 @@ export function HeroPremium({
   return (
     <section
       ref={containerRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#1C1917]"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#1a1720]"
     >
       {/* Parallax Background Image */}
       <motion.div 

@@ -28,7 +28,7 @@ export function AliignspaceServicesCTA({
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-24 lg:py-32 overflow-hidden" style={{ backgroundColor: "#1A1612" }}>
+    <section ref={ref} className="py-24 lg:py-32 overflow-hidden" style={{ backgroundColor: "#16141f" }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -36,7 +36,7 @@ export function AliignspaceServicesCTA({
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="text-center max-w-3xl mx-auto"
         >
-          <span className="inline-block font-sans text-xs font-semibold tracking-[0.25em] uppercase mb-4" style={{ color: "rgb(255,134,113)" }}>
+          <span className="inline-block font-sans text-xs font-semibold tracking-[0.25em] uppercase mb-4" style={{ color: "rgb(198, 116, 243)" }}>
             {label}
           </span>
           <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-white leading-[1.1] tracking-tight mb-6">
@@ -55,8 +55,8 @@ export function AliignspaceServicesCTA({
           >
             <Link
               href={buttonUrl}
-              className="inline-flex items-center gap-3 px-8 py-4 rounded-full font-sans font-medium text-[#1A1612] transition-colors duration-300 group"
-              style={{ backgroundColor: "rgb(255,134,113)" }}
+              className="inline-flex items-center gap-3 px-8 py-4 rounded-full font-sans font-medium text-[#16141f] transition-colors duration-300 group"
+              style={{ backgroundColor: "rgb(198, 116, 243)" }}
             >
               {buttonText}
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -66,9 +66,9 @@ export function AliignspaceServicesCTA({
               className="inline-flex items-center gap-3 px-8 py-4 rounded-full border font-sans font-medium text-white border-stone-700 hover:border-stone-500 transition-all duration-300 group"
               style={{ backgroundColor: "transparent" }}
               onMouseEnter={(e) => {
-                (e.currentTarget as HTMLElement).style.backgroundColor = "rgb(250,202,194)";
-                (e.currentTarget as HTMLElement).style.color = "#1A1612";
-                (e.currentTarget as HTMLElement).style.borderColor = "rgb(250,202,194)";
+                (e.currentTarget as HTMLElement).style.backgroundColor = "rgb(217, 165, 247)";
+                (e.currentTarget as HTMLElement).style.color = "#16141f";
+                (e.currentTarget as HTMLElement).style.borderColor = "rgb(217, 165, 247)";
               }}
               onMouseLeave={(e) => {
                 (e.currentTarget as HTMLElement).style.backgroundColor = "transparent";

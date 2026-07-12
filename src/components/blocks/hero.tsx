@@ -63,7 +63,7 @@ export function HeroBlock({
         <div className="max-w-4xl">
           {/* Label */}
           <Reveal direction="fade" delay={0}>
-            <span className="inline-block text-[#D46546] text-xs font-sans font-semibold tracking-[0.25em] uppercase mb-6">
+            <span className="inline-block text-[#c674f3] text-xs font-sans font-semibold tracking-[0.25em] uppercase mb-6">
               Est. 2021 · Hyderabad &amp; Nellore
             </span>
           </Reveal>
@@ -74,7 +74,7 @@ export function HeroBlock({
               {hasAccent ? (
                 <>
                   {headingParts[0]}
-                  <em className="not-italic text-[#D46546] italic">
+                  <em className="not-italic text-[#c674f3] italic">
                     {accentWord}
                   </em>
                   {headingParts[1]}
@@ -98,7 +98,7 @@ export function HeroBlock({
               {buttonText && buttonUrl && (
                 <Link
                   href={buttonUrl}
-                  className="inline-flex items-center justify-center px-8 py-4 bg-[#D46546] hover:bg-[#c44d32] text-white font-sans font-medium text-base rounded-none transition-all duration-300 hover:shadow-lg hover:shadow-[#D46546]/30 hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-[#c674f3] hover:bg-[#9b57cf] text-white font-sans font-medium text-base rounded-none transition-all duration-300 hover:shadow-lg hover:shadow-[#c674f3]/30 hover:-translate-y-0.5"
                 >
                   {buttonText}
                 </Link>
@@ -118,18 +118,18 @@ export function HeroBlock({
           <Reveal direction="fade" delay={450}>
             <div className="flex flex-wrap items-center gap-4 mt-12 pt-8 border-t border-white/20">
               <div className="flex items-center gap-2 text-white/70">
-                <Users className="w-4 h-4 text-[#D46546]" />
+                <Users className="w-4 h-4 text-[#c674f3]" />
                 <span className="font-sans text-sm">500+ Happy Families</span>
               </div>
               <span className="text-white/30 hidden sm:block">·</span>
               <div className="flex items-center gap-2 text-white/70">
-                <Clock className="w-4 h-4 text-[#D46546]" />
+                <Clock className="w-4 h-4 text-[#c674f3]" />
                 <span className="font-sans text-sm">60–90 Day Delivery</span>
               </div>
               <span className="text-white/30 hidden sm:block">·</span>
               <div className="flex items-center gap-2 text-white/70">
-                <BadgeCheck className="w-4 h-4 text-[#D46546]" />
-                <span className="font-sans text-sm">Transparent Pricing</span>
+                <BadgeCheck className="w-4 h-4 text-[#c674f3]" />
+                <span className="font-sans text-sm">Trusted Craftsmanship</span>
               </div>
             </div>
           </Reveal>

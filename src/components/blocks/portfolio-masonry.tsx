@@ -136,7 +136,7 @@ export function PortfolioMasonry({
             </motion.div>
             
             <motion.h2
-              className="text-3xl sm:text-4xl lg:text-5xl font-serif font-medium text-[#1C1917] mb-4"
+              className="text-3xl sm:text-4xl lg:text-5xl font-serif font-medium text-[#1a1720] mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={isHeaderInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 }}
@@ -162,7 +162,7 @@ export function PortfolioMasonry({
             >
               <Link
                 href="/portfolio"
-                className="inline-flex items-center gap-2 px-6 py-3 border border-[#1C1917] text-[#1C1917] text-sm font-medium hover:bg-[#1C1917] hover:text-white transition-colors duration-300"
+                className="inline-flex items-center gap-2 px-6 py-3 border border-[#1a1720] text-[#1a1720] text-sm font-medium hover:bg-[#1a1720] hover:text-white transition-colors duration-300"
               >
                 View All Projects
                 <ArrowUpRight className="w-4 h-4" />

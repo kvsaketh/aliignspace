@@ -60,9 +60,9 @@ function ReelCard({ t }: { t: ReelCard }) {
     /*
       Explicit pixel width + aspect-[9/16] gives a reliable sized box
       so next/image fill always has a known parent dimension.
-      bg-[#1A1612] shows while image loads.
+      bg-[#16141f] shows while image loads.
     */
-    <div className="relative w-[155px] sm:w-[175px] lg:w-[195px] aspect-[9/16] rounded-2xl overflow-hidden bg-[#1A1612] group cursor-pointer">
+    <div className="relative w-[155px] sm:w-[175px] lg:w-[195px] aspect-[9/16] rounded-2xl overflow-hidden bg-[#16141f] group cursor-pointer">
       {/* Background image */}
       <Image
         src={t.thumbnail}
@@ -82,7 +82,7 @@ function ReelCard({ t }: { t: ReelCard }) {
         </span>
         <div className="flex items-center gap-[2px] bg-black/50 backdrop-blur-sm px-1.5 py-0.5 rounded-full border border-white/10">
           {[...Array(t.rating ?? 5)].map((_, s) => (
-            <Star key={s} className="w-[7px] h-[7px] text-[#D46546] fill-[#D46546]" />
+            <Star key={s} className="w-[7px] h-[7px] text-[#c674f3] fill-[#c674f3]" />
           ))}
         </div>
       </div>
@@ -91,8 +91,8 @@ function ReelCard({ t }: { t: ReelCard }) {
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div className="relative">
           {/* Soft glow ring (CSS only — no JS) */}
-          <div className="absolute -inset-3 rounded-full bg-[#D46546]/15 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-          <div className="relative w-11 h-11 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-[#D46546] group-hover:border-[#D46546] transition-all duration-300 group-hover:scale-110">
+          <div className="absolute -inset-3 rounded-full bg-[#c674f3]/15 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div className="relative w-11 h-11 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-[#c674f3] group-hover:border-[#c674f3] transition-all duration-300 group-hover:scale-110">
             <Play className="w-4 h-4 text-white fill-white ml-[2px]" />
           </div>
         </div>
@@ -107,8 +107,8 @@ function ReelCard({ t }: { t: ReelCard }) {
 
         {/* Reviewer row */}
         <div className="flex items-center gap-1.5">
-          <div className="w-5 h-5 rounded-full bg-[#D46546]/25 border border-[#D46546]/40 flex items-center justify-center flex-shrink-0">
-            <span className="font-sans text-[8px] font-bold text-[#D46546]">
+          <div className="w-5 h-5 rounded-full bg-[#c674f3]/25 border border-[#c674f3]/40 flex items-center justify-center flex-shrink-0">
+            <span className="font-sans text-[8px] font-bold text-[#c674f3]">
               {getInitials(t.name)}
             </span>
           </div>
@@ -117,7 +117,7 @@ function ReelCard({ t }: { t: ReelCard }) {
       </div>
 
       {/* Hover border glow */}
-      <div className="absolute inset-0 rounded-2xl ring-0 group-hover:ring-1 group-hover:ring-[#D46546]/60 transition-all duration-300 pointer-events-none" />
+      <div className="absolute inset-0 rounded-2xl ring-0 group-hover:ring-1 group-hover:ring-[#c674f3]/60 transition-all duration-300 pointer-events-none" />
     </div>
   );
 }
@@ -133,18 +133,18 @@ export function VideoTestimonialsBlock() {
   };
 
   return (
-    <section className="py-20 lg:py-28 bg-[#0F0C09]">
+    <section className="py-20 lg:py-28 bg-[#0d0b12]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* ── Header ── */}
         <div className="flex items-end justify-between gap-4 mb-8 sm:mb-10">
           <div>
-            <span className="block font-sans text-[11px] uppercase tracking-[0.25em] text-[#D46546] mb-3">
+            <span className="block font-sans text-[11px] uppercase tracking-[0.25em] text-[#c674f3] mb-3">
               Client Stories
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-white leading-tight">
               Hear it from{" "}
-              <span className="italic text-[rgb(250,202,194)]">our clients</span>
+              <span className="italic text-[#d9a5f7]">our clients</span>
             </h2>
             <p className="font-sans text-[13px] text-white/40 mt-2">
               Real homeowners. Real results.
@@ -197,15 +197,15 @@ export function VideoTestimonialsBlock() {
           {/* Share your story card */}
           <div className="flex-shrink-0">
             <a href="https://wa.me/919030444503" target="_blank" rel="noopener noreferrer" className="group block">
-              <div className="relative w-[155px] sm:w-[175px] lg:w-[195px] aspect-[9/16] rounded-2xl border border-dashed border-white/15 bg-white/[0.015] flex flex-col items-center justify-center text-center p-4 hover:border-[#D46546]/40 hover:bg-[#D46546]/[0.04] transition-all duration-300">
-                <div className="w-10 h-10 rounded-full border border-[#D46546]/30 bg-[#D46546]/5 flex items-center justify-center mb-3 group-hover:bg-[#D46546]/20 transition-colors duration-300">
-                  <MessageCircle className="w-4 h-4 text-[#D46546]" />
+              <div className="relative w-[155px] sm:w-[175px] lg:w-[195px] aspect-[9/16] rounded-2xl border border-dashed border-white/15 bg-white/[0.015] flex flex-col items-center justify-center text-center p-4 hover:border-[#c674f3]/40 hover:bg-[#c674f3]/[0.04] transition-all duration-300">
+                <div className="w-10 h-10 rounded-full border border-[#c674f3]/30 bg-[#c674f3]/5 flex items-center justify-center mb-3 group-hover:bg-[#c674f3]/20 transition-colors duration-300">
+                  <MessageCircle className="w-4 h-4 text-[#c674f3]" />
                 </div>
                 <p className="font-serif text-[12px] text-white mb-1.5 leading-snug">Share your story</p>
                 <p className="font-sans text-[10px] text-white/30 leading-relaxed mb-4">
                   Had a great experience? Feature your home.
                 </p>
-                <span className="font-sans text-[10px] text-[#D46546] border border-[#D46546]/25 px-2.5 py-1 rounded-full group-hover:bg-[#D46546]/10 transition-colors duration-200">
+                <span className="font-sans text-[10px] text-[#c674f3] border border-[#c674f3]/25 px-2.5 py-1 rounded-full group-hover:bg-[#c674f3]/10 transition-colors duration-200">
                   WhatsApp us
                 </span>
               </div>

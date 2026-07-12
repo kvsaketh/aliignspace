@@ -20,13 +20,13 @@ export function AliignspaceProcessWheel({
   if (!steps.length) return null;
 
   return (
-    <section className="py-20 lg:py-28 bg-[#1A1612]">
+    <section className="py-20 lg:py-28 bg-[#16141f]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
         <div className="text-center mb-12 lg:mb-16">
           {subtitle && (
-            <span className="block font-sans text-[11px] uppercase tracking-[0.25em] text-[#D46546] mb-3">
+            <span className="block font-sans text-[11px] uppercase tracking-[0.25em] text-[#c674f3] mb-3">
               {subtitle}
             </span>
           )}
@@ -42,20 +42,20 @@ export function AliignspaceProcessWheel({
 
                 {/* Mobile vertical connector */}
                 {!isLast && (
-                  <div className="lg:hidden absolute left-[19px] top-10 bottom-0 w-px bg-[#D46546]/20" />
+                  <div className="lg:hidden absolute left-[19px] top-10 bottom-0 w-px bg-[#c674f3]/20" />
                 )}
                 {/* Desktop horizontal connector */}
                 {!isLast && (
                   <div
-                    className="hidden lg:block absolute h-px bg-[#D46546]/20"
+                    className="hidden lg:block absolute h-px bg-[#c674f3]/20"
                     style={{ top: "19px", left: "calc(50% + 22px)", right: 0 }}
                   />
                 )}
 
                 <div className="flex lg:flex-col items-start lg:items-center gap-4 lg:gap-0 pb-10 lg:pb-0 relative">
                   {/* Number circle */}
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full border border-[#D46546]/50 bg-[#D46546]/10 flex items-center justify-center z-10">
-                    <span className="font-sans text-xs font-bold text-[#D46546]">{step.number}</span>
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full border border-[#c674f3]/50 bg-[#c674f3]/10 flex items-center justify-center z-10">
+                    <span className="font-sans text-xs font-bold text-[#c674f3]">{step.number}</span>
                   </div>
 
                   {/* Text */}

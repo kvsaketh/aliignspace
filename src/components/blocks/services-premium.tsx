@@ -45,7 +45,7 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
       onMouseLeave={() => setIsHovered(false)}
     >
       <Link href={service.link || "#"} className="block h-full">
-        <div className="relative h-[480px] overflow-hidden rounded-sm bg-[#1C1917]">
+        <div className="relative h-[480px] overflow-hidden rounded-sm bg-[#1a1720]">
           {/* Background Image */}
           <motion.div
             className="absolute inset-0"
@@ -77,7 +77,7 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
             className="absolute top-6 left-6 w-14 h-14 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20"
             animate={{ 
               scale: isHovered ? 1.1 : 1,
-              backgroundColor: isHovered ? "rgba(212, 101, 70, 0.9)" : "rgba(255, 255, 255, 0.1)"
+              backgroundColor: isHovered ? "rgba(155, 87, 207, 0.9)" : "rgba(255, 255, 255, 0.1)"
             }}
             transition={{ duration: 0.3 }}
           >
@@ -220,7 +220,7 @@ export function ServicesPremium({
   };
 
   return (
-    <section ref={containerRef} className="py-24 lg:py-32 bg-[#1C1917] relative overflow-hidden">
+    <section ref={containerRef} className="py-24 lg:py-32 bg-[#1a1720] relative overflow-hidden">
       {/* Animated background */}
       <motion.div 
         className="absolute inset-0 opacity-30"
@@ -260,7 +260,7 @@ export function ServicesPremium({
           >
             <motion.button
               onClick={scrollLeft}
-              className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-[#1C1917] transition-colors duration-300"
+              className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-[#1a1720] transition-colors duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

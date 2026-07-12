@@ -71,10 +71,10 @@ function CTAStrip() {
   return (
     <div
       className="relative overflow-hidden"
-      style={{ backgroundColor: "#1A1612" }}
+      style={{ backgroundColor: "#16141f" }}
     >
       {/* Top accent line */}
-      <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-[#D46546]/60 to-transparent" />
+      <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-[#c674f3]/60 to-transparent" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
@@ -91,7 +91,7 @@ function CTAStrip() {
             <Link
               href="/contact"
               className="inline-flex items-center px-7 py-3.5 rounded-full text-sm font-semibold transition-all duration-200 hover:opacity-90 active:scale-95"
-              style={{ backgroundColor: "rgb(250,202,194)", color: "#1A1612" }}
+              style={{ backgroundColor: "rgb(217, 165, 247)", color: "#16141f" }}
             >
               Book Consultation
             </Link>
@@ -135,7 +135,7 @@ function MainFooter() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={s.label}
-                className="w-10 h-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-white/50 hover:text-white hover:bg-[#D46546] hover:border-[#D46546] transition-all duration-200"
+                className="w-10 h-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-white/50 hover:text-white hover:bg-[#c674f3] hover:border-[#c674f3] transition-all duration-200"
               >
                 {s.icon}
               </a>
@@ -153,7 +153,7 @@ function MainFooter() {
                   href={link.href}
                   className="group flex items-center gap-2 text-sm text-white/50 hover:text-white transition-colors duration-200"
                 >
-                  <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 text-[#D46546] flex-shrink-0" />
+                  <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 text-[#c674f3] flex-shrink-0" />
                   {link.label}
                 </Link>
               </li>
@@ -171,7 +171,7 @@ function MainFooter() {
                   href={link.href}
                   className="group flex items-center gap-2 text-sm text-white/50 hover:text-white transition-colors duration-200"
                 >
-                  <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 text-[#D46546] flex-shrink-0" />
+                  <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 text-[#c674f3] flex-shrink-0" />
                   {link.label}
                 </Link>
               </li>
@@ -186,7 +186,7 @@ function MainFooter() {
                   href={link.href}
                   className="group flex items-center gap-2 text-sm text-white/50 hover:text-white transition-colors duration-200"
                 >
-                  <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 text-[#D46546] flex-shrink-0" />
+                  <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 text-[#c674f3] flex-shrink-0" />
                   {link.label}
                 </Link>
               </li>
@@ -200,7 +200,7 @@ function MainFooter() {
           <ul className="space-y-4">
             <li className="flex items-start gap-3">
               <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center mt-0.5">
-                <MapPin className="w-4 h-4 text-[#D46546]" />
+                <MapPin className="w-4 h-4 text-[#c674f3]" />
               </div>
               <div>
                 <p className="text-sm text-white/70">Jubilee Hills</p>
@@ -210,7 +210,7 @@ function MainFooter() {
 
             <li className="flex items-center gap-3">
               <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center">
-                <Phone className="w-4 h-4 text-[#D46546]" />
+                <Phone className="w-4 h-4 text-[#c674f3]" />
               </div>
               <a
                 href="tel:+919030444503"
@@ -222,7 +222,7 @@ function MainFooter() {
 
             <li className="flex items-center gap-3">
               <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center">
-                <Mail className="w-4 h-4 text-[#D46546]" />
+                <Mail className="w-4 h-4 text-[#c674f3]" />
               </div>
               <a
                 href="mailto:hello@aliignspace.in"
@@ -284,17 +284,17 @@ function FooterBottom() {
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden" style={{ backgroundColor: "#1A1612" }}>
+    <footer className="relative overflow-hidden" style={{ backgroundColor: "#16141f" }}>
       {/* Decorative radial blobs */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -top-40 -left-40 w-96 h-96 rounded-full opacity-[0.04]"
-        style={{ background: "radial-gradient(circle, #D46546 0%, transparent 70%)" }}
+        style={{ background: "radial-gradient(circle, #c674f3 0%, transparent 70%)" }}
       />
       <div
         aria-hidden="true"
         className="pointer-events-none absolute bottom-0 right-0 w-80 h-80 rounded-full opacity-[0.04]"
-        style={{ background: "radial-gradient(circle, #D46546 0%, transparent 70%)" }}
+        style={{ background: "radial-gradient(circle, #c674f3 0%, transparent 70%)" }}
       />
 
       <CTAStrip />

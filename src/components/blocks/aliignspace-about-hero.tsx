@@ -31,7 +31,7 @@ export function AliignspaceAboutHero({
             className="flex items-center justify-center gap-4 mb-8"
           >
             <span className="w-12 h-px bg-stone-300" />
-            <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#D46546]">
+            <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#c674f3]">
               {eyebrow}
             </span>
             <span className="w-12 h-px bg-stone-300" />
@@ -42,10 +42,10 @@ export function AliignspaceAboutHero({
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium text-[#1A1612] leading-[1.05] tracking-tight mb-8"
+            className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium text-[#16141f] leading-[1.05] tracking-tight mb-8"
           >
             {title}{" "}
-            <span className="italic text-[#D46546]">{accentWord}</span>
+            <span className="italic text-[#c674f3]">{accentWord}</span>
           </motion.h1>
 
           {/* Subtitle */}

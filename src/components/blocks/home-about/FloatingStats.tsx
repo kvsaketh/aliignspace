@@ -107,7 +107,7 @@ function StatCard({
     >
       {/* Value */}
       <motion.div
-        className={`font-serif font-medium text-[#1C1917] mb-1 ${
+        className={`font-serif font-medium text-[#1a1720] mb-1 ${
           variant === "minimal" ? "text-3xl sm:text-4xl" : "text-3xl sm:text-4xl lg:text-5xl"
         }`}
         whileHover={{ scale: 1.05 }}
@@ -232,7 +232,7 @@ export function FloatingStatsCompact({
           transition={{ duration: 0.4, delay: index * 0.1 }}
           whileHover={{ scale: 1.05, y: -2 }}
         >
-          <div className="font-serif text-xl font-medium text-[#1C1917]">
+          <div className="font-serif text-xl font-medium text-[#1a1720]">
             <AnimatedCounter 
               value={stat.value} 
               suffix={stat.suffix}

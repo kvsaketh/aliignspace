@@ -57,13 +57,13 @@ export function ServicesBlock({
   services = defaultServices,
 }: ServicesProps) {
   return (
-    <section className="py-20 lg:py-32 bg-[#1C1917]">
+    <section className="py-20 lg:py-32 bg-[#1a1720]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <Reveal direction="fade">
-            <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#D46546] block mb-4">
+            <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#c674f3] block mb-4">
               {subtitle}
             </span>
           </Reveal>
@@ -78,7 +78,7 @@ export function ServicesBlock({
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5">
           {services.map((service, index) => (
             <Reveal key={index} direction="up" delay={index * 60}>
-              <div className="group relative overflow-hidden bg-[#1C1917] aspect-[4/3]">
+              <div className="group relative overflow-hidden bg-[#1a1720] aspect-[4/3]">
                 {/* Background image or gradient placeholder */}
                 {service.image ? (
                   <Image
@@ -107,7 +107,7 @@ export function ServicesBlock({
                     {service.link && (
                       <Link
                         href={service.link}
-                        className="inline-flex items-center gap-2 font-sans text-sm font-medium text-[#D46546] hover:text-[#e3876a] transition-colors"
+                        className="inline-flex items-center gap-2 font-sans text-sm font-medium text-[#c674f3] hover:text-[#d9a5f7] transition-colors"
                       >
                         Explore
                         <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -117,7 +117,7 @@ export function ServicesBlock({
                 </div>
 
                 {/* Top accent line on hover */}
-                <div className="absolute top-0 left-0 right-0 h-0.5 bg-[#D46546] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                <div className="absolute top-0 left-0 right-0 h-0.5 bg-[#c674f3] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
               </div>
             </Reveal>
           ))}

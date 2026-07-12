@@ -83,7 +83,7 @@ export function AliignspaceVideoTestimonials({
   };
 
   return (
-    <section className="py-24 lg:py-32 bg-[#f9f7f4]" ref={ref}>
+    <section className="py-24 lg:py-32 bg-[#f7f5fb]" ref={ref}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -92,12 +92,12 @@ export function AliignspaceVideoTestimonials({
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="mb-16"
         >
-          <span className="inline-block font-sans text-xs uppercase tracking-[0.2em] text-[rgb(255,134,113)] mb-4">
+          <span className="inline-block font-sans text-xs uppercase tracking-[0.2em] text-[#c674f3] mb-4">
             {label}
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#1A1612]">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#16141f]">
             {title}{" "}
-            <span className="italic text-[rgb(255,134,113)]">{accentWord}</span>
+            <span className="italic text-[#c674f3]">{accentWord}</span>
           </h2>
         </motion.div>
 
@@ -130,7 +130,7 @@ export function AliignspaceVideoTestimonials({
                   {/* Play button overlay */}
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-16 h-16 rounded-full bg-white shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <Play className="w-6 h-6 text-[#1A1612] fill-[#1A1612] ml-1" />
+                      <Play className="w-6 h-6 text-[#16141f] fill-[#16141f] ml-1" />
                     </div>
                   </div>
                 </div>
@@ -138,12 +138,12 @@ export function AliignspaceVideoTestimonials({
                 {/* Content */}
                 <div className="p-6">
                   {video.quote && (
-                    <p className="font-serif text-sm italic text-[#1A1612]/60 mb-3">
+                    <p className="font-serif text-sm italic text-[#16141f]/60 mb-3">
                       &ldquo;{video.quote}&rdquo;
                     </p>
                   )}
-                  <h3 className="font-serif text-lg text-[#1A1612]">{video.name}</h3>
-                  <p className="font-sans text-sm text-[#1A1612]/50 mt-1">{video.location}</p>
+                  <h3 className="font-serif text-lg text-[#16141f]">{video.name}</h3>
+                  <p className="font-sans text-sm text-[#16141f]/50 mt-1">{video.location}</p>
                 </div>
               </div>
             </motion.div>
@@ -155,7 +155,7 @@ export function AliignspaceVideoTestimonials({
           <div className="flex items-center justify-center gap-3 mt-10">
             <button
               onClick={goPrev}
-              className="w-10 h-10 rounded-full border border-[#1A1612]/20 flex items-center justify-center text-[#1A1612] hover:bg-[#1A1612] hover:text-white transition-colors duration-300"
+              className="w-10 h-10 rounded-full border border-[#16141f]/20 flex items-center justify-center text-[#16141f] hover:bg-[#16141f] hover:text-white transition-colors duration-300"
               aria-label="Previous"
             >
               <ChevronLeft className="w-5 h-5" />
@@ -165,14 +165,14 @@ export function AliignspaceVideoTestimonials({
                 key={i}
                 onClick={() => setCurrentIndex(i)}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  i === currentIndex ? "bg-[#1A1612] w-6" : "bg-[#1A1612]/30"
+                  i === currentIndex ? "bg-[#16141f] w-6" : "bg-[#16141f]/30"
                 }`}
                 aria-label={`Go to slide ${i + 1}`}
               />
             ))}
             <button
               onClick={goNext}
-              className="w-10 h-10 rounded-full border border-[#1A1612]/20 flex items-center justify-center text-[#1A1612] hover:bg-[#1A1612] hover:text-white transition-colors duration-300"
+              className="w-10 h-10 rounded-full border border-[#16141f]/20 flex items-center justify-center text-[#16141f] hover:bg-[#16141f] hover:text-white transition-colors duration-300"
               aria-label="Next"
             >
               <ChevronRight className="w-5 h-5" />
@@ -196,7 +196,7 @@ export function AliignspaceVideoTestimonials({
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              className="relative w-full max-w-4xl aspect-video bg-[#1A1612] rounded-2xl overflow-hidden"
+              className="relative w-full max-w-4xl aspect-video bg-[#16141f] rounded-2xl overflow-hidden"
               onClick={(e) => e.stopPropagation()}
             >
               <iframe

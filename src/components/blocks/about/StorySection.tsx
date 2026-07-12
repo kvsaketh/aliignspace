@@ -61,7 +61,7 @@ export function StorySection({
       </span>
       
       <h2
-        className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#1C1917] leading-tight mt-4 mb-6"
+        className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#1a1720] leading-tight mt-4 mb-6"
         dangerouslySetInnerHTML={{ __html: accentHeading }}
       />
       

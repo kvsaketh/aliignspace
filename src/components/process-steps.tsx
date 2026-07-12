@@ -110,13 +110,13 @@ export function ProcessSteps() {
                   {step.illustration}
                 </div>
                 {/* Step number */}
-                <div className="absolute -top-5 -left-5 w-16 h-16 bg-[#D46546] flex items-center justify-center">
+                <div className="absolute -top-5 -left-5 w-16 h-16 bg-[#c674f3] flex items-center justify-center">
                   <span className="font-serif text-white text-xl font-medium">{step.number}</span>
                 </div>
                 {/* Duration badge */}
-                <div className="absolute bottom-4 right-4 bg-[#1C1917]/90 backdrop-blur-sm px-4 py-2">
+                <div className="absolute bottom-4 right-4 bg-[#1a1720]/90 backdrop-blur-sm px-4 py-2">
                   <div className="flex items-center gap-2">
-                    <Clock className="w-4 h-4 text-[#D46546]" />
+                    <Clock className="w-4 h-4 text-[#c674f3]" />
                     <span className="font-sans text-white text-xs font-medium">{step.duration}</span>
                   </div>
                 </div>
@@ -125,14 +125,14 @@ export function ProcessSteps() {
               {/* Content */}
               <div>
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-[#D46546]/10 flex items-center justify-center text-[#D46546]">
+                  <div className="w-10 h-10 bg-[#c674f3]/10 flex items-center justify-center text-[#c674f3]">
                     {step.icon}
                   </div>
-                  <span className="font-sans text-xs font-semibold text-[#D46546] tracking-wider uppercase">
+                  <span className="font-sans text-xs font-semibold text-[#c674f3] tracking-wider uppercase">
                     {step.subtitle}
                   </span>
                 </div>
-                <h2 className="font-serif text-3xl sm:text-4xl font-medium text-[#1C1917] mb-5">
+                <h2 className="font-serif text-3xl sm:text-4xl font-medium text-[#1a1720] mb-5">
                   {step.title}
                 </h2>
                 <p className="font-sans text-stone-600 leading-relaxed mb-8">
@@ -146,7 +146,7 @@ export function ProcessSteps() {
                   <ul className="space-y-3">
                     {step.deliverables.map((d) => (
                       <li key={d} className="flex items-center gap-3 font-sans text-sm text-stone-600">
-                        <CheckCircle2 className="w-4 h-4 text-[#D46546] flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-[#c674f3] flex-shrink-0" />
                         {d}
                       </li>
                     ))}

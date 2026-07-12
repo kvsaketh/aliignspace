@@ -115,21 +115,21 @@ function ProjectImageSlider({ images, title }: { images: string[]; title: string
       </AnimatePresence>
 
       {/* Counter */}
-      <div className="absolute top-4 right-4 z-10 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-sans text-[#1A1612]">
+      <div className="absolute top-4 right-4 z-10 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-sans text-[#16141f]">
         {String(current + 1).padStart(2, "0")} / {String(images.length).padStart(2, "0")}
       </div>
 
       {/* Arrows */}
       <button
         onClick={prev}
-        className="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-[#1A1612] hover:bg-white transition-colors shadow-sm"
+        className="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-[#16141f] hover:bg-white transition-colors shadow-sm"
         aria-label="Previous image"
       >
         <ChevronLeft className="w-4 h-4" />
       </button>
       <button
         onClick={next}
-        className="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-[#1A1612] hover:bg-white transition-colors shadow-sm"
+        className="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-[#16141f] hover:bg-white transition-colors shadow-sm"
         aria-label="Next image"
       >
         <ChevronRight className="w-4 h-4" />
@@ -142,7 +142,7 @@ function ProjectImageSlider({ images, title }: { images: string[]; title: string
             key={i}
             onClick={() => goTo(i)}
             className={`transition-all duration-300 rounded-full ${
-              i === current ? "w-6 h-2 bg-[#D46546]" : "w-2 h-2 bg-white/70 hover:bg-white"
+              i === current ? "w-6 h-2 bg-[#c674f3]" : "w-2 h-2 bg-white/70 hover:bg-white"
             }`}
             aria-label={`Go to image ${i + 1}`}
           />
@@ -175,17 +175,17 @@ function ProjectCard({
       {/* Text Column */}
       <div className={`space-y-5 ${isReversed ? "lg:order-2" : "lg:order-1"}`}>
         {/* Location label */}
-        <span className="inline-block font-sans text-xs font-semibold tracking-[0.2em] uppercase text-[rgb(250,202,194)]">
+        <span className="inline-block font-sans text-xs font-semibold tracking-[0.2em] uppercase text-[#d9a5f7]">
           {project.location}
         </span>
 
         {/* Index number */}
-        <div className="font-serif italic text-5xl text-[rgb(250,202,194)]">
+        <div className="font-serif italic text-5xl text-[#d9a5f7]">
           {String(project.index || 1).padStart(2, "0")}
         </div>
 
         {/* Title */}
-        <h2 className="font-serif text-3xl sm:text-4xl text-[#1A1612] leading-[1.15]">
+        <h2 className="font-serif text-3xl sm:text-4xl text-[#16141f] leading-[1.15]">
           {project.title}
         </h2>
 
@@ -211,7 +211,7 @@ function ProjectCard({
         {/* View Project button */}
         <a
           href={project.link || "#"}
-          className="inline-flex items-center gap-2 mt-2 font-sans text-sm font-medium text-[#D46546] hover:text-[rgb(255,134,113)] transition-colors group"
+          className="inline-flex items-center gap-2 mt-2 font-sans text-sm font-medium text-[#c674f3] hover:text-[#c674f3] transition-colors group"
         >
           View Project
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -228,7 +228,7 @@ function ProjectCard({
 
 export function AliignspaceProjectList({ projects = defaultProjects }: Props) {
   return (
-    <section className="py-24 lg:py-32 bg-[#f9f7f4]">
+    <section className="py-24 lg:py-32 bg-[#f7f5fb]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-24 lg:space-y-32">
           {projects.map((project, i) => (

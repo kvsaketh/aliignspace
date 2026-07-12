@@ -152,9 +152,9 @@ const PROCESS_STEPS = [
 const PROMISES = [
   {
     number: "01",
-    title: "Transparent Pricing",
+    title: "Honest Communication",
     Icon: ShieldCheck,
-    body: "No hidden costs. Every estimate is itemised and explained in detail before work begins.",
+    body: "Clear, honest updates at every step — you always know exactly where your project stands.",
   },
   {
     number: "02",
@@ -221,10 +221,10 @@ export default async function ServicesPage() {
           />
           <div
             aria-hidden="true"
-            className="absolute inset-0 bg-gradient-to-t from-[#1A1612]/95 via-[#1A1612]/50 to-transparent"
+            className="absolute inset-0 bg-gradient-to-t from-[#16141f]/95 via-[#16141f]/50 to-transparent"
           />
           <div className="relative z-10 pt-36 pb-20 px-8 lg:px-20 max-w-3xl">
-            <p className="text-[#D46546] text-sm font-sans font-semibold tracking-[0.2em] uppercase mb-4">
+            <p className="text-[#c674f3] text-sm font-sans font-semibold tracking-[0.2em] uppercase mb-4">
               Interior Design Services
             </p>
             <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl text-white leading-tight mb-5">
@@ -239,7 +239,7 @@ export default async function ServicesPage() {
         </section>
 
         {/* ── Section 2: Stats Band ────────────────────────────────────────── */}
-        <section className="bg-[#1C1917]">
+        <section className="bg-[#1a1720]">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/10 border-x border-white/10">
               {STATS.map((stat) => (
@@ -247,7 +247,7 @@ export default async function ServicesPage() {
                   key={stat.label}
                   className="py-10 px-4 text-center"
                 >
-                  <p className="font-serif text-4xl sm:text-5xl text-[#D46546] leading-none mb-2">
+                  <p className="font-serif text-4xl sm:text-5xl text-[#c674f3] leading-none mb-2">
                     {stat.value}
                   </p>
                   <p className="font-sans text-xs sm:text-sm text-white/60 tracking-wide uppercase">
@@ -260,13 +260,13 @@ export default async function ServicesPage() {
         </section>
 
         {/* ── Section 3: Services Grid ─────────────────────────────────────── */}
-        <section className="py-24 bg-[#f9f7f4]">
+        <section className="py-24 bg-[#f7f5fb]">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto">
-              <p className="font-sans text-[#D46546] text-xs font-semibold tracking-[0.2em] uppercase mb-3">
+              <p className="font-sans text-[#c674f3] text-xs font-semibold tracking-[0.2em] uppercase mb-3">
                 What We Offer
               </p>
-              <h2 className="font-serif text-4xl sm:text-5xl text-[#1A1612] mb-4">
+              <h2 className="font-serif text-4xl sm:text-5xl text-[#16141f] mb-4">
                 Our Services
               </h2>
               <p className="font-sans text-stone-500 leading-relaxed">
@@ -308,11 +308,11 @@ export default async function ServicesPage() {
                       />
                       <div
                         aria-hidden="true"
-                        className="absolute inset-0 bg-gradient-to-t from-[#1A1612]/90 via-[#1A1612]/35 to-transparent"
+                        className="absolute inset-0 bg-gradient-to-t from-[#16141f]/90 via-[#16141f]/35 to-transparent"
                       />
                     </div>
                     <div className="absolute inset-0 flex flex-col justify-end p-6">
-                      <p className="font-sans text-[#D46546] text-[10px] font-semibold tracking-[0.2em] uppercase mb-1.5">
+                      <p className="font-sans text-[#c674f3] text-[10px] font-semibold tracking-[0.2em] uppercase mb-1.5">
                         {shortDesc}
                       </p>
                       <h3 className="font-serif text-2xl text-white leading-snug mb-2">
@@ -339,10 +339,10 @@ export default async function ServicesPage() {
         <section className="py-24 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto">
-              <p className="font-sans text-[#D46546] text-xs font-semibold tracking-[0.2em] uppercase mb-3">
+              <p className="font-sans text-[#c674f3] text-xs font-semibold tracking-[0.2em] uppercase mb-3">
                 How We Work
               </p>
-              <h2 className="font-serif text-4xl sm:text-5xl text-[#1A1612] mb-4">
+              <h2 className="font-serif text-4xl sm:text-5xl text-[#16141f] mb-4">
                 A Process Built on Clarity
               </h2>
               <p className="font-sans text-stone-500 leading-relaxed">
@@ -355,17 +355,17 @@ export default async function ServicesPage() {
               {PROCESS_STEPS.map((step) => (
                 <div
                   key={step.number}
-                  className="bg-[#f9f7f4] rounded-2xl p-7 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg"
+                  className="bg-[#f7f5fb] rounded-2xl p-7 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg"
                 >
                   <div className="flex items-center justify-between mb-5">
-                    <span className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#D46546]/10 text-[#D46546]">
+                    <span className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#c674f3]/10 text-[#c674f3]">
                       <step.Icon className="w-6 h-6" aria-hidden="true" />
                     </span>
                     <span className="font-serif text-3xl text-stone-300">
                       {step.number}
                     </span>
                   </div>
-                  <h3 className="font-serif text-xl text-[#1A1612] mb-2">
+                  <h3 className="font-serif text-xl text-[#16141f] mb-2">
                     {step.title}
                   </h3>
                   <p className="font-sans text-sm text-stone-500 leading-relaxed">
@@ -378,7 +378,7 @@ export default async function ServicesPage() {
             <div className="text-center mt-12">
               <Link
                 href="/process"
-                className="inline-flex items-center gap-2 font-sans text-sm font-semibold text-[#D46546] hover:text-[#c25538] transition-colors duration-200"
+                className="inline-flex items-center gap-2 font-sans text-sm font-semibold text-[#c674f3] hover:text-[#9b57cf] transition-colors duration-200"
               >
                 See our full design process
                 <ArrowRight className="w-4 h-4" aria-hidden="true" />
@@ -388,13 +388,13 @@ export default async function ServicesPage() {
         </section>
 
         {/* ── Section 5: Why ALIIGNSPACE ───────────────────────────────────── */}
-        <section className="py-24 bg-[#F9F5ED]">
+        <section className="py-24 bg-[#f6f4fb]">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto">
-              <p className="font-sans text-[#D46546] text-xs font-semibold tracking-[0.2em] uppercase mb-3">
+              <p className="font-sans text-[#c674f3] text-xs font-semibold tracking-[0.2em] uppercase mb-3">
                 Why ALIIGNSPACE
               </p>
-              <h2 className="font-serif text-4xl sm:text-5xl text-[#1A1612] mb-4">
+              <h2 className="font-serif text-4xl sm:text-5xl text-[#16141f] mb-4">
                 The ALIIGNSPACE Promise
               </h2>
               <p className="font-sans text-stone-500 leading-relaxed">
@@ -409,13 +409,13 @@ export default async function ServicesPage() {
                   key={p.number}
                   className="bg-white p-8 rounded-2xl border border-stone-100 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
                 >
-                  <span className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#D46546]/10 text-[#D46546] mb-5">
+                  <span className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#c674f3]/10 text-[#c674f3] mb-5">
                     <p.Icon className="w-6 h-6" aria-hidden="true" />
                   </span>
-                  <p className="font-sans text-[#D46546] text-xs font-semibold tracking-[0.2em] mb-2">
+                  <p className="font-sans text-[#c674f3] text-xs font-semibold tracking-[0.2em] mb-2">
                     {p.number}
                   </p>
-                  <h3 className="font-serif text-xl text-[#1A1612] mb-3">
+                  <h3 className="font-serif text-xl text-[#16141f] mb-3">
                     {p.title}
                   </h3>
                   <p className="font-sans text-sm text-stone-500 leading-relaxed">
@@ -431,10 +431,10 @@ export default async function ServicesPage() {
         <section className="py-24 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto">
-              <p className="font-sans text-[#D46546] text-xs font-semibold tracking-[0.2em] uppercase mb-3">
+              <p className="font-sans text-[#c674f3] text-xs font-semibold tracking-[0.2em] uppercase mb-3">
                 Client Stories
               </p>
-              <h2 className="font-serif text-4xl sm:text-5xl text-[#1A1612]">
+              <h2 className="font-serif text-4xl sm:text-5xl text-[#16141f]">
                 Loved by Homeowners
               </h2>
             </div>
@@ -443,17 +443,17 @@ export default async function ServicesPage() {
               {TESTIMONIALS.map((t) => (
                 <figure
                   key={t.name}
-                  className="bg-[#f9f7f4] rounded-2xl p-8 flex flex-col transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg"
+                  className="bg-[#f7f5fb] rounded-2xl p-8 flex flex-col transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg"
                 >
                   <Quote
-                    className="w-9 h-9 text-[#D46546]/30 mb-4"
+                    className="w-9 h-9 text-[#c674f3]/30 mb-4"
                     aria-hidden="true"
                   />
                   <blockquote className="font-sans text-stone-600 leading-relaxed flex-1">
                     “{t.quote}”
                   </blockquote>
                   <figcaption className="mt-6 pt-6 border-t border-stone-200">
-                    <p className="font-serif text-base text-[#1A1612]">
+                    <p className="font-serif text-base text-[#16141f]">
                       {t.name}
                     </p>
                     <p className="font-sans text-xs text-stone-500 tracking-wide uppercase mt-0.5">
@@ -467,9 +467,9 @@ export default async function ServicesPage() {
         </section>
 
         {/* ── Section 7: Final CTA ─────────────────────────────────────────── */}
-        <section className="py-24 bg-[#1A1612] text-center">
+        <section className="py-24 bg-[#16141f] text-center">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl">
-            <p className="font-sans text-[#D46546] text-xs font-semibold tracking-[0.2em] uppercase mb-4">
+            <p className="font-sans text-[#c674f3] text-xs font-semibold tracking-[0.2em] uppercase mb-4">
               Let's Begin
             </p>
             <h2 className="font-serif text-4xl sm:text-5xl text-white mb-4">
@@ -481,7 +481,7 @@ export default async function ServicesPage() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 font-sans bg-[#D46546] text-white px-8 py-4 rounded-xl text-base font-medium hover:bg-[#c25538] transition-colors duration-200"
+              className="inline-flex items-center gap-2 font-sans bg-[#c674f3] text-white px-8 py-4 rounded-xl text-base font-medium hover:bg-[#9b57cf] transition-colors duration-200"
             >
               Book a Free Consultation
               <ArrowRight className="w-4 h-4" aria-hidden="true" />

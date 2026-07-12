@@ -30,7 +30,7 @@ export function CTAClean({
   const isInView = useInView(containerRef, { once: true, margin: "-100px" });
 
   return (
-    <section ref={containerRef} className="py-20 lg:py-28 bg-[#1C1917] relative overflow-hidden">
+    <section ref={containerRef} className="py-20 lg:py-28 bg-[#1a1720] relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{

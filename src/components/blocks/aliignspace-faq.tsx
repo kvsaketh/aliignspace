@@ -64,7 +64,7 @@ export function AliignspaceFAQ({
   };
 
   return (
-    <section className="py-24 lg:py-32 bg-[#f4f1ec]" ref={ref}>
+    <section className="py-24 lg:py-32 bg-[#f2f1f8]" ref={ref}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -73,13 +73,13 @@ export function AliignspaceFAQ({
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-12"
         >
-          <span className="inline-block font-sans text-xs uppercase tracking-[0.2em] text-[#D46546] mb-4">
+          <span className="inline-block font-sans text-xs uppercase tracking-[0.2em] text-[#c674f3] mb-4">
             {label}
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#1A1612]">
-            {title} <span className="text-[#D46546]">{accentWord}</span>
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#16141f]">
+            {title} <span className="text-[#c674f3]">{accentWord}</span>
           </h2>
-          <p className="mt-4 font-sans text-[#1A1612]/60 max-w-xl mx-auto">{intro}</p>
+          <p className="mt-4 font-sans text-[#16141f]/60 max-w-xl mx-auto">{intro}</p>
         </motion.div>
 
         {/* Accordion */}
@@ -100,14 +100,14 @@ export function AliignspaceFAQ({
                   className="w-full flex items-center gap-4 px-6 py-5 text-left"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-serif text-lg text-[rgb(255,134,113)] flex-shrink-0 w-8">
+                  <span className="font-serif text-lg text-[#c674f3] flex-shrink-0 w-8">
                     {num}
                   </span>
-                  <span className="font-serif text-base sm:text-lg text-[#1A1612] flex-1">
+                  <span className="font-serif text-base sm:text-lg text-[#16141f] flex-1">
                     {faq.question}
                   </span>
                   <ChevronDown
-                    className={`w-5 h-5 text-[#1A1612]/40 flex-shrink-0 transition-transform duration-300 ${
+                    className={`w-5 h-5 text-[#16141f]/40 flex-shrink-0 transition-transform duration-300 ${
                       isOpen ? "rotate-180" : ""
                     }`}
                   />
@@ -121,7 +121,7 @@ export function AliignspaceFAQ({
                       transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
                     >
                       <div className="px-6 pb-5 pl-[72px]">
-                        <p className="font-sans text-sm text-[#1A1612]/60 leading-relaxed">
+                        <p className="font-sans text-sm text-[#16141f]/60 leading-relaxed">
                           {faq.answer}
                         </p>
                       </div>

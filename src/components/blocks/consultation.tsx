@@ -43,7 +43,7 @@ function MagneticButton({ children, onClick, disabled }: { children: React.React
       style={{ x: springX, y: springY }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative inline-flex items-center justify-center gap-2 bg-[#D46546] hover:bg-[#c44d32] disabled:opacity-60 text-white font-sans font-semibold text-sm px-8 py-4 transition-all duration-300 whitespace-nowrap overflow-hidden group"
+      className="relative inline-flex items-center justify-center gap-2 bg-[#c674f3] hover:bg-[#9b57cf] disabled:opacity-60 text-white font-sans font-semibold text-sm px-8 py-4 transition-all duration-300 whitespace-nowrap overflow-hidden group"
     >
       <motion.span
         className="absolute inset-0 bg-white/20"
@@ -93,12 +93,12 @@ function AnimatedInput({
         onBlur={() => setIsFocused(false)}
         className="w-full bg-white/10 border border-white/20 text-white placeholder-white/40 font-sans text-sm px-5 py-4 focus:outline-none transition-all duration-300"
         style={{
-          borderColor: isFocused ? "#D46546" : "rgba(255,255,255,0.2)",
-          boxShadow: isFocused ? "0 0 20px rgba(212, 101, 70, 0.3)" : "none",
+          borderColor: isFocused ? "#c674f3" : "rgba(255,255,255,0.2)",
+          boxShadow: isFocused ? "0 0 20px rgba(155, 87, 207, 0.3)" : "none",
         }}
       />
       <motion.div
-        className="absolute bottom-0 left-0 h-[2px] bg-[#D46546]"
+        className="absolute bottom-0 left-0 h-[2px] bg-[#c674f3]"
         initial={{ width: "0%" }}
         animate={{ width: isFocused ? "100%" : "0%" }}
         transition={{ duration: 0.3 }}
@@ -128,7 +128,7 @@ export function ConsultationBlock({
   };
 
   return (
-    <section ref={containerRef} className="relative py-24 lg:py-36 overflow-hidden bg-[#1C1917]">
+    <section ref={containerRef} className="relative py-24 lg:py-36 overflow-hidden bg-[#1a1720]">
       {/* Animated background */}
       {backgroundImage && (
         <div className="absolute inset-0 z-0">
@@ -144,7 +144,7 @@ export function ConsultationBlock({
 
       {/* Animated gradient orbs */}
       <motion.div
-        className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#D46546]/10 rounded-full blur-[120px]"
+        className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#c674f3]/10 rounded-full blur-[120px]"
         animate={{
           x: [0, 30, 0],
           y: [0, -20, 0],
@@ -153,7 +153,7 @@ export function ConsultationBlock({
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#D46546]/5 rounded-full blur-[100px]"
+        className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#c674f3]/5 rounded-full blur-[100px]"
         animate={{
           x: [0, -20, 0],
           y: [0, 30, 0],
@@ -163,16 +163,16 @@ export function ConsultationBlock({
       />
 
       {/* Terracotta gradient wash */}
-      <div className="absolute inset-0 z-[1] bg-gradient-to-br from-[#D46546]/20 via-transparent to-transparent" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-br from-[#c674f3]/20 via-transparent to-transparent" />
 
       {/* Decorative circle accents */}
       <motion.div
-        className="absolute -right-40 -top-40 w-[600px] h-[600px] rounded-full border border-[#D46546]/10 z-[1]"
+        className="absolute -right-40 -top-40 w-[600px] h-[600px] rounded-full border border-[#c674f3]/10 z-[1]"
         animate={{ rotate: 360 }}
         transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
       />
       <motion.div
-        className="absolute -right-20 -top-20 w-[400px] h-[400px] rounded-full border border-[#D46546]/10 z-[1]"
+        className="absolute -right-20 -top-20 w-[400px] h-[400px] rounded-full border border-[#c674f3]/10 z-[1]"
         animate={{ rotate: -360 }}
         transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
       />
@@ -191,16 +191,16 @@ export function ConsultationBlock({
               animate={{ rotate: [0, 15, -15, 0] }}
               transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
             >
-              <Sparkles className="w-4 h-4 text-[#D46546]" />
+              <Sparkles className="w-4 h-4 text-[#c674f3]" />
             </motion.div>
-            <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#D46546]">
+            <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#c674f3]">
               Free Consultation
             </span>
             <motion.div
               animate={{ rotate: [0, -15, 15, 0] }}
               transition={{ duration: 2, repeat: Infinity, repeatDelay: 3, delay: 0.5 }}
             >
-              <Sparkles className="w-4 h-4 text-[#D46546]" />
+              <Sparkles className="w-4 h-4 text-[#c674f3]" />
             </motion.div>
           </motion.div>
 
@@ -242,7 +242,7 @@ export function ConsultationBlock({
                   animate={{ scale: 1 }}
                   transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
                 >
-                  <CheckCircle2 className="w-12 h-12 text-[#D46546]" />
+                  <CheckCircle2 className="w-12 h-12 text-[#c674f3]" />
                 </motion.div>
                 <h3 className="font-serif text-xl text-white">
                   We&apos;ll Call You Back!
@@ -318,7 +318,7 @@ export function ConsultationBlock({
                   transition={{ delay: 0.9 + i * 0.1 }}
                 >
                   <motion.span
-                    className="w-1.5 h-1.5 rounded-full bg-[#D46546]"
+                    className="w-1.5 h-1.5 rounded-full bg-[#c674f3]"
                     animate={{ scale: [1, 1.2, 1] }}
                     transition={{ duration: 2, repeat: Infinity, delay: i * 0.3 }}
                   />

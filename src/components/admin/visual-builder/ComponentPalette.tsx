@@ -104,7 +104,7 @@ function DraggableComponentItem({ component }: DraggableComponentItemProps) {
       ref={setNodeRef}
       {...listeners}
       {...attributes}
-      whileHover={{ scale: 1.02, backgroundColor: "rgba(212, 101, 70, 0.1)" }}
+      whileHover={{ scale: 1.02, backgroundColor: "rgba(155, 87, 207, 0.1)" }}
       whileTap={{ scale: 0.98 }}
       className={`
         group relative p-3 bg-gray-800 border border-gray-700 rounded-lg cursor-grab

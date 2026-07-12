@@ -58,10 +58,10 @@ export function AliignspaceServicesMarquee({
   const duplicatedItems = [...items, ...items, ...items, ...items];
   const isDark = variant === "dark";
 
-  const bgClass = isDark ? "bg-[#1A1612]" : "bg-[#f9f7f4]";
-  const textClass = isDark ? "text-[#f9f7f4]" : "text-[#1A1612]";
-  const mutedTextClass = isDark ? "text-[#f9f7f4]/50" : "text-[#1A1612]/50";
-  const shapeColor = "text-[rgb(255,134,113)]";
+  const bgClass = isDark ? "bg-[#16141f]" : "bg-[#f7f5fb]";
+  const textClass = isDark ? "text-[#f7f5fb]" : "text-[#16141f]";
+  const mutedTextClass = isDark ? "text-[#f7f5fb]/50" : "text-[#16141f]/50";
+  const shapeColor = "text-[#c674f3]";
 
   const row1Anim = direction === "left" 
     ? { animation: `marqueeLeft ${speed}s linear infinite` } 
@@ -88,8 +88,8 @@ export function AliignspaceServicesMarquee({
       <section className={`${bgClass} overflow-hidden py-16 lg:py-24`}>
         {/* Row 1: Large serif titles */}
         <div className="marquee-row relative mb-8">
-          <div className={`pointer-events-none absolute left-0 top-0 bottom-0 w-24 z-10 ${isDark ? "bg-gradient-to-r from-[#1A1612] to-transparent" : "bg-gradient-to-r from-[#f9f7f4] to-transparent"}`} />
-          <div className={`pointer-events-none absolute right-0 top-0 bottom-0 w-24 z-10 ${isDark ? "bg-gradient-to-l from-[#1A1612] to-transparent" : "bg-gradient-to-l from-[#f9f7f4] to-transparent"}`} />
+          <div className={`pointer-events-none absolute left-0 top-0 bottom-0 w-24 z-10 ${isDark ? "bg-gradient-to-r from-[#16141f] to-transparent" : "bg-gradient-to-r from-[#f7f5fb] to-transparent"}`} />
+          <div className={`pointer-events-none absolute right-0 top-0 bottom-0 w-24 z-10 ${isDark ? "bg-gradient-to-l from-[#16141f] to-transparent" : "bg-gradient-to-l from-[#f7f5fb] to-transparent"}`} />
           <div className="marquee-track flex whitespace-nowrap" style={row1Anim}>
             {duplicatedItems.map((item, i) => {
               const Shape = shapes[i % shapes.length];
@@ -107,8 +107,8 @@ export function AliignspaceServicesMarquee({
 
         {/* Row 2: Smaller sans descriptions */}
         <div className="marquee-row relative">
-          <div className={`pointer-events-none absolute left-0 top-0 bottom-0 w-24 z-10 ${isDark ? "bg-gradient-to-r from-[#1A1612] to-transparent" : "bg-gradient-to-r from-[#f9f7f4] to-transparent"}`} />
-          <div className={`pointer-events-none absolute right-0 top-0 bottom-0 w-24 z-10 ${isDark ? "bg-gradient-to-l from-[#1A1612] to-transparent" : "bg-gradient-to-l from-[#f9f7f4] to-transparent"}`} />
+          <div className={`pointer-events-none absolute left-0 top-0 bottom-0 w-24 z-10 ${isDark ? "bg-gradient-to-r from-[#16141f] to-transparent" : "bg-gradient-to-r from-[#f7f5fb] to-transparent"}`} />
+          <div className={`pointer-events-none absolute right-0 top-0 bottom-0 w-24 z-10 ${isDark ? "bg-gradient-to-l from-[#16141f] to-transparent" : "bg-gradient-to-l from-[#f7f5fb] to-transparent"}`} />
           <div className="marquee-track flex whitespace-nowrap" style={row2Anim}>
             {duplicatedItems.map((item, i) => {
               const Shape = shapes[(i + 1) % shapes.length];
@@ -117,7 +117,7 @@ export function AliignspaceServicesMarquee({
                   <Link href={item.link || "#"} className={`font-sans text-sm sm:text-base uppercase tracking-[0.15em] ${mutedTextClass} hover:opacity-100 transition-opacity duration-300`}>
                     {item.title}
                   </Link>
-                  <Shape className="text-[rgb(250,202,194)] flex-shrink-0 opacity-70" />
+                  <Shape className="text-[#d9a5f7] flex-shrink-0 opacity-70" />
                 </div>
               );
             })}

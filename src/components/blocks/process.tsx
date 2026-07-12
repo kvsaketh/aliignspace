@@ -75,18 +75,18 @@ export function ProcessBlock({
   const cols = steps.length === 5 ? "lg:grid-cols-5" : "lg:grid-cols-4";
 
   return (
-    <section className="py-20 lg:py-32 bg-[#F9F5ED] overflow-hidden">
+    <section className="py-20 lg:py-32 bg-[#f6f4fb] overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16 lg:mb-24">
           <Reveal direction="fade">
-            <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#D46546] block mb-4">
+            <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#c674f3] block mb-4">
               {subtitle}
             </span>
           </Reveal>
           <Reveal direction="up" delay={80}>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#1C1917]">
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#1a1720]">
               {title}
             </h2>
           </Reveal>
@@ -95,10 +95,10 @@ export function ProcessBlock({
         {/* Steps */}
         <div className="relative">
           {/* Vertical connecting line for mobile */}
-          <div className="absolute left-[3.25rem] top-0 bottom-0 w-px border-l-2 border-dashed border-[#D46546]/20 lg:hidden" />
+          <div className="absolute left-[3.25rem] top-0 bottom-0 w-px border-l-2 border-dashed border-[#c674f3]/20 lg:hidden" />
 
           {/* Horizontal line desktop */}
-          <div className="hidden lg:block absolute top-[3.25rem] left-[10%] right-[10%] h-px border-t-2 border-dashed border-[#D46546]/30 z-0" />
+          <div className="hidden lg:block absolute top-[3.25rem] left-[10%] right-[10%] h-px border-t-2 border-dashed border-[#c674f3]/30 z-0" />
 
           <div className={`grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-3 ${cols} gap-10 lg:gap-4 relative z-10`}>
             {steps.map((step, index) => {
@@ -109,19 +109,19 @@ export function ProcessBlock({
 
                     {/* Icon circle */}
                     <div className="relative mb-0 lg:mb-6 flex-shrink-0">
-                      <span className="font-serif text-6xl font-medium text-[#D46546]/12 leading-none select-none absolute -top-2 -left-1 lg:-left-2">
+                      <span className="font-serif text-6xl font-medium text-[#c674f3]/12 leading-none select-none absolute -top-2 -left-1 lg:-left-2">
                         {step.number ?? String(index + 1).padStart(2, "0")}
                       </span>
-                      <div className="relative w-24 h-24 rounded-full bg-white shadow-sm flex items-center justify-center border border-stone-100 group-hover:border-[#D46546]/40 group-hover:shadow-md transition-all duration-300">
-                        <Icon className="w-8 h-8 text-[#D46546]" />
+                      <div className="relative w-24 h-24 rounded-full bg-white shadow-sm flex items-center justify-center border border-stone-100 group-hover:border-[#c674f3]/40 group-hover:shadow-md transition-all duration-300">
+                        <Icon className="w-8 h-8 text-[#c674f3]" />
                       </div>
                     </div>
 
                     <div className="lg:px-2">
-                      <span className="font-sans text-xs font-bold tracking-[0.2em] uppercase text-[#D46546] mb-2 block">
+                      <span className="font-sans text-xs font-bold tracking-[0.2em] uppercase text-[#c674f3] mb-2 block">
                         {step.number ?? String(index + 1).padStart(2, "0")}
                       </span>
-                      <h3 className="font-serif text-lg sm:text-xl font-medium text-[#1C1917] mb-2">
+                      <h3 className="font-serif text-lg sm:text-xl font-medium text-[#1a1720] mb-2">
                         {step.title}
                       </h3>
                       <p className="font-sans text-xs sm:text-sm text-stone-500 leading-relaxed">

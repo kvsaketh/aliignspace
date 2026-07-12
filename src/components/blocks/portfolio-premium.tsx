@@ -263,7 +263,7 @@ export function PortfolioPremium({
             {subtitle}
           </motion.span>
           <motion.h2
-            className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#1C1917] leading-tight"
+            className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#1a1720] leading-tight"
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.3 }}
@@ -320,11 +320,11 @@ export function PortfolioPremium({
           >
             <Link
               href="/portfolio"
-              className="inline-flex items-center gap-3 px-8 py-4 border-2 border-[#1C1917] text-[#1C1917] font-sans font-medium hover:bg-[#1C1917] hover:text-white transition-all duration-300 group"
+              className="inline-flex items-center gap-3 px-8 py-4 border-2 border-[#1a1720] text-[#1a1720] font-sans font-medium hover:bg-[#1a1720] hover:text-white transition-all duration-300 group"
             >
               View All Projects
               <motion.span
-                className="w-8 h-8 rounded-full bg-[#1C1917] text-white flex items-center justify-center group-hover:bg-terracotta-500 transition-colors"
+                className="w-8 h-8 rounded-full bg-[#1a1720] text-white flex items-center justify-center group-hover:bg-terracotta-500 transition-colors"
                 whileHover={{ rotate: 45 }}
               >
                 <ArrowUpRight className="w-4 h-4" />

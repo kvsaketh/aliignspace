@@ -70,7 +70,7 @@ export const sectionTemplates: SectionTemplate[] = [
         order: 5,
         parentId: "container-2",
         content: { label: "Start Your Journey", url: "/contact", variant: "primary" },
-        style: { backgroundColor: "#E07A5F", color: "#ffffff" },
+        style: { backgroundColor: "#c674f3", color: "#ffffff" },
       },
       {
         type: "button",
@@ -92,7 +92,7 @@ export const sectionTemplates: SectionTemplate[] = [
         order: 0,
         parentId: null,
         content: {},
-        style: { backgroundColor: "#FDF6F0", paddingTop: "96px", paddingBottom: "96px" },
+        style: { backgroundColor: "#f7f4fc", paddingTop: "96px", paddingBottom: "96px" },
       },
       {
         type: "container",
@@ -165,7 +165,7 @@ export const sectionTemplates: SectionTemplate[] = [
         parentId: null,
         content: {},
         style: {
-          background: "linear-gradient(135deg, #E07A5F 0%, #D4765F 50%, #c44d32 100%)",
+          background: "linear-gradient(135deg, #c674f3 0%, #b495f5 50%, #9b57cf 100%)",
           paddingTop: "96px",
           paddingBottom: "96px",
         },
@@ -247,7 +247,7 @@ export const sectionTemplates: SectionTemplate[] = [
           ],
           submitLabel: "Send Message",
         },
-        style: { backgroundColor: "#FFFBF7", borderRadius: "24px", padding: "32px" },
+        style: { backgroundColor: "#fdfcff", borderRadius: "24px", padding: "32px" },
       },
     ],
   },
@@ -262,7 +262,7 @@ export const sectionTemplates: SectionTemplate[] = [
         order: 0,
         parentId: null,
         content: {},
-        style: { backgroundColor: "#FFFBF7", paddingTop: "96px", paddingBottom: "96px" },
+        style: { backgroundColor: "#fdfcff", paddingTop: "96px", paddingBottom: "96px" },
       },
       {
         type: "container",
@@ -293,8 +293,8 @@ export const sectionTemplates: SectionTemplate[] = [
           rating: 5,
         },
         style: {
-          backgroundColor: "#FDF6F0",
-          borderLeftColor: "#E07A5F",
+          backgroundColor: "#f7f4fc",
+          borderLeftColor: "#c674f3",
           borderLeftWidth: "4px",
           padding: "2rem",
           maxWidth: "800px",
@@ -313,7 +313,7 @@ export const sectionTemplates: SectionTemplate[] = [
         order: 0,
         parentId: null,
         content: {},
-        style: { backgroundColor: "#E07A5F", paddingTop: "96px", paddingBottom: "96px" },
+        style: { backgroundColor: "#c674f3", paddingTop: "96px", paddingBottom: "96px" },
       },
       {
         type: "container",

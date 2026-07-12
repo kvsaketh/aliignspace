@@ -97,12 +97,12 @@ export function GoogleReviewsBlock({
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8 mb-12">
           <div>
             <Reveal direction="fade">
-              <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#D46546] block mb-3">
+              <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#c674f3] block mb-3">
                 {subtitle}
               </span>
             </Reveal>
             <Reveal direction="up" delay={80}>
-              <h2 className="font-serif text-3xl sm:text-4xl font-medium text-[#1C1917]">
+              <h2 className="font-serif text-3xl sm:text-4xl font-medium text-[#1a1720]">
                 {title}
               </h2>
             </Reveal>
@@ -114,7 +114,7 @@ export function GoogleReviewsBlock({
               <GoogleG size={28} />
               <div>
                 <div className="flex items-center gap-2">
-                  <span className="font-sans text-2xl font-bold text-[#1C1917] leading-none">
+                  <span className="font-sans text-2xl font-bold text-[#1a1720] leading-none">
                     {rating}
                   </span>
                   <div className="flex gap-0.5">
@@ -158,7 +158,7 @@ export function GoogleReviewsBlock({
                 {/* Reviewer */}
                 <div className="mt-5 pt-4 border-t border-stone-100 flex items-center justify-between">
                   <div>
-                    <span className="font-sans text-sm font-semibold text-[#1C1917] block">
+                    <span className="font-sans text-sm font-semibold text-[#1a1720] block">
                       {review.name}
                     </span>
                     <span className="font-sans text-xs text-stone-400 mt-0.5 block">
@@ -177,7 +177,7 @@ export function GoogleReviewsBlock({
             href="https://g.page/r/aliignspace/review"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 font-sans text-sm font-medium text-[#D46546] hover:text-[#c44d32] transition-colors"
+            className="inline-flex items-center gap-2 font-sans text-sm font-medium text-[#c674f3] hover:text-[#9b57cf] transition-colors"
           >
             View all reviews on Google
             <ExternalLink className="w-4 h-4" />

@@ -113,7 +113,7 @@ function FeatureCard({ feature, index }: { feature: Feature; index: number }) {
           className="absolute inset-0 rounded-3xl pointer-events-none"
           animate={{
             boxShadow: isHovered 
-              ? "inset 0 0 0 2px rgba(212, 101, 70, 0.3), 0 20px 40px -15px rgba(212, 101, 70, 0.2)"
+              ? "inset 0 0 0 2px rgba(155, 87, 207, 0.3), 0 20px 40px -15px rgba(155, 87, 207, 0.2)"
               : "inset 0 0 0 1px rgba(255,255,255,0.5), 0 4px 20px -5px rgba(0,0,0,0.05)"
           }}
           transition={{ duration: 0.4 }}
@@ -155,7 +155,7 @@ function FeatureCard({ feature, index }: { feature: Feature; index: number }) {
           </div>
 
           {/* Title */}
-          <h3 className="font-serif text-xl sm:text-2xl font-medium text-[#1C1917] mb-3 group-hover:text-terracotta-600 transition-colors duration-300">
+          <h3 className="font-serif text-xl sm:text-2xl font-medium text-[#1a1720] mb-3 group-hover:text-terracotta-600 transition-colors duration-300">
             {feature.title}
           </h3>
 
@@ -325,7 +325,7 @@ export function WhyChooseUsPremium({
 
             {/* Title */}
             <motion.h2
-              className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#1C1917] leading-[1.1] mb-5"
+              className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#1a1720] leading-[1.1] mb-5"
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.2 }}
@@ -375,7 +375,7 @@ export function WhyChooseUsPremium({
                   </div>
                 )}
                 <div>
-                  <p className="font-medium text-[#1C1917] text-sm">{quoteAuthor}</p>
+                  <p className="font-medium text-[#1a1720] text-sm">{quoteAuthor}</p>
                   <p className="text-stone-500 text-xs">{quoteRole}</p>
                 </div>
               </div>
@@ -395,9 +395,9 @@ export function WhyChooseUsPremium({
                 className="w-80 h-80 rounded-full bg-gradient-to-br from-terracotta-100 to-cream-200 flex items-center justify-center"
                 animate={{ 
                   boxShadow: [
-                    "0 0 60px rgba(212, 101, 70, 0.2)",
-                    "0 0 100px rgba(212, 101, 70, 0.3)",
-                    "0 0 60px rgba(212, 101, 70, 0.2)",
+                    "0 0 60px rgba(155, 87, 207, 0.2)",
+                    "0 0 100px rgba(155, 87, 207, 0.3)",
+                    "0 0 60px rgba(155, 87, 207, 0.2)",
                   ]
                 }}
                 transition={{ duration: 4, repeat: Infinity }}
@@ -448,7 +448,7 @@ export function WhyChooseUsPremium({
         >
           <motion.a
             href="/contact"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-[#1C1917] text-white font-sans font-medium rounded-full hover:bg-terracotta-500 transition-colors duration-300 group"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-[#1a1720] text-white font-sans font-medium rounded-full hover:bg-terracotta-500 transition-colors duration-300 group"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >

@@ -54,11 +54,11 @@ export function AliignspaceFounders({
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="inline-block font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#D46546] mb-4">
+          <span className="inline-block font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#c674f3] mb-4">
             {label}
           </span>
-          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-[#1A1612] leading-[1.1] tracking-tight">
-            {title} <span className="italic text-[#D46546]">{accentWord}</span>
+          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-[#16141f] leading-[1.1] tracking-tight">
+            {title} <span className="italic text-[#c674f3]">{accentWord}</span>
           </h2>
         </motion.div>
 
@@ -83,10 +83,10 @@ export function AliignspaceFounders({
               </div>
               <div className="flex items-start justify-between">
                 <div>
-                  <h3 className="font-serif text-2xl font-medium text-[#1A1612] mb-1">
+                  <h3 className="font-serif text-2xl font-medium text-[#16141f] mb-1">
                     {founder.name}
                   </h3>
-                  <p className="font-sans text-sm text-[#D46546] font-medium mb-3">
+                  <p className="font-sans text-sm text-[#c674f3] font-medium mb-3">
                     {founder.role}
                   </p>
                   {founder.bio && (
@@ -100,7 +100,7 @@ export function AliignspaceFounders({
                     href={founder.linkedIn}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-shrink-0 w-10 h-10 rounded-full border border-stone-200 flex items-center justify-center text-stone-400 hover:text-[#D46546] hover:border-[#D46546] transition-colors duration-300"
+                    className="flex-shrink-0 w-10 h-10 rounded-full border border-stone-200 flex items-center justify-center text-stone-400 hover:text-[#c674f3] hover:border-[#c674f3] transition-colors duration-300"
                     aria-label={`${founder.name} LinkedIn`}
                   >
                     <Linkedin className="w-4 h-4" />

@@ -84,7 +84,7 @@ function StepCard({ step, index }: { step: ProcessStep; index: number }) {
             </div>
           </div>
           
-          <h3 className="font-serif text-2xl sm:text-3xl font-medium text-[#1C1917] mb-4">
+          <h3 className="font-serif text-2xl sm:text-3xl font-medium text-[#1a1720] mb-4">
             {step.title}
           </h3>
           <p className="font-sans text-base text-stone-600 leading-relaxed mb-6 max-w-md">
@@ -146,7 +146,7 @@ export function ProcessV2({
             {subtitle}
           </motion.span>
           <motion.h2
-            className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#1C1917] leading-tight"
+            className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#1a1720] leading-tight"
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}

@@ -35,7 +35,7 @@ export function AliignspaceFinalCTA({
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="relative py-24 lg:py-32 bg-[#1A1612] overflow-hidden" ref={ref}>
+    <section className="relative py-24 lg:py-32 bg-[#16141f] overflow-hidden" ref={ref}>
       {/* Ghost word background */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
         <span className="font-serif text-[12vw] text-white/[0.03] whitespace-nowrap">TOGETHER</span>
@@ -47,12 +47,12 @@ export function AliignspaceFinalCTA({
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
-          <span className="inline-block font-sans text-xs uppercase tracking-[0.2em] text-[rgb(255,134,113)] mb-6">
+          <span className="inline-block font-sans text-xs uppercase tracking-[0.2em] text-[#c674f3] mb-6">
             {label}
           </span>
           <h2
             className="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white leading-tight mb-6"
-            dangerouslySetInnerHTML={{ __html: `${title} <span class="text-[rgb(255,134,113)]">${accentWord}</span>` }}
+            dangerouslySetInnerHTML={{ __html: `${title} <span class="text-[#c674f3]">${accentWord}</span>` }}
           />
           <p className="font-sans text-white/60 max-w-2xl mx-auto mb-10 leading-relaxed">{body}</p>
         </motion.div>
@@ -70,7 +70,7 @@ export function AliignspaceFinalCTA({
                 <a
                   key={i}
                   href={btn.url}
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-[#D46546] text-white font-sans text-sm uppercase tracking-wider hover:bg-[rgb(255,134,113)] transition-colors duration-300 rounded-full"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-[#c674f3] text-white font-sans text-sm uppercase tracking-wider hover:bg-[#c674f3] transition-colors duration-300 rounded-full"
                 >
                   {btn.label}
                   <ArrowRight className="w-4 h-4" />

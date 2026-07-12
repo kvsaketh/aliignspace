@@ -34,7 +34,7 @@ function StatItem({ stat, index }: { stat: Stat; index: number }) {
       transition={{ duration: 0.6, delay: index * 0.15 }}
     >
       <div className="mb-2">
-        <span className="font-serif text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-medium text-[#1C1917] tracking-tight">
+        <span className="font-serif text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-medium text-[#1a1720] tracking-tight">
           {stat.value}
         </span>
         {stat.suffix && (
@@ -43,7 +43,7 @@ function StatItem({ stat, index }: { stat: Stat; index: number }) {
           </span>
         )}
       </div>
-      <h3 className="font-sans text-sm sm:text-base font-semibold tracking-wider uppercase text-[#1C1917] mb-1">
+      <h3 className="font-sans text-sm sm:text-base font-semibold tracking-wider uppercase text-[#1a1720] mb-1">
         {stat.label}
       </h3>
       {stat.description && (
@@ -64,7 +64,7 @@ export function StatsV2({ stats = defaultStats }: StatsV2Props) {
       {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-[0.015]">
         <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, #1C1917 1px, transparent 0)`,
+          backgroundImage: `radial-gradient(circle at 1px 1px, #1a1720 1px, transparent 0)`,
           backgroundSize: "32px 32px",
         }} />
       </div>

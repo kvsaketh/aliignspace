@@ -43,7 +43,7 @@ function MobileDrawer({ open, onClose }: { open: boolean; onClose: () => void })
 
           {/* Drawer panel */}
           <motion.div
-            className="fixed top-0 right-0 bottom-0 z-50 w-[300px] bg-[#1A1612] flex flex-col lg:hidden"
+            className="fixed top-0 right-0 bottom-0 z-50 w-[300px] bg-[#16141f] flex flex-col lg:hidden"
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
@@ -96,7 +96,7 @@ function MobileDrawer({ open, onClose }: { open: boolean; onClose: () => void })
                 href="/contact"
                 onClick={onClose}
                 className="flex items-center justify-center w-full py-3 rounded-xl text-sm font-semibold transition-colors"
-                style={{ backgroundColor: "rgb(250,202,194)", color: "#1A1612" }}
+                style={{ backgroundColor: "rgb(217, 165, 247)", color: "#16141f" }}
               >
                 Free Consultation
               </Link>
@@ -138,7 +138,7 @@ export function Header() {
               <span
                 className={cn(
                   "font-serif text-2xl tracking-[0.15em] transition-colors duration-300",
-                  isScrolled ? "text-[#1A1612]" : "text-white"
+                  isScrolled ? "text-[#16141f]" : "text-white"
                 )}
               >
                 aliignspace
@@ -146,7 +146,7 @@ export function Header() {
               <span
                 className={cn(
                   "block h-[1px] w-0 transition-all duration-300 group-hover:w-full mt-0.5",
-                  isScrolled ? "bg-[#D46546]" : "bg-white/60"
+                  isScrolled ? "bg-[#c674f3]" : "bg-white/60"
                 )}
               />
             </Link>
@@ -158,8 +158,8 @@ export function Header() {
                   key={link.label}
                   href={link.href}
                   className={cn(
-                    "relative text-sm font-medium transition-colors duration-200 hover:text-[#D46546] after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 after:bg-[#D46546] after:transition-all after:duration-300 hover:after:w-full pb-0.5",
-                    isScrolled ? "text-[#1A1612]/80" : "text-white/90"
+                    "relative text-sm font-medium transition-colors duration-200 hover:text-[#c674f3] after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 after:bg-[#c674f3] after:transition-all after:duration-300 hover:after:w-full pb-0.5",
+                    isScrolled ? "text-[#16141f]/80" : "text-white/90"
                   )}
                 >
                   {link.label}
@@ -172,8 +172,8 @@ export function Header() {
               <a
                 href="tel:+919030444503"
                 className={cn(
-                  "flex items-center gap-2 text-sm font-medium transition-colors duration-200 hover:text-[#D46546]",
-                  isScrolled ? "text-[#1A1612]/70" : "text-white/80"
+                  "flex items-center gap-2 text-sm font-medium transition-colors duration-200 hover:text-[#c674f3]",
+                  isScrolled ? "text-[#16141f]/70" : "text-white/80"
                 )}
               >
                 <Phone className="w-4 h-4" />
@@ -182,7 +182,7 @@ export function Header() {
               <Link
                 href="/contact"
                 className="inline-flex items-center px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 hover:opacity-90 active:scale-95"
-                style={{ backgroundColor: "rgb(250,202,194)", color: "#1A1612" }}
+                style={{ backgroundColor: "rgb(217, 165, 247)", color: "#16141f" }}
               >
                 Free Consultation
               </Link>
@@ -193,7 +193,7 @@ export function Header() {
               className={cn(
                 "lg:hidden flex items-center justify-center w-10 h-10 rounded-lg transition-colors",
                 isScrolled
-                  ? "text-[#1A1612] hover:bg-[#1A1612]/5"
+                  ? "text-[#16141f] hover:bg-[#16141f]/5"
                   : "text-white hover:bg-white/10"
               )}
               onClick={() => setMobileOpen(true)}

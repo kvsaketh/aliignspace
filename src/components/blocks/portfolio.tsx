@@ -51,12 +51,12 @@ export function PortfolioBlock({
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <Reveal direction="fade">
-            <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#D46546] block mb-4">
+            <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#c674f3] block mb-4">
               {subtitle}
             </span>
           </Reveal>
           <Reveal direction="up" delay={80}>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#1C1917]">
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#1a1720]">
               {title}
             </h2>
           </Reveal>
@@ -71,8 +71,8 @@ export function PortfolioBlock({
                 onClick={() => handleFilterChange(cat)}
                 className={`font-sans text-sm px-5 py-2 border transition-all duration-200 ${
                   activeFilter === cat
-                    ? "bg-[#D46546] border-[#D46546] text-white"
-                    : "bg-white border-stone-200 text-stone-600 hover:border-[#D46546] hover:text-[#D46546]"
+                    ? "bg-[#c674f3] border-[#c674f3] text-white"
+                    : "bg-white border-stone-200 text-stone-600 hover:border-[#c674f3] hover:text-[#c674f3]"
                 }`}
               >
                 {cat}
@@ -108,7 +108,7 @@ export function PortfolioBlock({
 
                   {/* Content */}
                   <div className="absolute inset-0 flex flex-col justify-end p-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-400">
-                    <span className="font-sans text-xs font-semibold tracking-wider uppercase text-[#D46546] mb-1">
+                    <span className="font-sans text-xs font-semibold tracking-wider uppercase text-[#c674f3] mb-1">
                       {item.category}
                     </span>
                     <h3 className="font-serif text-lg font-medium text-white">
@@ -118,7 +118,7 @@ export function PortfolioBlock({
 
                   {/* Featured badge */}
                   {item.featured && (
-                    <div className="absolute top-4 left-4 bg-[#D46546] text-white font-sans text-[10px] font-semibold tracking-wider uppercase px-3 py-1">
+                    <div className="absolute top-4 left-4 bg-[#c674f3] text-white font-sans text-[10px] font-semibold tracking-wider uppercase px-3 py-1">
                       Featured
                     </div>
                   )}
@@ -137,7 +137,7 @@ export function PortfolioBlock({
           <div className="text-center mt-10">
             <button
               onClick={() => setVisibleCount((c) => c + ITEMS_PER_PAGE)}
-              className="font-sans text-sm font-medium px-8 py-3 border border-[#1C1917] text-[#1C1917] hover:bg-[#1C1917] hover:text-white transition-all duration-300"
+              className="font-sans text-sm font-medium px-8 py-3 border border-[#1a1720] text-[#1a1720] hover:bg-[#1a1720] hover:text-white transition-all duration-300"
             >
               Load More Projects
             </button>
@@ -148,7 +148,7 @@ export function PortfolioBlock({
         <div className="text-center mt-10">
           <Link
             href="/portfolio"
-            className="inline-flex items-center gap-2 font-sans text-sm font-semibold text-[#D46546] hover:text-[#c44d32] transition-colors group"
+            className="inline-flex items-center gap-2 font-sans text-sm font-semibold text-[#c674f3] hover:text-[#9b57cf] transition-colors group"
           >
             View All Projects
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

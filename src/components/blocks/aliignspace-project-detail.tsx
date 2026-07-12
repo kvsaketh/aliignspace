@@ -76,7 +76,7 @@ export function AliignspaceProjectDetail({
             sizes="100vw"
           />
           {/* Gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#1A1612]/80 via-[#1A1612]/30 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#16141f]/80 via-[#16141f]/30 to-transparent" />
 
           {/* Content */}
           <div className="absolute inset-0 flex items-end">
@@ -87,7 +87,7 @@ export function AliignspaceProjectDetail({
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               >
                 {/* Location */}
-                <span className="inline-block font-sans text-xs font-semibold tracking-[0.2em] uppercase text-[rgb(255,134,113)] mb-3">
+                <span className="inline-block font-sans text-xs font-semibold tracking-[0.2em] uppercase text-[#c674f3] mb-3">
                   {location}
                 </span>
                 {/* Title */}
@@ -121,7 +121,7 @@ export function AliignspaceProjectDetail({
               animate={contentInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             >
-              <h2 className="font-serif text-3xl sm:text-4xl text-[#1A1612] mb-6">About the Project</h2>
+              <h2 className="font-serif text-3xl sm:text-4xl text-[#16141f] mb-6">About the Project</h2>
               <p className="font-sans text-lg text-stone-600 leading-relaxed whitespace-pre-line">
                 {description}
               </p>
@@ -134,37 +134,37 @@ export function AliignspaceProjectDetail({
               transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
               className="h-fit"
             >
-              <div className="bg-[#f9f7f4] rounded-2xl p-8 space-y-6">
-                <h3 className="font-serif text-xl text-[#1A1612]">Project Details</h3>
+              <div className="bg-[#f7f5fb] rounded-2xl p-8 space-y-6">
+                <h3 className="font-serif text-xl text-[#16141f]">Project Details</h3>
                 <div className="space-y-4">
                   {clientName && (
                     <div>
                       <span className="block font-sans text-xs uppercase tracking-wider text-stone-400 mb-1">Client</span>
-                      <span className="font-sans text-sm text-[#1A1612]">{clientName}</span>
+                      <span className="font-sans text-sm text-[#16141f]">{clientName}</span>
                     </div>
                   )}
                   {projectType && (
                     <div>
                       <span className="block font-sans text-xs uppercase tracking-wider text-stone-400 mb-1">Type</span>
-                      <span className="font-sans text-sm text-[#1A1612]">{projectType}</span>
+                      <span className="font-sans text-sm text-[#16141f]">{projectType}</span>
                     </div>
                   )}
                   {area && (
                     <div>
                       <span className="block font-sans text-xs uppercase tracking-wider text-stone-400 mb-1">Area</span>
-                      <span className="font-sans text-sm text-[#1A1612]">{area}</span>
+                      <span className="font-sans text-sm text-[#16141f]">{area}</span>
                     </div>
                   )}
                   {budget && (
                     <div>
                       <span className="block font-sans text-xs uppercase tracking-wider text-stone-400 mb-1">Budget</span>
-                      <span className="font-sans text-sm text-[#1A1612]">{budget}</span>
+                      <span className="font-sans text-sm text-[#16141f]">{budget}</span>
                     </div>
                   )}
                   {location && (
                     <div>
                       <span className="block font-sans text-xs uppercase tracking-wider text-stone-400 mb-1">Location</span>
-                      <span className="font-sans text-sm text-[#1A1612]">{location}</span>
+                      <span className="font-sans text-sm text-[#16141f]">{location}</span>
                     </div>
                   )}
                 </div>
@@ -175,14 +175,14 @@ export function AliignspaceProjectDetail({
       </section>
 
       {/* Gallery */}
-      <section ref={galleryRef} className="py-24 lg:py-32 bg-[#f9f7f4]">
+      <section ref={galleryRef} className="py-24 lg:py-32 bg-[#f7f5fb]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={galleryInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
-            <h2 className="font-serif text-3xl sm:text-4xl text-[#1A1612] mb-12 text-center">Project Gallery</h2>
+            <h2 className="font-serif text-3xl sm:text-4xl text-[#16141f] mb-12 text-center">Project Gallery</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {gallery.map((img, i) => (
                 <motion.div
@@ -219,7 +219,7 @@ export function AliignspaceProjectDetail({
               animate={videoInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             >
-              <h2 className="font-serif text-3xl sm:text-4xl text-[#1A1612] mb-12 text-center">Project Walkthrough</h2>
+              <h2 className="font-serif text-3xl sm:text-4xl text-[#16141f] mb-12 text-center">Project Walkthrough</h2>
               <div
                 className="relative w-full aspect-video max-w-5xl mx-auto overflow-hidden rounded-2xl bg-stone-100 cursor-pointer group"
                 onClick={() => setVideoOpen(true)}
@@ -232,11 +232,11 @@ export function AliignspaceProjectDetail({
                   sizes="(max-width: 1280px) 100vw, 1024px"
                 />
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-[#1A1612]/30 group-hover:bg-[#1A1612]/20 transition-colors duration-300" />
+                <div className="absolute inset-0 bg-[#16141f]/30 group-hover:bg-[#16141f]/20 transition-colors duration-300" />
                 {/* Play button */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-20 h-20 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                    <Play className="w-8 h-8 text-[#D46546] ml-1" fill="#D46546" />
+                    <Play className="w-8 h-8 text-[#c674f3] ml-1" fill="#c674f3" />
                   </div>
                 </div>
               </div>
@@ -253,7 +253,7 @@ export function AliignspaceProjectDetail({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-50 bg-[#1A1612]/90 backdrop-blur-sm flex items-center justify-center p-4"
+            className="fixed inset-0 z-50 bg-[#16141f]/90 backdrop-blur-sm flex items-center justify-center p-4"
             onClick={() => setVideoOpen(false)}
           >
             <motion.div

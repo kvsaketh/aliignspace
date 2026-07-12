@@ -188,7 +188,7 @@ export function ProjectsV2({
   };
 
   return (
-    <section ref={containerRef} className="relative bg-[#1C1917]">
+    <section ref={containerRef} className="relative bg-[#1a1720]">
       {/* Header */}
       <div className="absolute top-0 left-0 right-0 z-20 p-6 sm:p-10 lg:p-16">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
@@ -220,13 +220,13 @@ export function ProjectsV2({
           >
             <button
               onClick={prevSlide}
-              className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-[#1C1917] transition-all duration-300"
+              className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-[#1a1720] transition-all duration-300"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={nextSlide}
-              className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-[#1C1917] transition-all duration-300"
+              className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-[#1a1720] transition-all duration-300"
             >
               <ChevronRight className="w-5 h-5" />
             </button>
@@ -256,7 +256,7 @@ export function ProjectsV2({
               onClick={() => setCurrentIndex(index)}
               className={`flex-shrink-0 relative w-20 h-20 sm:w-24 sm:h-24 rounded-lg overflow-hidden transition-all duration-300 ${
                 index === currentIndex 
-                  ? "ring-2 ring-terracotta-500 ring-offset-2 ring-offset-[#1C1917]" 
+                  ? "ring-2 ring-terracotta-500 ring-offset-2 ring-offset-[#1a1720]" 
                   : "opacity-50 hover:opacity-80"
               }`}
             >
@@ -273,7 +273,7 @@ export function ProjectsV2({
           {/* View All Link */}
           <Link
             href="/portfolio"
-            className="flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 rounded-lg border border-white/20 flex flex-col items-center justify-center text-white hover:bg-white hover:text-[#1C1917] transition-all duration-300 ml-4"
+            className="flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 rounded-lg border border-white/20 flex flex-col items-center justify-center text-white hover:bg-white hover:text-[#1a1720] transition-all duration-300 ml-4"
           >
             <ArrowUpRight className="w-5 h-5 mb-1" />
             <span className="font-sans text-xs">View All</span>

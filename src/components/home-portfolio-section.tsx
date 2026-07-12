@@ -12,18 +12,18 @@ export async function HomePortfolioSection() {
   if (!projects.length) return null;
 
   return (
-    <section className="py-24 lg:py-32" style={{ backgroundColor: "#f9f7f4" }}>
+    <section className="py-24 lg:py-32" style={{ backgroundColor: "#f7f5fb" }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
           <span
             className="inline-block font-sans text-xs font-semibold tracking-[0.25em] uppercase mb-4"
-            style={{ color: "#D46546" }}
+            style={{ color: "#c674f3" }}
           >
             Our Work
           </span>
           <h2
             className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium leading-tight tracking-tight"
-            style={{ color: "#1A1612" }}
+            style={{ color: "#16141f" }}
           >
             Featured Projects
           </h2>
@@ -46,7 +46,7 @@ export async function HomePortfolioSection() {
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 ) : (
-                  <div className="absolute inset-0" style={{ backgroundColor: "#e8e0d8" }} />
+                  <div className="absolute inset-0" style={{ backgroundColor: "#e7e4f1" }} />
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
               </div>
@@ -54,7 +54,7 @@ export async function HomePortfolioSection() {
                 {project.category && (
                   <span
                     className="inline-block font-sans text-[10px] font-semibold tracking-[0.2em] uppercase mb-2"
-                    style={{ color: "#D46546" }}
+                    style={{ color: "#c674f3" }}
                   >
                     {project.category}
                   </span>
@@ -73,7 +73,7 @@ export async function HomePortfolioSection() {
         <div className="mt-12 flex justify-center">
           <Link
             href="/portfolio"
-            className="font-sans text-sm font-medium px-8 py-3 border border-[#1A1612] text-[#1A1612] hover:bg-[#1A1612] hover:text-white transition-colors duration-200"
+            className="font-sans text-sm font-medium px-8 py-3 border border-[#16141f] text-[#16141f] hover:bg-[#16141f] hover:text-white transition-colors duration-200"
           >
             View All Projects →
           </Link>

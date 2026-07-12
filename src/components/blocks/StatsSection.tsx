@@ -59,21 +59,21 @@ export function StatsSection({
   };
 
   return (
-    <section className={`py-20 lg:py-28 ${isDark ? "bg-[#1C1917]" : "bg-white"}`}>
+    <section className={`py-20 lg:py-28 ${isDark ? "bg-[#1a1720]" : "bg-white"}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <Reveal direction="fade">
           <div className="text-center max-w-3xl mx-auto mb-14">
             <span
               className={`font-sans text-xs font-semibold tracking-[0.25em] uppercase mb-4 block ${
-                isDark ? "text-[#D46546]" : "text-[#D46546]"
+                isDark ? "text-[#c674f3]" : "text-[#c674f3]"
               }`}
             >
               By The Numbers
             </span>
             <h2
               className={`font-serif text-3xl sm:text-4xl lg:text-5xl font-medium mb-4 ${
-                isDark ? "text-white" : "text-[#1C1917]"
+                isDark ? "text-white" : "text-[#1a1720]"
               }`}
             >
               {title}
@@ -105,7 +105,7 @@ export function StatsSection({
                   {/* Number */}
                   <span
                     className={`font-serif text-4xl sm:text-5xl lg:text-6xl font-medium leading-none mb-2 ${
-                      isDark ? "text-white" : "text-[#1C1917]"
+                      isDark ? "text-white" : "text-[#1a1720]"
                     }`}
                   >
                     {stat.prefix && <span>{stat.prefix}</span>}
@@ -119,7 +119,7 @@ export function StatsSection({
                   {/* Label */}
                   <span
                     className={`font-serif text-base sm:text-lg font-medium mt-1 mb-2 ${
-                      isDark ? "text-white" : "text-[#1C1917]"
+                      isDark ? "text-white" : "text-[#1a1720]"
                     }`}
                   >
                     {stat.label}
@@ -137,7 +137,7 @@ export function StatsSection({
                   )}
 
                   {/* Accent dot */}
-                  <span className="block w-1.5 h-1.5 rounded-full bg-[#D46546] mt-4" />
+                  <span className="block w-1.5 h-1.5 rounded-full bg-[#c674f3] mt-4" />
                 </div>
               </Reveal>
             );

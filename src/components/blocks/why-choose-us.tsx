@@ -95,10 +95,10 @@ export function WhyChooseUsBlock({
       <div className="grid lg:grid-cols-2">
 
         {/* Left — Dark panel */}
-        <div className="bg-[#1C1917] px-8 sm:px-12 lg:px-16 py-20 lg:py-32 flex flex-col justify-between">
+        <div className="bg-[#1a1720] px-8 sm:px-12 lg:px-16 py-20 lg:py-32 flex flex-col justify-between">
           <div>
             <Reveal direction="left">
-              <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#D46546] block mb-6">
+              <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#c674f3] block mb-6">
                 {subtitle}
               </span>
             </Reveal>
@@ -111,7 +111,7 @@ export function WhyChooseUsBlock({
 
             {/* Quote block */}
             <Reveal direction="left" delay={160}>
-              <blockquote className="border-l-4 border-[#D46546] pl-6">
+              <blockquote className="border-l-4 border-[#c674f3] pl-6">
                 <p className="font-serif text-lg italic text-white/70 leading-relaxed mb-4">
                   &ldquo;{quote}&rdquo;
                 </p>
@@ -125,7 +125,7 @@ export function WhyChooseUsBlock({
           {/* Founder image */}
           {founderImage && (
             <Reveal direction="left" delay={240}>
-              <div className="mt-12 relative w-20 h-20 rounded-full overflow-hidden border-2 border-[#D46546]/50">
+              <div className="mt-12 relative w-20 h-20 rounded-full overflow-hidden border-2 border-[#c674f3]/50">
                 <Image
                   src={founderImage}
                   alt={quoteAuthor}
@@ -139,18 +139,18 @@ export function WhyChooseUsBlock({
         </div>
 
         {/* Right — Cream grid */}
-        <div className="bg-[#F9F5ED] px-8 sm:px-10 lg:px-12 py-20 lg:py-32">
+        <div className="bg-[#f6f4fb] px-8 sm:px-10 lg:px-12 py-20 lg:py-32">
           <div className="grid grid-cols-2 gap-px bg-stone-200">
             {features.slice(0, 8).map((feature, index) => {
               const Icon = iconMap[feature.icon] ?? CheckCircle2;
               return (
                 <Reveal key={index} direction="up" delay={index * 60}>
-                  <div className="bg-[#F9F5ED] p-6 sm:p-7 group hover:bg-white transition-colors duration-300">
+                  <div className="bg-[#f6f4fb] p-6 sm:p-7 group hover:bg-white transition-colors duration-300">
                     {/* Icon square */}
-                    <div className="w-10 h-10 bg-[#D46546]/10 flex items-center justify-center mb-4 group-hover:bg-[#D46546] transition-colors duration-300">
-                      <Icon className="w-5 h-5 text-[#D46546] group-hover:text-white transition-colors duration-300" />
+                    <div className="w-10 h-10 bg-[#c674f3]/10 flex items-center justify-center mb-4 group-hover:bg-[#c674f3] transition-colors duration-300">
+                      <Icon className="w-5 h-5 text-[#c674f3] group-hover:text-white transition-colors duration-300" />
                     </div>
-                    <h3 className="font-serif text-base font-medium text-[#1C1917] mb-1.5">
+                    <h3 className="font-serif text-base font-medium text-[#1a1720] mb-1.5">
                       {feature.title}
                     </h3>
                     <p className="font-sans text-xs text-stone-500 leading-relaxed">

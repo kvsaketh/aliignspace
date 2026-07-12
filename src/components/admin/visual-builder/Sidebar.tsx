@@ -163,7 +163,7 @@ function DraggableComponentItem({ component, onAdd }: DraggableComponentItemProp
       ref={setNodeRef}
       {...listeners}
       {...attributes}
-      whileHover={{ scale: 1.02, backgroundColor: "rgba(212, 101, 70, 0.1)" }}
+      whileHover={{ scale: 1.02, backgroundColor: "rgba(155, 87, 207, 0.1)" }}
       whileTap={{ scale: 0.98 }}
       onClick={onAdd}
       className={cn(

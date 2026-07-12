@@ -5,14 +5,14 @@
 @layer base {
   :root {
     /* Aliignspace Brand Colors */
-    --aliign-coral: #E07A5F;
-    --aliign-coral-light: #F4A261;
-    --aliign-peach: #F2CC8F;
-    --aliign-salmon: #E29578;
-    --aliign-terracotta: #D4765F;
-    --aliign-cream: #FDF6F0;
-    --aliign-warm-white: #FFFBF7;
-    --aliign-stone: #EDE0D4;
+    --aliign-coral: #c674f3;
+    --aliign-coral-light: #d9a5f7;
+    --aliign-peach: #e5d9f9;
+    --aliign-salmon: #c294f0;
+    --aliign-terracotta: #b495f5;
+    --aliign-cream: #f7f4fc;
+    --aliign-warm-white: #fdfcff;
+    --aliign-stone: #e6e2f0;
     --aliign-charcoal: #2B2D42;
     --aliign-slate: #4A4E69;
     --aliign-muted: #8D99AE;
@@ -24,25 +24,28 @@
     --info: #457B9D;
 
     /* shadcn/ui theme mapped to brand */
-    --background: 40 33% 97%;
+    --background: 265 30% 98%;
     --foreground: 233 19% 21%;
-    --card: 40 33% 97%;
+    --card: 265 30% 98%;
     --card-foreground: 233 19% 21%;
-    --popover: 40 33% 97%;
+    --popover: 265 30% 98%;
     --popover-foreground: 233 19% 21%;
-    --primary: 15 68% 63%;
-    --primary-foreground: 40 100% 98%;
-    --secondary: 30 25% 90%;
+    /* Primary — #b495f5 (soft lavender) with matching shades for gradients */
+    --primary: 263 61% 62%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 263 61% 72%;
+    --primary-dark: 233 72% 60%;
+    --secondary: 265 18% 93%;
     --secondary-foreground: 233 19% 21%;
-    --muted: 30 20% 92%;
-    --muted-foreground: 220 12% 61%;
-    --accent: 15 68% 63%;
-    --accent-foreground: 40 100% 98%;
+    --muted: 265 16% 94%;
+    --muted-foreground: 260 8% 55%;
+    --accent: 33 88% 59%;
+    --accent-foreground: 260 35% 16%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --border: 30 20% 85%;
-    --input: 30 20% 85%;
-    --ring: 15 68% 63%;
+    --border: 265 14% 88%;
+    --input: 265 14% 88%;
+    --ring: 233 82% 60%;
     --radius: 0.5rem;
   }
 
@@ -53,19 +56,22 @@
     --card-foreground: 40 20% 95%;
     --popover: 233 19% 12%;
     --popover-foreground: 40 20% 95%;
-    --primary: 15 68% 63%;
-    --primary-foreground: 40 100% 98%;
+    /* Primary — #b495f5 (soft lavender) with matching shades for gradients */
+    --primary: 263 61% 62%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 263 61% 72%;
+    --primary-dark: 233 72% 60%;
     --secondary: 233 19% 18%;
     --secondary-foreground: 40 20% 95%;
     --muted: 233 19% 18%;
     --muted-foreground: 220 12% 60%;
-    --accent: 15 68% 63%;
-    --accent-foreground: 40 100% 98%;
+    --accent: 33 88% 59%;
+    --accent-foreground: 260 35% 14%;
     --destructive: 0 62% 30%;
     --destructive-foreground: 0 0% 100%;
     --border: 233 19% 22%;
     --input: 233 19% 22%;
-    --ring: 15 68% 63%;
+    --ring: 233 82% 60%;
   }
 }
 
@@ -85,17 +91,24 @@
   .text-balance {
     text-wrap: balance;
   }
+  /* Logo palette: periwinkle blue #3b4fea -> violet #8b5cd8 -> warm amber #f2a03c */
   .gradient-terracotta {
-    background: linear-gradient(135deg, #D4765F 0%, #E07A5F 100%);
+    background: linear-gradient(135deg, #3b4fea 0%, #8b5cd8 55%, #f2a03c 100%);
   }
   .gradient-cream {
-    background: linear-gradient(135deg, #FDF6F0 0%, #FFFBF7 100%);
+    background: linear-gradient(135deg, #f6f5fd 0%, #fdfcff 100%);
   }
   .gradient-coral {
-    background: linear-gradient(135deg, #E07A5F 0%, #F4A261 100%);
+    background: linear-gradient(135deg, #8b5cd8 0%, #f2a03c 100%);
+  }
+  .gradient-primary {
+    background: linear-gradient(135deg, #3b4fea 0%, #8b5cd8 50%, #f2a03c 100%);
+  }
+  .gradient-blue-violet {
+    background: linear-gradient(135deg, #3b4fea 0%, #8b5cd8 100%);
   }
   .shadow-soft {
-    box-shadow: 0 4px 20px rgba(224, 122, 95, 0.08);
+    box-shadow: 0 4px 20px rgba(198, 116, 243, 0.08);
   }
   .shadow-card {
     box-shadow: 0 8px 32px rgba(43, 45, 66, 0.12);
@@ -214,7 +227,7 @@ html {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #E07A5F;
+  background: #c674f3;
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
@@ -228,7 +241,7 @@ html {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  border: 1.5px solid rgba(224, 122, 95, 0.5);
+  border: 1.5px solid rgba(198, 116, 243, 0.5);
   pointer-events: none;
   z-index: 9998;
   transform: translate(-50%, -50%);
@@ -238,13 +251,13 @@ html {
 .cursor-dot.cursor-hover {
   width: 12px;
   height: 12px;
-  background: #D4765F;
+  background: #b495f5;
 }
 
 .cursor-ring.cursor-hover {
   width: 48px;
   height: 48px;
-  border-color: rgba(224, 122, 95, 0.3);
+  border-color: rgba(198, 116, 243, 0.3);
 }
 
 /* ─── Additional keyframes ───────────────────────────────────────────────── */
@@ -323,14 +336,14 @@ html {
 
 /* ─── Gradient text utility ──────────────────────────────────────────────── */
 .gradient-text {
-  background: linear-gradient(135deg, #E07A5F 0%, #F4A261 50%, #D4765F 100%);
+  background: linear-gradient(120deg, #3b4fea 0%, #8b5cd8 50%, #f2a03c 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .gradient-text-gold {
-  background: linear-gradient(135deg, #f5c177 0%, #e8a94f 50%, #c9893a 100%);
+  background: linear-gradient(135deg, #f2a03c 0%, #f7c07a 45%, #8b5cd8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -345,7 +358,7 @@ html {
 }
 
 .glass-dark {
-  background: rgba(28, 25, 23, 0.75);
+  background: rgba(26, 23, 32, 0.75);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -355,7 +368,7 @@ html {
   background: rgba(255, 251, 247, 0.7);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(224, 122, 95, 0.15);
+  border: 1px solid rgba(198, 116, 243, 0.15);
 }
 
 /* ─── Line reveal for headings ───────────────────────────────────────────── */
@@ -371,7 +384,7 @@ html {
   left: 0;
   height: 2px;
   width: 100%;
-  background: linear-gradient(90deg, #E07A5F, #F4A261);
+  background: linear-gradient(90deg, #c674f3, #d9a5f7);
   transform: scaleX(0);
   transform-origin: left center;
   transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
@@ -384,14 +397,14 @@ html {
 
 /* ─── Text stroke utility ─────────────────────────────────────────────────── */
 .text-stroke {
-  -webkit-text-stroke: 1px #E07A5F;
+  -webkit-text-stroke: 1px #c674f3;
   color: transparent;
 }
 
 /* ─── Section divider ─────────────────────────────────────────────────────── */
 .divider-coral {
   height: 1px;
-  background: linear-gradient(90deg, transparent, #E07A5F 40%, #E07A5F 60%, transparent);
+  background: linear-gradient(90deg, transparent, #c674f3 40%, #c674f3 60%, transparent);
   opacity: 0.4;
 }
 

@@ -41,39 +41,27 @@ const NAV_LINKS = [
 const SERVICES: ServiceItem[] = [
   {
     icon: <Home className="w-5 h-5" />,
-    label: "Home Interiors",
-    href: "/services/full-home-interiors",
-    description: "Complete home transformation from concept to completion",
-  },
-  {
-    icon: <UtensilsCrossed className="w-5 h-5" />,
-    label: "Modular Kitchen",
-    href: "/services/modular-kitchen",
-    description: "Smart, functional kitchens built to perfection",
+    label: "Turnkey Solutions",
+    href: "/services/turnkey",
+    description: "Turn the key — from woodwork to curtains & décor",
   },
   {
     icon: <Sofa className="w-5 h-5" />,
-    label: "Living Room",
-    href: "/services/living-room-interiors",
-    description: "Inviting spaces designed for comfort and style",
+    label: "Home Renovation",
+    href: "/services/renovation",
+    description: "Modern makeovers for existing homes, room by room",
   },
   {
-    icon: <BedDouble className="w-5 h-5" />,
-    label: "Bedroom",
-    href: "/services/bedroom-interiors",
-    description: "Serene retreats crafted for rest and relaxation",
-  },
-  {
-    icon: <Briefcase className="w-5 h-5" />,
-    label: "Wardrobe & Storage",
-    href: "/services/wardrobe-design",
-    description: "Precision-designed storage solutions for every space",
+    icon: <UtensilsCrossed className="w-5 h-5" />,
+    label: "Modular Solutions",
+    href: "/services/modular",
+    description: "Kitchens, wardrobes & storage engineered to fit",
   },
   {
     icon: <Building2 className="w-5 h-5" />,
-    label: "Luxury Furniture",
-    href: "/services/luxury-furniture",
-    description: "Bespoke furniture pieces crafted to elevate your space",
+    label: "Commercial Space Design",
+    href: "/services/commercial",
+    description: "Offices, retail & commercial interiors that perform",
   },
 ];
 
@@ -155,7 +143,7 @@ function ServicesMegaDropdown({ isScrolled }: { isScrolled: boolean }) {
             ? "opacity-100 translate-y-0 pointer-events-auto"
             : "opacity-0 -translate-y-2 pointer-events-none"
         )}
-        style={{ background: "rgba(28,25,23,0.97)", backdropFilter: "blur(16px)" }}
+        style={{ background: "rgba(26, 23, 32,0.97)", backdropFilter: "blur(16px)" }}
       >
         {/* Header strip */}
         <div className="px-6 py-4 border-b border-white/10 flex items-center justify-between">
@@ -242,7 +230,7 @@ function MobileDrawer({
       {/* Drawer panel */}
       <div
         className={cn(
-          "fixed top-0 right-0 bottom-0 z-50 w-[300px] bg-[#1C1917] flex flex-col transition-transform duration-300 ease-out lg:hidden",
+          "fixed top-0 right-0 bottom-0 z-50 w-[300px] bg-[#1a1720] flex flex-col transition-transform duration-300 ease-out lg:hidden",
           open ? "translate-x-0" : "translate-x-full"
         )}
       >
@@ -351,7 +339,7 @@ export function Header() {
         className={cn(
           "fixed top-0 left-0 right-0 z-40 transition-all duration-300",
           isScrolled
-            ? "bg-[#1C1917]/95 backdrop-blur-md shadow-[0_2px_24px_rgba(0,0,0,0.3)]"
+            ? "bg-[#1a1720]/95 backdrop-blur-md shadow-[0_2px_24px_rgba(0,0,0,0.3)]"
             : "bg-transparent"
         )}
       >
@@ -401,7 +389,7 @@ export function Header() {
               {/* CTA */}
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-terracotta-500 text-white text-sm font-semibold hover:bg-terracotta-600 active:scale-95 transition-all duration-200 shadow-[0_2px_12px_rgba(212,101,70,0.4)]"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-terracotta-500 text-white text-sm font-semibold hover:bg-terracotta-600 active:scale-95 transition-all duration-200 shadow-[0_2px_12px_rgba(155, 87, 207,0.4)]"
               >
                 Get Free Consultation
               </Link>

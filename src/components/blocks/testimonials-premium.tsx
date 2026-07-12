@@ -115,7 +115,7 @@ function TestimonialCard({ review, isActive }: { review: Review; isActive: boole
       <div className="flex items-center gap-4 pt-6 border-t border-stone-100">
         <Avatar name={review.name} avatar={review.avatar} />
         <div className="flex-1">
-          <h4 className="font-serif text-lg font-medium text-[#1C1917]">
+          <h4 className="font-serif text-lg font-medium text-[#1a1720]">
             {review.name}
           </h4>
           {review.location && (
@@ -245,7 +245,7 @@ export function TestimonialsPremium({
               {subtitle}
             </motion.span>
             <motion.h2
-              className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-[#1C1917] leading-tight"
+              className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-[#1a1720] leading-tight"
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.3 }}
@@ -264,7 +264,7 @@ export function TestimonialsPremium({
             <GoogleG size={32} />
             <div>
               <div className="flex items-center gap-2">
-                <span className="font-sans text-3xl font-bold text-[#1C1917]">{rating}</span>
+                <span className="font-sans text-3xl font-bold text-[#1a1720]">{rating}</span>
                 <StarRating rating={5} />
               </div>
               <span className="font-sans text-sm text-stone-500">{reviewCount} Google reviews</span>
@@ -304,7 +304,7 @@ export function TestimonialsPremium({
           <div className="flex items-center justify-center gap-4 mt-10">
             <motion.button
               onClick={goToPrevious}
-              className="w-14 h-14 rounded-full bg-white shadow-lg border border-stone-100 flex items-center justify-center text-[#1C1917] hover:bg-terracotta-500 hover:text-white hover:border-terracotta-500 transition-colors duration-300"
+              className="w-14 h-14 rounded-full bg-white shadow-lg border border-stone-100 flex items-center justify-center text-[#1a1720] hover:bg-terracotta-500 hover:text-white hover:border-terracotta-500 transition-colors duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -329,7 +329,7 @@ export function TestimonialsPremium({
 
             <motion.button
               onClick={goToNext}
-              className="w-14 h-14 rounded-full bg-white shadow-lg border border-stone-100 flex items-center justify-center text-[#1C1917] hover:bg-terracotta-500 hover:text-white hover:border-terracotta-500 transition-colors duration-300"
+              className="w-14 h-14 rounded-full bg-white shadow-lg border border-stone-100 flex items-center justify-center text-[#1a1720] hover:bg-terracotta-500 hover:text-white hover:border-terracotta-500 transition-colors duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -356,7 +356,7 @@ export function TestimonialsPremium({
                 initial={{ opacity: 0 }}
                 animate={isInView ? { opacity: 1 } : {}}
                 transition={{ delay: 0.7 + i * 0.1 }}
-                whileHover={{ color: "#d46546", scale: 1.05 }}
+                whileHover={{ color: "#c674f3", scale: 1.05 }}
               >
                 {location}
               </motion.div>

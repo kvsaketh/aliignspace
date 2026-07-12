@@ -36,7 +36,7 @@ export function StatsClean({ stats = defaultStats }: StatsCleanProps) {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <div className="text-3xl sm:text-4xl lg:text-5xl font-serif font-medium text-[#1C1917] mb-2">
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-serif font-medium text-[#1a1720] mb-2">
                 {stat.value}
               </div>
               <div className="text-sm font-medium text-terracotta-500 uppercase tracking-wider mb-1">

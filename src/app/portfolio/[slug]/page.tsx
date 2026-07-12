@@ -58,7 +58,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
               priority
               sizes="100vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#1A1612]/90 via-[#1A1612]/40 to-[#1A1612]/10" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#16141f]/90 via-[#16141f]/40 to-[#16141f]/10" />
           </div>
 
           <div className="absolute top-6 left-6 z-20">
@@ -72,7 +72,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
           </div>
 
           <div className="relative z-10 px-6 sm:px-10 lg:px-20 pb-16 pt-32 max-w-4xl">
-            <span className="inline-block text-[#D46546] text-xs font-sans font-semibold tracking-[0.25em] uppercase mb-4">
+            <span className="inline-block text-[#c674f3] text-xs font-sans font-semibold tracking-[0.25em] uppercase mb-4">
               {project.category}
             </span>
             <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-medium text-white leading-tight mb-4">
@@ -90,35 +90,35 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
             <div className={`grid gap-12 ${hasVideo ? "lg:grid-cols-2" : "max-w-3xl mx-auto"}`}>
               <div>
                 {project.description && (
-                  <p className="font-sans text-lg text-[#1A1612]/80 leading-relaxed mb-10">
+                  <p className="font-sans text-lg text-[#16141f]/80 leading-relaxed mb-10">
                     {project.description}
                   </p>
                 )}
-                <div className="grid grid-cols-2 gap-x-8 gap-y-5 border-t border-[#1A1612]/10 pt-8">
+                <div className="grid grid-cols-2 gap-x-8 gap-y-5 border-t border-[#16141f]/10 pt-8">
                   <div>
-                    <p className="font-sans text-xs text-[#D46546] uppercase tracking-widest mb-1">Category</p>
-                    <p className="font-sans text-sm text-[#1A1612] font-medium">{project.category}</p>
+                    <p className="font-sans text-xs text-[#c674f3] uppercase tracking-widest mb-1">Category</p>
+                    <p className="font-sans text-sm text-[#16141f] font-medium">{project.category}</p>
                   </div>
                   <div>
-                    <p className="font-sans text-xs text-[#D46546] uppercase tracking-widest mb-1">Location</p>
-                    <p className="font-sans text-sm text-[#1A1612] font-medium">{project.location}</p>
+                    <p className="font-sans text-xs text-[#c674f3] uppercase tracking-widest mb-1">Location</p>
+                    <p className="font-sans text-sm text-[#16141f] font-medium">{project.location}</p>
                   </div>
                   {project.clientName && (
                     <div>
-                      <p className="font-sans text-xs text-[#D46546] uppercase tracking-widest mb-1">Client</p>
-                      <p className="font-sans text-sm text-[#1A1612] font-medium">{project.clientName}</p>
+                      <p className="font-sans text-xs text-[#c674f3] uppercase tracking-widest mb-1">Client</p>
+                      <p className="font-sans text-sm text-[#16141f] font-medium">{project.clientName}</p>
                     </div>
                   )}
                   {project.area && (
                     <div>
-                      <p className="font-sans text-xs text-[#D46546] uppercase tracking-widest mb-1">Area</p>
-                      <p className="font-sans text-sm text-[#1A1612] font-medium">{project.area}</p>
+                      <p className="font-sans text-xs text-[#c674f3] uppercase tracking-widest mb-1">Area</p>
+                      <p className="font-sans text-sm text-[#16141f] font-medium">{project.area}</p>
                     </div>
                   )}
                   {project.projectType && (
                     <div>
-                      <p className="font-sans text-xs text-[#D46546] uppercase tracking-widest mb-1">Project Type</p>
-                      <p className="font-sans text-sm text-[#1A1612] font-medium">{project.projectType}</p>
+                      <p className="font-sans text-xs text-[#c674f3] uppercase tracking-widest mb-1">Project Type</p>
+                      <p className="font-sans text-sm text-[#16141f] font-medium">{project.projectType}</p>
                     </div>
                   )}
                 </div>
@@ -140,13 +140,13 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
         </section>
 
         {hasGallery && (
-          <section className="py-20 bg-[#f9f7f4]">
+          <section className="py-20 bg-[#f7f5fb]">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-12">
-                <span className="inline-block text-[#D46546] text-xs font-sans font-semibold tracking-[0.25em] uppercase mb-4">
+                <span className="inline-block text-[#c674f3] text-xs font-sans font-semibold tracking-[0.25em] uppercase mb-4">
                   The Work
                 </span>
-                <h2 className="font-serif text-3xl sm:text-4xl font-medium text-[#1A1612]">
+                <h2 className="font-serif text-3xl sm:text-4xl font-medium text-[#16141f]">
                   Project Gallery
                 </h2>
               </div>
@@ -161,7 +161,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                       sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 33vw"
                     />
                     {item.caption && (
-                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#1A1612]/70 to-transparent px-4 py-3">
+                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#16141f]/70 to-transparent px-4 py-3">
                         <p className="font-sans text-xs text-white/90">{item.caption}</p>
                       </div>
                     )}
@@ -183,9 +183,9 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
           </section>
         )}
 
-        <section className="py-20 bg-[#1A1612] text-center">
+        <section className="py-20 bg-[#16141f] text-center">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl">
-            <span className="inline-block text-[rgb(255,134,113)] text-xs font-sans font-semibold tracking-[0.25em] uppercase mb-6">
+            <span className="inline-block text-[#c674f3] text-xs font-sans font-semibold tracking-[0.25em] uppercase mb-6">
               Start Your Project
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-white leading-tight mb-4">
@@ -197,7 +197,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 bg-[#D46546] hover:bg-[rgb(255,134,113)] text-white font-sans font-medium text-base transition-all duration-300 hover:-translate-y-0.5 rounded"
+                className="inline-flex items-center justify-center px-8 py-4 bg-[#c674f3] hover:bg-[#c674f3] text-white font-sans font-medium text-base transition-all duration-300 hover:-translate-y-0.5 rounded"
               >
                 Book a Consultation
               </Link>

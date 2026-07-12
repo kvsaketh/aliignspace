@@ -43,7 +43,7 @@ export function StorySection({
   const headingWithAccent = accentWord
     ? heading.replace(
         new RegExp(accentWord, "gi"),
-        `<em class="not-italic text-[#D46546] italic">${accentWord}</em>`
+        `<em class="not-italic text-[#c674f3] italic">${accentWord}</em>`
       )
     : heading;
 
@@ -51,14 +51,14 @@ export function StorySection({
   const imageOnLeft = imagePosition === "left";
 
   const bgColors = {
-    cream: "bg-[#F9F5ED]",
+    cream: "bg-[#f6f4fb]",
     white: "bg-white",
-    dark: "bg-[#1C1917]",
+    dark: "bg-[#1a1720]",
   };
 
   const textColors = {
-    cream: "text-[#1C1917]",
-    white: "text-[#1C1917]",
+    cream: "text-[#1a1720]",
+    white: "text-[#1a1720]",
     dark: "text-white",
   };
 
@@ -84,7 +84,7 @@ export function StorySection({
                 {/* Decorative border offset */}
                 <div
                   className={cn(
-                    "absolute w-full h-full border-2 border-[#D46546]/30 z-0",
+                    "absolute w-full h-full border-2 border-[#c674f3]/30 z-0",
                     imageOnLeft ? "-top-4 -left-4" : "-top-4 -right-4"
                   )}
                 />
@@ -101,11 +101,11 @@ export function StorySection({
                 {isStory && showExperienceBadge && (
                   <div
                     className={cn(
-                      "absolute -bottom-6 z-20 bg-[#1C1917] text-white px-6 py-5",
+                      "absolute -bottom-6 z-20 bg-[#1a1720] text-white px-6 py-5",
                       imageOnLeft ? "-right-6" : "-left-6"
                     )}
                   >
-                    <span className="font-serif text-3xl font-medium text-[#D46546]">
+                    <span className="font-serif text-3xl font-medium text-[#c674f3]">
                       {experienceYears}
                     </span>
                     <p className="font-sans text-xs text-white/70 mt-0.5 tracking-wider uppercase">
@@ -139,7 +139,7 @@ export function StorySection({
             {/* Label */}
             {label && (
               <Reveal direction="up" delay={0}>
-                <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#D46546]">
+                <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#c674f3]">
                   {label}
                 </span>
               </Reveal>
@@ -170,10 +170,10 @@ export function StorySection({
             {/* Pull Quote - Only for story variant */}
             {isStory && quote && (
               <Reveal direction="up" delay={240}>
-                <blockquote className="border-l-4 border-[#D46546] pl-6 py-2 my-4">
+                <blockquote className="border-l-4 border-[#c674f3] pl-6 py-2 my-4">
                   <p className={cn(
                     "font-serif text-lg italic leading-relaxed",
-                    backgroundColor === "dark" ? "text-white/90" : "text-[#1C1917]/80"
+                    backgroundColor === "dark" ? "text-white/90" : "text-[#1a1720]/80"
                   )}>
                     &ldquo;{quote}&rdquo;
                   </p>
