@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import { sanitizeHtml } from "@/lib/sanitize";
 import { motion, useInView } from "framer-motion";
 import { useBuilderStore } from "@/stores/builder-store";
 import { getWidgetDefinition } from "@/lib/builder/widget-registry";
@@ -83,7 +84,7 @@ function WidgetContent({ widget }: { widget: WidgetData }) {
         <div
           className="prose prose-sm max-w-none"
           dangerouslySetInnerHTML={{
-            __html: (content.html as string) || "<p>Text content...</p>",
+            __html: sanitizeHtml((content.html as string) || "<p>Text content...</p>"),
           }}
         />
       );

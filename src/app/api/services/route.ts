@@ -19,6 +19,7 @@ export async function GET(request: NextRequest) {
     const services = await prisma.service.findMany({
       where: isActive !== null ? { isActive: isActive === "true" } : undefined,
       orderBy: { sortOrder: "asc" },
+      take: 200,
     });
 
     return NextResponse.json(services);

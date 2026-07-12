@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { sanitizeHtml } from "@/lib/sanitize";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/ui/reveal";
@@ -90,7 +91,7 @@ export function AboutBlock({
             <Reveal direction="up" delay={80}>
               <h2
                 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#1a1720] leading-tight"
-                dangerouslySetInnerHTML={{ __html: headingWithAccent }}
+                dangerouslySetInnerHTML={{ __html: sanitizeHtml(headingWithAccent) }}
               />
             </Reveal>
 
@@ -98,7 +99,7 @@ export function AboutBlock({
             <Reveal direction="up" delay={160}>
               <div
                 className="font-sans text-base sm:text-lg text-stone-600 leading-relaxed space-y-4 [&_p]:mb-0"
-                dangerouslySetInnerHTML={{ __html: content }}
+                dangerouslySetInnerHTML={{ __html: sanitizeHtml(content) }}
               />
             </Reveal>
 

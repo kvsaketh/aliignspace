@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { sanitizeHtml } from "@/lib/sanitize";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useInView, AnimatePresence } from "framer-motion";
@@ -241,7 +242,7 @@ export function AboutPremium({
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.4 }}
-              dangerouslySetInnerHTML={{ __html: headingWithAccent }}
+              dangerouslySetInnerHTML={{ __html: sanitizeHtml(headingWithAccent) }}
             />
 
             {/* Content */}
@@ -250,7 +251,7 @@ export function AboutPremium({
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.5 }}
-              dangerouslySetInnerHTML={{ __html: content }}
+              dangerouslySetInnerHTML={{ __html: sanitizeHtml(content) }}
             />
 
             {/* Quote */}

@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { sanitizeHtml } from "@/lib/sanitize";
 
 interface ContentProps {
   content?: string;
@@ -22,7 +23,7 @@ export function ContentBlock({ content = "", alignment = "left" }: ContentProps)
             "max-w-4xl mx-auto prose prose-lg",
             alignmentClasses[alignment]
           )}
-          dangerouslySetInnerHTML={{ __html: content }}
+          dangerouslySetInnerHTML={{ __html: sanitizeHtml(content) }}
         />
       </div>
     </section>

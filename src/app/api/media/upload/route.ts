@@ -25,6 +25,34 @@ const MIME_TO_EXTENSION: Record<string, string> = {
 };
 const ALLOWED_MIME_TYPES = Object.keys(MIME_TO_EXTENSION);
 
+/**
+ * Verify the file's real content matches the declared MIME by inspecting magic
+ * bytes, so a spoofed Content-Type can't slip disguised content past the header
+ * allowlist. Returns true if the buffer's signature matches the declared type.
+ */
+function magicBytesMatch(mime: string, buf: Buffer): boolean {
+  const startsWith = (bytes: number[], offset = 0) =>
+    bytes.every((b, i) => buf[offset + i] === b);
+  switch (mime) {
+    case "image/jpeg":
+      return startsWith([0xff, 0xd8, 0xff]);
+    case "image/png":
+      return startsWith([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]);
+    case "image/gif":
+      return startsWith([0x47, 0x49, 0x46, 0x38]); // GIF8
+    case "image/webp":
+      return startsWith([0x52, 0x49, 0x46, 0x46]) && startsWith([0x57, 0x45, 0x42, 0x50], 8); // RIFF....WEBP
+    case "video/mp4":
+      return startsWith([0x66, 0x74, 0x79, 0x70], 4); // ....ftyp
+    case "video/webm":
+      return startsWith([0x1a, 0x45, 0xdf, 0xa3]);
+    case "application/pdf":
+      return startsWith([0x25, 0x50, 0x44, 0x46]); // %PDF
+    default:
+      return false;
+  }
+}
+
 export async function POST(request: NextRequest) {
   try {
     const session = await getServerSession(authOptions);
@@ -58,10 +86,18 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Generate unique filename
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
 
+    // Reject when the real content doesn't match the declared MIME type.
+    if (!magicBytesMatch(file.type, buffer)) {
+      return NextResponse.json(
+        { error: "File content does not match its declared type." },
+        { status: 400 }
+      );
+    }
+
+    // Generate unique filename
     const hash = crypto.createHash("md5").update(buffer).digest("hex");
     const originalName = file.name;
     const extension = MIME_TO_EXTENSION[file.type];

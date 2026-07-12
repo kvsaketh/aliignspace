@@ -12,6 +12,7 @@ export async function GET(request: NextRequest) {
     const events = await prisma.timelineEvent.findMany({
       where: isActive !== null ? { isActive: isActive === "true" } : undefined,
       orderBy: { sortOrder: "asc" },
+      take: 200,
     });
 
     return NextResponse.json(events);

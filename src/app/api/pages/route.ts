@@ -61,6 +61,7 @@ export async function GET(request: NextRequest) {
     const pages = await prisma.page.findMany({
       where,
       orderBy: { [sortBy]: sortOrder },
+      take: 200,
       include: {
         seo: true,
         author: {

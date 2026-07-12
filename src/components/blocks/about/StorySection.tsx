@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { sanitizeHtml } from "@/lib/sanitize";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -62,12 +63,12 @@ export function StorySection({
       
       <h2
         className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#1a1720] leading-tight mt-4 mb-6"
-        dangerouslySetInnerHTML={{ __html: accentHeading }}
+        dangerouslySetInnerHTML={{ __html: sanitizeHtml(accentHeading) }}
       />
       
       <div
         className="font-sans text-base text-stone-600 leading-relaxed space-y-4"
-        dangerouslySetInnerHTML={{ __html: content }}
+        dangerouslySetInnerHTML={{ __html: sanitizeHtml(content) }}
       />
 
       {quote && (

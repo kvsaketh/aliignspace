@@ -7,6 +7,7 @@ export async function GET(request: Request) {
   try {
     const milestones = await prisma.milestone.findMany({
       orderBy: { sortOrder: "asc" },
+      take: 100,
     });
 
     return NextResponse.json(milestones);

@@ -14,8 +14,19 @@ running instance.
 |----------|-------|--------|
 | Critical | 0 | — |
 | High | 2 | **Fixed** |
-| Medium | 5 | 2 fixed, 3 documented |
+| Medium | 5 | **5 fixed** |
 | Low | 6 | 3 fixed, 3 documented |
+
+**Pass 5 update:** the three previously-documented Mediums are now fixed:
+- **M2 (stored XSS):** added `isomorphic-dompurify` + a shared `sanitizeHtml()`
+  helper (`src/lib/sanitize.ts`) applied render-side at all 10 `dangerouslySetInnerHTML`
+  sinks in the block/widget components. Verified live: a `content` section storing
+  `<img onerror>`/`<script>` renders only the sanitized `<em>` in the DOM; the raw
+  payload survives solely as inert, entity-escaped RSC props (non-executable).
+- **M3 (upload magic bytes):** `api/media/upload/route.ts` now sniffs magic bytes and
+  rejects when content doesn't match the declared MIME (spoofed `image/png` HTML is
+  rejected). Combined with the MIME-derived extension (H1), the upload path is closed.
+- **M5 (unbounded lists):** every list route now has a `take` cap (100-200).
 
 No SQL injection (100% Prisma, parameterized), no password-hash leakage, no IDOR
 (single-tenant CMS, all `:id` mutations session-gated), no unauthenticated mutations,

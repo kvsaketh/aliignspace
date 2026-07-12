@@ -16,6 +16,7 @@ export async function GET(request: Request) {
     const faqs = await prisma.fAQ.findMany({
       where,
       orderBy: { sortOrder: "asc" },
+      take: 200,
     });
 
     return NextResponse.json(faqs);

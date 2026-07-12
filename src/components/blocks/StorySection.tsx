@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { sanitizeHtml } from "@/lib/sanitize";
 import { Reveal } from "@/components/ui/reveal";
 import { cn } from "@/lib/utils";
 
@@ -152,7 +153,7 @@ export function StorySection({
                   "font-serif text-2xl sm:text-3xl lg:text-4xl font-medium leading-tight",
                   textColors[backgroundColor]
                 )}
-                dangerouslySetInnerHTML={{ __html: headingWithAccent }}
+                dangerouslySetInnerHTML={{ __html: sanitizeHtml(headingWithAccent) }}
               />
             </Reveal>
 
@@ -163,7 +164,7 @@ export function StorySection({
                   "font-sans text-base leading-relaxed space-y-4 [&_p]:mb-4",
                   backgroundColor === "dark" ? "text-white/80" : "text-stone-600"
                 )}
-                dangerouslySetInnerHTML={{ __html: content }}
+                dangerouslySetInnerHTML={{ __html: sanitizeHtml(content) }}
               />
             </Reveal>
 

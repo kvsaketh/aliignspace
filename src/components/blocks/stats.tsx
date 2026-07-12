@@ -1,6 +1,7 @@
 "use client";
 
 import { Reveal } from "@/components/ui/reveal";
+import { sanitizeHtml } from "@/lib/sanitize";
 import { AnimatedCounter } from "@/components/ui/animated-counter";
 
 interface Stat {
@@ -86,7 +87,7 @@ export function StatsBlock({ stats = defaultStats }: StatsProps) {
                 {stat.description && (
                   <span
                     className="font-sans text-xs sm:text-sm text-stone-500 leading-relaxed"
-                    dangerouslySetInnerHTML={{ __html: stat.description }}
+                    dangerouslySetInnerHTML={{ __html: sanitizeHtml(stat.description) }}
                   />
                 )}
 

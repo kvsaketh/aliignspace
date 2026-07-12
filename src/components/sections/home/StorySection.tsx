@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import { sanitizeHtml } from "@/lib/sanitize";
 import { motion, useInView } from "framer-motion";
 import { MapPin, Calendar } from "lucide-react";
 
@@ -46,7 +47,7 @@ export function StorySection({
             {/* Heading */}
             <h2
               className="text-3xl sm:text-4xl md:text-5xl font-serif font-medium text-charcoal leading-[1.1] tracking-tight mb-8"
-              dangerouslySetInnerHTML={{ __html: heading }}
+              dangerouslySetInnerHTML={{ __html: sanitizeHtml(heading) }}
             />
 
             {/* Body */}

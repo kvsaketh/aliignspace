@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
+import { sanitizeHtml } from "@/lib/sanitize";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -516,7 +517,7 @@ function CollageLayout(props: HomeAboutPremiumProps) {
         >
           <div
             className="font-sans text-base sm:text-lg text-stone-600 leading-relaxed space-y-4 mb-8"
-            dangerouslySetInnerHTML={{ __html: props.content || "" }}
+            dangerouslySetInnerHTML={{ __html: sanitizeHtml(props.content || "") }}
           />
 
           {props.quote && (
@@ -602,7 +603,7 @@ function SplitLayout(props: HomeAboutPremiumProps) {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.6 }}
-              dangerouslySetInnerHTML={{ __html: props.content || "" }}
+              dangerouslySetInnerHTML={{ __html: sanitizeHtml(props.content || "") }}
             />
 
             {/* Quote */}
@@ -763,7 +764,7 @@ function TimelineLayout(props: HomeAboutPremiumProps) {
         >
           <div
             className="font-sans text-base text-stone-600 leading-relaxed mb-6"
-            dangerouslySetInnerHTML={{ __html: props.content || "" }}
+            dangerouslySetInnerHTML={{ __html: sanitizeHtml(props.content || "") }}
           />
 
           {props.quote && <QuoteBlock quote={props.quote} author={props.quoteAuthor} isInView={isInView} />}
@@ -842,7 +843,7 @@ function FullWidthLayout(props: HomeAboutPremiumProps) {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.6 }}
-              dangerouslySetInnerHTML={{ __html: props.content || "" }}
+              dangerouslySetInnerHTML={{ __html: sanitizeHtml(props.content || "") }}
             />
 
             {props.quote && (
