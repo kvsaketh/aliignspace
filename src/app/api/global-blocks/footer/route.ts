@@ -84,7 +84,12 @@ export async function GET() {
     });
 
     if (!footer) {
-      // Create default footer
+      // Only persist the default for logged-in users; anonymous GETs must not write
+      const session = await getServerSession(authOptions);
+      if (!session) {
+        return NextResponse.json(defaultFooterContent);
+      }
+            // Create default footer
       footer = await prisma.globalBlock.create({
         data: {
           type: "FOOTER",

@@ -32,7 +32,12 @@ export async function GET() {
     });
 
     if (!story) {
-      // Create default story block
+      // Only persist the default for logged-in users; anonymous GETs must not write
+      const session = await getServerSession(authOptions);
+      if (!session) {
+        return NextResponse.json(defaultStoryContent);
+      }
+            // Create default story block
       story = await prisma.globalBlock.create({
         data: {
           type: "STORY",

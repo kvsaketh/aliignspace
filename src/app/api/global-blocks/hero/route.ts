@@ -21,7 +21,12 @@ export async function GET() {
     });
 
     if (!hero) {
-      hero = await prisma.globalBlock.create({
+      // Only persist the default for logged-in users; anonymous GETs must not write
+      const session = await getServerSession(authOptions);
+      if (!session) {
+        return NextResponse.json(defaultHeroContent);
+      }
+            hero = await prisma.globalBlock.create({
         data: { type: "HERO", name: "main", content: defaultHeroContent, isActive: true },
       });
     }
