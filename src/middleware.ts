@@ -1,12 +1,40 @@
 import { withAuth } from "next-auth/middleware";
+import { NextResponse } from "next/server";
 
-// Defense in depth: every /admin route (except the login page) requires a
-// valid session token at the edge, in addition to the per-page and per-action
-// checks. Unauthenticated requests are redirected to the sign-in page.
-export default withAuth({
-  pages: { signIn: "/admin/login" },
-});
+// Defense in depth on two surfaces:
+//  1. Every /admin route (except the login page) requires a session at the edge.
+//  2. Every state-changing /api request (non-GET) requires a session token, so a
+//     handler that ever forgets its own getServerSession check still cannot be
+//     hit unauthenticated. Public GETs and NextAuth's own /api/auth are exempt.
+export default withAuth(
+  function middleware() {
+    return NextResponse.next();
+  },
+  {
+    pages: { signIn: "/admin/login" },
+    callbacks: {
+      authorized: ({ req, token }) => {
+        const { pathname } = req.nextUrl;
+        const method = req.method;
+
+        if (pathname.startsWith("/api")) {
+          // NextAuth's own endpoints manage their own auth.
+          if (pathname.startsWith("/api/auth")) return true;
+          // Public reads stay open; individual routes still gate drafts.
+          if (method === "GET" || method === "HEAD" || method === "OPTIONS") {
+            return true;
+          }
+          // Any mutation requires a staff session token.
+          return !!token;
+        }
+
+        // /admin/* (matched below): require a token.
+        return !!token;
+      },
+    },
+  }
+);
 
 export const config = {
-  matcher: ["/admin", "/admin/((?!login).*)"],
+  matcher: ["/admin", "/admin/((?!login).*)", "/api/:path*"],
 };

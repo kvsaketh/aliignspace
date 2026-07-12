@@ -48,7 +48,7 @@ export async function PUT(
   } catch (error: any) {
     console.error("Error updating sections:", error);
     return NextResponse.json(
-      { error: error.message || "Failed to update sections" },
+      { error: "Failed to update sections" },
       { status: 500 }
     );
   }

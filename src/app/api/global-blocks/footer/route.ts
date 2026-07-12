@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getServerSession } from "next-auth/next";
-import { authOptions } from "@/lib/auth";
+import { requireRole, getSessionUser } from "@/lib/authz";
 import { prisma } from "@/lib/prisma";
 
 // Default footer content
@@ -85,8 +84,8 @@ export async function GET() {
 
     if (!footer) {
       // Only persist the default for logged-in users; anonymous GETs must not write
-      const session = await getServerSession(authOptions);
-      if (!session) {
+      const user = await getSessionUser();
+      if (!user) {
         return NextResponse.json(defaultFooterContent);
       }
             // Create default footer
@@ -110,10 +109,8 @@ export async function GET() {
 // PUT /api/global-blocks/footer - Update footer content
 export async function PUT(request: NextRequest) {
   try {
-    const session = await getServerSession(authOptions);
-    if (!session) {
-      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-    }
+    const denied = await requireRole(["ADMIN"]);
+    if (denied) return NextResponse.json({ error: denied.error }, { status: denied.status });
 
     const body = await request.json();
 

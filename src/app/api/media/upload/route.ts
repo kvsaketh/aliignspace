@@ -11,15 +11,19 @@ import crypto from "crypto";
 const MAX_FILE_SIZE = 10 * 1024 * 1024;
 
 // Allowed MIME types
-const ALLOWED_MIME_TYPES = [
-  "image/jpeg",
-  "image/png",
-  "image/gif",
-  "image/webp",
-  "video/mp4",
-  "video/webm",
-  "application/pdf",
-];
+// The stored extension is derived from the validated MIME type, never from the
+// client-supplied filename, so an attacker cannot land an executable extension
+// (.html/.svg/.xml) in the web root by spoofing Content-Type.
+const MIME_TO_EXTENSION: Record<string, string> = {
+  "image/jpeg": ".jpg",
+  "image/png": ".png",
+  "image/gif": ".gif",
+  "image/webp": ".webp",
+  "video/mp4": ".mp4",
+  "video/webm": ".webm",
+  "application/pdf": ".pdf",
+};
+const ALLOWED_MIME_TYPES = Object.keys(MIME_TO_EXTENSION);
 
 export async function POST(request: NextRequest) {
   try {
@@ -60,7 +64,7 @@ export async function POST(request: NextRequest) {
 
     const hash = crypto.createHash("md5").update(buffer).digest("hex");
     const originalName = file.name;
-    const extension = path.extname(originalName).toLowerCase();
+    const extension = MIME_TO_EXTENSION[file.type];
     const timestamp = Date.now();
     const filename = `${timestamp}-${hash.slice(0, 8)}${extension}`;
     const key = `uploads/${filename}`;

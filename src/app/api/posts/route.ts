@@ -1,19 +1,35 @@
 import { NextResponse } from "next/server";
+import { getSessionUser } from "@/lib/authz";
 import { prisma } from "@/lib/prisma";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/lib/auth";
 
 export async function GET(request: Request) {
-  const { searchParams } = new URL(request.url);
-  const status = searchParams.get("status");
+  try {
+    const { searchParams } = new URL(request.url);
+    const status = searchParams.get("status");
+    const user = await getSessionUser();
 
-  const posts = await prisma.post.findMany({
-    where: status ? { status: status as any } : undefined,
-    include: { author: { select: { name: true, email: true } } },
-    orderBy: { createdAt: "desc" },
-  });
+    // Anonymous callers only see published posts; drafts require a session.
+    const where = user
+      ? status
+        ? { status: status as any }
+        : undefined
+      : { status: "PUBLISHED" as const };
 
-  return NextResponse.json(posts);
+    const posts = await prisma.post.findMany({
+      where,
+      // Public responses expose author name only, never staff email.
+      include: { author: { select: { name: true } } },
+      orderBy: { createdAt: "desc" },
+      take: 100,
+    });
+
+    return NextResponse.json(posts);
+  } catch (error) {
+    console.error("GET /api/posts error:", error);
+    return NextResponse.json({ error: "Failed to fetch posts" }, { status: 500 });
+  }
 }
 
 export async function POST(request: Request) {

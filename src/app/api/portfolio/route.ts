@@ -1,18 +1,33 @@
 import { NextResponse } from "next/server";
+import { getSessionUser } from "@/lib/authz";
 import { prisma } from "@/lib/prisma";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/lib/auth";
 
 export async function GET(request: Request) {
-  const { searchParams } = new URL(request.url);
-  const status = searchParams.get("status");
+  try {
+    const { searchParams } = new URL(request.url);
+    const status = searchParams.get("status");
+    const user = await getSessionUser();
 
-  const projects = await prisma.portfolioProject.findMany({
-    where: status ? { status: status as any } : undefined,
-    orderBy: [{ sortOrder: "asc" }, { createdAt: "desc" }],
-  });
+    // Anonymous callers only see published projects; drafts require a session.
+    const where = user
+      ? status
+        ? { status: status as any }
+        : undefined
+      : { status: "PUBLISHED" as const };
 
-  return NextResponse.json(projects);
+    const projects = await prisma.portfolioProject.findMany({
+      where,
+      orderBy: [{ sortOrder: "asc" }, { createdAt: "desc" }],
+      take: 200,
+    });
+
+    return NextResponse.json(projects);
+  } catch (error) {
+    console.error("GET /api/portfolio error:", error);
+    return NextResponse.json({ error: "Failed to fetch portfolio" }, { status: 500 });
+  }
 }
 
 export async function POST(request: Request) {
