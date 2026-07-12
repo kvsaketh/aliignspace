@@ -25,13 +25,19 @@ export async function PUT(
 
   const { id } = await params;
   const body = await request.json();
-  const { categories, tags, ...data } = body;
+  // Whitelist updatable fields (no mass assignment of arbitrary columns).
+  const { title, slug, content, excerpt, featuredImage, status } = body;
 
   const post = await prisma.post.update({
     where: { id },
     data: {
-      ...data,
-      publishedAt: data.status === "PUBLISHED" ? new Date() : undefined,
+      ...(title !== undefined && { title }),
+      ...(slug !== undefined && { slug }),
+      ...(content !== undefined && { content }),
+      ...(excerpt !== undefined && { excerpt }),
+      ...(featuredImage !== undefined && { featuredImage }),
+      ...(status !== undefined && { status }),
+      ...(status === "PUBLISHED" && { publishedAt: new Date() }),
     },
   });
   return NextResponse.json(post);

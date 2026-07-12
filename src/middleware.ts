@@ -24,8 +24,11 @@ export default withAuth(
           if (method === "GET" || method === "HEAD" || method === "OPTIONS") {
             return true;
           }
-          // Any mutation requires a staff session token.
-          return !!token;
+          // Mutations require a write-capable staff role. SEO is read-only, and a
+          // roleless/unknown token cannot write (least-privilege policy). Per-route
+          // requireRole still narrows destructive/config ops to ADMIN.
+          const role = (token as { role?: string } | null)?.role;
+          return role === "ADMIN" || role === "EDITOR";
         }
 
         // /admin/* (matched below): require a token.

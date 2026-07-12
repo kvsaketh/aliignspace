@@ -68,7 +68,6 @@ export async function GET(request: NextRequest) {
           select: {
             id: true,
             name: true,
-            email: true,
           },
         },
         _count: {
@@ -252,7 +251,6 @@ export async function POST(request: NextRequest) {
           select: {
             id: true,
             name: true,
-            email: true,
           },
         },
         _count: {

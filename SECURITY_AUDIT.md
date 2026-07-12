@@ -15,7 +15,30 @@ running instance.
 | Critical | 0 | — |
 | High | 2 | **Fixed** |
 | Medium | 5 | **5 fixed** |
-| Low | 6 | 3 fixed, 3 documented |
+| Low | 6 | **6 fixed** |
+
+**Pass 6 update (Low backlog cleared):**
+- **H2 role policy completed / L (least privilege):** middleware now allows `/api`
+  mutations only for `ADMIN` or `EDITOR` roles (SEO and roleless tokens are read-only),
+  and the Prisma `User.role` default changed `EDITOR -> SEO` so an accidentally-created
+  user is read-only by default. (Seeded admin retains ADMIN; verified.)
+- **M4/L (login limiter):** `lib/auth.ts` now throttles by **IP + global budget** (20
+  failures/IP/15min) in addition to per-email (5/15min), blunting password-spraying.
+  Still in-process; a Redis-backed store remains the multi-instance follow-up.
+- **L4 (session lifetime):** JWT `maxAge` cut `30 days -> 8 hours` with a 1-hour refresh,
+  and the `jwt` callback **re-validates role/existence against the DB** (throttled to 5
+  min) so a demoted or deleted user loses access mid-session.
+- **L5 (mass assignment):** the four raw-body PUTs (`faqs`, `milestones`, `testimonials`,
+  `posts` `[id]`) now destructure and whitelist updatable fields instead of spreading the
+  body into Prisma `update`.
+- **L1 (staff email):** `author.email` removed from all public `/api/pages` responses
+  (name only).
+- **L6 (input guards):** `POST /api/portfolio` and `/api/posts` return 400 on a missing
+  `title` instead of 500.
+
+All High, Medium, and Low findings are now resolved. Remaining backlog is
+infrastructure-level only: move the login limiter to a shared store for multi-instance
+deploys, and move uploads off local disk (S3/signed URLs) for serverless hosting.
 
 **Pass 5 update:** the three previously-documented Mediums are now fixed:
 - **M2 (stored XSS):** added `isomorphic-dompurify` + a shared `sanitizeHtml()`

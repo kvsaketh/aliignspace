@@ -37,6 +37,10 @@ export async function POST(request: Request) {
   const body = await request.json();
   const { title, category, image, featured, status } = body;
 
+  if (!title || typeof title !== "string") {
+    return NextResponse.json({ error: "title is required" }, { status: 400 });
+  }
+
   const base = title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
   let slug = base;
   let i = 1;

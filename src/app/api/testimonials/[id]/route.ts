@@ -34,10 +34,21 @@ export async function PUT(
   try {
     const { id } = await params;
     const body = await request.json();
-
+    // Whitelist updatable fields (no mass assignment of arbitrary columns).
+    const { type, name, location, review, rating, videoUrl, avatarUrl, sortOrder, isActive } = body;
     const testimonial = await prisma.testimonial.update({
       where: { id },
-      data: body,
+      data: {
+        ...(type !== undefined && { type }),
+        ...(name !== undefined && { name }),
+        ...(location !== undefined && { location }),
+        ...(review !== undefined && { review }),
+        ...(rating !== undefined && { rating }),
+        ...(videoUrl !== undefined && { videoUrl }),
+        ...(avatarUrl !== undefined && { avatarUrl }),
+        ...(sortOrder !== undefined && { sortOrder }),
+        ...(isActive !== undefined && { isActive }),
+      },
     });
 
     return NextResponse.json(testimonial);

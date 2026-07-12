@@ -34,10 +34,17 @@ export async function PUT(
   try {
     const { id } = await params;
     const body = await request.json();
-
+    // Whitelist updatable fields (no mass assignment of arbitrary columns).
+    const { number, suffix, label, sortOrder, isActive } = body;
     const milestone = await prisma.milestone.update({
       where: { id },
-      data: body,
+      data: {
+        ...(number !== undefined && { number }),
+        ...(suffix !== undefined && { suffix }),
+        ...(label !== undefined && { label }),
+        ...(sortOrder !== undefined && { sortOrder }),
+        ...(isActive !== undefined && { isActive }),
+      },
     });
 
     return NextResponse.json(milestone);

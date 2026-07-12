@@ -34,10 +34,17 @@ export async function PUT(
   try {
     const { id } = await params;
     const body = await request.json();
-
+    // Whitelist updatable fields (no mass assignment of arbitrary columns).
+    const { question, answer, category, sortOrder, isActive } = body;
     const faq = await prisma.fAQ.update({
       where: { id },
-      data: body,
+      data: {
+        ...(question !== undefined && { question }),
+        ...(answer !== undefined && { answer }),
+        ...(category !== undefined && { category }),
+        ...(sortOrder !== undefined && { sortOrder }),
+        ...(isActive !== undefined && { isActive }),
+      },
     });
 
     return NextResponse.json(faq);
