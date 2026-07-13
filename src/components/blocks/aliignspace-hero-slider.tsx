@@ -1,10 +1,16 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef, type ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import {
+  motion,
+  AnimatePresence,
+  useReducedMotion,
+  useMotionValue,
+  useSpring,
+} from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
 
 interface Slide {
   image?: string;
@@ -43,13 +49,57 @@ const defaultSlides: Slide[] = [
 
 const FALLBACK_IMAGE = "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1920&q=80";
 
+// Real service lines, run as a kinetic type band (not decorative filler).
+const MARQUEE_ITEMS = [
+  "Full Home Interiors",
+  "Modular Kitchens",
+  "Living Rooms",
+  "Wardrobes & Storage",
+  "Villas",
+  "Commercial Spaces",
+  "Renovations",
+];
+
+/* Magnetic CTA — pointer-driven via motion values, never React state (no re-renders). */
+function MagneticCTA({ href, children }: { href: string; children: ReactNode }) {
+  const ref = useRef<HTMLAnchorElement>(null);
+  const reduce = useReducedMotion();
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+  const sx = useSpring(x, { stiffness: 150, damping: 15, mass: 0.2 });
+  const sy = useSpring(y, { stiffness: 150, damping: 15, mass: 0.2 });
+
+  const onMove = (e: React.MouseEvent) => {
+    if (reduce || !ref.current) return;
+    const r = ref.current.getBoundingClientRect();
+    x.set((e.clientX - (r.left + r.width / 2)) * 0.3);
+    y.set((e.clientY - (r.top + r.height / 2)) * 0.3);
+  };
+  const reset = () => {
+    x.set(0);
+    y.set(0);
+  };
+
+  return (
+    <motion.a
+      ref={ref}
+      href={href}
+      onMouseMove={onMove}
+      onMouseLeave={reset}
+      style={{ x: sx, y: sy }}
+      className="group inline-flex items-center gap-2.5 rounded-full bg-[#0055FF] px-8 py-4 font-sans text-sm font-medium text-white hover:bg-[#0043CC] active:scale-[0.98] transition-colors duration-300"
+    >
+      {children}
+      <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+    </motion.a>
+  );
+}
+
 export function AliignspaceHeroSlider({ slides = defaultSlides, autoPlayInterval = 7000 }: Props) {
   const [current, setCurrent] = useState(0);
   const reduce = useReducedMotion();
 
-  const next = useCallback(() => {
-    setCurrent((prev) => (prev + 1) % slides.length);
-  }, [slides.length]);
+  const next = useCallback(() => setCurrent((p) => (p + 1) % slides.length), [slides.length]);
 
   useEffect(() => {
     if (autoPlayInterval <= 0 || slides.length < 2) return;
@@ -61,68 +111,32 @@ export function AliignspaceHeroSlider({ slides = defaultSlides, autoPlayInterval
 
   return (
     <section className="relative w-full min-h-[100dvh] overflow-hidden bg-[#16141f]">
-      {/* Cinematic photography: long crossfade, slow drift */}
-      <AnimatePresence initial={false} mode="popLayout">
-        <motion.div
-          key={current}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1, scale: reduce ? 1 : 1.07 }}
-          exit={{ opacity: 0 }}
-          transition={{
-            opacity: { duration: 1.6, ease: "easeInOut" },
-            scale: { duration: 10, ease: "linear" },
-          }}
-          className="absolute inset-0"
-        >
-          {slide.videoUrl ? (
-            <video
-              src={slide.videoUrl}
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-          ) : (
-            <Image
-              src={slide.image || FALLBACK_IMAGE}
-              alt={slide.title}
-              fill
-              priority
-              className="object-cover"
-              sizes="100vw"
-            />
-          )}
-        </motion.div>
-      </AnimatePresence>
+      {/* Restrained brand-purple depth wash */}
+      <div className="pointer-events-none absolute -top-40 right-[6%] w-[560px] h-[560px] rounded-full bg-[#7A22FF]/12 blur-[150px]" />
 
-      {/* Cinematic grade: soft vignette, heavier at the base where the content sits */}
-      <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#16141f]/95 via-[#16141f]/35 to-[#16141f]/40" />
-      <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-[#16141f]/60 via-transparent to-transparent" />
-
-      {/* Content, anchored low: emptiness above is the luxury */}
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 min-h-[100dvh] flex flex-col justify-end pb-36 sm:pb-40 pt-28">
-        <div className="max-w-3xl">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 min-h-[100dvh] grid grid-cols-1 lg:grid-cols-12 items-center gap-10 lg:gap-6 pt-28 pb-28 lg:pb-24">
+        {/* Left: editorial statement */}
+        <div className="lg:col-span-6 relative z-10 lg:pr-8">
           <motion.div
             initial={reduce ? false : { opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.2 }}
+            transition={{ duration: 1, delay: 0.15 }}
             className="flex items-center gap-4 mb-6"
           >
             <span className="block w-12 h-px bg-[#FF9900]" />
             <span className="font-sans text-[11px] uppercase tracking-[0.3em] text-[#FF9900]">
-              Bespoke Interior Design
+              Interior Design Studio
             </span>
           </motion.div>
 
           <AnimatePresence mode="wait">
-            <motion.div key={current} exit={{ opacity: 0, transition: { duration: 0.4 } }}>
+            <motion.div key={current} exit={{ opacity: 0, transition: { duration: 0.35 } }}>
               <div className="overflow-hidden">
                 <motion.h1
-                  initial={reduce ? false : { y: "102%" }}
+                  initial={reduce ? false : { y: "103%" }}
                   animate={{ y: "0%" }}
                   transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-                  className="font-serif font-normal text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-white leading-[1.08] pb-1"
+                  className="font-serif font-normal text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-white leading-[1.06] pb-1"
                 >
                   {slide.title}
                 </motion.h1>
@@ -130,8 +144,8 @@ export function AliignspaceHeroSlider({ slides = defaultSlides, autoPlayInterval
               <motion.p
                 initial={reduce ? false : { opacity: 0, y: 14 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                className="mt-5 font-sans text-base sm:text-lg text-white/70 leading-relaxed max-w-xl"
+                transition={{ duration: 0.8, delay: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                className="mt-5 font-sans text-base sm:text-lg text-white/70 leading-relaxed max-w-md"
               >
                 {slide.subtitle}
               </motion.p>
@@ -141,59 +155,21 @@ export function AliignspaceHeroSlider({ slides = defaultSlides, autoPlayInterval
           <motion.div
             initial={reduce ? false : { opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-10"
+            transition={{ duration: 0.8, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
+            className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-5"
           >
+            <MagneticCTA href="/contact">Book a Consultation</MagneticCTA>
             <Link
-              href="/contact"
-              className="group inline-flex items-center gap-2.5 rounded-full bg-[#0055FF] px-8 py-4 font-sans text-sm font-medium text-white hover:bg-[#0043CC] active:scale-[0.98] transition-all duration-300"
+              href="/portfolio"
+              className="group inline-flex items-center gap-2 font-sans text-sm text-white/70 hover:text-white transition-colors"
             >
-              Book a Consultation
-              <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+              View Portfolio
+              <span className="block w-8 h-px bg-white/40 group-hover:w-12 group-hover:bg-white transition-all duration-300" />
             </Link>
           </motion.div>
-        </div>
-      </div>
 
-      {/* Gallery navigation: slide titles on a hairline, gold progress on the active one */}
-      <div className="absolute bottom-0 left-0 right-0 z-10 border-t border-white/15 bg-gradient-to-t from-[#16141f]/70 to-transparent">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Desktop: titles as navigation */}
-          <div
-            className="hidden md:grid"
-            style={{ gridTemplateColumns: `repeat(${slides.length}, minmax(0, 1fr))` }}
-          >
-            {slides.map((s, i) => (
-              <button
-                key={i}
-                onClick={() => setCurrent(i)}
-                aria-label={`Go to slide ${i + 1}: ${s.title}`}
-                className="relative py-5 pr-6 text-left"
-              >
-                <span
-                  className={`block font-sans text-[11px] uppercase tracking-[0.16em] truncate transition-colors duration-500 ${
-                    i === current ? "text-white" : "text-white/40 hover:text-white/70"
-                  }`}
-                >
-                  {s.title}
-                </span>
-                {i === current && (
-                  <motion.span
-                    key={`progress-${current}`}
-                    initial={{ scaleX: reduce ? 1 : 0 }}
-                    animate={{ scaleX: 1 }}
-                    transition={{
-                      duration: reduce ? 0 : Math.max(autoPlayInterval, 1000) / 1000,
-                      ease: "linear",
-                    }}
-                    className="absolute top-0 left-0 right-6 h-px bg-[#FF9900] origin-left"
-                  />
-                )}
-              </button>
-            ))}
-          </div>
-          {/* Mobile: quiet gold line indicators */}
-          <div className="flex md:hidden items-center gap-2.5 py-5">
+          {/* Slide indicators, inline with the content */}
+          <div className="mt-12 flex items-center gap-2.5">
             {slides.map((s, i) => (
               <button
                 key={i}
@@ -203,13 +179,84 @@ export function AliignspaceHeroSlider({ slides = defaultSlides, autoPlayInterval
               >
                 <span
                   className={`block h-px transition-all duration-500 ${
-                    i === current ? "w-10 bg-[#FF9900]" : "w-6 bg-white/30"
+                    i === current ? "w-10 bg-white" : "w-6 bg-white/30 group-hover:bg-white/60"
                   }`}
                 />
               </button>
             ))}
           </div>
         </div>
+
+        {/* Right: layered image with Ken Burns drift */}
+        <div className="lg:col-span-6 relative lg:pl-6">
+          <motion.div
+            initial={reduce ? false : { opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
+            className="relative aspect-[4/5] sm:aspect-[3/4] lg:aspect-[4/5] max-h-[70vh] w-full overflow-hidden rounded-2xl ring-1 ring-white/10"
+          >
+            <AnimatePresence initial={false} mode="popLayout">
+              <motion.div
+                key={current}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1, scale: reduce ? 1 : 1.08 }}
+                exit={{ opacity: 0 }}
+                transition={{
+                  opacity: { duration: 1.1, ease: "easeInOut" },
+                  scale: { duration: 9, ease: "linear" },
+                }}
+                className="absolute inset-0"
+              >
+                {slide.videoUrl ? (
+                  <video
+                    src={slide.videoUrl}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                ) : (
+                  <Image
+                    src={slide.image || FALLBACK_IMAGE}
+                    alt={slide.title}
+                    fill
+                    priority
+                    className="object-cover"
+                    sizes="(min-width: 1024px) 45vw, 100vw"
+                  />
+                )}
+              </motion.div>
+            </AnimatePresence>
+            {/* Soft bottom fade so the frame melts into the section */}
+            <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#16141f]/40 via-transparent to-transparent" />
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Kinetic marquee of real service lines — the motion signature */}
+      <div className="absolute bottom-0 left-0 right-0 z-10 border-t border-white/10 py-5 overflow-hidden">
+        <motion.div
+          className="flex whitespace-nowrap will-change-transform"
+          animate={reduce ? undefined : { x: ["0%", "-50%"] }}
+          transition={{ duration: 32, ease: "linear", repeat: Infinity }}
+        >
+          {[0, 1].map((dup) => (
+            <div key={dup} className="flex items-center shrink-0" aria-hidden={dup === 1}>
+              {MARQUEE_ITEMS.map((item) => (
+                <span key={`${dup}-${item}`} className="flex items-center">
+                  <span
+                    className="font-serif italic text-xl sm:text-2xl text-transparent px-6"
+                    style={{ WebkitTextStroke: "1px rgba(255,255,255,0.28)" }}
+                  >
+                    {item}
+                  </span>
+                  <span className="text-[#FF9900] text-xs">&#9670;</span>
+                </span>
+              ))}
+            </div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );
