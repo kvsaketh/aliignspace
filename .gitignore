@@ -25,5 +25,3 @@ server.log
 .env*
 tsconfig.tsbuildinfo
 
-# Self-hosted video (large; deploy to CDN/YouTube for prod)
-public/videos/
