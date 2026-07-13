@@ -40,8 +40,11 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
   const galleryUrls = new Set(gallery.map((g) => g.url));
   const extraImages = imageList.filter((url) => !galleryUrls.has(url));
 
+  const rawVideo = project.mainVideoUrl || project.videoUrl || "";
   const videoEmbedUrl = getYouTubeEmbedUrl(project.mainVideoUrl || "") || getYouTubeEmbedUrl(project.videoUrl || "");
-  const hasVideo = !!videoEmbedUrl;
+  // Self-hosted files (uploaded MP4s) play in a native <video>; YouTube uses the iframe.
+  const selfHostedVideo = !videoEmbedUrl && /\.(mp4|webm)$/i.test(rawVideo) ? rawVideo : null;
+  const hasVideo = !!videoEmbedUrl || !!selfHostedVideo;
   const hasGallery = gallery.length > 0 || extraImages.length > 0;
 
   return (
@@ -125,14 +128,25 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
               </div>
 
               {hasVideo && (
-                <div className="w-full aspect-video rounded-xl overflow-hidden shadow-lg">
-                  <iframe
-                    src={videoEmbedUrl!}
-                    title={`${project.title} — video`}
-                    className="w-full h-full"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
+                <div className="w-full aspect-video rounded-xl overflow-hidden shadow-lg bg-[#16141f]">
+                  {selfHostedVideo ? (
+                    <video
+                      src={selfHostedVideo}
+                      poster={project.image || undefined}
+                      controls
+                      playsInline
+                      preload="metadata"
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <iframe
+                      src={videoEmbedUrl!}
+                      title={`${project.title} — video`}
+                      className="w-full h-full"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  )}
                 </div>
               )}
             </div>

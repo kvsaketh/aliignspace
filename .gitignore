@@ -24,3 +24,6 @@ server.log
 .vercel
 .env*
 tsconfig.tsbuildinfo
+
+# Self-hosted video (large; deploy to CDN/YouTube for prod)
+public/videos/
