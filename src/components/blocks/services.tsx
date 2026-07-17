@@ -63,7 +63,7 @@ export function ServicesBlock({
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <Reveal direction="fade">
-            <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#7A22FF] block mb-4">
+            <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#6D28D9] block mb-4">
               {subtitle}
             </span>
           </Reveal>
@@ -107,7 +107,7 @@ export function ServicesBlock({
                     {service.link && (
                       <Link
                         href={service.link}
-                        className="inline-flex items-center gap-2 font-sans text-sm font-medium text-[#7A22FF] hover:text-[#d9a5f7] transition-colors"
+                        className="inline-flex items-center gap-2 font-sans text-sm font-medium text-[#6D28D9] hover:text-[#d9a5f7] transition-colors"
                       >
                         Explore
                         <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -117,7 +117,7 @@ export function ServicesBlock({
                 </div>
 
                 {/* Top accent line on hover */}
-                <div className="absolute top-0 left-0 right-0 h-0.5 bg-[#7A22FF] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                <div className="absolute top-0 left-0 right-0 h-0.5 bg-[#6D28D9] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
               </div>
             </Reveal>
           ))}

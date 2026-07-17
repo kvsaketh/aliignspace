@@ -17,7 +17,7 @@ export async function HomePortfolioSection() {
         <div className="text-center mb-14">
           <span
             className="inline-block font-sans text-xs font-semibold tracking-[0.25em] uppercase mb-4"
-            style={{ color: "#7A22FF" }}
+            style={{ color: "#6D28D9" }}
           >
             Our Work
           </span>

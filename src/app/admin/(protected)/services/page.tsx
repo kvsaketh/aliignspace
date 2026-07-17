@@ -1,6 +1,5 @@
 import { prisma } from "@/lib/prisma";
-import { getServerSession } from "next-auth/next";
-import { authOptions } from "@/lib/auth";
+import { requireRole } from "@/lib/authz";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { Button } from "@/components/ui/button";
@@ -11,8 +10,8 @@ import { Plus, Edit2, Trash2, Search } from "lucide-react";
 
 async function deleteService(formData: FormData) {
   "use server";
-  const session = await getServerSession(authOptions);
-  if (!session) throw new Error("Unauthorized");
+  const denied = await requireRole(["ADMIN"]);
+  if (denied) throw new Error(denied.error);
   const id = formData.get("id") as string;
   if (!id) return;
   await prisma.service.delete({ where: { id } });

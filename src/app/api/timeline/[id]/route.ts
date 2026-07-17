@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/lib/auth";
+import { requireRole } from "@/lib/authz";
 
 // GET /api/timeline/[id] - Get single timeline event (public)
 export async function GET(
@@ -62,16 +63,14 @@ export async function PUT(
   }
 }
 
-// DELETE /api/timeline/[id] - Delete single timeline event (auth required)
+// DELETE /api/timeline/[id] - Delete single timeline event (ADMIN only)
 export async function DELETE(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const session = await getServerSession(authOptions);
-    if (!session) {
-      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-    }
+    const denied = await requireRole(["ADMIN"]);
+    if (denied) return NextResponse.json({ error: denied.error }, { status: denied.status });
 
     const { id } = await params;
     await prisma.timelineEvent.delete({ where: { id } });

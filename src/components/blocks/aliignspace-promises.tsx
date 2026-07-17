@@ -65,11 +65,11 @@ export function AliignspacePromises({
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
-            <span className="inline-block font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#7A22FF] mb-4">
+            <span className="inline-block font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#6D28D9] mb-4">
               {label}
             </span>
             <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-[#16141f] leading-[1.1] tracking-tight mb-10">
-              {title} <span className="italic text-[#7A22FF]">{accentWord}</span>
+              {title} <span className="italic text-[#6D28D9]">{accentWord}</span>
             </h2>
 
             <div className="space-y-4">

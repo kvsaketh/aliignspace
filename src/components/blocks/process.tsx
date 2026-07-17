@@ -81,7 +81,7 @@ export function ProcessBlock({
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16 lg:mb-24">
           <Reveal direction="fade">
-            <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#7A22FF] block mb-4">
+            <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#6D28D9] block mb-4">
               {subtitle}
             </span>
           </Reveal>
@@ -95,10 +95,10 @@ export function ProcessBlock({
         {/* Steps */}
         <div className="relative">
           {/* Vertical connecting line for mobile */}
-          <div className="absolute left-[3.25rem] top-0 bottom-0 w-px border-l-2 border-dashed border-[#7A22FF]/20 lg:hidden" />
+          <div className="absolute left-[3.25rem] top-0 bottom-0 w-px border-l-2 border-dashed border-[#6D28D9]/20 lg:hidden" />
 
           {/* Horizontal line desktop */}
-          <div className="hidden lg:block absolute top-[3.25rem] left-[10%] right-[10%] h-px border-t-2 border-dashed border-[#7A22FF]/30 z-0" />
+          <div className="hidden lg:block absolute top-[3.25rem] left-[10%] right-[10%] h-px border-t-2 border-dashed border-[#6D28D9]/30 z-0" />
 
           <div className={`grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-3 ${cols} gap-10 lg:gap-4 relative z-10`}>
             {steps.map((step, index) => {
@@ -109,16 +109,16 @@ export function ProcessBlock({
 
                     {/* Icon circle */}
                     <div className="relative mb-0 lg:mb-6 flex-shrink-0">
-                      <span className="font-serif text-6xl font-medium text-[#7A22FF]/12 leading-none select-none absolute -top-2 -left-1 lg:-left-2">
+                      <span className="font-serif text-6xl font-medium text-[#6D28D9]/12 leading-none select-none absolute -top-2 -left-1 lg:-left-2">
                         {step.number ?? String(index + 1).padStart(2, "0")}
                       </span>
-                      <div className="relative w-24 h-24 rounded-full bg-white shadow-sm flex items-center justify-center border border-stone-100 group-hover:border-[#7A22FF]/40 group-hover:shadow-md transition-all duration-300">
-                        <Icon className="w-8 h-8 text-[#7A22FF]" />
+                      <div className="relative w-24 h-24 rounded-full bg-white shadow-sm flex items-center justify-center border border-stone-100 group-hover:border-[#6D28D9]/40 group-hover:shadow-md transition-all duration-300">
+                        <Icon className="w-8 h-8 text-[#6D28D9]" />
                       </div>
                     </div>
 
                     <div className="lg:px-2">
-                      <span className="font-sans text-xs font-bold tracking-[0.2em] uppercase text-[#7A22FF] mb-2 block">
+                      <span className="font-sans text-xs font-bold tracking-[0.2em] uppercase text-[#6D28D9] mb-2 block">
                         {step.number ?? String(index + 1).padStart(2, "0")}
                       </span>
                       <h3 className="font-serif text-lg sm:text-xl font-medium text-[#1a1720] mb-2">

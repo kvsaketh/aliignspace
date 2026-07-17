@@ -916,7 +916,7 @@ export const defaultAliignspacePortfolioPage = {
   seo: {
     metaTitle: "Portfolio | ALIIGNSPACE — Interior Design Work, Hyderabad & Nellore",
     metaDescription: "Browse 500+ completed interior design projects by ALIIGNSPACE — homes, kitchens, bedrooms, offices, and commercial spaces across Hyderabad & Nellore.",
-    ogImage: "https://img.youtube.com/vi/QodXhFHptcQ/maxresdefault.jpg",
+    ogImage: "https://img.youtube.com/vi/QodXhFHptcQ/hqdefault.jpg",
   },
 };
 

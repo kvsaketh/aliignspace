@@ -157,8 +157,9 @@ export function TestimonialForm({ initial }: { initial?: TestimonialFormValues }
                   placeholder="https://www.youtube.com/shorts/..."
                 />
                 <p className="text-xs text-muted-foreground">
-                  YouTube Short, YouTube video, or Instagram Reel link. The thumbnail is pulled
-                  from the video automatically.
+                  YouTube Short, YouTube video, Instagram Reel, or a direct .mp4/.webm/.mov file
+                  link. The thumbnail is pulled from the video automatically (YouTube only —
+                  set the thumbnail field above for Instagram or self-hosted files).
                 </p>
               </div>
             )}

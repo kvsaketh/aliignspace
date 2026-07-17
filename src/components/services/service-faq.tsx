@@ -25,12 +25,12 @@ export function ServiceFaq({ faqs }: { faqs: Faq[] }) {
               aria-expanded={isOpen}
               className="w-full flex items-center justify-between gap-4 text-left py-5 group"
             >
-              <span className="font-serif text-lg sm:text-xl font-medium text-[#1a1720] group-hover:text-[#7A22FF] transition-colors duration-200">
+              <span className="font-serif text-lg sm:text-xl font-medium text-[#1a1720] group-hover:text-[#6D28D9] transition-colors duration-200">
                 {faq.q}
               </span>
               <span
-                className={`flex-shrink-0 w-9 h-9 rounded-full border border-[#7A22FF]/30 flex items-center justify-center text-[#7A22FF] transition-all duration-300 ${
-                  isOpen ? "bg-[#7A22FF] text-white rotate-180" : "bg-transparent"
+                className={`flex-shrink-0 w-9 h-9 rounded-full border border-[#6D28D9]/30 flex items-center justify-center text-[#6D28D9] transition-all duration-300 ${
+                  isOpen ? "bg-[#6D28D9] text-white rotate-180" : "bg-transparent"
                 }`}
               >
                 <ChevronDown className="w-5 h-5" />

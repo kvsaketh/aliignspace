@@ -31,7 +31,7 @@ export function AliignspaceAboutHero({
             className="flex items-center justify-center gap-4 mb-8"
           >
             <span className="w-12 h-px bg-stone-300" />
-            <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#7A22FF]">
+            <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#6D28D9]">
               {eyebrow}
             </span>
             <span className="w-12 h-px bg-stone-300" />
@@ -45,7 +45,7 @@ export function AliignspaceAboutHero({
             className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium text-[#16141f] leading-[1.05] tracking-tight mb-8"
           >
             {title}{" "}
-            <span className="italic text-[#7A22FF]">{accentWord}</span>
+            <span className="italic text-[#6D28D9]">{accentWord}</span>
           </motion.h1>
 
           {/* Subtitle */}

@@ -60,7 +60,9 @@ export async function POST(request: NextRequest) {
     }
 
     const embedUrl = `https://www.youtube.com/embed/${videoId}`;
-    const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+    // hqdefault is guaranteed to exist for every video; maxresdefault 404s
+    // for videos YouTube never generated a high-res thumbnail for.
+    const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
     const key = `youtube/${videoId}`;
     const filename = title || videoId;
 

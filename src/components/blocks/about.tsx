@@ -43,7 +43,7 @@ export function AboutBlock({
   const headingWithAccent = accentWord
     ? heading.replace(
         accentWord,
-        `<em class="not-italic text-[#7A22FF] italic">${accentWord}</em>`
+        `<em class="not-italic text-[#6D28D9] italic">${accentWord}</em>`
       )
     : heading;
 
@@ -57,7 +57,7 @@ export function AboutBlock({
             <Reveal direction="left">
               <div className="relative">
                 {/* Decorative border offset */}
-                <div className="absolute -top-4 -left-4 w-full h-full border-2 border-[#7A22FF]/30 z-0" />
+                <div className="absolute -top-4 -left-4 w-full h-full border-2 border-[#6D28D9]/30 z-0" />
                 <div className="relative z-10 aspect-[3/4] overflow-hidden">
                   <Image
                     src={image}
@@ -69,7 +69,7 @@ export function AboutBlock({
                 </div>
                 {/* Floating stat badge */}
                 <div className="absolute -bottom-6 -right-6 z-20 bg-[#1a1720] text-white px-6 py-5">
-                  <span className="font-serif text-3xl font-medium text-[#7A22FF]">500+</span>
+                  <span className="font-serif text-3xl font-medium text-[#6D28D9]">500+</span>
                   <p className="font-sans text-xs text-white/70 mt-0.5 tracking-wider uppercase">
                     Homes Designed
                   </p>
@@ -82,7 +82,7 @@ export function AboutBlock({
           <div className="space-y-7 lg:pt-4">
             {/* Label */}
             <Reveal direction="up" delay={0}>
-              <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#7A22FF]">
+              <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#6D28D9]">
                 {label}
               </span>
             </Reveal>
@@ -106,7 +106,7 @@ export function AboutBlock({
             {/* Pull Quote */}
             {quote && (
               <Reveal direction="up" delay={240}>
-                <blockquote className="border-l-4 border-[#7A22FF] pl-6 py-2 my-2">
+                <blockquote className="border-l-4 border-[#6D28D9] pl-6 py-2 my-2">
                   <p className="font-serif text-lg italic text-[#1a1720]/80 leading-relaxed">
                     &ldquo;{quote}&rdquo;
                   </p>
@@ -141,7 +141,7 @@ export function AboutBlock({
             <Reveal direction="up" delay={400}>
               <Link
                 href="/about"
-                className="inline-flex items-center gap-2 font-sans text-sm font-semibold text-[#7A22FF] hover:text-[#9b57cf] transition-colors group"
+                className="inline-flex items-center gap-2 font-sans text-sm font-semibold text-[#6D28D9] hover:text-[#7C3AED] transition-colors group"
               >
                 Learn Our Story
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

@@ -20,6 +20,9 @@ export default withAuth(
         if (pathname.startsWith("/api")) {
           // NextAuth's own endpoints manage their own auth.
           if (pathname.startsWith("/api/auth")) return true;
+          // Public contact form and newsletter signup: anonymous visitors must be able to POST.
+          if (pathname === "/api/contact" && method === "POST") return true;
+          if (pathname === "/api/newsletter" && method === "POST") return true;
           // Public reads stay open; individual routes still gate drafts.
           if (method === "GET" || method === "HEAD" || method === "OPTIONS") {
             return true;

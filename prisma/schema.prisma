@@ -351,3 +351,27 @@ model PortfolioProject {
 
   @@map("portfolio_projects")
 }
+
+model ContactSubmission {
+  id          String   @id @default(cuid())
+  name        String
+  phone       String
+  email       String?
+  city        String?
+  projectType String?
+  budget      String?
+  message     String?  @db.Text
+  source      String   @default("contact_form") // contact_form | process_page | service:<slug>
+  isRead      Boolean  @default(false)
+  createdAt   DateTime @default(now())
+
+  @@map("contact_submissions")
+}
+
+model NewsletterSubscriber {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  createdAt DateTime @default(now())
+
+  @@map("newsletter_subscribers")
+}

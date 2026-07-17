@@ -202,7 +202,7 @@ export function AliignspaceGoogleReviews({
                   </div>
 
                   {/* Large quote mark */}
-                  <div className="font-serif text-4xl leading-none text-[#7A22FF]/20 mb-1 select-none">&ldquo;</div>
+                  <div className="font-serif text-4xl leading-none text-[#6D28D9]/20 mb-1 select-none">&ldquo;</div>
 
                   {/* Review text */}
                   <p className="font-sans text-[13px] text-white leading-relaxed flex-1 line-clamp-5 -mt-2">
@@ -211,7 +211,7 @@ export function AliignspaceGoogleReviews({
 
                   {/* Author */}
                   <div className="flex items-center gap-2.5 mt-4 pt-4 border-t border-white/[0.07]">
-                    <div className="w-8 h-8 rounded-full bg-[#7A22FF]/10 border border-[#7A22FF]/20 flex items-center justify-center flex-shrink-0">
+                    <div className="w-8 h-8 rounded-full bg-[#6D28D9]/10 border border-[#6D28D9]/20 flex items-center justify-center flex-shrink-0">
                       <span className="font-sans text-[10px] font-semibold text-[#C4A2FF]">
                         {getInitials(review.name)}
                       </span>

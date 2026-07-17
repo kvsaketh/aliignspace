@@ -34,11 +34,11 @@ export function AliignspaceFactoryVideo({
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="text-center max-w-3xl mx-auto mb-12 lg:mb-16"
         >
-          <span className="inline-block font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#7A22FF] mb-4">
+          <span className="inline-block font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#6D28D9] mb-4">
             {label}
           </span>
           <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-[#16141f] leading-[1.1] tracking-tight">
-            {title} <span className="italic text-[#7A22FF]">{accentWord}</span>
+            {title} <span className="italic text-[#6D28D9]">{accentWord}</span>
           </h2>
         </motion.div>
 
@@ -77,7 +77,7 @@ export function AliignspaceFactoryVideo({
                   whileTap={{ scale: 0.98 }}
                 >
                   <motion.div
-                    className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-white flex items-center justify-center shadow-2xl group-hover:bg-[#7A22FF] transition-colors duration-300"
+                    className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-white flex items-center justify-center shadow-2xl group-hover:bg-[#6D28D9] transition-colors duration-300"
                     whileHover={{ scale: 1.1 }}
                   >
                     <Play className="w-8 h-8 sm:w-10 sm:h-10 text-[#16141f] group-hover:text-white transition-colors duration-300 ml-1" />

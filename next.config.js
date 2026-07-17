@@ -12,6 +12,16 @@ const nextConfig = {
       { protocol: "http", hostname: "localhost" },
     ],
   },
+  async redirects() {
+    // The header nav used to link to these slugs before it was fixed to match
+    // the real Service records — redirect in case they're bookmarked/indexed.
+    return [
+      { source: "/services/turnkey", destination: "/services/full-home-interiors", permanent: true },
+      { source: "/services/renovation", destination: "/services/full-home-interiors", permanent: true },
+      { source: "/services/modular", destination: "/services/modular-kitchen", permanent: true },
+      { source: "/services/commercial", destination: "/services/office-commercial-interiors", permanent: true },
+    ];
+  },
   async headers() {
     return [
       {

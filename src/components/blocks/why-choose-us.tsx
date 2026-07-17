@@ -98,7 +98,7 @@ export function WhyChooseUsBlock({
         <div className="bg-[#1a1720] px-8 sm:px-12 lg:px-16 py-20 lg:py-32 flex flex-col justify-between">
           <div>
             <Reveal direction="left">
-              <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#7A22FF] block mb-6">
+              <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#6D28D9] block mb-6">
                 {subtitle}
               </span>
             </Reveal>
@@ -111,7 +111,7 @@ export function WhyChooseUsBlock({
 
             {/* Quote block */}
             <Reveal direction="left" delay={160}>
-              <blockquote className="border-l-4 border-[#7A22FF] pl-6">
+              <blockquote className="border-l-4 border-[#6D28D9] pl-6">
                 <p className="font-serif text-lg italic text-white/70 leading-relaxed mb-4">
                   &ldquo;{quote}&rdquo;
                 </p>
@@ -125,7 +125,7 @@ export function WhyChooseUsBlock({
           {/* Founder image */}
           {founderImage && (
             <Reveal direction="left" delay={240}>
-              <div className="mt-12 relative w-20 h-20 rounded-full overflow-hidden border-2 border-[#7A22FF]/50">
+              <div className="mt-12 relative w-20 h-20 rounded-full overflow-hidden border-2 border-[#6D28D9]/50">
                 <Image
                   src={founderImage}
                   alt={quoteAuthor}
@@ -147,8 +147,8 @@ export function WhyChooseUsBlock({
                 <Reveal key={index} direction="up" delay={index * 60}>
                   <div className="bg-[#f6f4fb] p-6 sm:p-7 group hover:bg-white transition-colors duration-300">
                     {/* Icon square */}
-                    <div className="w-10 h-10 bg-[#7A22FF]/10 flex items-center justify-center mb-4 group-hover:bg-[#7A22FF] transition-colors duration-300">
-                      <Icon className="w-5 h-5 text-[#7A22FF] group-hover:text-white transition-colors duration-300" />
+                    <div className="w-10 h-10 bg-[#6D28D9]/10 flex items-center justify-center mb-4 group-hover:bg-[#6D28D9] transition-colors duration-300">
+                      <Icon className="w-5 h-5 text-[#6D28D9] group-hover:text-white transition-colors duration-300" />
                     </div>
                     <h3 className="font-serif text-base font-medium text-[#1a1720] mb-1.5">
                       {feature.title}

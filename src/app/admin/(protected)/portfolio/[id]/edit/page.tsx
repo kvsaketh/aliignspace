@@ -19,7 +19,7 @@ function getYtThumb(url: string) {
   const r = url.match(/[?&]v=([^&]+)/);
   const s = url.match(/shorts\/([^?&\n]+)/);
   const id = r?.[1] || s?.[1];
-  return id ? `https://img.youtube.com/vi/${id}/maxresdefault.jpg` : "";
+  return id ? `https://img.youtube.com/vi/${id}/hqdefault.jpg` : "";
 }
 
 export default function EditPortfolioPage() {

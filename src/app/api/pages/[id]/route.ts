@@ -3,6 +3,7 @@ import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { slugify } from "@/lib/utils";
+import { requireRole } from "@/lib/authz";
 
 // GET /api/pages/[id] - Get a single page with sections
 export async function GET(
@@ -223,11 +224,8 @@ export async function DELETE(
 ) {
   try {
     const { id } = await params;
-    const session = await getServerSession(authOptions);
-
-    if (!session) {
-      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-    }
+    const denied = await requireRole(["ADMIN"]);
+    if (denied) return NextResponse.json({ error: denied.error }, { status: denied.status });
 
     const existingPage = await prisma.page.findUnique({
       where: { id },

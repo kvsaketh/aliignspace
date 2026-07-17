@@ -146,7 +146,7 @@ export function AliignspaceHeroSlider({ slides = defaultSlides, autoPlayInterval
           >
             <Link
               href="/contact"
-              className="group inline-flex items-center gap-2.5 rounded-full bg-[#0055FF] px-8 py-4 font-sans text-sm font-medium text-white hover:bg-[#0043CC] active:scale-[0.98] transition-all duration-300"
+              className="group inline-flex items-center gap-2.5 rounded-full bg-[#FF9900] px-8 py-4 font-sans text-sm font-medium text-white hover:bg-[#CC7A00] active:scale-[0.98] transition-all duration-300"
             >
               Book a Consultation
               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />

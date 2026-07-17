@@ -110,13 +110,13 @@ export function ProcessSteps() {
                   {step.illustration}
                 </div>
                 {/* Step number */}
-                <div className="absolute -top-5 -left-5 w-16 h-16 bg-[#7A22FF] flex items-center justify-center">
+                <div className="absolute -top-5 -left-5 w-16 h-16 bg-[#6D28D9] flex items-center justify-center">
                   <span className="font-serif text-white text-xl font-medium">{step.number}</span>
                 </div>
                 {/* Duration badge */}
                 <div className="absolute bottom-4 right-4 bg-[#1a1720]/90 backdrop-blur-sm px-4 py-2">
                   <div className="flex items-center gap-2">
-                    <Clock className="w-4 h-4 text-[#7A22FF]" />
+                    <Clock className="w-4 h-4 text-[#6D28D9]" />
                     <span className="font-sans text-white text-xs font-medium">{step.duration}</span>
                   </div>
                 </div>
@@ -125,10 +125,10 @@ export function ProcessSteps() {
               {/* Content */}
               <div>
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-[#7A22FF]/10 flex items-center justify-center text-[#7A22FF]">
+                  <div className="w-10 h-10 bg-[#6D28D9]/10 flex items-center justify-center text-[#6D28D9]">
                     {step.icon}
                   </div>
-                  <span className="font-sans text-xs font-semibold text-[#7A22FF] tracking-wider uppercase">
+                  <span className="font-sans text-xs font-semibold text-[#6D28D9] tracking-wider uppercase">
                     {step.subtitle}
                   </span>
                 </div>
@@ -146,7 +146,7 @@ export function ProcessSteps() {
                   <ul className="space-y-3">
                     {step.deliverables.map((d) => (
                       <li key={d} className="flex items-center gap-3 font-sans text-sm text-stone-600">
-                        <CheckCircle2 className="w-4 h-4 text-[#7A22FF] flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-[#6D28D9] flex-shrink-0" />
                         {d}
                       </li>
                     ))}

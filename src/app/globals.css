@@ -24,27 +24,30 @@
     --info: #457B9D;
 
     /* shadcn/ui theme mapped to brand */
-    --background: 265 30% 98%;
+    /* Neutrals de-tinted from a lavender hue (265) to a true warm-neutral (30) —
+       the old values made every admin background/border/muted surface read
+       faintly purple regardless of context. */
+    --background: 30 20% 98%;
     --foreground: 233 19% 21%;
-    --card: 265 30% 98%;
+    --card: 30 20% 98%;
     --card-foreground: 233 19% 21%;
-    --popover: 265 30% 98%;
+    --popover: 30 20% 98%;
     --popover-foreground: 233 19% 21%;
-    /* Primary — #b495f5 (soft lavender) with matching shades for gradients */
-    --primary: 264 100% 57%;
+    /* Primary — #6D28D9, deepened from the original 100%-saturation electric violet */
+    --primary: 263 69% 50%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 264 100% 82%;
+    --primary-light: 264 55% 80%;
     --primary-dark: 220 100% 40%;
-    --secondary: 265 18% 93%;
+    --secondary: 30 8% 93%;
     --secondary-foreground: 233 19% 21%;
-    --muted: 265 16% 94%;
-    --muted-foreground: 260 8% 55%;
+    --muted: 30 6% 94%;
+    --muted-foreground: 30 4% 55%;
     --accent: 33 88% 59%;
-    --accent-foreground: 260 35% 16%;
+    --accent-foreground: 233 19% 16%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --border: 265 14% 88%;
-    --input: 265 14% 88%;
+    --border: 30 6% 88%;
+    --input: 30 6% 88%;
     --ring: 220 100% 50%;
     --radius: 0.5rem;
   }
@@ -56,17 +59,17 @@
     --card-foreground: 40 20% 95%;
     --popover: 233 19% 12%;
     --popover-foreground: 40 20% 95%;
-    /* Primary — #b495f5 (soft lavender) with matching shades for gradients */
-    --primary: 264 100% 57%;
+    /* Primary — #6D28D9, deepened from the original 100%-saturation electric violet */
+    --primary: 263 69% 50%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 264 100% 82%;
+    --primary-light: 264 55% 80%;
     --primary-dark: 220 100% 40%;
     --secondary: 233 19% 18%;
     --secondary-foreground: 40 20% 95%;
     --muted: 233 19% 18%;
     --muted-foreground: 220 12% 60%;
     --accent: 33 88% 59%;
-    --accent-foreground: 260 35% 14%;
+    --accent-foreground: 233 19% 14%;
     --destructive: 0 62% 30%;
     --destructive-foreground: 0 0% 100%;
     --border: 233 19% 22%;
@@ -91,21 +94,18 @@
   .text-balance {
     text-wrap: balance;
   }
-  /* Logo palette: periwinkle blue #0055FF -> violet #7A22FF -> warm amber #FF9900 */
+  /* Logo palette: violet #7A22FF -> warm amber #FF9900 (blue removed) */
   .gradient-terracotta {
-    background: linear-gradient(135deg, #0055FF 0%, #7A22FF 55%, #FF9900 100%);
+    background: linear-gradient(135deg, #7A22FF 0%, #FF9900 100%);
   }
   .gradient-cream {
     background: linear-gradient(135deg, #f6f5fd 0%, #fdfcff 100%);
   }
   .gradient-coral {
-    background: linear-gradient(135deg, #0055FF 0%, #7A22FF 100%);
+    background: linear-gradient(135deg, #7A22FF 0%, #FF9900 100%);
   }
   .gradient-primary {
-    background: linear-gradient(135deg, #0055FF 0%, #7A22FF 100%);
-  }
-  .gradient-blue-violet {
-    background: linear-gradient(135deg, #0055FF 0%, #7A22FF 100%);
+    background: linear-gradient(135deg, #7A22FF 0%, #FF9900 100%);
   }
   .shadow-soft {
     box-shadow: 0 4px 20px rgba(122, 34, 255, 0.08);
@@ -336,7 +336,7 @@ html {
 
 /* ─── Gradient text utility ──────────────────────────────────────────────── */
 .gradient-text {
-  background: linear-gradient(120deg, #0055FF 0%, #7A22FF 50%, #FF9900 100%);
+  background: linear-gradient(120deg, #7A22FF 0%, #FF9900 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

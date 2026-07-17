@@ -61,7 +61,7 @@ export function AliignspaceServicesMarquee({
   const bgClass = isDark ? "bg-[#16141f]" : "bg-[#F6F5FB]";
   const textClass = isDark ? "text-[#F6F5FB]" : "text-[#16141f]";
   const mutedTextClass = isDark ? "text-[#F6F5FB]/50" : "text-[#16141f]/50";
-  const shapeColor = "text-[#7A22FF]";
+  const shapeColor = "text-[#6D28D9]";
 
   const row1Anim = direction === "left" 
     ? { animation: `marqueeLeft ${speed}s linear infinite` } 

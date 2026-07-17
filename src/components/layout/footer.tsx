@@ -44,7 +44,7 @@ const SOCIAL = [
     label: "Instagram",
     href: "https://instagram.com/aliignspace",
     icon: <Instagram className="w-4 h-4" />,
-    color: "hover:bg-gradient-to-br hover:from-[#f09433] hover:via-[#7A22FF] hover:to-[#bc1888]",
+    color: "hover:bg-gradient-to-br hover:from-[#f09433] hover:via-[#6D28D9] hover:to-[#bc1888]",
   },
   {
     label: "Facebook",
@@ -89,13 +89,23 @@ function NewsletterSignup() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email && email.includes("@")) {
+    if (!email || !email.includes("@")) {
+      setStatus("error");
+      return;
+    }
+    try {
+      const res = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      if (!res.ok) throw new Error("failed");
       setStatus("success");
       setEmail("");
       setTimeout(() => setStatus("idle"), 3000);
-    } else {
+    } catch {
       setStatus("error");
     }
   };
@@ -177,7 +187,7 @@ function CopyrightBar() {
             </Link>
             <span className="text-white/15 text-xs">·</span>
             <Link
-              href="/sitemap"
+              href="/sitemap.xml"
               className="text-xs text-white/30 hover:text-white/60 transition-colors"
             >
               Sitemap
@@ -201,12 +211,12 @@ export function Footer() {
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -top-40 -left-40 w-96 h-96 rounded-full opacity-5"
-        style={{ background: "radial-gradient(circle, #7A22FF 0%, transparent 70%)" }}
+        style={{ background: "radial-gradient(circle, #6D28D9 0%, transparent 70%)" }}
       />
       <div
         aria-hidden="true"
         className="pointer-events-none absolute bottom-0 right-0 w-80 h-80 rounded-full opacity-5"
-        style={{ background: "radial-gradient(circle, #7A22FF 0%, transparent 70%)" }}
+        style={{ background: "radial-gradient(circle, #6D28D9 0%, transparent 70%)" }}
       />
 
       {/* ── Main grid ─────────────────────────────────────────────────────── */}

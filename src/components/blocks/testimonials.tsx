@@ -77,7 +77,7 @@ export function TestimonialsBlock({
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-14">
           <Reveal direction="fade">
-            <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#7A22FF] block mb-4">
+            <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#6D28D9] block mb-4">
               Client Stories
             </span>
           </Reveal>

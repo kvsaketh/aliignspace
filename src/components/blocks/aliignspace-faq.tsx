@@ -73,11 +73,11 @@ export function AliignspaceFAQ({
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-12"
         >
-          <span className="inline-block font-sans text-xs uppercase tracking-[0.2em] text-[#7A22FF] mb-4">
+          <span className="inline-block font-sans text-xs uppercase tracking-[0.2em] text-[#6D28D9] mb-4">
             {label}
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#16141f]">
-            {title} <span className="text-[#7A22FF]">{accentWord}</span>
+            {title} <span className="text-[#6D28D9]">{accentWord}</span>
           </h2>
           <p className="mt-4 font-sans text-[#16141f]/60 max-w-xl mx-auto">{intro}</p>
         </motion.div>
@@ -100,7 +100,7 @@ export function AliignspaceFAQ({
                   className="w-full flex items-center gap-4 px-6 py-5 text-left"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-serif text-lg text-[#7A22FF] flex-shrink-0 w-8">
+                  <span className="font-serif text-lg text-[#6D28D9] flex-shrink-0 w-8">
                     {num}
                   </span>
                   <span className="font-serif text-base sm:text-lg text-[#16141f] flex-1">

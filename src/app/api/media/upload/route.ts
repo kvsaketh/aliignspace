@@ -2,9 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
-import { writeFile, mkdir, readFile } from "fs/promises";
-import { existsSync } from "fs";
-import path from "path";
+import { put } from "@vercel/blob";
 import crypto from "crypto";
 
 // Maximum file size: 10MB
@@ -105,15 +103,12 @@ export async function POST(request: NextRequest) {
     const filename = `${timestamp}-${hash.slice(0, 8)}${extension}`;
     const key = `uploads/${filename}`;
 
-    // Ensure uploads directory exists
-    const uploadsDir = path.join(process.cwd(), "public", "uploads");
-    if (!existsSync(uploadsDir)) {
-      await mkdir(uploadsDir, { recursive: true });
-    }
-
-    // Save file to disk
-    const filePath = path.join(uploadsDir, filename);
-    await writeFile(filePath, buffer);
+    // Vercel's production serverless filesystem is read-only outside /tmp, so
+    // files are stored in Vercel Blob rather than public/uploads.
+    const blob = await put(key, buffer, {
+      access: "public",
+      contentType: file.type,
+    });
 
     // Get image dimensions if it's an image
     let width: number | null = null;
@@ -132,15 +127,15 @@ export async function POST(request: NextRequest) {
         if (width && height && width > 300) {
           try {
             const sharp = await import("sharp");
-            const thumbnailFilename = `${timestamp}-${hash.slice(0, 8)}-thumb${extension}`;
-            const thumbnailPath = path.join(uploadsDir, thumbnailFilename);
-
-            await sharp
+            const thumbnailBuffer = await sharp
               .default(buffer)
               .resize(300, null, { withoutEnlargement: true })
-              .toFile(thumbnailPath);
-
-            thumbnailUrl = `/uploads/${thumbnailFilename}`;
+              .toBuffer();
+            const thumbnailBlob = await put(`uploads/${timestamp}-${hash.slice(0, 8)}-thumb${extension}`, thumbnailBuffer, {
+              access: "public",
+              contentType: file.type,
+            });
+            thumbnailUrl = thumbnailBlob.url;
           } catch {
             // If sharp is not available, skip thumbnail creation
             thumbnailUrl = null;
@@ -154,7 +149,7 @@ export async function POST(request: NextRequest) {
     // Save to database
     const media = await prisma.media.create({
       data: {
-        url: `/uploads/${filename}`,
+        url: blob.url,
         thumbnailUrl,
         key,
         filename: originalName,

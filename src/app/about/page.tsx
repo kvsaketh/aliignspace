@@ -53,12 +53,12 @@ export default function AboutPage() {
             <div className="absolute inset-0 bg-gradient-to-t from-[#1a1720] via-[#1a1720]/80 to-[#1a1720]/30" />
           </div>
           <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
-            <p className="text-[#7A22FF] font-sans text-sm uppercase tracking-widest mb-5">
+            <p className="text-[#6D28D9] font-sans text-sm uppercase tracking-widest mb-5">
               Interior Designers · Hyderabad &amp; Nellore
             </p>
             <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl text-white leading-tight mb-6">
               Crafting Spaces That{" "}
-              <em className="text-[#7A22FF] not-italic">Tell Your Story</em>
+              <em className="text-[#6D28D9] not-italic">Tell Your Story</em>
             </h1>
             <p className="font-sans text-white/70 text-lg sm:text-xl max-w-2xl leading-relaxed">
               We are ALIIGNSPACE — a boutique interior design studio built on
@@ -72,7 +72,7 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto px-6 lg:px-12">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
-                <p className="text-[#7A22FF] font-sans text-sm uppercase tracking-widest mb-4">
+                <p className="text-[#6D28D9] font-sans text-sm uppercase tracking-widest mb-4">
                   Our Story
                 </p>
                 <h2 className="font-serif text-4xl sm:text-5xl text-[#1a1720] leading-tight mb-8">
@@ -123,7 +123,7 @@ export default function AboutPage() {
                 { number: "4.9★", label: "Google Rating" },
               ].map(({ number, label }) => (
                 <div key={label}>
-                  <p className="font-serif text-4xl sm:text-5xl text-[#7A22FF] mb-2">
+                  <p className="font-serif text-4xl sm:text-5xl text-[#6D28D9] mb-2">
                     {number}
                   </p>
                   <p className="font-sans text-xs uppercase tracking-widest text-white/60">
@@ -139,7 +139,7 @@ export default function AboutPage() {
         <section className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6 lg:px-12">
             <div className="text-center mb-14">
-              <p className="text-[#7A22FF] font-sans text-sm uppercase tracking-widest mb-4">
+              <p className="text-[#6D28D9] font-sans text-sm uppercase tracking-widest mb-4">
                 Our Purpose
               </p>
               <h2 className="font-serif text-4xl sm:text-5xl text-[#1a1720]">
@@ -148,8 +148,8 @@ export default function AboutPage() {
             </div>
             <div className="grid lg:grid-cols-2 gap-6">
               <div className="bg-[#f6f4fb] p-10 rounded-2xl">
-                <div className="w-12 h-12 bg-[#7A22FF]/10 border border-[#7A22FF]/30 rounded-full flex items-center justify-center mb-6">
-                  <span className="font-serif text-[#7A22FF] text-xl font-bold">
+                <div className="w-12 h-12 bg-[#6D28D9]/10 border border-[#6D28D9]/30 rounded-full flex items-center justify-center mb-6">
+                  <span className="font-serif text-[#6D28D9] text-xl font-bold">
                     M
                   </span>
                 </div>
@@ -164,7 +164,7 @@ export default function AboutPage() {
               </div>
               <div className="bg-[#1a1720] p-10 rounded-2xl">
                 <div className="w-12 h-12 bg-white/10 border border-white/20 rounded-full flex items-center justify-center mb-6">
-                  <span className="font-serif text-[#7A22FF] text-xl font-bold">
+                  <span className="font-serif text-[#6D28D9] text-xl font-bold">
                     V
                   </span>
                 </div>
@@ -185,7 +185,7 @@ export default function AboutPage() {
         <section className="py-24 bg-[#f6f4fb]">
           <div className="max-w-7xl mx-auto px-6 lg:px-12">
             <div className="text-center mb-14">
-              <p className="text-[#7A22FF] font-sans text-sm uppercase tracking-widest mb-4">
+              <p className="text-[#6D28D9] font-sans text-sm uppercase tracking-widest mb-4">
                 The Team
               </p>
               <h2 className="font-serif text-4xl sm:text-5xl text-[#1a1720]">
@@ -208,15 +208,15 @@ export default function AboutPage() {
                 },
               ].map(({ initials, name, role, bio }) => (
                 <div key={name} className="bg-white p-8 rounded-2xl shadow-sm">
-                  <div className="w-20 h-20 bg-[#7A22FF]/10 border border-[#7A22FF]/30 rounded-full flex items-center justify-center mb-6">
-                    <span className="font-serif text-[#7A22FF] text-xl font-semibold">
+                  <div className="w-20 h-20 bg-[#6D28D9]/10 border border-[#6D28D9]/30 rounded-full flex items-center justify-center mb-6">
+                    <span className="font-serif text-[#6D28D9] text-xl font-semibold">
                       {initials}
                     </span>
                   </div>
                   <h3 className="font-serif text-xl text-[#1a1720] mb-1">
                     {name}
                   </h3>
-                  <p className="font-sans text-[#7A22FF] text-xs uppercase tracking-widest mb-4">
+                  <p className="font-sans text-[#6D28D9] text-xs uppercase tracking-widest mb-4">
                     {role}
                   </p>
                   <p className="font-sans text-stone-600 text-sm leading-relaxed">
@@ -270,7 +270,7 @@ export default function AboutPage() {
                 },
               ].map(({ num, title, body }) => (
                 <div key={num} className="bg-[#f6f4fb] p-6 rounded-xl">
-                  <p className="font-sans text-[#7A22FF] text-xs font-semibold tracking-widest mb-3">
+                  <p className="font-sans text-[#6D28D9] text-xs font-semibold tracking-widest mb-3">
                     {num}
                   </p>
                   <h3 className="font-serif text-lg text-[#1a1720] mb-2">
@@ -320,9 +320,9 @@ export default function AboutPage() {
                 ].map(({ year, title, desc }) => (
                   <div key={year} className="relative text-center lg:text-left">
                     <div className="hidden lg:flex justify-center mb-6">
-                      <div className="w-4 h-4 rounded-full bg-[#7A22FF] ring-4 ring-[#7A22FF]/20 relative z-10" />
+                      <div className="w-4 h-4 rounded-full bg-[#6D28D9] ring-4 ring-[#6D28D9]/20 relative z-10" />
                     </div>
-                    <p className="font-serif text-4xl text-[#7A22FF] mb-2">
+                    <p className="font-serif text-4xl text-[#6D28D9] mb-2">
                       {year}
                     </p>
                     <h3 className="font-sans text-white font-semibold text-base mb-2">
@@ -340,10 +340,10 @@ export default function AboutPage() {
 
         {/* ── 8. CTA — background palette from the Process page consultation block ── */}
         <section className="relative py-24 overflow-hidden bg-[#1a1720]">
-          <div className="pointer-events-none absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#7A22FF]/10 rounded-full blur-[120px]" />
-          <div className="pointer-events-none absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#7A22FF]/5 rounded-full blur-[100px]" />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#7A22FF]/20 via-transparent to-transparent" />
-          <div className="pointer-events-none absolute -right-40 -top-40 w-[600px] h-[600px] rounded-full border border-[#7A22FF]/10" />
+          <div className="pointer-events-none absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#6D28D9]/10 rounded-full blur-[120px]" />
+          <div className="pointer-events-none absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#6D28D9]/5 rounded-full blur-[100px]" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#6D28D9]/20 via-transparent to-transparent" />
+          <div className="pointer-events-none absolute -right-40 -top-40 w-[600px] h-[600px] rounded-full border border-[#6D28D9]/10" />
           <div className="relative max-w-3xl mx-auto px-6 lg:px-12 text-center">
             <h2 className="font-serif text-4xl sm:text-5xl text-white mb-5">
               Ready to Begin Your Journey?
@@ -354,7 +354,7 @@ export default function AboutPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-white text-[#7A22FF] font-sans font-semibold text-sm tracking-wide hover:bg-white/90 transition-colors"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-white text-[#6D28D9] font-sans font-semibold text-sm tracking-wide hover:bg-white/90 transition-colors"
               >
                 Book a Consultation
               </Link>

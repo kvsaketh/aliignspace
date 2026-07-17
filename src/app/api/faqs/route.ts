@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/lib/auth";
+import { requireRole } from "@/lib/authz";
 
 export async function GET(request: Request) {
   try {
@@ -52,8 +53,8 @@ export async function POST(request: Request) {
 }
 
 export async function DELETE(request: Request) {
-  const session = await getServerSession(authOptions);
-  if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  const denied = await requireRole(["ADMIN"]);
+  if (denied) return NextResponse.json({ error: denied.error }, { status: denied.status });
 
   try {
     const { ids } = await request.json();

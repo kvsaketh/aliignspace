@@ -146,7 +146,7 @@ export function Header() {
               <span
                 className={cn(
                   "block h-[1px] w-0 transition-all duration-300 group-hover:w-full mt-0.5",
-                  isScrolled ? "bg-[#7A22FF]" : "bg-white/60"
+                  isScrolled ? "bg-[#6D28D9]" : "bg-white/60"
                 )}
               />
             </Link>
@@ -158,7 +158,7 @@ export function Header() {
                   key={link.label}
                   href={link.href}
                   className={cn(
-                    "relative text-sm font-medium transition-colors duration-200 hover:text-[#7A22FF] after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 after:bg-[#7A22FF] after:transition-all after:duration-300 hover:after:w-full pb-0.5",
+                    "relative text-sm font-medium transition-colors duration-200 hover:text-[#6D28D9] after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 after:bg-[#6D28D9] after:transition-all after:duration-300 hover:after:w-full pb-0.5",
                     isScrolled ? "text-[#16141f]/80" : "text-white/90"
                   )}
                 >
@@ -172,7 +172,7 @@ export function Header() {
               <a
                 href="tel:+919030444503"
                 className={cn(
-                  "flex items-center gap-2 text-sm font-medium transition-colors duration-200 hover:text-[#7A22FF]",
+                  "flex items-center gap-2 text-sm font-medium transition-colors duration-200 hover:text-[#6D28D9]",
                   isScrolled ? "text-[#16141f]/70" : "text-white/80"
                 )}
               >

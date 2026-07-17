@@ -70,7 +70,7 @@ export const sectionTemplates: SectionTemplate[] = [
         order: 5,
         parentId: "container-2",
         content: { label: "Start Your Journey", url: "/contact", variant: "primary" },
-        style: { backgroundColor: "#7A22FF", color: "#ffffff" },
+        style: { backgroundColor: "#6D28D9", color: "#ffffff" },
       },
       {
         type: "button",
@@ -165,7 +165,7 @@ export const sectionTemplates: SectionTemplate[] = [
         parentId: null,
         content: {},
         style: {
-          background: "linear-gradient(135deg, #7A22FF 0%, #b495f5 50%, #9b57cf 100%)",
+          background: "linear-gradient(135deg, #6D28D9 0%, #b495f5 50%, #7C3AED 100%)",
           paddingTop: "96px",
           paddingBottom: "96px",
         },
@@ -294,7 +294,7 @@ export const sectionTemplates: SectionTemplate[] = [
         },
         style: {
           backgroundColor: "#f7f4fc",
-          borderLeftColor: "#7A22FF",
+          borderLeftColor: "#6D28D9",
           borderLeftWidth: "4px",
           padding: "2rem",
           maxWidth: "800px",
@@ -313,7 +313,7 @@ export const sectionTemplates: SectionTemplate[] = [
         order: 0,
         parentId: null,
         content: {},
-        style: { backgroundColor: "#7A22FF", paddingTop: "96px", paddingBottom: "96px" },
+        style: { backgroundColor: "#6D28D9", paddingTop: "96px", paddingBottom: "96px" },
       },
       {
         type: "container",

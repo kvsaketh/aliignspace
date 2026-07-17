@@ -156,7 +156,7 @@ export function AliignspaceAboutBrief({
               animate={isTextInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               className="inline-block font-sans text-xs font-semibold tracking-[0.25em] uppercase mb-6"
-              style={{ color: "#7A22FF" }}
+              style={{ color: "#6D28D9" }}
             >
               {label}
             </motion.span>
@@ -170,7 +170,7 @@ export function AliignspaceAboutBrief({
               style={{ color: "#16141f" }}
             >
               {title}{" "}
-              <span className="italic text-[#7A22FF]">{accentWord}</span>
+              <span className="italic text-[#6D28D9]">{accentWord}</span>
             </motion.h2>
 
             {/* Body paragraphs with stagger */}
@@ -199,7 +199,7 @@ export function AliignspaceAboutBrief({
               animate={isTextInView ? { scaleX: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="mt-8 h-[2px] w-24 origin-left"
-              style={{ background: "#7A22FF" }}
+              style={{ background: "#6D28D9" }}
             />
           </div>
 

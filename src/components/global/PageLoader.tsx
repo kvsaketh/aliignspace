@@ -36,7 +36,7 @@ export function PageLoader() {
           {/* Animated horizontal line */}
           <motion.div
             className="mt-6 h-[2px] rounded-full"
-            style={{ backgroundColor: "#7A22FF" }}
+            style={{ backgroundColor: "#6D28D9" }}
             initial={{ width: 0, opacity: 0 }}
             animate={{ width: 120, opacity: 1 }}
             transition={{

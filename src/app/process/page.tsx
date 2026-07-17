@@ -51,12 +51,12 @@ export default function ProcessPage() {
             <div className="absolute inset-0 bg-gradient-to-t from-[#1a1720] via-[#1a1720]/70 to-transparent" />
           </div>
           <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-            <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#7A22FF] block mb-4">
+            <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#6D28D9] block mb-4">
               How We Work
             </span>
             <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-medium text-white leading-tight max-w-3xl">
               A process built on{" "}
-              <em className="not-italic italic text-[#7A22FF]">transparency</em>
+              <em className="not-italic italic text-[#6D28D9]">transparency</em>
             </h1>
             <p className="font-sans text-lg text-white/60 mt-4 max-w-xl">
               Five clear steps. Zero surprises. One beautiful home — delivered in 60–90 days.
@@ -65,12 +65,12 @@ export default function ProcessPage() {
         </section>
 
         {/* Process Overview Strip */}
-        <section className="bg-[#7A22FF] py-6">
+        <section className="bg-[#1a1720] py-6 border-t border-white/10">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 text-center">
               {["Meet Designer", "Visualise Home", "Freeze Design", "Execution Begins", "Happy Handover"].map((step, i) => (
                 <div key={step} className="flex items-center justify-center gap-3">
-                  <span className="font-serif text-white/40 text-sm">{String(i + 1).padStart(2, "0")}</span>
+                  <span className="font-serif text-[#6D28D9] text-sm">{String(i + 1).padStart(2, "0")}</span>
                   <span className="font-sans text-white text-sm font-medium">{step}</span>
                 </div>
               ))}
@@ -85,7 +85,7 @@ export default function ProcessPage() {
         <section className="py-20 bg-[#1a1720]">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-14">
-              <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#7A22FF] block mb-4">
+              <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#6D28D9] block mb-4">
                 Project Timeline
               </span>
               <h2 className="font-serif text-3xl sm:text-4xl font-medium text-white">
@@ -94,7 +94,7 @@ export default function ProcessPage() {
             </div>
             <div className="relative max-w-4xl mx-auto">
               {/* Connecting line */}
-              <div className="absolute top-8 left-8 right-8 h-px bg-[#7A22FF]/30 hidden sm:block" />
+              <div className="absolute top-8 left-8 right-8 h-px bg-[#6D28D9]/30 hidden sm:block" />
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
                 {[
                   { phase: "Week 1", label: "Consultation & Site Visit" },
@@ -103,10 +103,10 @@ export default function ProcessPage() {
                   { phase: "Week 11–13", label: "Installation & Handover" },
                 ].map((item, i) => (
                   <div key={item.phase} className="relative flex flex-col items-center text-center">
-                    <div className="w-16 h-16 rounded-full bg-[#7A22FF]/10 border border-[#7A22FF]/30 flex items-center justify-center mb-4 relative z-10">
-                      <span className="font-serif text-[#7A22FF] text-sm font-medium">{i + 1}</span>
+                    <div className="w-16 h-16 rounded-full bg-[#6D28D9]/10 border border-[#6D28D9]/30 flex items-center justify-center mb-4 relative z-10">
+                      <span className="font-serif text-[#6D28D9] text-sm font-medium">{i + 1}</span>
                     </div>
-                    <span className="font-sans text-xs text-[#7A22FF] font-semibold tracking-wider uppercase block mb-1">{item.phase}</span>
+                    <span className="font-sans text-xs text-[#6D28D9] font-semibold tracking-wider uppercase block mb-1">{item.phase}</span>
                     <span className="font-sans text-white/60 text-xs">{item.label}</span>
                   </div>
                 ))}
@@ -119,7 +119,7 @@ export default function ProcessPage() {
         <section className="py-20 lg:py-28 bg-[#f6f4fb]">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
             <div className="text-center mb-12">
-              <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#7A22FF] block mb-4">
+              <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#6D28D9] block mb-4">
                 Questions
               </span>
               <h2 className="font-serif text-3xl sm:text-4xl font-medium text-[#1a1720]">
@@ -149,7 +149,7 @@ export default function ProcessPage() {
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 bg-[#7A22FF] hover:bg-[#9b57cf] text-white font-sans font-semibold px-8 py-4 transition-all duration-300 hover:shadow-lg hover:shadow-[#7A22FF]/25 group"
+                className="inline-flex items-center gap-2 bg-[#6D28D9] hover:bg-[#7C3AED] text-white font-sans font-semibold px-8 py-4 transition-all duration-300 hover:shadow-lg hover:shadow-[#6D28D9]/25 group"
               >
                 Get Free Consultation
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -168,6 +168,7 @@ export default function ProcessPage() {
         <ConsultationBlock
           title="Let&apos;s Begin Your Project"
           subtitle="Drop your number and we'll call you back within 24 hours to schedule your free consultation."
+          source="process_page"
         />
       </main>
       <Footer />

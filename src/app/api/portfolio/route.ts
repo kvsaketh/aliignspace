@@ -35,7 +35,25 @@ export async function POST(request: Request) {
   if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
   const body = await request.json();
-  const { title, category, image, featured, status } = body;
+  const {
+    title,
+    category,
+    location,
+    description,
+    image,
+    images,
+    videoUrl,
+    videoType,
+    mainVideoUrl,
+    mainVideoType,
+    galleryImages,
+    clientName,
+    projectType,
+    budget,
+    area,
+    featured,
+    status,
+  } = body;
 
   if (!title || typeof title !== "string") {
     return NextResponse.json({ error: "title is required" }, { status: 400 });
@@ -50,7 +68,27 @@ export async function POST(request: Request) {
 
   const count = await prisma.portfolioProject.count();
   const project = await prisma.portfolioProject.create({
-    data: { title, slug, category, image: image ?? "", featured: featured ?? false, status: status ?? "DRAFT", sortOrder: count },
+    data: {
+      title,
+      slug,
+      category,
+      location,
+      description,
+      image: image ?? "",
+      images: images ?? undefined,
+      videoUrl,
+      videoType,
+      mainVideoUrl,
+      mainVideoType,
+      galleryImages: galleryImages ?? undefined,
+      clientName,
+      projectType,
+      budget,
+      area,
+      featured: featured ?? false,
+      status: status ?? "DRAFT",
+      sortOrder: count,
+    },
   });
 
   return NextResponse.json(project, { status: 201 });

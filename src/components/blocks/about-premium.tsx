@@ -72,7 +72,7 @@ function ImageGallery({ images }: { images: string[] }) {
           className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-[#1a1720] shadow-lg"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: isHovered ? 1 : 0, x: isHovered ? 0 : -20 }}
-          whileHover={{ scale: 1.1, backgroundColor: "#7A22FF", color: "#fff" }}
+          whileHover={{ scale: 1.1, backgroundColor: "#6D28D9", color: "#fff" }}
           whileTap={{ scale: 0.95 }}
           onClick={prevImage}
         >
@@ -83,7 +83,7 @@ function ImageGallery({ images }: { images: string[] }) {
           className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-[#1a1720] shadow-lg"
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: isHovered ? 1 : 0, x: isHovered ? 0 : 20 }}
-          whileHover={{ scale: 1.1, backgroundColor: "#7A22FF", color: "#fff" }}
+          whileHover={{ scale: 1.1, backgroundColor: "#6D28D9", color: "#fff" }}
           whileTap={{ scale: 0.95 }}
           onClick={nextImage}
         >

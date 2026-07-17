@@ -92,12 +92,12 @@ export function AliignspaceVideoTestimonials({
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="mb-16"
         >
-          <span className="inline-block font-sans text-xs uppercase tracking-[0.2em] text-[#7A22FF] mb-4">
+          <span className="inline-block font-sans text-xs uppercase tracking-[0.2em] text-[#6D28D9] mb-4">
             {label}
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#16141f]">
             {title}{" "}
-            <span className="italic text-[#7A22FF]">{accentWord}</span>
+            <span className="italic text-[#6D28D9]">{accentWord}</span>
           </h2>
         </motion.div>
 

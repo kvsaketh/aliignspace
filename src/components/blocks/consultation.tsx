@@ -9,6 +9,7 @@ interface ConsultationProps {
   title?: string;
   subtitle?: string;
   backgroundImage?: string;
+  source?: string;
 }
 
 // Magnetic button component
@@ -43,7 +44,7 @@ function MagneticButton({ children, onClick, disabled }: { children: React.React
       style={{ x: springX, y: springY }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative inline-flex items-center justify-center gap-2 bg-[#7A22FF] hover:bg-[#9b57cf] disabled:opacity-60 text-white font-sans font-semibold text-sm px-8 py-4 transition-all duration-300 whitespace-nowrap overflow-hidden group"
+      className="relative inline-flex items-center justify-center gap-2 bg-[#6D28D9] hover:bg-[#7C3AED] disabled:opacity-60 text-white font-sans font-semibold text-sm px-8 py-4 transition-all duration-300 whitespace-nowrap overflow-hidden group"
     >
       <motion.span
         className="absolute inset-0 bg-white/20"
@@ -93,12 +94,12 @@ function AnimatedInput({
         onBlur={() => setIsFocused(false)}
         className="w-full bg-white/10 border border-white/20 text-white placeholder-white/40 font-sans text-sm px-5 py-4 focus:outline-none transition-all duration-300"
         style={{
-          borderColor: isFocused ? "#7A22FF" : "rgba(255,255,255,0.2)",
+          borderColor: isFocused ? "#6D28D9" : "rgba(255,255,255,0.2)",
           boxShadow: isFocused ? "0 0 20px rgba(155, 87, 207, 0.3)" : "none",
         }}
       />
       <motion.div
-        className="absolute bottom-0 left-0 h-[2px] bg-[#7A22FF]"
+        className="absolute bottom-0 left-0 h-[2px] bg-[#6D28D9]"
         initial={{ width: "0%" }}
         animate={{ width: isFocused ? "100%" : "0%" }}
         transition={{ duration: 0.3 }}
@@ -111,20 +112,33 @@ export function ConsultationBlock({
   title = "Start Your Interior Journey",
   subtitle = "Talk to our design team — no commitments, just a conversation about your dream space.",
   backgroundImage,
+  source = "consultation_block",
 }: ConsultationProps) {
   const [formData, setFormData] = useState({ name: "", phone: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { once: true, margin: "-100px" });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    await new Promise<void>((resolve) => setTimeout(resolve, 1000));
-    setIsSubmitting(false);
-    setSubmitted(true);
-    setFormData({ name: "", phone: "" });
+    setError("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...formData, source }),
+      });
+      if (!res.ok) throw new Error("send failed");
+      setSubmitted(true);
+      setFormData({ name: "", phone: "" });
+    } catch {
+      setError("Something went wrong. Please call or WhatsApp us instead.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -144,7 +158,7 @@ export function ConsultationBlock({
 
       {/* Animated gradient orbs */}
       <motion.div
-        className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#7A22FF]/10 rounded-full blur-[120px]"
+        className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#6D28D9]/10 rounded-full blur-[120px]"
         animate={{
           x: [0, 30, 0],
           y: [0, -20, 0],
@@ -153,7 +167,7 @@ export function ConsultationBlock({
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#7A22FF]/5 rounded-full blur-[100px]"
+        className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#6D28D9]/5 rounded-full blur-[100px]"
         animate={{
           x: [0, -20, 0],
           y: [0, 30, 0],
@@ -163,16 +177,16 @@ export function ConsultationBlock({
       />
 
       {/* Terracotta gradient wash */}
-      <div className="absolute inset-0 z-[1] bg-gradient-to-br from-[#7A22FF]/20 via-transparent to-transparent" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-br from-[#6D28D9]/20 via-transparent to-transparent" />
 
       {/* Decorative circle accents */}
       <motion.div
-        className="absolute -right-40 -top-40 w-[600px] h-[600px] rounded-full border border-[#7A22FF]/10 z-[1]"
+        className="absolute -right-40 -top-40 w-[600px] h-[600px] rounded-full border border-[#6D28D9]/10 z-[1]"
         animate={{ rotate: 360 }}
         transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
       />
       <motion.div
-        className="absolute -right-20 -top-20 w-[400px] h-[400px] rounded-full border border-[#7A22FF]/10 z-[1]"
+        className="absolute -right-20 -top-20 w-[400px] h-[400px] rounded-full border border-[#6D28D9]/10 z-[1]"
         animate={{ rotate: -360 }}
         transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
       />
@@ -191,16 +205,16 @@ export function ConsultationBlock({
               animate={{ rotate: [0, 15, -15, 0] }}
               transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
             >
-              <Sparkles className="w-4 h-4 text-[#7A22FF]" />
+              <Sparkles className="w-4 h-4 text-[#6D28D9]" />
             </motion.div>
-            <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#7A22FF]">
+            <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#6D28D9]">
               Free Consultation
             </span>
             <motion.div
               animate={{ rotate: [0, -15, 15, 0] }}
               transition={{ duration: 2, repeat: Infinity, repeatDelay: 3, delay: 0.5 }}
             >
-              <Sparkles className="w-4 h-4 text-[#7A22FF]" />
+              <Sparkles className="w-4 h-4 text-[#6D28D9]" />
             </motion.div>
           </motion.div>
 
@@ -242,7 +256,7 @@ export function ConsultationBlock({
                   animate={{ scale: 1 }}
                   transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
                 >
-                  <CheckCircle2 className="w-12 h-12 text-[#7A22FF]" />
+                  <CheckCircle2 className="w-12 h-12 text-[#6D28D9]" />
                 </motion.div>
                 <h3 className="font-serif text-xl text-white">
                   We&apos;ll Call You Back!
@@ -299,6 +313,11 @@ export function ConsultationBlock({
                 </motion.div>
               </form>
             )}
+            {error && (
+              <p className="font-sans text-sm text-red-400 mt-3" role="alert">
+                {error}
+              </p>
+            )}
           </motion.div>
 
           {/* Trust signals */}
@@ -318,7 +337,7 @@ export function ConsultationBlock({
                   transition={{ delay: 0.9 + i * 0.1 }}
                 >
                   <motion.span
-                    className="w-1.5 h-1.5 rounded-full bg-[#7A22FF]"
+                    className="w-1.5 h-1.5 rounded-full bg-[#6D28D9]"
                     animate={{ scale: [1, 1.2, 1] }}
                     transition={{ duration: 2, repeat: Infinity, delay: i * 0.3 }}
                   />

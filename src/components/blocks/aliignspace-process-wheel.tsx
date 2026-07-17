@@ -42,19 +42,19 @@ export function AliignspaceProcessWheel({
 
                 {/* Mobile vertical connector */}
                 {!isLast && (
-                  <div className="lg:hidden absolute left-[19px] top-10 bottom-0 w-px bg-[#7A22FF]/20" />
+                  <div className="lg:hidden absolute left-[19px] top-10 bottom-0 w-px bg-[#6D28D9]/20" />
                 )}
                 {/* Desktop horizontal connector */}
                 {!isLast && (
                   <div
-                    className="hidden lg:block absolute h-px bg-[#7A22FF]/20"
+                    className="hidden lg:block absolute h-px bg-[#6D28D9]/20"
                     style={{ top: "19px", left: "calc(50% + 22px)", right: 0 }}
                   />
                 )}
 
                 <div className="flex lg:flex-col items-start lg:items-center gap-4 lg:gap-0 pb-10 lg:pb-0 relative">
                   {/* Number circle */}
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full border border-[#7A22FF]/50 bg-[#7A22FF]/10 flex items-center justify-center z-10">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full border border-[#6D28D9]/50 bg-[#6D28D9]/10 flex items-center justify-center z-10">
                     <span className="font-sans text-xs font-bold text-[#7FA8FF]">{step.number}</span>
                   </div>
 

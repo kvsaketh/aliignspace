@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/lib/auth";
+import { requireRole } from "@/lib/authz";
 
 function generateSlug(title: string): string {
   return title
@@ -110,13 +111,11 @@ export async function POST(request: NextRequest) {
   }
 }
 
-// DELETE /api/services - Bulk delete by IDs (auth required)
+// DELETE /api/services - Bulk delete by IDs (ADMIN only)
 export async function DELETE(request: NextRequest) {
   try {
-    const session = await getServerSession(authOptions);
-    if (!session) {
-      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-    }
+    const denied = await requireRole(["ADMIN"]);
+    if (denied) return NextResponse.json({ error: denied.error }, { status: denied.status });
 
     const body = await request.json();
     const { ids } = body;

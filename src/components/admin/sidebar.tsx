@@ -20,6 +20,8 @@ import {
   Clock,
   Wrench,
   Sparkles,
+  Inbox,
+  Mail,
 } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -29,6 +31,8 @@ const navigation = [
   { name: "Widget Builder", href: "/admin/builder", icon: PenTool },
   { name: "Pages", href: "/admin/pages", icon: FileText },
   { name: "Portfolio", href: "/admin/portfolio", icon: Briefcase },
+  { name: "Contact Inquiries", href: "/admin/contacts", icon: Inbox },
+  { name: "Newsletter", href: "/admin/newsletter", icon: Mail },
   { name: "Blog Posts", href: "/admin/posts", icon: Newspaper },
   { name: "Testimonials", href: "/admin/testimonials", icon: MessageSquare },
   { name: "FAQs", href: "/admin/faqs", icon: HelpCircle },

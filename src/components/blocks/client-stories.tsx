@@ -13,9 +13,9 @@ export interface Story {
   rating?: number;
 }
 
-/* Turn an Instagram Reel or YouTube Short/watch URL into an embeddable player URL. */
+/* Turn an Instagram Reel, YouTube Short/watch, or self-hosted file URL into a playable source. */
 function parseMedia(url?: string): {
-  kind: "youtube" | "instagram" | "other" | "none";
+  kind: "youtube" | "instagram" | "video" | "other" | "none";
   embed?: string;
   thumb?: string;
 } {
@@ -31,6 +31,10 @@ function parseMedia(url?: string): {
   const ig = url.match(/instagram\.com\/(?:reel|reels|p|tv)\/([\w-]+)/);
   if (ig) {
     return { kind: "instagram", embed: `https://www.instagram.com/reel/${ig[1]}/embed/` };
+  }
+  // Self-hosted upload (uploaded MP4/WebM/MOV) — plays in a native <video>, not an iframe.
+  if (/\.(mp4|webm|mov)(\?|$)/i.test(url)) {
+    return { kind: "video", embed: url };
   }
   return { kind: "other", embed: url };
 }
@@ -74,8 +78,8 @@ function StoryCard({ s, onPlay }: { s: Story; onPlay?: () => void }) {
       {onPlay && (
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <div className="relative">
-            <div className="absolute -inset-3 rounded-full bg-[#7A22FF]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="relative w-11 h-11 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-[#7A22FF] group-hover:border-[#7A22FF] transition-all duration-300 group-hover:scale-110">
+            <div className="absolute -inset-3 rounded-full bg-[#6D28D9]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="relative w-11 h-11 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-[#6D28D9] group-hover:border-[#6D28D9] transition-all duration-300 group-hover:scale-110">
               <Play className="w-4 h-4 text-white fill-white ml-[2px]" />
             </div>
           </div>
@@ -87,13 +91,13 @@ function StoryCard({ s, onPlay }: { s: Story; onPlay?: () => void }) {
           &ldquo;{s.quote}&rdquo;
         </p>
         <div className="flex items-center gap-1.5">
-          <div className="w-5 h-5 rounded-full bg-[#7A22FF]/25 border border-[#7A22FF]/40 flex items-center justify-center flex-shrink-0">
+          <div className="w-5 h-5 rounded-full bg-[#6D28D9]/25 border border-[#6D28D9]/40 flex items-center justify-center flex-shrink-0">
             <span className="font-sans text-[8px] font-bold text-[#C4A2FF]">{getInitials(s.name)}</span>
           </div>
           <p className="font-sans text-[10px] text-white/55 truncate leading-none">{s.name}</p>
         </div>
       </div>
-      <div className="absolute inset-0 rounded-2xl ring-0 group-hover:ring-1 group-hover:ring-[#7A22FF]/60 transition-all duration-300 pointer-events-none" />
+      <div className="absolute inset-0 rounded-2xl ring-0 group-hover:ring-1 group-hover:ring-[#6D28D9]/60 transition-all duration-300 pointer-events-none" />
     </button>
   );
 }
@@ -124,13 +128,13 @@ export function ClientStories({ stories }: { stories: Story[] }) {
         <div className="flex items-end justify-between gap-4 mb-8 sm:mb-10">
           <div>
             <span className="block font-sans text-[11px] uppercase tracking-[0.25em] text-[#FF9900] mb-3">
-              Client Stories
+              Design Reels
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-white leading-tight">
-              Hear it from <span className="italic text-[#C4A2FF]">our clients</span>
+              See our designs <span className="italic text-[#C4A2FF]">come to life</span>
             </h2>
             <p className="font-sans text-[13px] text-white/40 mt-2">
-              Real homeowners. Real reels. Tap to watch their stories.
+              Real projects. Real transformations. Tap to watch.
             </p>
           </div>
           <div className="hidden sm:flex items-center gap-2 flex-shrink-0">
@@ -157,8 +161,8 @@ export function ClientStories({ stories }: { stories: Story[] }) {
           {/* Share your story card */}
           <div className="flex-shrink-0">
             <a href="https://wa.me/919030444503" target="_blank" rel="noopener noreferrer" className="group block">
-              <div className="relative w-[155px] sm:w-[175px] lg:w-[195px] aspect-[9/16] rounded-2xl border border-dashed border-white/15 bg-white/[0.015] flex flex-col items-center justify-center text-center p-4 hover:border-[#7A22FF]/40 hover:bg-[#7A22FF]/[0.04] transition-all duration-300">
-                <div className="w-10 h-10 rounded-full border border-[#7A22FF]/30 bg-[#7A22FF]/5 flex items-center justify-center mb-3 group-hover:bg-[#7A22FF]/20 transition-colors duration-300">
+              <div className="relative w-[155px] sm:w-[175px] lg:w-[195px] aspect-[9/16] rounded-2xl border border-dashed border-white/15 bg-white/[0.015] flex flex-col items-center justify-center text-center p-4 hover:border-[#6D28D9]/40 hover:bg-[#6D28D9]/[0.04] transition-all duration-300">
+                <div className="w-10 h-10 rounded-full border border-[#6D28D9]/30 bg-[#6D28D9]/5 flex items-center justify-center mb-3 group-hover:bg-[#6D28D9]/20 transition-colors duration-300">
                   <MessageCircle className="w-4 h-4 text-[#C4A2FF]" />
                 </div>
                 <p className="font-serif text-[12px] text-white mb-1.5 leading-snug">Share your story</p>
@@ -189,14 +193,25 @@ export function ClientStories({ stories }: { stories: Story[] }) {
             className="relative w-full max-w-[420px] aspect-[9/16] rounded-2xl overflow-hidden bg-black shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
-            <iframe
-              src={activeMedia.embed}
-              title={active.name}
-              className="absolute inset-0 w-full h-full"
-              allow="autoplay; encrypted-media; clipboard-write; picture-in-picture"
-              allowFullScreen
-              scrolling="no"
-            />
+            {activeMedia.kind === "video" ? (
+              <video
+                src={activeMedia.embed}
+                poster={active.thumbnail}
+                controls
+                autoPlay
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            ) : (
+              <iframe
+                src={activeMedia.embed}
+                title={active.name}
+                className="absolute inset-0 w-full h-full"
+                allow="autoplay; encrypted-media; clipboard-write; picture-in-picture"
+                allowFullScreen
+                scrolling="no"
+              />
+            )}
           </div>
         </div>
       )}

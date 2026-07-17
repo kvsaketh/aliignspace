@@ -68,7 +68,7 @@ export function AboutHero({
       >
         {label && (
           <Reveal direction="fade" delay={0}>
-            <span className="inline-block text-[#7A22FF] text-xs font-sans font-semibold tracking-[0.25em] uppercase mb-6">
+            <span className="inline-block text-[#6D28D9] text-xs font-sans font-semibold tracking-[0.25em] uppercase mb-6">
               {label}
             </span>
           </Reveal>
@@ -101,9 +101,9 @@ export function AboutHero({
             alignment === "center" && "justify-center",
             alignment === "right" && "justify-end"
           )}>
-            <span className="w-12 h-[1px] bg-[#7A22FF]" />
-            <span className="w-2 h-2 rounded-full bg-[#7A22FF]" />
-            <span className="w-12 h-[1px] bg-[#7A22FF]" />
+            <span className="w-12 h-[1px] bg-[#6D28D9]" />
+            <span className="w-2 h-2 rounded-full bg-[#6D28D9]" />
+            <span className="w-12 h-[1px] bg-[#6D28D9]" />
           </div>
         </Reveal>
       </div>

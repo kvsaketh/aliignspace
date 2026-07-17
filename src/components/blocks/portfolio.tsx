@@ -51,7 +51,7 @@ export function PortfolioBlock({
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <Reveal direction="fade">
-            <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#7A22FF] block mb-4">
+            <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#6D28D9] block mb-4">
               {subtitle}
             </span>
           </Reveal>
@@ -71,8 +71,8 @@ export function PortfolioBlock({
                 onClick={() => handleFilterChange(cat)}
                 className={`font-sans text-sm px-5 py-2 border transition-all duration-200 ${
                   activeFilter === cat
-                    ? "bg-[#7A22FF] border-[#7A22FF] text-white"
-                    : "bg-white border-stone-200 text-stone-600 hover:border-[#7A22FF] hover:text-[#7A22FF]"
+                    ? "bg-[#6D28D9] border-[#6D28D9] text-white"
+                    : "bg-white border-stone-200 text-stone-600 hover:border-[#6D28D9] hover:text-[#6D28D9]"
                 }`}
               >
                 {cat}
@@ -108,7 +108,7 @@ export function PortfolioBlock({
 
                   {/* Content */}
                   <div className="absolute inset-0 flex flex-col justify-end p-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-400">
-                    <span className="font-sans text-xs font-semibold tracking-wider uppercase text-[#7A22FF] mb-1">
+                    <span className="font-sans text-xs font-semibold tracking-wider uppercase text-[#6D28D9] mb-1">
                       {item.category}
                     </span>
                     <h3 className="font-serif text-lg font-medium text-white">
@@ -118,7 +118,7 @@ export function PortfolioBlock({
 
                   {/* Featured badge */}
                   {item.featured && (
-                    <div className="absolute top-4 left-4 bg-[#7A22FF] text-white font-sans text-[10px] font-semibold tracking-wider uppercase px-3 py-1">
+                    <div className="absolute top-4 left-4 bg-[#6D28D9] text-white font-sans text-[10px] font-semibold tracking-wider uppercase px-3 py-1">
                       Featured
                     </div>
                   )}
@@ -148,7 +148,7 @@ export function PortfolioBlock({
         <div className="text-center mt-10">
           <Link
             href="/portfolio"
-            className="inline-flex items-center gap-2 font-sans text-sm font-semibold text-[#7A22FF] hover:text-[#9b57cf] transition-colors group"
+            className="inline-flex items-center gap-2 font-sans text-sm font-semibold text-[#6D28D9] hover:text-[#7C3AED] transition-colors group"
           >
             View All Projects
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

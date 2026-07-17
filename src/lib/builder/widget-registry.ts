@@ -152,7 +152,7 @@ export const widgetRegistry: WidgetRegistryItem[] = [
     },
     defaultStyle: {
       backgroundColor: "#f7f4fc",
-      borderLeftColor: "#7A22FF",
+      borderLeftColor: "#6D28D9",
       borderLeftWidth: "4px",
       padding: "2rem",
     },
@@ -170,7 +170,7 @@ export const widgetRegistry: WidgetRegistryItem[] = [
       duration: 2,
     },
     defaultStyle: {
-      color: "#7A22FF",
+      color: "#6D28D9",
       fontSize: "3rem",
       fontFamily: "var(--font-playfair)",
       fontWeight: 600,
@@ -280,7 +280,7 @@ export const widgetRegistry: WidgetRegistryItem[] = [
       icon: "ArrowRight",
     },
     defaultStyle: {
-      backgroundColor: "#7A22FF",
+      backgroundColor: "#6D28D9",
       color: "#ffffff",
       fontSize: "0.875rem",
       fontWeight: 600,

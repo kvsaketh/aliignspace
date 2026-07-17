@@ -69,7 +69,7 @@ export function AliignspaceFinalCTA({
                 <a
                   key={i}
                   href={btn.url}
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-[#0055FF] text-white font-sans text-sm uppercase tracking-wider hover:bg-[#0043CC] transition-colors duration-300 rounded-full"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-[#FF9900] text-white font-sans text-sm uppercase tracking-wider hover:bg-[#CC7A00] transition-colors duration-300 rounded-full"
                 >
                   {btn.label}
                   <ArrowRight className="w-4 h-4" />

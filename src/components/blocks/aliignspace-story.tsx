@@ -56,13 +56,13 @@ export function AliignspaceStory({
             className="order-1 lg:order-2"
           >
             {/* Label */}
-            <span className="inline-block font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#7A22FF] mb-4">
+            <span className="inline-block font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#6D28D9] mb-4">
               {label}
             </span>
 
             {/* Heading */}
             <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-[#16141f] leading-[1.1] tracking-tight mb-8">
-              {title} <span className="italic text-[#7A22FF]">{accentWord}</span>
+              {title} <span className="italic text-[#6D28D9]">{accentWord}</span>
             </h2>
 
             {/* Body paragraphs */}

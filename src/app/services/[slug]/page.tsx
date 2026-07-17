@@ -293,7 +293,7 @@ export default async function ServiceDetailPage({
               >
                 <ArrowLeft className="w-4 h-4" /> All Services
               </Link>
-              <span className="block text-[#7A22FF] text-xs font-sans font-semibold tracking-[0.28em] uppercase mb-5">
+              <span className="block text-[#6D28D9] text-xs font-sans font-semibold tracking-[0.28em] uppercase mb-5">
                 {content?.tagline || service.shortDesc || "Premium Service"}
               </span>
               <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl font-medium text-white leading-[1.05] mb-7">
@@ -305,7 +305,7 @@ export default async function ServiceDetailPage({
               <div className="flex flex-wrap gap-4">
                 {stats.deliveryTime && (
                   <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md ring-1 ring-white/15 px-5 py-3 rounded-full">
-                    <Clock className="w-4 h-4 text-[#7A22FF]" />
+                    <Clock className="w-4 h-4 text-[#6D28D9]" />
                     <span className="text-white font-sans text-sm font-medium">
                       {stats.deliveryTime}
                     </span>
@@ -313,7 +313,7 @@ export default async function ServiceDetailPage({
                 )}
                 {stats.warranty && (
                   <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md ring-1 ring-white/15 px-5 py-3 rounded-full">
-                    <ShieldCheck className="w-4 h-4 text-[#7A22FF]" />
+                    <ShieldCheck className="w-4 h-4 text-[#6D28D9]" />
                     <span className="text-white font-sans text-sm font-medium">
                       {stats.warranty}
                     </span>
@@ -326,18 +326,18 @@ export default async function ServiceDetailPage({
 
         {/* ========================= HERO STATS BAND ======================= */}
         {heroStats.length > 0 && (
-          <section className="bg-[#7A22FF]">
+          <section className="bg-[#1a1720]">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/15">
+              <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/10">
                 {heroStats.map((stat, index) => (
                   <div
                     key={index}
                     className="px-6 py-10 text-center first:pl-0 last:pr-0"
                   >
-                    <div className="font-serif text-4xl sm:text-5xl font-medium text-white leading-none mb-2">
+                    <div className="font-serif text-4xl sm:text-5xl font-medium text-[#6D28D9] leading-none mb-2">
                       {stat.value}
                     </div>
-                    <div className="font-sans text-xs sm:text-sm text-white/75 tracking-wide uppercase">
+                    <div className="font-sans text-xs sm:text-sm text-white/60 tracking-wide uppercase">
                       {stat.label}
                     </div>
                   </div>
@@ -352,10 +352,10 @@ export default async function ServiceDetailPage({
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
               <div className="lg:col-span-7">
-                <span className="inline-flex items-center gap-2 text-[#7A22FF] text-xs font-sans font-semibold tracking-[0.25em] uppercase mb-5">
+                <span className="inline-flex items-center gap-2 text-[#6D28D9] text-xs font-sans font-semibold tracking-[0.25em] uppercase mb-5">
                   <span
                     aria-hidden="true"
-                    className="w-8 h-px bg-[#7A22FF]"
+                    className="w-8 h-px bg-[#6D28D9]"
                   />
                   The Overview
                 </span>
@@ -372,7 +372,7 @@ export default async function ServiceDetailPage({
                 )}
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-[#7A22FF] hover:bg-[#9b57cf] text-white font-sans font-medium text-base transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#7A22FF]/25"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-[#6D28D9] hover:bg-[#7C3AED] text-white font-sans font-medium text-base transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#6D28D9]/25"
                 >
                   Get a Free Consultation
                   <ArrowRight className="w-4 h-4" />
@@ -389,7 +389,7 @@ export default async function ServiceDetailPage({
                     <ul className="space-y-3.5">
                       {features.map((feature, index) => (
                         <li key={index} className="flex items-start gap-3">
-                          <CheckCircle2 className="w-5 h-5 text-[#7A22FF] flex-shrink-0 mt-0.5" />
+                          <CheckCircle2 className="w-5 h-5 text-[#6D28D9] flex-shrink-0 mt-0.5" />
                           <span className="text-gray-700 font-sans text-[15px] leading-relaxed">
                             {feature}
                           </span>
@@ -408,7 +408,7 @@ export default async function ServiceDetailPage({
           <section className="py-20 lg:py-28 bg-white">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center max-w-2xl mx-auto mb-14">
-                <span className="text-[#7A22FF] text-xs font-sans font-semibold tracking-[0.25em] uppercase">
+                <span className="text-[#6D28D9] text-xs font-sans font-semibold tracking-[0.25em] uppercase">
                   What&apos;s Included
                 </span>
                 <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#1a1720] mt-4">
@@ -427,7 +427,7 @@ export default async function ServiceDetailPage({
                       key={index}
                       className="group bg-[#F6F5FB] rounded-2xl p-8 transition-all duration-300 hover:bg-[#1a1720] hover:-translate-y-1 hover:shadow-xl"
                     >
-                      <div className="w-12 h-12 rounded-xl bg-[#7A22FF]/10 group-hover:bg-[#7A22FF] flex items-center justify-center text-[#7A22FF] group-hover:text-white transition-colors duration-300 mb-5">
+                      <div className="w-12 h-12 rounded-xl bg-[#6D28D9]/10 group-hover:bg-[#6D28D9] flex items-center justify-center text-[#6D28D9] group-hover:text-white transition-colors duration-300 mb-5">
                         <Icon className="w-6 h-6" />
                       </div>
                       <h3 className="font-serif text-xl font-medium text-[#1a1720] group-hover:text-white transition-colors duration-300 mb-3">
@@ -448,7 +448,7 @@ export default async function ServiceDetailPage({
         <section className="py-20 lg:py-28 bg-[#1a1720]">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-14">
-              <span className="text-[#7A22FF] text-xs font-sans font-semibold tracking-[0.25em] uppercase">
+              <span className="text-[#6D28D9] text-xs font-sans font-semibold tracking-[0.25em] uppercase">
                 How It Works
               </span>
               <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-white mt-4 mb-3">
@@ -466,13 +466,13 @@ export default async function ServiceDetailPage({
                 return (
                   <div key={index} className="flex gap-5">
                     <div className="flex flex-col items-center">
-                      <div className="w-12 h-12 flex-shrink-0 rounded-full bg-[#7A22FF]/15 border border-[#7A22FF]/40 flex items-center justify-center text-[#7A22FF]">
+                      <div className="w-12 h-12 flex-shrink-0 rounded-full bg-[#6D28D9]/15 border border-[#6D28D9]/40 flex items-center justify-center text-[#6D28D9]">
                         {processIcons[index % processIcons.length]}
                       </div>
                       {!isLast && (
                         <div
                           aria-hidden="true"
-                          className="w-px flex-1 bg-gradient-to-b from-[#7A22FF]/40 to-[#7A22FF]/5 my-1"
+                          className="w-px flex-1 bg-gradient-to-b from-[#6D28D9]/40 to-[#6D28D9]/5 my-1"
                         />
                       )}
                     </div>
@@ -484,7 +484,7 @@ export default async function ServiceDetailPage({
                         <h3 className="font-serif text-lg sm:text-xl font-medium text-white">
                           {step.title}
                         </h3>
-                        <span className="text-xs font-sans font-semibold text-[#7A22FF] bg-[#7A22FF]/10 px-2.5 py-0.5 rounded-full border border-[#7A22FF]/20">
+                        <span className="text-xs font-sans font-semibold text-[#6D28D9] bg-[#6D28D9]/10 px-2.5 py-0.5 rounded-full border border-[#6D28D9]/20">
                           {step.duration}
                         </span>
                       </div>
@@ -500,7 +500,7 @@ export default async function ServiceDetailPage({
             <div className="text-center mt-6">
               <Link
                 href="/process"
-                className="inline-flex items-center gap-2 text-[#7A22FF] font-sans font-medium text-sm hover:underline"
+                className="inline-flex items-center gap-2 text-[#6D28D9] font-sans font-medium text-sm hover:underline"
               >
                 See the full process breakdown <ArrowRight className="w-4 h-4" />
               </Link>
@@ -513,7 +513,7 @@ export default async function ServiceDetailPage({
           <section className="py-20 lg:py-28 bg-[#f6f4fb]">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center max-w-2xl mx-auto mb-14">
-                <span className="text-[#7A22FF] text-xs font-sans font-semibold tracking-[0.25em] uppercase">
+                <span className="text-[#6D28D9] text-xs font-sans font-semibold tracking-[0.25em] uppercase">
                   Curated Aesthetics
                 </span>
                 <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#1a1720] mt-4">
@@ -564,7 +564,7 @@ export default async function ServiceDetailPage({
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
                 <div className="lg:col-span-4">
-                  <span className="text-[#7A22FF] text-xs font-sans font-semibold tracking-[0.25em] uppercase">
+                  <span className="text-[#6D28D9] text-xs font-sans font-semibold tracking-[0.25em] uppercase">
                     Materials &amp; Brands
                   </span>
                   <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#1a1720] mt-4 mb-5 leading-tight">
@@ -584,7 +584,7 @@ export default async function ServiceDetailPage({
                         className="bg-white p-7 transition-colors duration-300 hover:bg-[#F6F5FB]"
                       >
                         <div className="flex items-center gap-3 mb-2">
-                          <span className="w-7 h-7 rounded-full bg-[#7A22FF]/10 text-[#7A22FF] flex items-center justify-center text-xs font-sans font-bold tabular-nums">
+                          <span className="w-7 h-7 rounded-full bg-[#6D28D9]/10 text-[#6D28D9] flex items-center justify-center text-xs font-sans font-bold tabular-nums">
                             {index + 1}
                           </span>
                           <h3 className="font-serif text-lg font-medium text-[#1a1720]">
@@ -608,7 +608,7 @@ export default async function ServiceDetailPage({
           <section className="py-20 lg:py-28 bg-[#16141f]">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center max-w-2xl mx-auto mb-14">
-                <span className="text-[#7A22FF] text-xs font-sans font-semibold tracking-[0.25em] uppercase">
+                <span className="text-[#6D28D9] text-xs font-sans font-semibold tracking-[0.25em] uppercase">
                   Real Spaces, Real Homes
                 </span>
                 <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-white mt-4">
@@ -662,7 +662,7 @@ export default async function ServiceDetailPage({
           <section className="py-20 lg:py-28 bg-white">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center max-w-2xl mx-auto mb-14">
-                <span className="text-[#7A22FF] text-xs font-sans font-semibold tracking-[0.25em] uppercase">
+                <span className="text-[#6D28D9] text-xs font-sans font-semibold tracking-[0.25em] uppercase">
                   Why ALIIGNSPACE
                 </span>
                 <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#1a1720] mt-4">
@@ -675,7 +675,7 @@ export default async function ServiceDetailPage({
                     key={index}
                     className="bg-white p-8 transition-colors duration-300 hover:bg-[#F6F5FB]"
                   >
-                    <div className="font-serif text-3xl text-[#7A22FF]/30 mb-4 tabular-nums">
+                    <div className="font-serif text-3xl text-[#6D28D9]/30 mb-4 tabular-nums">
                       0{index + 1}
                     </div>
                     <h3 className="font-serif text-lg font-medium text-[#1a1720] mb-3">
@@ -696,7 +696,7 @@ export default async function ServiceDetailPage({
           <section className="py-20 lg:py-28 bg-[#f6f4fb]">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center max-w-2xl mx-auto mb-12">
-                <span className="text-[#7A22FF] text-xs font-sans font-semibold tracking-[0.25em] uppercase">
+                <span className="text-[#6D28D9] text-xs font-sans font-semibold tracking-[0.25em] uppercase">
                   Questions, Answered
                 </span>
                 <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#1a1720] mt-4">
@@ -713,13 +713,13 @@ export default async function ServiceDetailPage({
           <section className="py-20 lg:py-32 bg-[#1a1720] relative overflow-hidden">
             <div
               aria-hidden="true"
-              className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-[#7A22FF]/10 blur-3xl"
+              className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-[#6D28D9]/10 blur-3xl"
             />
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
               <div className="max-w-3xl mx-auto text-center">
                 <Quote
                   aria-hidden="true"
-                  className="w-12 h-12 text-[#7A22FF] mx-auto mb-8"
+                  className="w-12 h-12 text-[#6D28D9] mx-auto mb-8"
                 />
                 <blockquote className="font-serif text-2xl sm:text-3xl lg:text-4xl font-medium text-white leading-snug mb-10">
                   &ldquo;{testimonial.quote}&rdquo;
@@ -727,7 +727,7 @@ export default async function ServiceDetailPage({
                 <div className="flex flex-col items-center">
                   <div
                     aria-hidden="true"
-                    className="w-12 h-px bg-[#7A22FF] mb-5"
+                    className="w-12 h-px bg-[#6D28D9] mb-5"
                   />
                   <p className="font-serif text-lg font-medium text-white">
                     {testimonial.name}
@@ -772,14 +772,14 @@ export default async function ServiceDetailPage({
                     </div>
                     <div className="p-5 flex items-center justify-between">
                       <div>
-                        <p className="text-xs text-[#7A22FF] font-sans font-semibold uppercase tracking-wider mb-1">
+                        <p className="text-xs text-[#6D28D9] font-sans font-semibold uppercase tracking-wider mb-1">
                           {related.shortDesc || "Service"}
                         </p>
                         <h3 className="font-serif text-lg font-medium text-[#1a1720]">
                           {related.title}
                         </h3>
                       </div>
-                      <ArrowRight className="w-5 h-5 text-[#7A22FF] group-hover:translate-x-1 transition-transform duration-200" />
+                      <ArrowRight className="w-5 h-5 text-[#6D28D9] group-hover:translate-x-1 transition-transform duration-200" />
                     </div>
                   </Link>
                 ))}
@@ -792,6 +792,7 @@ export default async function ServiceDetailPage({
         <ConsultationBlock
           title={`Ready to get started with ${service.title}?`}
           subtitle="Book a free consultation. We'll visit your space, understand your vision, and share a detailed plan — no commitment required."
+          source={`service:${slug}`}
         />
       </main>
       <Footer />
@@ -805,14 +806,14 @@ export default async function ServiceDetailPage({
                 {service.title}
               </p>
               {content?.tagline && (
-                <p className="font-sans text-xs text-[#7A22FF] hidden sm:block">
+                <p className="font-sans text-xs text-[#6D28D9] hidden sm:block">
                   {content.tagline}
                 </p>
               )}
             </div>
             <Link
               href="/contact"
-              className="flex-shrink-0 inline-flex items-center gap-2 px-5 sm:px-7 py-3 bg-[#7A22FF] hover:bg-[#9b57cf] text-white font-sans font-medium text-sm transition-colors duration-300 rounded-full"
+              className="flex-shrink-0 inline-flex items-center gap-2 px-5 sm:px-7 py-3 bg-[#6D28D9] hover:bg-[#7C3AED] text-white font-sans font-medium text-sm transition-colors duration-300 rounded-full"
             >
               Book Free Consultation
               <ArrowRight className="w-4 h-4" />

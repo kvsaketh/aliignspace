@@ -356,7 +356,7 @@ export function TestimonialsPremium({
                 initial={{ opacity: 0 }}
                 animate={isInView ? { opacity: 1 } : {}}
                 transition={{ delay: 0.7 + i * 0.1 }}
-                whileHover={{ color: "#7A22FF", scale: 1.05 }}
+                whileHover={{ color: "#6D28D9", scale: 1.05 }}
               >
                 {location}
               </motion.div>

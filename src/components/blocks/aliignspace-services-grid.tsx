@@ -98,11 +98,11 @@ export function AliignspaceServicesGrid({
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="mb-12 lg:mb-16 max-w-2xl"
         >
-          <span className="inline-block font-sans text-xs uppercase tracking-[0.2em] text-[#7A22FF] mb-4">
+          <span className="inline-block font-sans text-xs uppercase tracking-[0.2em] text-[#6D28D9] mb-4">
             {label}
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#16141f]">
-            {title} <span className="text-[#7A22FF]">{accentWord}</span>
+            {title} <span className="text-[#6D28D9]">{accentWord}</span>
           </h2>
           <p className="mt-4 font-sans text-[#16141f]/60">{subtitle}</p>
         </motion.div>
@@ -125,7 +125,7 @@ export function AliignspaceServicesGrid({
                 <Link
                   href={service.link || "/services"}
                   onFocus={() => setActive(i)}
-                  className="group absolute inset-0 flex flex-col justify-end p-8 outline-none focus-visible:ring-2 focus-visible:ring-[#0055FF] focus-visible:ring-inset"
+                  className="group absolute inset-0 flex flex-col justify-end p-8 outline-none focus-visible:ring-2 focus-visible:ring-[#FF9900] focus-visible:ring-inset"
                 >
                   <Image
                     src={service.image || fallbackImages[i % fallbackImages.length]}

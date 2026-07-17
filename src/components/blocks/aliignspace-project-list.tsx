@@ -142,7 +142,7 @@ function ProjectImageSlider({ images, title }: { images: string[]; title: string
             key={i}
             onClick={() => goTo(i)}
             className={`transition-all duration-300 rounded-full ${
-              i === current ? "w-6 h-2 bg-[#7A22FF]" : "w-2 h-2 bg-white/70 hover:bg-white"
+              i === current ? "w-6 h-2 bg-[#6D28D9]" : "w-2 h-2 bg-white/70 hover:bg-white"
             }`}
             aria-label={`Go to image ${i + 1}`}
           />
@@ -211,7 +211,7 @@ function ProjectCard({
         {/* View Project button */}
         <a
           href={project.link || "#"}
-          className="inline-flex items-center gap-2 mt-2 font-sans text-sm font-medium text-[#7A22FF] hover:text-[#7A22FF] transition-colors group"
+          className="inline-flex items-center gap-2 mt-2 font-sans text-sm font-medium text-[#6D28D9] hover:text-[#6D28D9] transition-colors group"
         >
           View Project
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

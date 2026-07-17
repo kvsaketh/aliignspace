@@ -4,7 +4,9 @@ import bcrypt from "bcryptjs";
 const prisma = new PrismaClient();
 
 function ytThumb(videoId: string) {
-  return `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+  // hqdefault is guaranteed to exist for every video; maxresdefault 404s for
+  // videos YouTube never generated a high-res thumbnail for (seen in practice).
+  return `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
 }
 
 async function main() {

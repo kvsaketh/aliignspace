@@ -53,7 +53,7 @@ export function StatsBlock({ stats = defaultStats }: StatsProps) {
         {/* Label */}
         <Reveal direction="fade">
           <div className="text-center mb-14">
-            <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#7A22FF]">
+            <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#6D28D9]">
               Our Numbers
             </span>
           </div>
@@ -92,7 +92,7 @@ export function StatsBlock({ stats = defaultStats }: StatsProps) {
                 )}
 
                 {/* Terracotta accent dot */}
-                <span className="block w-1.5 h-1.5 rounded-full bg-[#7A22FF] mt-4" />
+                <span className="block w-1.5 h-1.5 rounded-full bg-[#6D28D9] mt-4" />
               </div>
             </Reveal>
           ))}

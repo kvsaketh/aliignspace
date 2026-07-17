@@ -43,71 +43,75 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // ALIIGNSPACE logo palette — blue #0055FF, purple #7A22FF, gold #FF9900
+        // ALIIGNSPACE logo palette — deep violet #6D28D9, gold #FF9900 (blue removed)
         brand: {
-          blue: "#0055FF",
-          violet: "#7A22FF",
+          violet: "#6D28D9",
           amber: "#FF9900",
         },
-        // `coral` classes -> logo BLUE ramp (spreads blue across existing usages)
+        // `coral` classes -> logo AMBER ramp (spreads amber across existing usages)
         coral: {
-          50: "hsl(220, 100%, 96%)",
-          100: "hsl(220, 100%, 92%)",
-          200: "hsl(220, 100%, 86%)",
-          300: "hsl(220, 100%, 78%)",
-          400: "hsl(220, 100%, 68%)",
-          500: "#0055FF",
-          600: "hsl(220, 100%, 40%)", // #0043CC hover
-          700: "hsl(220, 100%, 33%)",
-          800: "hsl(220, 90%, 27%)",
-          900: "hsl(220, 80%, 22%)",
-          950: "hsl(220, 80%, 14%)",
+          50: "hsl(36, 100%, 96%)",
+          100: "hsl(36, 100%, 92%)",
+          200: "hsl(36, 100%, 86%)",
+          300: "hsl(36, 100%, 78%)",
+          400: "hsl(36, 100%, 68%)",
+          500: "#FF9900",
+          600: "hsl(36, 100%, 40%)", // #CC7A00 hover
+          700: "hsl(36, 100%, 33%)",
+          800: "hsl(36, 90%, 27%)",
+          900: "hsl(36, 80%, 22%)",
+          950: "hsl(36, 80%, 14%)",
         },
         // amber accents introduced via these tokens
         "coral-light": "hsl(36, 100%, 50%)",
         peach: "hsl(36, 100%, 88%)",
         salmon: "hsl(36, 100%, 55%)",
-        // `terracotta` classes -> logo PURPLE ramp (#7A22FF), matches --primary
+        // `terracotta` classes -> logo violet ramp (#6D28D9), matches --primary
+        // Saturation pulled down from the original 100% (electric/neon) to a
+        // deeper, more premium tone — same hue (264°), softer everywhere it's used.
         terracotta: {
-          50: "hsl(264, 100%, 97%)",
-          100: "hsl(264, 100%, 93%)",
-          200: "hsl(264, 100%, 87%)",
-          300: "hsl(264, 100%, 82%)", // #C4A2FF tint for dark surfaces
-          400: "hsl(264, 100%, 70%)",
-          500: "#7A22FF",
-          600: "hsl(264, 80%, 47%)", // #6318D9 hover
-          700: "hsl(264, 78%, 40%)",
-          800: "hsl(264, 75%, 33%)",
-          900: "hsl(264, 70%, 27%)",
-          950: "hsl(264, 70%, 17%)",
+          50: "hsl(264, 60%, 97%)",
+          100: "hsl(264, 55%, 94%)",
+          200: "hsl(264, 55%, 88%)",
+          300: "hsl(264, 55%, 80%)",
+          400: "hsl(264, 60%, 65%)",
+          500: "#6D28D9",
+          600: "hsl(264, 69%, 43%)", // #5B21B6-ish hover
+          700: "hsl(264, 70%, 36%)",
+          800: "hsl(264, 68%, 30%)",
+          900: "hsl(264, 65%, 24%)",
+          950: "hsl(264, 65%, 15%)",
         },
-        // Neutrals retuned cool/lavender for the purple makeover
+        // Neutrals: previously tinted lavender/purple site-wide (a leftover
+        // "purple makeover") which made every background/border/text read as
+        // off-white or off-black instead of neutral — flattened to true near-0
+        // saturation grays so purple only reads where it's an intentional accent.
         cream: {
-          50: "hsl(265, 40%, 99%)",
-          100: "hsl(265, 38%, 98%)",
-          200: "hsl(265, 30%, 95%)",
-          300: "hsl(265, 25%, 91%)",
-          400: "hsl(265, 20%, 85%)",
-          500: "hsl(265, 16%, 78%)",
-          600: "hsl(265, 12%, 66%)",
-          700: "hsl(265, 10%, 52%)",
-          800: "hsl(265, 10%, 40%)",
-          900: "hsl(265, 12%, 28%)",
-          950: "hsl(265, 15%, 16%)",
+          50: "hsl(30, 20%, 99%)",
+          100: "hsl(30, 15%, 97%)",
+          200: "hsl(30, 10%, 95%)",
+          300: "hsl(30, 8%, 91%)",
+          400: "hsl(30, 6%, 85%)",
+          500: "hsl(30, 4%, 78%)",
+          600: "hsl(30, 3%, 66%)",
+          700: "hsl(30, 3%, 52%)",
+          800: "hsl(30, 3%, 40%)",
+          900: "hsl(30, 4%, 28%)",
+          950: "hsl(30, 5%, 16%)",
         },
-        "warm-white": "hsl(265, 40%, 99%)",
+        "warm-white": "hsl(30, 20%, 99%)",
         stone: {
-          50: "hsl(260, 24%, 97%)",
-          100: "hsl(260, 22%, 94%)",
-          200: "hsl(260, 18%, 89%)",
-          300: "hsl(260, 15%, 82%)",
-          400: "hsl(260, 12%, 72%)",
-          500: "hsl(260, 11%, 62%)",
-          600: "hsl(260, 11%, 52%)",
-          700: "hsl(260, 12%, 43%)",
-          800: "hsl(260, 13%, 34%)",
-          900: "hsl(260, 15%, 26%)",
-          950: "hsl(260, 18%, 16%)",
+          50: "hsl(30, 8%, 97%)",
+          100: "hsl(30, 7%, 94%)",
+          200: "hsl(30, 6%, 89%)",
+          300: "hsl(30, 5%, 82%)",
+          400: "hsl(30, 4%, 72%)",
+          500: "hsl(30, 4%, 62%)",
+          600: "hsl(30, 4%, 52%)",
+          700: "hsl(30, 4%, 43%)",
+          800: "hsl(30, 5%, 34%)",
+          900: "hsl(30, 5%, 26%)",
+          950: "hsl(30, 6%, 16%)",
         },
         charcoal: "#2B2D42",
         slate: {

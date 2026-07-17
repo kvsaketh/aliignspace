@@ -42,25 +42,25 @@ const SERVICES: ServiceItem[] = [
   {
     icon: <Home className="w-5 h-5" />,
     label: "Turnkey Solutions",
-    href: "/services/turnkey",
+    href: "/services/full-home-interiors",
     description: "Turn the key — from woodwork to curtains & décor",
   },
   {
     icon: <Sofa className="w-5 h-5" />,
     label: "Home Renovation",
-    href: "/services/renovation",
+    href: "/services/full-home-interiors",
     description: "Modern makeovers for existing homes, room by room",
   },
   {
     icon: <UtensilsCrossed className="w-5 h-5" />,
     label: "Modular Solutions",
-    href: "/services/modular",
+    href: "/services/modular-kitchen",
     description: "Kitchens, wardrobes & storage engineered to fit",
   },
   {
     icon: <Building2 className="w-5 h-5" />,
     label: "Commercial Space Design",
-    href: "/services/commercial",
+    href: "/services/office-commercial-interiors",
     description: "Offices, retail & commercial interiors that perform",
   },
 ];
@@ -132,8 +132,12 @@ function ServicesMegaDropdown({ isScrolled }: { isScrolled: boolean }) {
         />
       </button>
 
-      {/* Invisible bridge — fills the gap so mouseLeave doesn't fire mid-travel */}
-      <div className="absolute top-full left-0 right-0 h-3" />
+      {/* Invisible bridge — fills the gap so mouseLeave doesn't fire mid-travel.
+          Must match the dropdown panel's own width/centering (w-[620px], centered
+          via left-1/2 -translate-x-1/2), not the trigger's shrink-wrapped width —
+          otherwise a diagonal move toward an outer card exits the bridge sideways
+          before reaching the panel, closing the dropdown mid-click. */}
+      <div className="absolute top-full left-1/2 -translate-x-1/2 w-[620px] h-3" />
 
       {/* Dropdown panel */}
       <div
@@ -163,7 +167,7 @@ function ServicesMegaDropdown({ isScrolled }: { isScrolled: boolean }) {
         <div className="grid grid-cols-2 gap-px p-1">
           {SERVICES.map((service) => (
             <Link
-              key={service.href}
+              key={service.label}
               href={service.href}
               onClick={() => setOpen(false)}
               className="group flex items-start gap-4 p-4 rounded-xl hover:bg-white/5 transition-colors duration-150"
@@ -271,7 +275,7 @@ function MobileDrawer({
                   <div className="pl-4 pb-2 space-y-1">
                     {SERVICES.map((s) => (
                       <Link
-                        key={s.href}
+                        key={s.label}
                         href={s.href}
                         onClick={onClose}
                         className="flex items-center gap-3 px-4 py-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-colors text-sm"
@@ -389,7 +393,7 @@ export function Header() {
               {/* CTA */}
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-coral-500 text-white text-sm font-semibold hover:bg-coral-600 active:scale-95 transition-all duration-200 shadow-[0_2px_12px_rgba(0,85,255,0.35)]"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-coral-500 text-white text-sm font-semibold hover:bg-coral-600 active:scale-95 transition-all duration-200 shadow-[0_2px_12px_rgba(255,153,0,0.35)]"
               >
                 Get Free Consultation
               </Link>

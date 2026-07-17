@@ -88,7 +88,7 @@ export function PortfolioGrid({ projects }: { projects: Project[] }) {
     <section className="py-20 bg-[#f6f4fb]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-[#7A22FF] text-sm font-medium tracking-wider uppercase font-sans">Browse Our Work</span>
+          <span className="text-[#6D28D9] text-sm font-medium tracking-wider uppercase font-sans">Browse Our Work</span>
           <h2 className="font-serif text-3xl sm:text-4xl font-medium text-[#1a1720] mt-4 mb-2">Every project is unique.</h2>
           <p className="text-gray-500 font-sans">Every finish is a promise kept.</p>
         </div>
@@ -99,8 +99,8 @@ export function PortfolioGrid({ projects }: { projects: Project[] }) {
             <button key={cat} onClick={() => setFilter(cat)}
               className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
                 filter === cat
-                  ? "bg-[#7A22FF] text-white shadow-md"
-                  : "bg-white text-gray-600 hover:bg-[#7A22FF]/10 hover:text-[#7A22FF] border border-gray-200"
+                  ? "bg-[#6D28D9] text-white shadow-md"
+                  : "bg-white text-gray-600 hover:bg-[#6D28D9]/10 hover:text-[#6D28D9] border border-gray-200"
               }`}>
               {cat}
             </button>
@@ -126,7 +126,7 @@ export function PortfolioGrid({ projects }: { projects: Project[] }) {
                     onClick={(e) => { e.preventDefault(); setActive(project); }}
                   >
                     <div className="w-14 h-14 rounded-full bg-white/95 flex items-center justify-center shadow-lg">
-                      <Play className="h-6 w-6 text-[#7A22FF] fill-[#7A22FF] translate-x-0.5" />
+                      <Play className="h-6 w-6 text-[#6D28D9] fill-[#6D28D9] translate-x-0.5" />
                     </div>
                   </div>
                 )}
@@ -139,7 +139,7 @@ export function PortfolioGrid({ projects }: { projects: Project[] }) {
                     </span>
                   )}
                   {project.videoType === "Short" && (
-                    <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-[#7A22FF] text-white">Short</span>
+                    <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-[#6D28D9] text-white">Short</span>
                   )}
                 </div>
               </div>
@@ -150,7 +150,7 @@ export function PortfolioGrid({ projects }: { projects: Project[] }) {
                   <h3 className="font-serif text-base font-medium text-[#1a1720] leading-snug line-clamp-2">{project.title}</h3>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-medium text-[#7A22FF] bg-[#7A22FF]/10 px-2 py-0.5 rounded-full">{project.category}</span>
+                  <span className="text-xs font-medium text-[#6D28D9] bg-[#6D28D9]/10 px-2 py-0.5 rounded-full">{project.category}</span>
                   {project.location && (
                     <span className="flex items-center gap-1 text-xs text-gray-400">
                       <MapPin className="h-3 w-3" /> {project.location.split(",")[0]}

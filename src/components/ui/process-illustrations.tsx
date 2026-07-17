@@ -1,5 +1,5 @@
 // Inline SVG illustrations for the 5-step ALIIGNSPACE process.
-// Palette: #7A22FF (terracotta), #1a1720 (dark), #f6f4fb (cream), white.
+// Palette: #6D28D9 (terracotta), #1a1720 (dark), #f6f4fb (cream), white.
 
 export function IllustrationMeetDesigner() {
   return (
@@ -20,9 +20,9 @@ export function IllustrationMeetDesigner() {
       <rect x="28" y="28" width="195" height="145" stroke="#b8afd2" strokeWidth="0.8" fill="none" opacity="0.35" />
       <line x1="28" y1="88" x2="223" y2="88" stroke="#b8afd2" strokeWidth="0.8" opacity="0.35" />
       <line x1="118" y1="28" x2="118" y2="173" stroke="#b8afd2" strokeWidth="0.8" opacity="0.35" />
-      <rect x="34" y="34" width="78" height="48" stroke="#7A22FF" strokeWidth="0.7" fill="none" opacity="0.25" />
-      <rect x="124" y="34" width="93" height="48" stroke="#7A22FF" strokeWidth="0.7" fill="none" opacity="0.25" />
-      <rect x="34" y="94" width="78" height="73" stroke="#7A22FF" strokeWidth="0.7" fill="none" opacity="0.2" />
+      <rect x="34" y="34" width="78" height="48" stroke="#6D28D9" strokeWidth="0.7" fill="none" opacity="0.25" />
+      <rect x="124" y="34" width="93" height="48" stroke="#6D28D9" strokeWidth="0.7" fill="none" opacity="0.25" />
+      <rect x="34" y="94" width="78" height="73" stroke="#6D28D9" strokeWidth="0.7" fill="none" opacity="0.2" />
 
       {/* Window – right wall */}
       <rect x="610" y="55" width="160" height="230" stroke="#1a1720" strokeWidth="2" fill="none" />
@@ -36,9 +36,9 @@ export function IllustrationMeetDesigner() {
       <rect x="610" y="55" width="4" height="230" fill="#1a1720" opacity="0.08" />
 
       {/* Round meeting table */}
-      <ellipse cx="400" cy="445" rx="145" ry="52" fill="#c294f0" stroke="#9b57cf" strokeWidth="2" />
+      <ellipse cx="400" cy="445" rx="145" ry="52" fill="#c294f0" stroke="#7C3AED" strokeWidth="2" />
       <ellipse cx="400" cy="445" rx="135" ry="44" fill="#d9a5f7" opacity="0.4" />
-      <rect x="388" y="448" width="24" height="72" rx="4" fill="#9b57cf" />
+      <rect x="388" y="448" width="24" height="72" rx="4" fill="#7C3AED" />
       <ellipse cx="400" cy="520" rx="38" ry="11" fill="#8350bd" opacity="0.5" />
 
       {/* Chair 1 – left, client, dark */}
@@ -50,47 +50,47 @@ export function IllustrationMeetDesigner() {
       <path d="M168 380 L168 340 C168 330 222 327 222 327 C222 327 276 330 276 340 L276 380" fill="#252131" opacity="0.5" />
 
       {/* Chair 2 – right, designer, terracotta */}
-      <ellipse cx="578" cy="445" rx="70" ry="27" fill="#7A22FF" />
-      <path d="M511 445 L511 308 C511 286 578 280 578 280 C578 280 645 286 645 308 L645 445" fill="none" stroke="#7A22FF" strokeWidth="14" strokeLinecap="round" strokeLinejoin="round" />
-      <line x1="524" y1="445" x2="518" y2="492" stroke="#7A22FF" strokeWidth="6" strokeLinecap="round" />
-      <line x1="632" y1="445" x2="638" y2="492" stroke="#7A22FF" strokeWidth="6" strokeLinecap="round" />
-      <path d="M524 380 L524 340 C524 330 578 327 578 327 C578 327 632 330 632 340 L632 380" fill="#9b57cf" opacity="0.3" />
+      <ellipse cx="578" cy="445" rx="70" ry="27" fill="#6D28D9" />
+      <path d="M511 445 L511 308 C511 286 578 280 578 280 C578 280 645 286 645 308 L645 445" fill="none" stroke="#6D28D9" strokeWidth="14" strokeLinecap="round" strokeLinejoin="round" />
+      <line x1="524" y1="445" x2="518" y2="492" stroke="#6D28D9" strokeWidth="6" strokeLinecap="round" />
+      <line x1="632" y1="445" x2="638" y2="492" stroke="#6D28D9" strokeWidth="6" strokeLinecap="round" />
+      <path d="M524 380 L524 340 C524 330 578 327 578 327 C578 327 632 330 632 340 L632 380" fill="#7C3AED" opacity="0.3" />
 
       {/* Open notebook on table */}
-      <rect x="342" y="395" width="116" height="84" rx="3" fill="white" stroke="#7A22FF" strokeWidth="2" />
+      <rect x="342" y="395" width="116" height="84" rx="3" fill="white" stroke="#6D28D9" strokeWidth="2" />
       <line x1="400" y1="397" x2="400" y2="477" stroke="#e6e1f0" strokeWidth="1.5" />
       {/* Left page lines */}
-      <line x1="350" y1="410" x2="396" y2="410" stroke="#7A22FF" strokeWidth="1" opacity="0.4" />
-      <line x1="350" y1="421" x2="396" y2="421" stroke="#7A22FF" strokeWidth="1" opacity="0.4" />
-      <line x1="350" y1="432" x2="396" y2="432" stroke="#7A22FF" strokeWidth="1" opacity="0.4" />
-      <line x1="350" y1="443" x2="388" y2="443" stroke="#7A22FF" strokeWidth="1" opacity="0.4" />
-      <line x1="350" y1="454" x2="393" y2="454" stroke="#7A22FF" strokeWidth="1" opacity="0.4" />
+      <line x1="350" y1="410" x2="396" y2="410" stroke="#6D28D9" strokeWidth="1" opacity="0.4" />
+      <line x1="350" y1="421" x2="396" y2="421" stroke="#6D28D9" strokeWidth="1" opacity="0.4" />
+      <line x1="350" y1="432" x2="396" y2="432" stroke="#6D28D9" strokeWidth="1" opacity="0.4" />
+      <line x1="350" y1="443" x2="388" y2="443" stroke="#6D28D9" strokeWidth="1" opacity="0.4" />
+      <line x1="350" y1="454" x2="393" y2="454" stroke="#6D28D9" strokeWidth="1" opacity="0.4" />
       {/* Right page – tiny room sketch */}
       <rect x="407" y="404" width="45" height="35" stroke="#1a1720" strokeWidth="0.8" fill="none" opacity="0.45" />
-      <rect x="411" y="408" width="14" height="12" stroke="#7A22FF" strokeWidth="0.7" fill="none" opacity="0.55" />
-      <rect x="430" y="408" width="17" height="26" stroke="#7A22FF" strokeWidth="0.7" fill="none" opacity="0.55" />
+      <rect x="411" y="408" width="14" height="12" stroke="#6D28D9" strokeWidth="0.7" fill="none" opacity="0.55" />
+      <rect x="430" y="408" width="17" height="26" stroke="#6D28D9" strokeWidth="0.7" fill="none" opacity="0.55" />
       <line x1="407" y1="420" x2="452" y2="420" stroke="#1a1720" strokeWidth="0.5" opacity="0.35" />
       {/* Dimension tick */}
-      <line x1="407" y1="444" x2="452" y2="444" stroke="#7A22FF" strokeWidth="0.7" opacity="0.4" />
-      <line x1="407" y1="440" x2="407" y2="448" stroke="#7A22FF" strokeWidth="0.7" opacity="0.4" />
-      <line x1="452" y1="440" x2="452" y2="448" stroke="#7A22FF" strokeWidth="0.7" opacity="0.4" />
-      <line x1="407" y1="460" x2="440" y2="460" stroke="#7A22FF" strokeWidth="0.7" opacity="0.4" />
+      <line x1="407" y1="444" x2="452" y2="444" stroke="#6D28D9" strokeWidth="0.7" opacity="0.4" />
+      <line x1="407" y1="440" x2="407" y2="448" stroke="#6D28D9" strokeWidth="0.7" opacity="0.4" />
+      <line x1="452" y1="440" x2="452" y2="448" stroke="#6D28D9" strokeWidth="0.7" opacity="0.4" />
+      <line x1="407" y1="460" x2="440" y2="460" stroke="#6D28D9" strokeWidth="0.7" opacity="0.4" />
 
       {/* Pen on notebook */}
       <rect x="454" y="395" width="5" height="74" rx="2.5" fill="#1a1720" transform="rotate(-7 454 395)" />
-      <circle cx="451" cy="466" r="3.5" fill="#7A22FF" />
+      <circle cx="451" cy="466" r="3.5" fill="#6D28D9" />
 
       {/* Coffee cup left of table */}
       <path d="M310 415 L310 448 Q310 458 320 458 Q330 458 330 448 L330 415" fill="white" stroke="#1a1720" strokeWidth="1.5" />
       <ellipse cx="320" cy="415" rx="17" ry="6" fill="white" stroke="#1a1720" strokeWidth="1.5" />
-      <ellipse cx="320" cy="415" rx="10" ry="3.5" fill="#7A22FF" opacity="0.5" />
+      <ellipse cx="320" cy="415" rx="10" ry="3.5" fill="#6D28D9" opacity="0.5" />
       <path d="M330 425 Q345 425 345 434 Q345 443 330 443" fill="none" stroke="#1a1720" strokeWidth="1.5" />
       <ellipse cx="320" cy="459" rx="23" ry="7" fill="white" stroke="#1a1720" strokeWidth="1" />
       <path d="M314 412 Q312 402 316 394" stroke="#c4bcdd" strokeWidth="1.5" fill="none" strokeLinecap="round" />
       <path d="M322 411 Q320 399 324 390" stroke="#c4bcdd" strokeWidth="1.5" fill="none" strokeLinecap="round" />
 
       {/* Corner plant */}
-      <rect x="42" y="370" width="22" height="45" rx="4" fill="#9b57cf" />
+      <rect x="42" y="370" width="22" height="45" rx="4" fill="#7C3AED" />
       <ellipse cx="53" cy="348" rx="36" ry="32" fill="#5A8A58" />
       <ellipse cx="53" cy="362" rx="27" ry="22" fill="#487246" />
       <circle cx="70" cy="326" r="14" fill="#487246" />
@@ -99,7 +99,7 @@ export function IllustrationMeetDesigner() {
       <rect x="42" y="378" width="22" height="4" rx="2" fill="#8A6030" opacity="0.5" />
 
       {/* Left accent strip */}
-      <rect x="0" y="0" width="6" height="600" fill="#7A22FF" opacity="0.3" />
+      <rect x="0" y="0" width="6" height="600" fill="#6D28D9" opacity="0.3" />
     </svg>
   );
 }
@@ -148,25 +148,25 @@ export function IllustrationVisualise() {
       <polygon points="320,260 480,260 520,380 280,380" fill="#f2f0fa" opacity="0.5" />
 
       {/* Sofa (terracotta) */}
-      <rect x="150" y="300" width="280" height="100" rx="8" fill="#7A22FF" />
-      <rect x="150" y="300" width="280" height="30" rx="8" fill="#9b57cf" />
+      <rect x="150" y="300" width="280" height="100" rx="8" fill="#6D28D9" />
+      <rect x="150" y="300" width="280" height="30" rx="8" fill="#7C3AED" />
       {/* Sofa arms */}
-      <rect x="140" y="300" width="25" height="85" rx="5" fill="#9b57cf" />
-      <rect x="415" y="300" width="25" height="85" rx="5" fill="#9b57cf" />
+      <rect x="140" y="300" width="25" height="85" rx="5" fill="#7C3AED" />
+      <rect x="415" y="300" width="25" height="85" rx="5" fill="#7C3AED" />
       {/* Sofa cushions */}
-      <rect x="156" y="312" width="82" height="60" rx="5" fill="#7A22FF" opacity="0.7" />
-      <rect x="247" y="312" width="82" height="60" rx="5" fill="#7A22FF" opacity="0.7" />
-      <rect x="338" y="312" width="73" height="60" rx="5" fill="#7A22FF" opacity="0.7" />
+      <rect x="156" y="312" width="82" height="60" rx="5" fill="#6D28D9" opacity="0.7" />
+      <rect x="247" y="312" width="82" height="60" rx="5" fill="#6D28D9" opacity="0.7" />
+      <rect x="338" y="312" width="73" height="60" rx="5" fill="#6D28D9" opacity="0.7" />
       {/* Sofa legs */}
       <rect x="160" y="385" width="10" height="20" rx="3" fill="#7c46b0" />
       <rect x="280" y="385" width="10" height="20" rx="3" fill="#7c46b0" />
       <rect x="410" y="385" width="10" height="20" rx="3" fill="#7c46b0" />
 
       {/* Coffee table */}
-      <rect x="200" y="400" width="200" height="40" rx="4" fill="#c294f0" stroke="#9b57cf" strokeWidth="1.5" />
+      <rect x="200" y="400" width="200" height="40" rx="4" fill="#c294f0" stroke="#7C3AED" strokeWidth="1.5" />
       {/* Small vase on table */}
-      <rect x="285" y="388" width="16" height="18" rx="3" fill="#7A22FF" opacity="0.8" />
-      <ellipse cx="293" cy="388" rx="10" ry="4" fill="#7A22FF" opacity="0.9" />
+      <rect x="285" y="388" width="16" height="18" rx="3" fill="#6D28D9" opacity="0.8" />
+      <ellipse cx="293" cy="388" rx="10" ry="4" fill="#6D28D9" opacity="0.9" />
 
       {/* Side lamp (right) */}
       <rect x="560" y="360" width="10" height="80" fill="#7c46b0" />
@@ -177,7 +177,7 @@ export function IllustrationVisualise() {
       <circle cx="560" cy="300" r="40" fill="#FFF4DC" opacity="0.12" />
 
       {/* Plant (left corner) */}
-      <rect x="110" y="380" width="18" height="38" rx="3" fill="#9b57cf" />
+      <rect x="110" y="380" width="18" height="38" rx="3" fill="#7C3AED" />
       <circle cx="119" cy="368" r="22" fill="#4A7A48" />
       <circle cx="108" cy="360" r="15" fill="#3C6838" />
       <circle cx="130" cy="362" r="14" fill="#3C6838" />
@@ -191,12 +191,12 @@ export function IllustrationVisualise() {
 
       {/* Swatches row */}
       {[
-        { x: 108, color: "#7A22FF" },
-        { x: 174, color: "#9b57cf" },
+        { x: 108, color: "#6D28D9" },
+        { x: 174, color: "#7C3AED" },
         { x: 240, color: "#e6e0ef" },
         { x: 306, color: "#f6f4fb" },
         { x: 372, color: "#1a1720" },
-        { x: 438, color: "#9b57cf" },
+        { x: 438, color: "#7C3AED" },
         { x: 504, color: "#7d6ba0" },
         { x: 570, color: "#c2b8da" },
         { x: 636, color: "#5A8A58" },
@@ -204,15 +204,15 @@ export function IllustrationVisualise() {
         <rect key={i} x={s.x} y="484" width="52" height="44" rx="4" fill={s.color} />
       ))}
       {/* Selected swatch indicator */}
-      <rect x="106" y="482" width="56" height="48" rx="5" fill="none" stroke="#7A22FF" strokeWidth="2.5" />
-      <circle cx="134" cy="542" r="4" fill="#7A22FF" />
+      <rect x="106" y="482" width="56" height="48" rx="5" fill="none" stroke="#6D28D9" strokeWidth="2.5" />
+      <circle cx="134" cy="542" r="4" fill="#6D28D9" />
 
       {/* 3D grid lines on screen (perspective suggestion) */}
       <line x1="400" y1="452" x2="150" y2="288" stroke="#1a1720" strokeWidth="0.5" opacity="0.2" />
       <line x1="400" y1="452" x2="650" y2="288" stroke="#1a1720" strokeWidth="0.5" opacity="0.2" />
 
       {/* Top accent strip */}
-      <rect x="0" y="0" width="800" height="6" fill="#7A22FF" opacity="0.3" />
+      <rect x="0" y="0" width="800" height="6" fill="#6D28D9" opacity="0.3" />
     </svg>
   );
 }
@@ -227,9 +227,9 @@ export function IllustrationFreezeDesign() {
       <rect x="40" y="50" width="340" height="260" stroke="#c4bcdd" strokeWidth="0.8" fill="none" opacity="0.3" />
       <line x1="40" y1="160" x2="380" y2="160" stroke="#c4bcdd" strokeWidth="0.8" opacity="0.3" />
       <line x1="210" y1="50" x2="210" y2="310" stroke="#c4bcdd" strokeWidth="0.8" opacity="0.3" />
-      <rect x="50" y="60" width="150" height="90" stroke="#7A22FF" strokeWidth="0.7" fill="none" opacity="0.2" />
-      <rect x="220" y="60" width="150" height="90" stroke="#7A22FF" strokeWidth="0.7" fill="none" opacity="0.2" />
-      <rect x="50" y="170" width="320" height="130" stroke="#7A22FF" strokeWidth="0.7" fill="none" opacity="0.2" />
+      <rect x="50" y="60" width="150" height="90" stroke="#6D28D9" strokeWidth="0.7" fill="none" opacity="0.2" />
+      <rect x="220" y="60" width="150" height="90" stroke="#6D28D9" strokeWidth="0.7" fill="none" opacity="0.2" />
+      <rect x="50" y="170" width="320" height="130" stroke="#6D28D9" strokeWidth="0.7" fill="none" opacity="0.2" />
       {/* Dimension lines */}
       <line x1="40" y1="330" x2="380" y2="330" stroke="#c4bcdd" strokeWidth="0.7" opacity="0.3" />
       <line x1="40" y1="326" x2="40" y2="334" stroke="#c4bcdd" strokeWidth="0.7" opacity="0.3" />
@@ -243,8 +243,8 @@ export function IllustrationFreezeDesign() {
       {/* Document body */}
       <rect x="264" y="64" width="440" height="490" rx="5" fill="white" stroke="#ddd8ec" strokeWidth="1.5" />
       {/* Document header – terracotta band */}
-      <rect x="264" y="64" width="440" height="52" rx="5" fill="#7A22FF" />
-      <rect x="264" y="96" width="440" height="20" fill="#7A22FF" />
+      <rect x="264" y="64" width="440" height="52" rx="5" fill="#6D28D9" />
+      <rect x="264" y="96" width="440" height="20" fill="#6D28D9" />
       <text x="290" y="95" fontFamily="serif" fontSize="16" fill="white" letterSpacing="1">BILL OF QUANTITIES</text>
       <text x="290" y="112" fontFamily="sans-serif" fontSize="9" fill="white" opacity="0.75" letterSpacing="2">ALIIGNSPACE · PROJECT APPROVAL</text>
 
@@ -265,10 +265,10 @@ export function IllustrationFreezeDesign() {
           {row.checked && (
             <>
               {/* Check circle */}
-              <circle cx="668" cy={row.y + 10} r="10" fill="#7A22FF" opacity="0.15" />
-              <circle cx="668" cy={row.y + 10} r="10" stroke="#7A22FF" strokeWidth="1.5" fill="none" />
+              <circle cx="668" cy={row.y + 10} r="10" fill="#6D28D9" opacity="0.15" />
+              <circle cx="668" cy={row.y + 10} r="10" stroke="#6D28D9" strokeWidth="1.5" fill="none" />
               {/* Checkmark */}
-              <path d={`M661 ${row.y + 10} L666 ${row.y + 15} L676 ${row.y + 5}`} stroke="#7A22FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              <path d={`M661 ${row.y + 10} L666 ${row.y + 15} L676 ${row.y + 5}`} stroke="#6D28D9" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </>
           )}
           {/* Row number */}
@@ -277,9 +277,9 @@ export function IllustrationFreezeDesign() {
       ))}
 
       {/* Total row */}
-      <rect x="264" y="386" width="440" height="1.5" fill="#7A22FF" opacity="0.4" />
-      <rect x="510" y="392" width="180" height="36" rx="3" fill="#7A22FF" opacity="0.1" />
-      <rect x="512" y="394" width="176" height="32" rx="2" fill="none" stroke="#7A22FF" strokeWidth="1" />
+      <rect x="264" y="386" width="440" height="1.5" fill="#6D28D9" opacity="0.4" />
+      <rect x="510" y="392" width="180" height="36" rx="3" fill="#6D28D9" opacity="0.1" />
+      <rect x="512" y="394" width="176" height="32" rx="2" fill="none" stroke="#6D28D9" strokeWidth="1" />
       <text x="540" y="415" fontFamily="sans-serif" fontSize="10" fill="#1a1720">APPROVED TOTAL</text>
 
       {/* Signature area */}
@@ -292,23 +292,23 @@ export function IllustrationFreezeDesign() {
       <text x="530" y="475" fontFamily="sans-serif" fontSize="9" fill="#c4bcdd" letterSpacing="1">DATE</text>
 
       {/* Official seal */}
-      <circle cx="656" cy="488" r="34" stroke="#7A22FF" strokeWidth="1.5" fill="none" opacity="0.35" />
-      <circle cx="656" cy="488" r="28" stroke="#7A22FF" strokeWidth="1" fill="none" opacity="0.25" />
-      <text x="656" y="483" textAnchor="middle" fontFamily="serif" fontSize="7" fill="#7A22FF" opacity="0.55" letterSpacing="1">ALIIGN</text>
-      <text x="656" y="495" textAnchor="middle" fontFamily="serif" fontSize="7" fill="#7A22FF" opacity="0.55" letterSpacing="1">SPACE</text>
+      <circle cx="656" cy="488" r="34" stroke="#6D28D9" strokeWidth="1.5" fill="none" opacity="0.35" />
+      <circle cx="656" cy="488" r="28" stroke="#6D28D9" strokeWidth="1" fill="none" opacity="0.25" />
+      <text x="656" y="483" textAnchor="middle" fontFamily="serif" fontSize="7" fill="#6D28D9" opacity="0.55" letterSpacing="1">ALIIGN</text>
+      <text x="656" y="495" textAnchor="middle" fontFamily="serif" fontSize="7" fill="#6D28D9" opacity="0.55" letterSpacing="1">SPACE</text>
       {/* Seal star decoration */}
       {[0,45,90,135,180,225,270,315].map((angle, i) => {
         const rad = (angle * Math.PI) / 180;
-        return <line key={i} x1={656 + Math.cos(rad) * 22} y1={488 + Math.sin(rad) * 22} x2={656 + Math.cos(rad) * 29} y2={488 + Math.sin(rad) * 29} stroke="#7A22FF" strokeWidth="1" opacity="0.3" />;
+        return <line key={i} x1={656 + Math.cos(rad) * 22} y1={488 + Math.sin(rad) * 22} x2={656 + Math.cos(rad) * 29} y2={488 + Math.sin(rad) * 29} stroke="#6D28D9" strokeWidth="1" opacity="0.3" />;
       })}
 
       {/* Pen resting over document */}
       <rect x="690" y="130" width="8" height="220" rx="4" fill="#1a1720" transform="rotate(15 690 130)" />
-      <rect x="700" y="128" width="8" height="14" rx="2" fill="#7A22FF" transform="rotate(15 700 128)" />
-      <circle cx="725" cy="342" r="5" fill="#7A22FF" />
+      <rect x="700" y="128" width="8" height="14" rx="2" fill="#6D28D9" transform="rotate(15 700 128)" />
+      <circle cx="725" cy="342" r="5" fill="#6D28D9" />
 
       {/* Top accent strip */}
-      <rect x="0" y="0" width="800" height="6" fill="#7A22FF" opacity="0.3" />
+      <rect x="0" y="0" width="800" height="6" fill="#6D28D9" opacity="0.3" />
     </svg>
   );
 }
@@ -325,14 +325,14 @@ export function IllustrationExecution() {
 
       {/* Room framing – vertical studs */}
       {[120, 240, 360, 480, 600, 680].map((x, i) => (
-        <rect key={i} x={x - 6} y="80" width="12" height="400" rx="4" fill="#a99cc8" stroke="#9b57cf" strokeWidth="1" />
+        <rect key={i} x={x - 6} y="80" width="12" height="400" rx="4" fill="#a99cc8" stroke="#7C3AED" strokeWidth="1" />
       ))}
       {/* Top horizontal beam */}
-      <rect x="110" y="72" width="582" height="20" rx="4" fill="#9b57cf" stroke="#7c46b0" strokeWidth="1.5" />
+      <rect x="110" y="72" width="582" height="20" rx="4" fill="#7C3AED" stroke="#7c46b0" strokeWidth="1.5" />
       {/* Bottom horizontal beam */}
-      <rect x="110" y="468" width="582" height="18" rx="4" fill="#9b57cf" stroke="#7c46b0" strokeWidth="1.5" />
+      <rect x="110" y="468" width="582" height="18" rx="4" fill="#7C3AED" stroke="#7c46b0" strokeWidth="1.5" />
       {/* Mid horizontal nogging */}
-      <rect x="110" y="278" width="582" height="12" rx="3" fill="#a99cc8" stroke="#9b57cf" strokeWidth="1" opacity="0.8" />
+      <rect x="110" y="278" width="582" height="12" rx="3" fill="#a99cc8" stroke="#7C3AED" strokeWidth="1" opacity="0.8" />
 
       {/* Diagonal cross-brace */}
       <line x1="120" y1="80" x2="360" y2="480" stroke="#c294f0" strokeWidth="6" strokeLinecap="round" opacity="0.4" />
@@ -343,7 +343,7 @@ export function IllustrationExecution() {
       <rect x="246" y="92" width="108" height="180" rx="2" fill="#e9e6f2" stroke="#c2b8da" strokeWidth="1.5" opacity="0.7" />
       <rect x="366" y="92" width="108" height="180" rx="2" fill="#f3f1f9" stroke="#c2b8da" strokeWidth="1.5" opacity="0.9" />
       {/* Last panel half-fitted */}
-      <rect x="486" y="92" width="108" height="100" rx="2" fill="#f3f1f9" stroke="#7A22FF" strokeWidth="1.5" strokeDasharray="6 3" opacity="0.7" />
+      <rect x="486" y="92" width="108" height="100" rx="2" fill="#f3f1f9" stroke="#6D28D9" strokeWidth="1.5" strokeDasharray="6 3" opacity="0.7" />
 
       {/* Measuring tape – stretched horizontally */}
       <rect x="80" y="370" width="640" height="22" rx="4" fill="#F0C840" stroke="#b495f5" strokeWidth="1.5" />
@@ -354,8 +354,8 @@ export function IllustrationExecution() {
         </g>
       ))}
       {/* Tape case (left end) */}
-      <rect x="52" y="362" width="36" height="38" rx="6" fill="#b495f5" stroke="#9b57cf" strokeWidth="2" />
-      <circle cx="70" cy="381" r="8" fill="#9b57cf" />
+      <rect x="52" y="362" width="36" height="38" rx="6" fill="#b495f5" stroke="#7C3AED" strokeWidth="2" />
+      <circle cx="70" cy="381" r="8" fill="#7C3AED" />
       <circle cx="70" cy="381" r="4" fill="#b495f5" />
 
       {/* Spirit level */}
@@ -373,15 +373,15 @@ export function IllustrationExecution() {
       <line x1="480" y1="426" x2="480" y2="440" stroke="#c294f0" strokeWidth="1" opacity="0.4" />
       <line x1="440" y1="428" x2="440" y2="438" stroke="#c294f0" strokeWidth="1" opacity="0.3" />
       {/* End caps */}
-      <rect x="118" y="420" width="10" height="24" rx="4" fill="#7A22FF" />
-      <rect x="512" y="420" width="10" height="24" rx="4" fill="#7A22FF" />
+      <rect x="118" y="420" width="10" height="24" rx="4" fill="#6D28D9" />
+      <rect x="512" y="420" width="10" height="24" rx="4" fill="#6D28D9" />
 
       {/* Carpenter's square (bottom right) */}
       <g transform="translate(600, 430) rotate(-10)">
-        <rect x="0" y="0" width="12" height="120" rx="3" fill="#c294f0" stroke="#9b57cf" strokeWidth="1.5" />
-        <rect x="0" y="0" width="90" height="12" rx="3" fill="#c294f0" stroke="#9b57cf" strokeWidth="1.5" />
-        {[20,40,60].map((y, i) => <line key={i} x1="0" y1={y} x2="8" y2={y} stroke="#9b57cf" strokeWidth="1" />)}
-        {[20,40,60,80].map((x, i) => <line key={i} x1={x} y1="0" x2={x} y2="8" stroke="#9b57cf" strokeWidth="1" />)}
+        <rect x="0" y="0" width="12" height="120" rx="3" fill="#c294f0" stroke="#7C3AED" strokeWidth="1.5" />
+        <rect x="0" y="0" width="90" height="12" rx="3" fill="#c294f0" stroke="#7C3AED" strokeWidth="1.5" />
+        {[20,40,60].map((y, i) => <line key={i} x1="0" y1={y} x2="8" y2={y} stroke="#7C3AED" strokeWidth="1" />)}
+        {[20,40,60,80].map((x, i) => <line key={i} x1={x} y1="0" x2={x} y2="8" stroke="#7C3AED" strokeWidth="1" />)}
       </g>
 
       {/* Hammer (top right area) */}
@@ -399,11 +399,11 @@ export function IllustrationExecution() {
       {/* Pencil mark on wall panel */}
       <line x1="366" y1="92" x2="474" y2="272" stroke="#1a1720" strokeWidth="1" strokeDasharray="4 3" opacity="0.3" />
       {/* Measurement annotation */}
-      <line x1="366" y1="182" x2="474" y2="182" stroke="#7A22FF" strokeWidth="1" opacity="0.5" />
-      <line x1="366" y1="178" x2="366" y2="186" stroke="#7A22FF" strokeWidth="1" opacity="0.5" />
-      <line x1="474" y1="178" x2="474" y2="186" stroke="#7A22FF" strokeWidth="1" opacity="0.5" />
-      <rect x="390" y="170" width="60" height="16" rx="3" fill="#7A22FF" opacity="0.12" />
-      <text x="420" y="181" textAnchor="middle" fontFamily="sans-serif" fontSize="8" fill="#7A22FF" opacity="0.7">1080 mm</text>
+      <line x1="366" y1="182" x2="474" y2="182" stroke="#6D28D9" strokeWidth="1" opacity="0.5" />
+      <line x1="366" y1="178" x2="366" y2="186" stroke="#6D28D9" strokeWidth="1" opacity="0.5" />
+      <line x1="474" y1="178" x2="474" y2="186" stroke="#6D28D9" strokeWidth="1" opacity="0.5" />
+      <rect x="390" y="170" width="60" height="16" rx="3" fill="#6D28D9" opacity="0.12" />
+      <text x="420" y="181" textAnchor="middle" fontFamily="sans-serif" fontSize="8" fill="#6D28D9" opacity="0.7">1080 mm</text>
 
       {/* Worker silhouette (far left) */}
       <circle cx="90" cy="330" r="20" fill="#1a1720" opacity="0.6" />
@@ -411,10 +411,10 @@ export function IllustrationExecution() {
       <rect x="80" y="388" width="8" height="50" rx="3" fill="#1a1720" opacity="0.5" />
       <rect x="92" y="388" width="8" height="50" rx="3" fill="#1a1720" opacity="0.5" />
       {/* Hard hat */}
-      <path d="M70 328 Q70 308 90 305 Q110 308 110 328" fill="#7A22FF" opacity="0.7" />
+      <path d="M70 328 Q70 308 90 305 Q110 308 110 328" fill="#6D28D9" opacity="0.7" />
 
       {/* Left accent strip */}
-      <rect x="0" y="0" width="6" height="600" fill="#7A22FF" opacity="0.3" />
+      <rect x="0" y="0" width="6" height="600" fill="#6D28D9" opacity="0.3" />
     </svg>
   );
 }
@@ -427,44 +427,44 @@ export function IllustrationHandover() {
 
       {/* Radial glow behind key */}
       <radialGradient id="glow" cx="50%" cy="48%" r="42%">
-        <stop offset="0%" stopColor="#7A22FF" stopOpacity="0.18" />
-        <stop offset="100%" stopColor="#7A22FF" stopOpacity="0" />
+        <stop offset="0%" stopColor="#6D28D9" stopOpacity="0.18" />
+        <stop offset="100%" stopColor="#6D28D9" stopOpacity="0" />
       </radialGradient>
       <rect width="800" height="600" fill="url(#glow)" />
 
       {/* House outline (large, centered, subtle) */}
-      <path d="M250 440 L250 250 L400 130 L550 250 L550 440 Z" stroke="#7A22FF" strokeWidth="1.5" fill="none" opacity="0.18" />
+      <path d="M250 440 L250 250 L400 130 L550 250 L550 440 Z" stroke="#6D28D9" strokeWidth="1.5" fill="none" opacity="0.18" />
       {/* House door */}
-      <rect x="365" y="360" width="70" height="80" rx="3" stroke="#7A22FF" strokeWidth="1" fill="none" opacity="0.18" />
+      <rect x="365" y="360" width="70" height="80" rx="3" stroke="#6D28D9" strokeWidth="1" fill="none" opacity="0.18" />
       {/* House window left */}
-      <rect x="272" y="290" width="55" height="55" rx="3" stroke="#7A22FF" strokeWidth="1" fill="none" opacity="0.18" />
-      <line x1="299" y1="290" x2="299" y2="345" stroke="#7A22FF" strokeWidth="0.8" opacity="0.18" />
-      <line x1="272" y1="318" x2="327" y2="318" stroke="#7A22FF" strokeWidth="0.8" opacity="0.18" />
+      <rect x="272" y="290" width="55" height="55" rx="3" stroke="#6D28D9" strokeWidth="1" fill="none" opacity="0.18" />
+      <line x1="299" y1="290" x2="299" y2="345" stroke="#6D28D9" strokeWidth="0.8" opacity="0.18" />
+      <line x1="272" y1="318" x2="327" y2="318" stroke="#6D28D9" strokeWidth="0.8" opacity="0.18" />
       {/* House window right */}
-      <rect x="474" y="290" width="55" height="55" rx="3" stroke="#7A22FF" strokeWidth="1" fill="none" opacity="0.18" />
-      <line x1="501" y1="290" x2="501" y2="345" stroke="#7A22FF" strokeWidth="0.8" opacity="0.18" />
-      <line x1="474" y1="318" x2="529" y2="318" stroke="#7A22FF" strokeWidth="0.8" opacity="0.18" />
+      <rect x="474" y="290" width="55" height="55" rx="3" stroke="#6D28D9" strokeWidth="1" fill="none" opacity="0.18" />
+      <line x1="501" y1="290" x2="501" y2="345" stroke="#6D28D9" strokeWidth="0.8" opacity="0.18" />
+      <line x1="474" y1="318" x2="529" y2="318" stroke="#6D28D9" strokeWidth="0.8" opacity="0.18" />
 
       {/* Main key – bow (round head) */}
-      <circle cx="400" cy="210" r="95" stroke="#7A22FF" strokeWidth="6" fill="none" />
-      <circle cx="400" cy="210" r="65" stroke="#7A22FF" strokeWidth="3" fill="none" opacity="0.4" />
+      <circle cx="400" cy="210" r="95" stroke="#6D28D9" strokeWidth="6" fill="none" />
+      <circle cx="400" cy="210" r="65" stroke="#6D28D9" strokeWidth="3" fill="none" opacity="0.4" />
       {/* Key hole */}
-      <circle cx="400" cy="210" r="28" fill="#1a1720" stroke="#7A22FF" strokeWidth="3" />
-      <rect x="393" y="222" width="14" height="28" rx="3" fill="#1a1720" stroke="#7A22FF" strokeWidth="2" />
+      <circle cx="400" cy="210" r="28" fill="#1a1720" stroke="#6D28D9" strokeWidth="3" />
+      <rect x="393" y="222" width="14" height="28" rx="3" fill="#1a1720" stroke="#6D28D9" strokeWidth="2" />
 
       {/* Key shaft */}
-      <rect x="392" y="300" width="16" height="230" rx="4" fill="#7A22FF" />
+      <rect x="392" y="300" width="16" height="230" rx="4" fill="#6D28D9" />
       {/* Key teeth */}
-      <rect x="408" y="340" width="28" height="14" rx="3" fill="#7A22FF" />
-      <rect x="408" y="376" width="20" height="14" rx="3" fill="#7A22FF" />
-      <rect x="408" y="412" width="28" height="14" rx="3" fill="#7A22FF" />
-      <rect x="408" y="448" width="16" height="14" rx="3" fill="#7A22FF" />
+      <rect x="408" y="340" width="28" height="14" rx="3" fill="#6D28D9" />
+      <rect x="408" y="376" width="20" height="14" rx="3" fill="#6D28D9" />
+      <rect x="408" y="412" width="28" height="14" rx="3" fill="#6D28D9" />
+      <rect x="408" y="448" width="16" height="14" rx="3" fill="#6D28D9" />
       {/* Key shaft detail line */}
-      <line x1="396" y1="305" x2="396" y2="525" stroke="#9b57cf" strokeWidth="2" opacity="0.4" />
+      <line x1="396" y1="305" x2="396" y2="525" stroke="#7C3AED" strokeWidth="2" opacity="0.4" />
 
       {/* Top of bow – decorative flourish */}
-      <path d="M344 168 Q360 128 400 115 Q440 128 456 168" stroke="#7A22FF" strokeWidth="2" fill="none" opacity="0.4" />
-      <circle cx="400" cy="112" r="6" fill="#7A22FF" opacity="0.5" />
+      <path d="M344 168 Q360 128 400 115 Q440 128 456 168" stroke="#6D28D9" strokeWidth="2" fill="none" opacity="0.4" />
+      <circle cx="400" cy="112" r="6" fill="#6D28D9" opacity="0.5" />
 
       {/* Sparkle elements */}
       {[
@@ -478,9 +478,9 @@ export function IllustrationHandover() {
         { cx: 670, cy: 370, r: 2.5, opacity: 0.45 },
       ].map((s, i) => (
         <g key={i}>
-          <circle cx={s.cx} cy={s.cy} r={s.r} fill="#7A22FF" opacity={s.opacity} />
-          <line x1={s.cx - s.r * 2.5} y1={s.cy} x2={s.cx + s.r * 2.5} y2={s.cy} stroke="#7A22FF" strokeWidth="1" opacity={s.opacity * 0.6} />
-          <line x1={s.cx} y1={s.cy - s.r * 2.5} x2={s.cx} y2={s.cy + s.r * 2.5} stroke="#7A22FF" strokeWidth="1" opacity={s.opacity * 0.6} />
+          <circle cx={s.cx} cy={s.cy} r={s.r} fill="#6D28D9" opacity={s.opacity} />
+          <line x1={s.cx - s.r * 2.5} y1={s.cy} x2={s.cx + s.r * 2.5} y2={s.cy} stroke="#6D28D9" strokeWidth="1" opacity={s.opacity * 0.6} />
+          <line x1={s.cx} y1={s.cy - s.r * 2.5} x2={s.cx} y2={s.cy + s.r * 2.5} stroke="#6D28D9" strokeWidth="1" opacity={s.opacity * 0.6} />
         </g>
       ))}
 
@@ -490,31 +490,31 @@ export function IllustrationHandover() {
           {[0, 45, 90, 135].map((angle, j) => {
             const rad = (angle * Math.PI) / 180;
             const len = 12;
-            return <line key={j} x1={s.cx - Math.cos(rad) * len} y1={s.cy - Math.sin(rad) * len} x2={s.cx + Math.cos(rad) * len} y2={s.cy + Math.sin(rad) * len} stroke="#7A22FF" strokeWidth="1.5" opacity="0.45" />;
+            return <line key={j} x1={s.cx - Math.cos(rad) * len} y1={s.cy - Math.sin(rad) * len} x2={s.cx + Math.cos(rad) * len} y2={s.cy + Math.sin(rad) * len} stroke="#6D28D9" strokeWidth="1.5" opacity="0.45" />;
           })}
         </g>
       ))}
 
       {/* Confetti dots */}
       {[
-        [140, 380, "#7A22FF"], [680, 320, "#7A22FF"], [100, 460, "#f6f4fb"],
-        [700, 180, "#f6f4fb"], [180, 500, "#7A22FF"], [620, 500, "#f6f4fb"],
+        [140, 380, "#6D28D9"], [680, 320, "#6D28D9"], [100, 460, "#f6f4fb"],
+        [700, 180, "#f6f4fb"], [180, 500, "#6D28D9"], [620, 500, "#f6f4fb"],
       ].map(([x, y, c], i) => (
         <circle key={i} cx={x as number} cy={y as number} r="4" fill={c as string} opacity="0.3" />
       ))}
 
       {/* "COMPLETE" text at bottom */}
-      <text x="400" y="572" textAnchor="middle" fontFamily="serif" fontSize="11" fill="#7A22FF" opacity="0.45" letterSpacing="6">HAPPY HANDOVER</text>
-      <line x1="240" y1="578" x2="360" y2="578" stroke="#7A22FF" strokeWidth="0.8" opacity="0.3" />
-      <line x1="440" y1="578" x2="560" y2="578" stroke="#7A22FF" strokeWidth="0.8" opacity="0.3" />
+      <text x="400" y="572" textAnchor="middle" fontFamily="serif" fontSize="11" fill="#6D28D9" opacity="0.45" letterSpacing="6">HAPPY HANDOVER</text>
+      <line x1="240" y1="578" x2="360" y2="578" stroke="#6D28D9" strokeWidth="0.8" opacity="0.3" />
+      <line x1="440" y1="578" x2="560" y2="578" stroke="#6D28D9" strokeWidth="0.8" opacity="0.3" />
 
       {/* Subtle horizontal lines (ambient) */}
       {[80, 140, 500, 545].map((y, i) => (
-        <line key={i} x1="0" y1={y} x2="800" y2={y} stroke="#7A22FF" strokeWidth="0.4" opacity="0.06" />
+        <line key={i} x1="0" y1={y} x2="800" y2={y} stroke="#6D28D9" strokeWidth="0.4" opacity="0.06" />
       ))}
 
       {/* Bottom accent strip */}
-      <rect x="0" y="594" width="800" height="6" fill="#7A22FF" opacity="0.3" />
+      <rect x="0" y="594" width="800" height="6" fill="#6D28D9" opacity="0.3" />
     </svg>
   );
 }

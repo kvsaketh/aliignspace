@@ -45,7 +45,7 @@ export function ContactCTASection() {
       ref={ref}
       className="relative py-24 md:py-32 overflow-hidden"
       style={{
-        background: "linear-gradient(135deg, #7A22FF 0%, #b495f5 50%, #9b57cf 100%)",
+        background: "linear-gradient(135deg, #6D28D9 0%, #b495f5 50%, #7C3AED 100%)",
       }}
     >
       {/* Subtle pattern */}

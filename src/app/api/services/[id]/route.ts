@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/lib/auth";
+import { requireRole } from "@/lib/authz";
 
 // GET /api/services/[id] - Get single service by ID or slug (public)
 export async function GET(
@@ -102,16 +103,14 @@ export async function PUT(
   }
 }
 
-// DELETE /api/services/[id] - Delete single service (auth required)
+// DELETE /api/services/[id] - Delete single service (ADMIN only)
 export async function DELETE(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const session = await getServerSession(authOptions);
-    if (!session) {
-      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-    }
+    const denied = await requireRole(["ADMIN"]);
+    if (denied) return NextResponse.json({ error: denied.error }, { status: denied.status });
 
     const { id } = await params;
     await prisma.service.delete({ where: { id } });

@@ -13,6 +13,7 @@
 
 import { useState, useCallback, useEffect } from "react";
 import { motion } from "framer-motion";
+import { sanitizeHtml } from "@/lib/sanitize";
 import {
   X,
   Type,
@@ -354,7 +355,7 @@ function RichTextFieldEditor({
       {showPreview ? (
         <div
           className="p-3 bg-gray-800 border border-gray-700 rounded-md text-white text-sm min-h-[200px] prose prose-invert max-w-none"
-          dangerouslySetInnerHTML={{ __html: value || "<p>No content</p>" }}
+          dangerouslySetInnerHTML={{ __html: sanitizeHtml(value) || "<p>No content</p>" }}
         />
       ) : (
         <Textarea

@@ -54,11 +54,11 @@ export function AliignspaceFounders({
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="inline-block font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#7A22FF] mb-4">
+          <span className="inline-block font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#6D28D9] mb-4">
             {label}
           </span>
           <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-[#16141f] leading-[1.1] tracking-tight">
-            {title} <span className="italic text-[#7A22FF]">{accentWord}</span>
+            {title} <span className="italic text-[#6D28D9]">{accentWord}</span>
           </h2>
         </motion.div>
 
@@ -86,7 +86,7 @@ export function AliignspaceFounders({
                   <h3 className="font-serif text-2xl font-medium text-[#16141f] mb-1">
                     {founder.name}
                   </h3>
-                  <p className="font-sans text-sm text-[#7A22FF] font-medium mb-3">
+                  <p className="font-sans text-sm text-[#6D28D9] font-medium mb-3">
                     {founder.role}
                   </p>
                   {founder.bio && (
@@ -100,7 +100,7 @@ export function AliignspaceFounders({
                     href={founder.linkedIn}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-shrink-0 w-10 h-10 rounded-full border border-stone-200 flex items-center justify-center text-stone-400 hover:text-[#7A22FF] hover:border-[#7A22FF] transition-colors duration-300"
+                    className="flex-shrink-0 w-10 h-10 rounded-full border border-stone-200 flex items-center justify-center text-stone-400 hover:text-[#6D28D9] hover:border-[#6D28D9] transition-colors duration-300"
                     aria-label={`${founder.name} LinkedIn`}
                   >
                     <Linkedin className="w-4 h-4" />

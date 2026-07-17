@@ -44,7 +44,7 @@ export function StorySection({
   const headingWithAccent = accentWord
     ? heading.replace(
         new RegExp(accentWord, "gi"),
-        `<em class="not-italic text-[#7A22FF] italic">${accentWord}</em>`
+        `<em class="not-italic text-[#6D28D9] italic">${accentWord}</em>`
       )
     : heading;
 
@@ -85,7 +85,7 @@ export function StorySection({
                 {/* Decorative border offset */}
                 <div
                   className={cn(
-                    "absolute w-full h-full border-2 border-[#7A22FF]/30 z-0",
+                    "absolute w-full h-full border-2 border-[#6D28D9]/30 z-0",
                     imageOnLeft ? "-top-4 -left-4" : "-top-4 -right-4"
                   )}
                 />
@@ -106,7 +106,7 @@ export function StorySection({
                       imageOnLeft ? "-right-6" : "-left-6"
                     )}
                   >
-                    <span className="font-serif text-3xl font-medium text-[#7A22FF]">
+                    <span className="font-serif text-3xl font-medium text-[#6D28D9]">
                       {experienceYears}
                     </span>
                     <p className="font-sans text-xs text-white/70 mt-0.5 tracking-wider uppercase">
@@ -140,7 +140,7 @@ export function StorySection({
             {/* Label */}
             {label && (
               <Reveal direction="up" delay={0}>
-                <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#7A22FF]">
+                <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#6D28D9]">
                   {label}
                 </span>
               </Reveal>
@@ -171,7 +171,7 @@ export function StorySection({
             {/* Pull Quote - Only for story variant */}
             {isStory && quote && (
               <Reveal direction="up" delay={240}>
-                <blockquote className="border-l-4 border-[#7A22FF] pl-6 py-2 my-4">
+                <blockquote className="border-l-4 border-[#6D28D9] pl-6 py-2 my-4">
                   <p className={cn(
                     "font-serif text-lg italic leading-relaxed",
                     backgroundColor === "dark" ? "text-white/90" : "text-[#1a1720]/80"

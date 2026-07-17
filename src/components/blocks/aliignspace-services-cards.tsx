@@ -120,7 +120,7 @@ export function AliignspaceServicesCards({
                 {service.link && (
                   <Link
                     href={service.link}
-                    className="inline-flex items-center gap-2 font-sans text-sm font-medium text-[#7A22FF] group/link"
+                    className="inline-flex items-center gap-2 font-sans text-sm font-medium text-[#6D28D9] group/link"
                   >
                     Explore
                     <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />

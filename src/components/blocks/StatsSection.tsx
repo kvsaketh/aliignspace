@@ -66,7 +66,7 @@ export function StatsSection({
           <div className="text-center max-w-3xl mx-auto mb-14">
             <span
               className={`font-sans text-xs font-semibold tracking-[0.25em] uppercase mb-4 block ${
-                isDark ? "text-[#7A22FF]" : "text-[#7A22FF]"
+                isDark ? "text-[#6D28D9]" : "text-[#6D28D9]"
               }`}
             >
               By The Numbers
@@ -137,7 +137,7 @@ export function StatsSection({
                   )}
 
                   {/* Accent dot */}
-                  <span className="block w-1.5 h-1.5 rounded-full bg-[#7A22FF] mt-4" />
+                  <span className="block w-1.5 h-1.5 rounded-full bg-[#6D28D9] mt-4" />
                 </div>
               </Reveal>
             );

@@ -49,13 +49,13 @@ export function AliignspaceWhoWeAre({
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
             {/* Label */}
-            <span className="inline-block font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#7A22FF] mb-4">
+            <span className="inline-block font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#6D28D9] mb-4">
               {label}
             </span>
 
             {/* Heading */}
             <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-[#16141f] leading-[1.1] tracking-tight mb-8">
-              {title} <span className="italic text-[#7A22FF]">{accentWord}</span>
+              {title} <span className="italic text-[#6D28D9]">{accentWord}</span>
             </h2>
 
             {/* Body paragraphs */}
@@ -76,7 +76,7 @@ export function AliignspaceWhoWeAre({
                 <div key={i}>
                   <div className="font-serif text-3xl sm:text-4xl font-medium text-[#16141f]">
                     {stat.number}
-                    <span className="text-[#7A22FF]">{stat.suffix}</span>
+                    <span className="text-[#6D28D9]">{stat.suffix}</span>
                   </div>
                   <p className="font-sans text-sm text-stone-500 mt-1">{stat.label}</p>
                 </div>

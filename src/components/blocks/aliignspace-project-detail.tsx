@@ -87,7 +87,7 @@ export function AliignspaceProjectDetail({
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               >
                 {/* Location */}
-                <span className="inline-block font-sans text-xs font-semibold tracking-[0.2em] uppercase text-[#7A22FF] mb-3">
+                <span className="inline-block font-sans text-xs font-semibold tracking-[0.2em] uppercase text-[#6D28D9] mb-3">
                   {location}
                 </span>
                 {/* Title */}
@@ -236,7 +236,7 @@ export function AliignspaceProjectDetail({
                 {/* Play button */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-20 h-20 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                    <Play className="w-8 h-8 text-[#7A22FF] ml-1" fill="#7A22FF" />
+                    <Play className="w-8 h-8 text-[#6D28D9] ml-1" fill="#6D28D9" />
                   </div>
                 </div>
               </div>
