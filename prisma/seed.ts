@@ -25,7 +25,7 @@ async function main() {
   const projects = [
     {
       title: "Stunning 3BHK — Urban Trilla, Mokila",
-      category: "3BHK Apartment",
+      category: "3BHK",
       location: "Urban Trilla, Mokila, Hyderabad",
       description: "3000 SFT flat featuring traditional Indian bedroom with cane shutters and Pandiri Mancham, contemporary bedroom, modern living room, modular kitchen, and home theatre.",
       videoUrl: "https://www.youtube.com/watch?v=QodXhFHptcQ",
@@ -35,7 +35,7 @@ async function main() {
     },
     {
       title: "Elegant Traditional Interiors — MyHome Tridasa",
-      category: "3BHK Apartment",
+      category: "2BHK",
       location: "MyHome Tridasa, Hyderabad",
       description: "Traditional interiors on a budget — timeless design with warm textures and classic Indian motifs.",
       videoUrl: "https://www.youtube.com/watch?v=OG6s7mUYg1I",
@@ -45,7 +45,7 @@ async function main() {
     },
     {
       title: "MyHome Tridasa Vibes — 3BHK",
-      category: "3BHK Apartment",
+      category: "3BHK",
       location: "MyHome Tridasa, Hyderabad",
       description: "A full 3BHK interior showcase blending comfort and contemporary aesthetics.",
       videoUrl: "https://www.youtube.com/watch?v=ULkdG1rU5p0",
@@ -55,7 +55,7 @@ async function main() {
     },
     {
       title: "Wholesome & Warm 3BHK Home",
-      category: "3BHK Apartment",
+      category: "3BHK",
       location: "Hyderabad",
       description: "A warm and functional 3BHK design blending functionality with charm.",
       videoUrl: "https://www.youtube.com/watch?v=IcS7FKf2Oqo",
@@ -65,7 +65,7 @@ async function main() {
     },
     {
       title: "Classic Wood — 3BHK Home Interiors",
-      category: "3BHK Apartment",
+      category: "3BHK",
       location: "Hyderabad",
       description: "Classic wood-themed 3BHK interiors with style in every angle.",
       videoUrl: "https://www.youtube.com/watch?v=BjM2jc8P1QE",
@@ -75,7 +75,7 @@ async function main() {
     },
     {
       title: "Turnkey Home Interiors",
-      category: "Home Interiors",
+      category: "3BHK",
       location: "Hyderabad",
       description: "Complete turnkey interior solutions — design to execution, all under one roof.",
       videoUrl: "https://www.youtube.com/watch?v=KyQo0viGwYs",
@@ -85,7 +85,7 @@ async function main() {
     },
     {
       title: "A Touch of Grey — Warm Home Interiors",
-      category: "Home Interiors",
+      category: "3BHK",
       location: "Hyderabad",
       description: "Grey-themed warm and blissful home interiors that feel cozy and sophisticated.",
       videoUrl: "https://www.youtube.com/watch?v=Chq4MCjwfoA",
@@ -95,7 +95,7 @@ async function main() {
     },
     {
       title: "Traditional Indian Art Themed Interiors",
-      category: "Home Interiors",
+      category: "3BHK",
       location: "Hyderabad",
       description: "Rich Indian art-themed interiors celebrating traditional craftsmanship and culture.",
       videoUrl: "https://www.youtube.com/watch?v=acXLnN1905U",
@@ -105,7 +105,7 @@ async function main() {
     },
     {
       title: "Bright & Glitter — Lansum Eden Garden 3BHK",
-      category: "3BHK Apartment",
+      category: "3BHK",
       location: "Lansum Eden Garden, Hyderabad",
       description: "Bright and glitter-themed 3BHK interiors that bring energy and elegance together.",
       videoUrl: "https://www.youtube.com/watch?v=B3JgPvf1Eo4",
@@ -115,7 +115,7 @@ async function main() {
     },
     {
       title: "Classic Themed 3BHK — Hyderabad",
-      category: "3BHK Apartment",
+      category: "3BHK",
       location: "Hyderabad",
       description: "A classic themed 3BHK home interior that stands the test of time.",
       videoUrl: "https://www.youtube.com/watch?v=4zwXb8bgouY",
@@ -125,7 +125,7 @@ async function main() {
     },
     {
       title: "Fusion Traditional & Modern 3BHK",
-      category: "3BHK Apartment",
+      category: "3BHK",
       location: "Hyderabad",
       description: "Fusion of traditional elements blending beautifully with modern 3BHK design.",
       videoUrl: "https://www.youtube.com/watch?v=0dto9Lzsx5c",
@@ -135,7 +135,7 @@ async function main() {
     },
     {
       title: "Stylish Villa Interiors — Vajram Aster Homes",
-      category: "Villa",
+      category: "Villas",
       location: "Vajram Aster Homes, Hyderabad",
       description: "Stylish and unique villa interior design that redefines luxury living.",
       videoUrl: "https://www.youtube.com/watch?v=qA9JhTACz00",
@@ -145,7 +145,7 @@ async function main() {
     },
     {
       title: "3BHK Interiors — Jains Balaji Casa",
-      category: "3BHK Apartment",
+      category: "3BHK",
       location: "Jains Balaji Casa, Hyderabad",
       description: "A complete 3BHK home interior showcase at Jains Balaji Casa.",
       videoUrl: "https://www.youtube.com/watch?v=0dgBMrPIZ4I",
@@ -155,7 +155,7 @@ async function main() {
     },
     {
       title: "3BHK Home Tour — Aparna Marigold",
-      category: "3BHK Apartment",
+      category: "3BHK",
       location: "Aparna Marigold, Hyderabad",
       description: "Complete 3BHK home tour with thoughtful interior design at Aparna Marigold.",
       videoUrl: "https://www.youtube.com/watch?v=vvNgdZ7tBd0",
@@ -165,6 +165,9 @@ async function main() {
     },
     // YouTube Shorts intentionally excluded: they live as VIDEO testimonials
     // in the home page "Client Stories" row (managed at /admin/testimonials).
+    // TODO: add once video links are available — Platina Cove (3BHK),
+    // Arunraj (3BHK), Dishira (Villas), Pavani Towers (2BHK),
+    // Kukatpally Office Space (Commercial Space).
   ];
 
   for (let i = 0; i < projects.length; i++) {

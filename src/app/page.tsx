@@ -70,10 +70,10 @@ export default async function HomePage() {
           accentWord="Services"
           subtitle="Comprehensive interior solutions for every space and style"
           services={[
-            { number: "01", title: "Turnkey Solutions", description: "From woodwork to curtains, complete turnkey décor solutions for your home.", image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200&q=80", link: "/services/full-home-interiors" },
-            { number: "02", title: "Home Renovation", description: "Thoughtful renovation of existing homes, done right.", image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&q=80", link: "/services" },
-            { number: "03", title: "Modular Solutions", description: "Kitchens, wardrobes and storage engineered to fit your life.", image: "https://images.unsplash.com/photo-1556911220-bff31c812dba?w=1200&q=80", link: "/services/modular-kitchen" },
-            { number: "04", title: "Commercial Space Design", description: "High-impact retail, office and commercial interiors.", image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80", link: "/services/office-commercial-interiors" },
+            { number: "01", title: "Turnkey Solutions", description: "From woodwork to curtains — complete turnkey décor solutions for your home.", icon: "home", link: "/services/turnkey" },
+            { number: "02", title: "Home Renovation", description: "Thoughtful renovation of existing homes, done right.", icon: "sofa", link: "/services/renovation" },
+            { number: "03", title: "Modular Solutions", description: "Kitchens, wardrobes and storage — engineered to fit your life.", icon: "utensils", link: "/services/modular" },
+            { number: "04", title: "Commercial Space Design", description: "High-impact retail, office and commercial interiors.", icon: "building", link: "/services/commercial" },
           ]}
         />
         <AliignspaceProcessWheel

@@ -150,7 +150,7 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <p className="font-sans text-xs text-stone-400 tracking-wider uppercase mb-1">Working Hours</p>
-                        <p className="font-sans text-[#1a1720] font-medium">Monday – Saturday</p>
+                        <p className="font-sans text-[#1a1720] font-medium">Monday – Sunday</p>
                         <p className="font-sans text-stone-500 text-sm">9:00 AM – 7:00 PM</p>
                       </div>
                     </li>
@@ -388,7 +388,7 @@ export default function ContactPage() {
                 Hitech City, Hyderabad · MG Road, Nellore
               </p>
               <a
-                href="https://maps.google.com/?q=Hitech+City+Hyderabad"
+                href="https://maps.app.goo.gl/vZBjpftW1C3cJ3Y59"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1 text-[#6D28D9] text-sm mt-2 hover:underline"

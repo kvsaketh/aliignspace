@@ -114,14 +114,14 @@ function ServicesMegaDropdown({ isScrolled }: { isScrolled: boolean }) {
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
     >
-      {/* Trigger */}
-      <button
+      {/* Trigger — hover opens the dropdown; click just navigates to /services */}
+      <Link
+        href="/services"
         className={cn(
           "flex items-center gap-1 text-sm font-medium transition-colors duration-200 hover:text-terracotta-400 focus:outline-none text-white/90"
         )}
         aria-haspopup="true"
         aria-expanded={open}
-        onClick={() => setOpen((v) => !v)}
       >
         Services
         <ChevronDown
@@ -130,14 +130,17 @@ function ServicesMegaDropdown({ isScrolled }: { isScrolled: boolean }) {
             open && "rotate-180"
           )}
         />
-      </button>
+      </Link>
 
       {/* Invisible bridge — fills the gap so mouseLeave doesn't fire mid-travel.
           Must match the dropdown panel's own width/centering (w-[620px], centered
           via left-1/2 -translate-x-1/2), not the trigger's shrink-wrapped width —
           otherwise a diagonal move toward an outer card exits the bridge sideways
-          before reaching the panel, closing the dropdown mid-click. */}
-      <div className="absolute top-full left-1/2 -translate-x-1/2 w-[620px] h-3" />
+          before reaching the panel, closing the dropdown mid-click.
+          Only interactive while open — otherwise this 620px strip silently
+          captures hover under neighboring nav items (Portfolio/Process/Contact)
+          before the dropdown ever opens. */}
+      <div className={cn("absolute top-full left-1/2 -translate-x-1/2 w-[620px] h-3", !open && "pointer-events-none")} />
 
       {/* Dropdown panel */}
       <div

@@ -10,10 +10,7 @@ import {
   ChevronDown, GripVertical, LayoutGrid, List, Loader2,
 } from "lucide-react";
 
-const CATEGORIES = [
-  "All", "2BHK Apartment", "3BHK Apartment", "4BHK Apartment",
-  "3BHK Villa", "4BHK Villa", "Office & Commercial",
-];
+const CATEGORIES = ["All", "2BHK", "3BHK", "Villas", "Renovations", "Commercial Space"];
 
 type Project = {
   id: string;

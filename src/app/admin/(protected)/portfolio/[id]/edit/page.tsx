@@ -9,11 +9,7 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Plus, X, Youtube, Image as ImageIcon, Loader2 } from "lucide-react";
 
-const CATEGORIES = [
-  "3BHK Apartment", "2BHK Apartment", "4BHK Apartment",
-  "Villa", "Home Interiors", "Bedroom Design",
-  "Kitchen Design", "Wardrobe Design", "Design Tips", "Office & Commercial",
-];
+const CATEGORIES = ["2BHK", "3BHK", "Villas", "Renovations", "Commercial Space"];
 
 function getYtThumb(url: string) {
   const r = url.match(/[?&]v=([^&]+)/);
