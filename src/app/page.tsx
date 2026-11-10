@@ -12,6 +12,7 @@ import { AliignspaceCraftsmanship } from "@/components/blocks/aliignspace-crafts
 import { ClientStoriesSection } from "@/components/client-stories-section";
 import { prisma } from "@/lib/prisma";
 import { GOOGLE_REVIEWS, GOOGLE_SCORE } from "@/lib/google-reviews";
+import { PROCESS_STEPS } from "@/lib/brand-facts";
 
 interface HeroSlide { image?: string; title: string; subtitle: string }
 
@@ -82,13 +83,7 @@ export default async function HomePage() {
         <AliignspaceProcessWheel
           title="From Design Start to Final Keys in 75–90 Days"
           subtitle="The ALIIGNSPACE Process"
-          steps={[
-            { number: "01", title: "Meet Designer", description: "A relaxed consultation at your home or our studio. We listen, understand your lifestyle, and align on vision and budget." },
-            { number: "02", title: "Visualise Your Home", description: "Detailed 3D renders of every room. You see your finished space before a single nail is hammered. Unlimited revisions included." },
-            { number: "03", title: "Freeze Design", description: "A complete itemised BOQ with every cost listed. You sign off on design and budget. Nothing proceeds without your explicit approval." },
-            { number: "04", title: "Execution", description: "A dedicated supervisor on-site daily. Skilled craftsmen execute your design with precision. Weekly photo progress reports sent to you." },
-            { number: "05", title: "Happy Handover", description: "Full walkthrough, punch list resolved, deep cleaning done. Keys to your dream home — delivered on schedule." },
-          ]}
+          steps={PROCESS_STEPS}
         />
         <ClientStoriesSection />
         <AliignspaceGoogleReviews

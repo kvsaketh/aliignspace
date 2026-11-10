@@ -28,7 +28,8 @@ import {
   Quote,
 } from "lucide-react";
 import { prisma } from "@/lib/prisma";
-import { COMPANY_STATS, servicePhotos } from "@/lib/brand-facts";
+import { COMPANY_STATS, PROCESS_STEPS, servicePhotos } from "@/lib/brand-facts";
+import { isClaim, stripClaims } from "@/lib/claims";
 import { GOOGLE_REVIEWS } from "@/lib/google-reviews";
 import { comparison, faqs as SITE_FAQS } from "@/components/landing/content";
 import { AliignspaceCraftsmanship } from "@/components/blocks/aliignspace-craftsmanship";
@@ -120,17 +121,16 @@ export async function generateMetadata({
     return { title: "Service Not Found | ALIIGNSPACE" };
   }
 
-  const stats =
-    (service.stats as { priceRange?: string; deliveryTime?: string }) || {};
   const content = service.content as ServiceContent | null;
-  const tagline = content?.tagline ? `${content.tagline}. ` : "";
+  const tagline = content?.tagline && !isClaim(content.tagline) ? content.tagline : "";
+  const summary = stripClaims(service.shortDesc || service.description.slice(0, 160));
 
   return {
     title: `${service.title} | ALIIGNSPACE — Interior Designers Hyderabad`,
-    description: `${tagline}${service.shortDesc || service.description.slice(0, 120)} ${stats.deliveryTime ? stats.deliveryTime + " delivery." : ""} ALIIGNSPACE, Hyderabad & Nellore.`,
+    description: `${tagline ? `${tagline}. ` : ""}${summary} ALIIGNSPACE — interiors across Hyderabad, Nellore & Vizag.`,
     openGraph: {
       title: `${service.title} | ALIIGNSPACE`,
-      description: content?.tagline || service.shortDesc || service.description,
+      description: tagline || summary,
       images: [
         {
           url: servicePhotos(slug)[0],
@@ -170,15 +170,9 @@ export default async function ServiceDetailPage({
 
   // Seeded CMS copy contained unverified promises (fixed-day snag windows, warranty years);
   // keep only descriptive scope items.
-  const features = ((service.features as string[]) || []).filter((f) => !/warranty|\d+-(day|year)/i.test(f));
+  const features = ((service.features as string[]) || []).filter((f) => !isClaim(f));
   // Real ALIIGNSPACE project photos only — the CMS gallery held stock images.
   const gallery = servicePhotos(slug);
-  const stats =
-    (service.stats as {
-      priceRange?: string;
-      deliveryTime?: string;
-      warranty?: string;
-    }) || {};
   const content = service.content as ServiceContent | null;
 
   const heroImage = gallery[0];
@@ -193,45 +187,8 @@ export default async function ServiceDetailPage({
       checklist?: string[];
     }>) || [];
 
-  const normalizedProcess =
-    processSteps.length > 0
-      ? processSteps.map((step, i) => ({
-          title: step.title,
-          duration: step.duration || step.number || `Step ${i + 1}`,
-          detail: step.detail || step.description || "",
-        }))
-      : [
-          {
-            title: "Meet Designer",
-            duration: "Day 1–3",
-            detail:
-              "Site visit, measurements, lifestyle brief, and budget alignment.",
-          },
-          {
-            title: "Visualise Your Home",
-            duration: "Day 4–12",
-            detail:
-              "3D renders for every room, material mood boards, and lighting plans.",
-          },
-          {
-            title: "Freeze Design",
-            duration: "Day 13–18",
-            detail:
-              "Complete itemised BOQ, final material lock-in, and project timeline.",
-          },
-          {
-            title: "Execution Begins",
-            duration: "Day 19–80",
-            detail:
-              "Dedicated supervisor on-site daily. All materials quality-checked.",
-          },
-          {
-            title: "Happy Handover",
-            duration: "Day 81–90",
-            detail:
-              "Full walkthrough, punch list resolved, cleaning done. Keys to your dream home.",
-          },
-        ];
+  // The company's published process; seeded per-service day ranges were unverified.
+  const normalizedProcess = PROCESS_STEPS.map((step) => ({ title: step.title, duration: "", detail: step.description }));
 
   const processIcons = [
     <MessageSquare key={0} className="w-5 h-5" />,
@@ -255,8 +212,14 @@ export default async function ServiceDetailPage({
   /* Derived content sections (all guarded) */
   // Company-wide facts, not per-service seeded numbers.
   const heroStats = COMPANY_STATS;
-  const intro = content?.intro;
-  const inclusions = content?.inclusions ?? [];
+  const intro = content?.intro ? { ...content.intro, body: stripClaims(content.intro.body) } : undefined;
+  const description = stripClaims(service.description);
+  const shortDesc = service.shortDesc ? stripClaims(service.shortDesc) : "";
+  const tagline = content?.tagline && !isClaim(content.tagline) ? content.tagline : "";
+  const inclusions = (content?.inclusions ?? []).map((inc) => ({
+    ...inc,
+    description: stripClaims(inc.description) || "Planned around your space, your storage and the way you live.",
+  }));
   // Brand lists and style tiles were seeded with unverified brands and stock photos; the real
   // craftsmanship section replaces them below.
   const materials: Material[] = [];
@@ -305,20 +268,20 @@ export default async function ServiceDetailPage({
                 <ArrowLeft className="w-4 h-4" /> All Services
               </Link>
               <span className="block text-[#E2B866] text-xs font-sans font-semibold tracking-[0.28em] uppercase mb-5">
-                {content?.tagline || service.shortDesc || "Premium Service"}
+                {tagline || shortDesc || "Interior design"}
               </span>
               <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl font-medium text-white leading-[1.05] mb-7">
                 {service.title}
               </h1>
               <p className="font-sans text-lg sm:text-xl text-white/75 font-light leading-relaxed max-w-2xl mb-9">
-                {service.shortDesc || service.description}
+                {shortDesc || description}
               </p>
               <div className="flex flex-wrap gap-4">
-                {stats.deliveryTime && (
+                {(
                   <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md ring-1 ring-white/15 px-5 py-3 rounded-full">
                     <Clock className="w-4 h-4 text-[#E2B866]" />
                     <span className="text-white font-sans text-sm font-medium">
-                      {stats.deliveryTime}
+                      Free 3D visualisation
                     </span>
                   </div>
                 )}
@@ -375,11 +338,11 @@ export default async function ServiceDetailPage({
                   {intro?.heading || `Designed around the way you live`}
                 </h2>
                 <p className="text-gray-600 font-sans leading-relaxed text-lg mb-6">
-                  {intro?.body || service.description}
+                  {intro?.body || description}
                 </p>
-                {intro?.body && (
+                {intro?.body && description && (
                   <p className="text-gray-600 font-sans leading-relaxed text-base mb-8">
-                    {service.description}
+                    {description}
                   </p>
                 )}
                 <Link
@@ -445,9 +408,11 @@ export default async function ServiceDetailPage({
                       <h3 className="font-serif text-xl font-medium text-[#1a1720] group-hover:text-white transition-colors duration-300 mb-3">
                         {item.title}
                       </h3>
-                      <p className="text-gray-600 group-hover:text-white/65 font-sans text-sm leading-relaxed transition-colors duration-300">
-                        {item.description}
-                      </p>
+                      {item.description && (
+                        <p className="text-gray-600 group-hover:text-white/65 font-sans text-sm leading-relaxed transition-colors duration-300">
+                          {item.description}
+                        </p>
+                      )}
                     </div>
                   );
                 })}
@@ -496,9 +461,11 @@ export default async function ServiceDetailPage({
                         <h3 className="font-serif text-lg sm:text-xl font-medium text-white">
                           {step.title}
                         </h3>
-                        <span className="text-xs font-sans font-semibold text-[#E2B866] bg-[#E2B866]/10 px-2.5 py-0.5 rounded-full border border-[#4E2585]/20">
-                          {step.duration}
-                        </span>
+                        {step.duration && (
+                          <span className="text-xs font-sans font-semibold text-[#E2B866] bg-[#E2B866]/10 px-2.5 py-0.5 rounded-full border border-[#4E2585]/20">
+                            {step.duration}
+                          </span>
+                        )}
                       </div>
                       <p className="text-white/55 font-sans text-sm leading-relaxed">
                         {step.detail}
@@ -818,9 +785,9 @@ export default async function ServiceDetailPage({
               <p className="font-serif text-base sm:text-lg font-medium text-white truncate">
                 {service.title}
               </p>
-              {content?.tagline && (
+              {tagline && (
                 <p className="font-sans text-xs text-[#E2B866] hidden sm:block">
-                  {content.tagline}
+                  {tagline}
                 </p>
               )}
             </div>

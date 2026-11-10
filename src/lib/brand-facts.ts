@@ -9,6 +9,15 @@ export const COMPANY_STATS = [
   { value: "2021", label: "Designing since" },
 ];
 
+// The ALIIGNSPACE process, as published on the home page (75–90 days from design start to keys).
+export const PROCESS_STEPS = [
+  { number: "01", title: "Meet Designer", description: "A relaxed consultation at your home or our studio. We listen, understand your lifestyle, and align on vision and budget." },
+  { number: "02", title: "Visualise Your Home", description: "Detailed 3D renders of every room. You see your finished space before a single nail is hammered. Unlimited revisions included." },
+  { number: "03", title: "Freeze Design", description: "A complete itemised BOQ with every cost listed. You sign off on design and budget. Nothing proceeds without your explicit approval." },
+  { number: "04", title: "Execution", description: "A dedicated supervisor on-site daily. Skilled craftsmen execute your design with precision. Weekly photo progress reports sent to you." },
+  { number: "05", title: "Happy Handover", description: "Full walkthrough, punch list resolved, deep cleaning done. Keys to your dream home — delivered on schedule." },
+];
+
 export const CITIES = "Hyderabad, Nellore & Vizag";
 
 const lp = (name: string) => `/lp/${name}.webp`;

@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 import { COMPANY_STATS, servicePhotos } from "@/lib/brand-facts";
 import { GOOGLE_REVIEWS } from "@/lib/google-reviews";
+import { stripClaims } from "@/lib/claims";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -262,12 +263,12 @@ export default async function ServicesPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-14">
               {services.map((s) => {
                 const slug = (s as { slug?: string }).slug ?? "";
-                const shortDesc =
+                const shortDesc = stripClaims(
                   (s as { shortDesc?: string }).shortDesc ??
-                  (s as { short_desc?: string }).short_desc ??
-                  "";
-                const description =
-                  (s as { description?: string }).description ?? "";
+                    (s as { short_desc?: string }).short_desc ??
+                    "",
+                );
+                const description = stripClaims((s as { description?: string }).description ?? "");
                 // Real project photos; CMS card images were stock.
                 const image = servicePhotos(slug)[0];
 
