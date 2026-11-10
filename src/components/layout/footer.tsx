@@ -186,12 +186,13 @@ function CopyrightBar() {
               Terms of Service
             </Link>
             <span className="text-white/15 text-xs">·</span>
-            <Link
+            {/* Plain <a>: it's an XML file, so Next.js shouldn't prefetch it as a page. */}
+            <a
               href="/sitemap.xml"
               className="text-xs text-white/30 hover:text-white/60 transition-colors"
             >
               Sitemap
-            </Link>
+            </a>
           </div>
         </div>
       </div>
