@@ -1,6 +1,7 @@
 import { prisma } from "@/lib/prisma";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { sourceLabel } from "@/lib/leads";
 
 function timeAgo(date: Date) {
   const s = Math.floor((Date.now() - date.getTime()) / 1000);
@@ -10,18 +11,6 @@ function timeAgo(date: Date) {
   return `${Math.floor(s / 86400)}d ago`;
 }
 
-const SOURCE_LABELS: Record<string, string> = {
-  contact_form: "Contact Page",
-  process_page: "Process Page",
-  consultation_block: "Consultation",
-};
-
-function sourceLabel(source: string) {
-  if (SOURCE_LABELS[source]) return SOURCE_LABELS[source];
-  if (source.startsWith("service:")) return `Service: ${source.slice(8)}`;
-  return source;
-}
-
 export default async function ContactsAdminPage() {
   const submissions = await prisma.contactSubmission.findMany({
     orderBy: { createdAt: "desc" },
@@ -29,12 +18,21 @@ export default async function ContactsAdminPage() {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h2 className="text-2xl font-bold tracking-tight">Contact Inquiries</h2>
-        <p className="text-muted-foreground">
-          Submissions from the website contact form. There is no client email
-          hookup — this list is the only place these land, so check it regularly.
-        </p>
+      <div className="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <h2 className="text-2xl font-bold tracking-tight">Leads</h2>
+          <p className="text-muted-foreground">
+            Every enquiry from the website and ads pages ({submissions.length} total). New leads are also sent to
+            the configured email, WhatsApp and CRM channels.
+          </p>
+        </div>
+        {/* Plain <a>: a file download, not a page. */}
+        <a
+          href="/api/contact/export"
+          className="inline-flex items-center rounded-md border px-4 py-2 text-sm font-medium hover:bg-muted"
+        >
+          Download CSV
+        </a>
       </div>
 
       {submissions.length === 0 ? (

@@ -3,6 +3,7 @@
 import { useId, useRef, useState, type FormEvent } from "react";
 import { ArrowRight, Check, ChevronDown, Loader2, MessageCircle, Phone } from "lucide-react";
 import { budgetOptions, floorPlanOptions, timelineOptions, PHONE_HREF, WHATSAPP_HREF, PHONE_DISPLAY } from "./content";
+import { Honeypot } from "@/components/ui/honeypot";
 
 declare global {
   interface Window {
@@ -71,6 +72,7 @@ export function LeadForm({ title = "Book your free consultation", className = ""
           budget: v("budget"),
           message,
           source: SOURCE,
+          website: v("website"),
         }),
       });
       if (!res.ok) throw new Error(String(res.status));
@@ -132,8 +134,9 @@ export function LeadForm({ title = "Book your free consultation", className = ""
     <form
       onSubmit={onSubmit}
       noValidate
-      className={`rounded-3xl bg-white p-6 shadow-[0_30px_80px_-20px_rgba(30,14,54,0.45)] sm:p-8 ${className}`}
+      className={`relative rounded-3xl bg-white p-6 shadow-[0_30px_80px_-20px_rgba(30,14,54,0.45)] sm:p-8 ${className}`}
     >
+      <Honeypot />
       <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#B8893A]">Free · No obligation</p>
       <h3 className="mt-2 font-serif text-[28px] leading-tight text-[#1a1720] sm:text-[32px]">{title}</h3>
       <p className="mt-1.5 text-sm text-[#1a1720]/60">Share a few details and a designer will call you back.</p>

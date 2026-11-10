@@ -6,6 +6,7 @@ import Link from "next/link";
 import { MapPin, Phone, Mail, Clock, Instagram, Facebook, MessageCircle, ArrowRight, CheckCircle2 } from "lucide-react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { Honeypot, honeypotValue } from "@/components/ui/honeypot";
 
 const projectTypes = [
   "Full Home Interiors",
@@ -52,7 +53,7 @@ export default function ContactPage() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, website: honeypotValue(e.currentTarget) }),
       });
       if (!res.ok) throw new Error("send failed");
       setSubmitted(true);
@@ -230,7 +231,8 @@ export default function ContactPage() {
                         </p>
                       </div>
 
-                      <form onSubmit={handleSubmit} className="space-y-5">
+                      <form onSubmit={handleSubmit} className="relative space-y-5">
+                        <Honeypot />
                         <div className="grid sm:grid-cols-2 gap-5">
                           <div>
                             <label className="block font-sans text-xs font-semibold text-stone-500 tracking-wider uppercase mb-2">

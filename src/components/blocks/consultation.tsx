@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 import Image from "next/image";
 import { motion, useInView, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { CheckCircle2, Phone, Sparkles } from "lucide-react";
+import { Honeypot, honeypotValue } from "@/components/ui/honeypot";
 
 interface ConsultationProps {
   title?: string;
@@ -129,7 +130,7 @@ export function ConsultationBlock({
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...formData, source }),
+        body: JSON.stringify({ ...formData, source, website: honeypotValue(e.currentTarget) }),
       });
       if (!res.ok) throw new Error("send failed");
       setSubmitted(true);
@@ -268,8 +269,9 @@ export function ConsultationBlock({
             ) : (
               <form
                 onSubmit={handleSubmit}
-                className="flex flex-col sm:flex-row gap-3"
+                className="relative flex flex-col sm:flex-row gap-3"
               >
+                <Honeypot />
                 <AnimatedInput
                   type="text"
                   placeholder="Your Name"
