@@ -11,15 +11,15 @@ import { usePathname } from "next/navigation";
  */
 
 const STORAGE_KEY = "aliign-ambient";
-const VOLUME = 0.16;
+const VOLUME = 0.8;
 const CHORD_SECONDS = 9;
 
-// Fmaj9 → Am7 → Dm9 → B♭maj7 (Hz) — open voicings in a calm register.
+// Fmaj9 → Am7 → Dm9 → B♭maj7 (Hz) — voiced in the mid range so phone and laptop speakers carry them.
 const CHORDS = [
-  [87.31, 174.61, 261.63, 329.63, 392.0],
-  [110.0, 164.81, 261.63, 329.63, 392.0],
-  [73.42, 146.83, 220.0, 261.63, 329.63],
-  [58.27, 116.54, 233.08, 293.66, 349.23],
+  [174.61, 261.63, 329.63, 392.0, 440.0],
+  [220.0, 261.63, 329.63, 392.0, 493.88],
+  [146.83, 220.0, 261.63, 329.63, 440.0],
+  [233.08, 293.66, 349.23, 440.0, 523.25],
 ];
 // F major pentatonic, upper register, for the melody.
 const MELODY = [523.25, 587.33, 659.25, 783.99, 880.0, 1046.5, 1174.66];
@@ -42,29 +42,35 @@ function impulse(ctx: AudioContext, seconds: number) {
 
 function startEngine(): Engine {
   const ctx = new AudioContext();
+  // Some browsers create the context suspended even inside a tap; resume explicitly.
+  void ctx.resume();
   const master = ctx.createGain();
   master.gain.value = 0;
-  master.connect(ctx.destination);
+  // Gentle limiter so the louder mix never clips.
+  const limiter = ctx.createDynamicsCompressor();
+  limiter.threshold.value = -12;
+  limiter.ratio.value = 6;
+  master.connect(limiter).connect(ctx.destination);
 
   const reverb = ctx.createConvolver();
   reverb.buffer = impulse(ctx, 5);
   const wet = ctx.createGain();
-  wet.gain.value = 0.55;
+  wet.gain.value = 0.5;
   reverb.connect(wet).connect(master);
 
   // Soft low-pass with a slow sweep keeps the pads gently moving.
   const tone = ctx.createBiquadFilter();
   tone.type = "lowpass";
-  tone.frequency.value = 900;
+  tone.frequency.value = 2200;
   tone.Q.value = 0.4;
   const lfo = ctx.createOscillator();
   const lfoDepth = ctx.createGain();
   lfo.frequency.value = 0.05;
-  lfoDepth.gain.value = 350;
+  lfoDepth.gain.value = 700;
   lfo.connect(lfoDepth).connect(tone.frequency);
   lfo.start();
   const dry = ctx.createGain();
-  dry.gain.value = 0.5;
+  dry.gain.value = 0.8;
   tone.connect(dry).connect(master);
   tone.connect(reverb);
 
@@ -80,8 +86,8 @@ function startEngine(): Engine {
         osc.frequency.value = f;
         osc.detune.value = detune;
         env.gain.setValueAtTime(0, now);
-        env.gain.linearRampToValueAtTime(type === "sine" ? 0.07 : 0.035, now + 3.5);
-        env.gain.setValueAtTime(type === "sine" ? 0.07 : 0.035, now + CHORD_SECONDS - 1);
+        env.gain.linearRampToValueAtTime(type === "sine" ? 0.09 : 0.045, now + 3.5);
+        env.gain.setValueAtTime(type === "sine" ? 0.09 : 0.045, now + CHORD_SECONDS - 1);
         env.gain.linearRampToValueAtTime(0, now + CHORD_SECONDS + 3.5);
         osc.connect(env).connect(tone);
         osc.start(now);
@@ -97,7 +103,7 @@ function startEngine(): Engine {
     osc.type = "sine";
     osc.frequency.value = MELODY[Math.floor(Math.random() * MELODY.length)];
     env.gain.setValueAtTime(0, now);
-    env.gain.linearRampToValueAtTime(0.045, now + 0.04);
+    env.gain.linearRampToValueAtTime(0.1, now + 0.04);
     env.gain.exponentialRampToValueAtTime(0.0001, now + 3.2);
     osc.connect(env);
     env.connect(reverb);
@@ -123,6 +129,17 @@ function startEngine(): Engine {
   return { ctx, master, timers };
 }
 
+// Older iOS has no navigator.audioSession: playing a silent <audio> element during the tap moves the page to
+// the media channel, so the music plays even with the ringer switched to silent.
+function unlockIOSAudio() {
+  const a = new Audio(
+    "data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQAAAAA=",
+  );
+  a.loop = true;
+  a.volume = 0;
+  void a.play().catch(() => {});
+}
+
 function stopEngine(e: Engine) {
   const t = e.ctx.currentTime;
   e.master.gain.cancelScheduledValues(t);
@@ -146,6 +163,10 @@ export function AmbientSound() {
   const start = useCallback(() => {
     if (engine.current) return;
     try {
+      // iPhone: web audio obeys the silent switch unless the page uses the "playback" audio session.
+      const nav = navigator as Navigator & { audioSession?: { type: string } };
+      if (nav.audioSession) nav.audioSession.type = "playback";
+      else unlockIOSAudio();
       engine.current = startEngine();
       setPlaying(true);
     } catch {
@@ -226,8 +247,8 @@ export function AmbientSound() {
       aria-pressed={playing}
       aria-label={playing ? "Turn ambient music off" : "Turn ambient music on"}
       title={playing ? "Ambient music on" : "Play ambient music"}
-      // Stacked above the floating WhatsApp button (bottom-right); on ads pages, above the sticky call bar.
-      className={`group fixed right-6 z-50 flex items-center gap-2.5 rounded-full border border-white/15 bg-[#16141f]/80 py-2.5 pl-3 pr-4 text-white shadow-[0_8px_30px_rgba(0,0,0,0.25)] backdrop-blur-md transition hover:border-[#D4A853]/60 ${
+      // Bottom-left, raised above the hero's slide labels; on ads pages, above the sticky call bar.
+      className={`group fixed left-5 z-50 flex items-center gap-2.5 rounded-full border border-white/15 bg-[#16141f]/80 py-2.5 pl-3 pr-4 text-white shadow-[0_8px_30px_rgba(0,0,0,0.25)] backdrop-blur-md transition hover:border-[#D4A853]/60 ${
         onLanding ? "bottom-24 lg:bottom-6" : "bottom-[5.5rem]"
       }`}
     >
