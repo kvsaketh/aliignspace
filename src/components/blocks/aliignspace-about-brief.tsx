@@ -61,7 +61,7 @@ function AnimatedNumber({ target, suffix = "" }: { target: string; suffix?: stri
 function FloatingImages({ images }: { images: string[] }) {
   const imageSet = images.slice(0, 3);
   while (imageSet.length < 3) {
-    imageSet.push("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&q=80");
+    imageSet.push("/lp/project-living-room-5.webp");
   }
 
   return (
@@ -82,8 +82,8 @@ function FloatingImages({ images }: { images: string[] }) {
       </div>
 
       {/* Static decorative blobs — CSS only, no JS */}
-      <div className="absolute -bottom-10 -right-10 w-48 h-48 rounded-full opacity-25 blur-2xl pointer-events-none" style={{ backgroundColor: "rgba(122, 34, 255, 0.45)" }} />
-      <div className="absolute top-10 -left-10 w-40 h-40 rounded-full opacity-15 blur-2xl pointer-events-none" style={{ backgroundColor: "rgba(122, 34, 255, 0.85)" }} />
+      <div className="absolute -bottom-10 -right-10 w-48 h-48 rounded-full opacity-25 blur-2xl pointer-events-none" style={{ backgroundColor: "rgba(78, 37, 133, 0.45)" }} />
+      <div className="absolute top-10 -left-10 w-40 h-40 rounded-full opacity-15 blur-2xl pointer-events-none" style={{ backgroundColor: "rgba(78, 37, 133, 0.85)" }} />
     </div>
   );
 }
@@ -106,9 +106,9 @@ export function AliignspaceAboutBrief({
     { number: "4.9", suffix: "★", label: "Rating" },
   ],
   images = [
-    "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80",
-    "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80",
-    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
+    "/lp/project-living-room-6.webp",
+    "/craft/kitchen-walnut.jpg",
+    "/lp/project-bedroom-9.webp",
   ],
 }: Props) {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -122,7 +122,7 @@ export function AliignspaceAboutBrief({
     <section
       ref={sectionRef}
       className="relative py-24 lg:py-32 overflow-hidden"
-      style={{ backgroundColor: "#F6F5FB" }}
+      style={{ backgroundColor: "#F7F5F1" }}
     >
       {/* Ghost text background */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
@@ -140,10 +140,10 @@ export function AliignspaceAboutBrief({
       {/* Static decorative blobs */}
       <div
         className="absolute top-20 right-[10%] w-24 h-24 rounded-full opacity-20 blur-xl pointer-events-none"
-        style={{ backgroundColor: "rgba(122, 34, 255, 0.45)" }}
+        style={{ backgroundColor: "rgba(78, 37, 133, 0.45)" }}
       />
-      <div className="absolute bottom-40 left-[5%] w-32 h-32 rounded-full opacity-15 blur-xl pointer-events-none" style={{ backgroundColor: "rgba(122, 34, 255, 0.85)" }} />
-      <div className="absolute top-[40%] left-[45%] w-16 h-16 rounded-full opacity-10 blur-lg pointer-events-none" style={{ backgroundColor: "rgba(122, 34, 255, 0.85)" }} />
+      <div className="absolute bottom-40 left-[5%] w-32 h-32 rounded-full opacity-15 blur-xl pointer-events-none" style={{ backgroundColor: "rgba(78, 37, 133, 0.85)" }} />
+      <div className="absolute top-[40%] left-[45%] w-16 h-16 rounded-full opacity-10 blur-lg pointer-events-none" style={{ backgroundColor: "rgba(78, 37, 133, 0.85)" }} />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Main grid: text left, images right */}
@@ -156,7 +156,7 @@ export function AliignspaceAboutBrief({
               animate={isTextInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               className="inline-block font-sans text-xs font-semibold tracking-[0.25em] uppercase mb-6"
-              style={{ color: "#6D28D9" }}
+              style={{ color: "#4E2585" }}
             >
               {label}
             </motion.span>
@@ -170,7 +170,7 @@ export function AliignspaceAboutBrief({
               style={{ color: "#16141f" }}
             >
               {title}{" "}
-              <span className="italic text-[#6D28D9]">{accentWord}</span>
+              <span className="italic text-[#4E2585]">{accentWord}</span>
             </motion.h2>
 
             {/* Body paragraphs with stagger */}
@@ -199,7 +199,7 @@ export function AliignspaceAboutBrief({
               animate={isTextInView ? { scaleX: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="mt-8 h-[2px] w-24 origin-left"
-              style={{ background: "#6D28D9" }}
+              style={{ background: "#4E2585" }}
             />
           </div>
 
@@ -236,7 +236,7 @@ export function AliignspaceAboutBrief({
               >
                 <div className="font-serif font-normal text-5xl lg:text-6xl tracking-tight text-white">
                   <AnimatedNumber target={stat.number} />
-                  {stat.suffix && <span className="text-[#FF9900]">{stat.suffix}</span>}
+                  {stat.suffix && <span className="text-[#D4A853]">{stat.suffix}</span>}
                 </div>
                 <p className="mt-3 font-sans text-[11px] uppercase tracking-[0.25em] text-white/50">
                   {stat.label}

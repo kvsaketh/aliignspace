@@ -85,10 +85,10 @@ export function PortfolioGrid({ projects }: { projects: Project[] }) {
   const filtered = filter === "All" ? projects : projects.filter((p) => p.category === filter);
 
   return (
-    <section className="py-20 bg-[#f6f4fb]">
+    <section className="py-20 bg-[#F7F5F1]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-[#6D28D9] text-sm font-medium tracking-wider uppercase font-sans">Browse Our Work</span>
+          <span className="text-[#4E2585] text-sm font-medium tracking-wider uppercase font-sans">Browse Our Work</span>
           <h2 className="font-serif text-3xl sm:text-4xl font-medium text-[#1a1720] mt-4 mb-2">Every project is unique.</h2>
           <p className="text-gray-500 font-sans">Every finish is a promise kept.</p>
         </div>
@@ -99,8 +99,8 @@ export function PortfolioGrid({ projects }: { projects: Project[] }) {
             <button key={cat} onClick={() => setFilter(cat)}
               className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
                 filter === cat
-                  ? "bg-[#6D28D9] text-white shadow-md"
-                  : "bg-white text-gray-600 hover:bg-[#6D28D9]/10 hover:text-[#6D28D9] border border-gray-200"
+                  ? "bg-[#4E2585] text-white shadow-md"
+                  : "bg-white text-gray-600 hover:bg-[#4E2585]/10 hover:text-[#4E2585] border border-gray-200"
               }`}>
               {cat}
             </button>
@@ -126,7 +126,7 @@ export function PortfolioGrid({ projects }: { projects: Project[] }) {
                     onClick={(e) => { e.preventDefault(); setActive(project); }}
                   >
                     <div className="w-14 h-14 rounded-full bg-white/95 flex items-center justify-center shadow-lg">
-                      <Play className="h-6 w-6 text-[#6D28D9] fill-[#6D28D9] translate-x-0.5" />
+                      <Play className="h-6 w-6 text-[#4E2585] fill-[#4E2585] translate-x-0.5" />
                     </div>
                   </div>
                 )}
@@ -134,12 +134,12 @@ export function PortfolioGrid({ projects }: { projects: Project[] }) {
                 {/* Badges */}
                 <div className="absolute top-3 left-3 flex gap-1.5">
                   {project.featured && (
-                    <span className="flex items-center gap-1 text-xs font-semibold px-2 py-0.5 rounded-full bg-amber-400 text-white">
+                    <span className="flex items-center gap-1 text-xs font-semibold px-2 py-0.5 rounded-full bg-[#D4A853] text-[#16141f]">
                       <Star className="h-2.5 w-2.5 fill-white" /> Featured
                     </span>
                   )}
                   {project.videoType === "Short" && (
-                    <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-[#6D28D9] text-white">Short</span>
+                    <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-[#4E2585] text-white">Short</span>
                   )}
                 </div>
               </div>
@@ -150,7 +150,7 @@ export function PortfolioGrid({ projects }: { projects: Project[] }) {
                   <h3 className="font-serif text-base font-medium text-[#1a1720] leading-snug line-clamp-2">{project.title}</h3>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-medium text-[#6D28D9] bg-[#6D28D9]/10 px-2 py-0.5 rounded-full">{project.category}</span>
+                  <span className="text-xs font-medium text-[#4E2585] bg-[#4E2585]/10 px-2 py-0.5 rounded-full">{project.category}</span>
                   {project.location && (
                     <span className="flex items-center gap-1 text-xs text-gray-400">
                       <MapPin className="h-3 w-3" /> {project.location.split(",")[0]}

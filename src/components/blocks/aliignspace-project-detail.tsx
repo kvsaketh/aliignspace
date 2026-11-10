@@ -87,7 +87,7 @@ export function AliignspaceProjectDetail({
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               >
                 {/* Location */}
-                <span className="inline-block font-sans text-xs font-semibold tracking-[0.2em] uppercase text-[#6D28D9] mb-3">
+                <span className="inline-block font-sans text-xs font-semibold tracking-[0.2em] uppercase text-[#4E2585] mb-3">
                   {location}
                 </span>
                 {/* Title */}
@@ -134,7 +134,7 @@ export function AliignspaceProjectDetail({
               transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
               className="h-fit"
             >
-              <div className="bg-[#F6F5FB] rounded-2xl p-8 space-y-6">
+              <div className="bg-[#F7F5F1] rounded-2xl p-8 space-y-6">
                 <h3 className="font-serif text-xl text-[#16141f]">Project Details</h3>
                 <div className="space-y-4">
                   {clientName && (
@@ -175,7 +175,7 @@ export function AliignspaceProjectDetail({
       </section>
 
       {/* Gallery */}
-      <section ref={galleryRef} className="py-24 lg:py-32 bg-[#F6F5FB]">
+      <section ref={galleryRef} className="py-24 lg:py-32 bg-[#F7F5F1]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -236,7 +236,7 @@ export function AliignspaceProjectDetail({
                 {/* Play button */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-20 h-20 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                    <Play className="w-8 h-8 text-[#6D28D9] ml-1" fill="#6D28D9" />
+                    <Play className="w-8 h-8 text-[#4E2585] ml-1" fill="#4E2585" />
                   </div>
                 </div>
               </div>

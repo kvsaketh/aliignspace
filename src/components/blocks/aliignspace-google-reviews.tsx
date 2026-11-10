@@ -78,6 +78,24 @@ function getInitials(name: string) {
   return name.split(" ").map((n) => n[0]).join("").toUpperCase().slice(0, 2);
 }
 
+// Full original review text (line breaks kept); long ones collapse behind "Read more".
+function ReviewText({ text }: { text: string }) {
+  const [open, setOpen] = useState(false);
+  const long = text.length > 260;
+  return (
+    <div className="flex-1 -mt-2">
+      <p className={`font-sans text-[13px] text-[#1a1720] leading-relaxed whitespace-pre-line ${long && !open ? "line-clamp-6" : ""}`}>
+        {text}
+      </p>
+      {long && (
+        <button type="button" onClick={() => setOpen((o) => !o)} className="mt-2 font-sans text-xs font-semibold text-[#4E2585] hover:underline">
+          {open ? "Show less" : "Read more"}
+        </button>
+      )}
+    </div>
+  );
+}
+
 export function AliignspaceGoogleReviews({
   label = "Client Reviews",
   title = "Loved by Homeowners",
@@ -119,38 +137,38 @@ export function AliignspaceGoogleReviews({
   }, []);
 
   return (
-    <section className="py-20 lg:py-28 bg-[#0B0B10] overflow-hidden">
+    <section className="py-20 lg:py-28 bg-[#F7F5F1] overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* ── Header ── */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-10 sm:mb-12">
           <div>
-            <span className="block font-sans text-[11px] uppercase tracking-[0.25em] text-[#FF9900] mb-3">
+            <span className="block font-sans text-[11px] uppercase tracking-[0.25em] text-[#4E2585] mb-3">
               {label}
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-white leading-tight">
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#1a1720] leading-tight">
               {title}{" "}
-              <span className="italic text-[#d9a5f7]">{accentWord}</span>
+              <span className="italic text-[#4E2585]">{accentWord}</span>
             </h2>
             {subtitle && (
-              <p className="font-sans text-white/50 text-sm mt-2">{subtitle}</p>
+              <p className="font-sans text-[#1a1720]/60 text-sm mt-2">{subtitle}</p>
             )}
           </div>
 
           {/* Rating badge */}
-          <div className="flex items-center gap-4 bg-white/[0.06] border border-white/10 rounded-2xl px-5 py-3.5 self-start sm:self-auto flex-shrink-0">
+          <div className="flex items-center gap-4 bg-white border border-[#4E2585]/10 rounded-2xl px-5 py-3.5 self-start sm:self-auto flex-shrink-0">
             <div>
               <div className="flex items-center gap-0.5 mb-1">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-3.5 h-3.5 text-[#FF9900] fill-[#FF9900]" />
+                  <Star key={i} className="w-3.5 h-3.5 text-[#D4A853] fill-[#D4A853]" />
                 ))}
               </div>
-              <p className="font-sans text-[9px] text-white/40 uppercase tracking-widest">Google Rating</p>
+              <p className="font-sans text-[9px] text-[#1a1720]/55 uppercase tracking-widest">Google Rating</p>
             </div>
-            <div className="h-8 w-px bg-white/10" />
+            <div className="h-8 w-px bg-[#4E2585]/10" />
             <div>
-              <p className="font-serif text-3xl text-white leading-none">{googleScore}</p>
-              <p className="font-sans text-[10px] text-white/35 mt-0.5">{reviewCount} reviews</p>
+              <p className="font-serif text-3xl text-[#1a1720] leading-none">{googleScore}</p>
+              <p className="font-sans text-[10px] text-[#1a1720]/55 mt-0.5">{reviewCount} reviews</p>
             </div>
           </div>
         </div>
@@ -161,7 +179,7 @@ export function AliignspaceGoogleReviews({
             onClick={() => scroll("left")}
             disabled={!canLeft}
             aria-label="Previous"
-            className="hidden sm:flex absolute -left-4 lg:-left-6 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full border border-white/20 bg-[#0B0B10] items-center justify-center text-white hover:bg-white/10 transition-colors disabled:opacity-20 disabled:cursor-not-allowed"
+            className="hidden sm:flex absolute -left-4 lg:-left-6 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full border border-[#4E2585]/20 bg-[#F7F5F1] items-center justify-center text-[#1a1720] hover:bg-[#4E2585]/10 transition-colors disabled:opacity-20 disabled:cursor-not-allowed"
           >
             <ChevronLeft className="w-4 h-4" />
           </button>
@@ -181,7 +199,7 @@ export function AliignspaceGoogleReviews({
                 key={i}
                 style={{ width: "calc(50vw - 24px)", maxWidth: "340px", minWidth: "150px", flexShrink: 0 }}
               >
-                <div className="h-full flex flex-col bg-[#16141f] border border-white/[0.07] rounded-2xl p-5 hover:border-white/[0.15] transition-colors duration-300">
+                <div className="h-full flex flex-col bg-white border border-[#4E2585]/10 shadow-[0_10px_40px_-20px_rgba(30,14,54,0.35)] rounded-2xl p-5 hover:border-[#D4A853]/60 transition-colors duration-300">
 
                   {/* Stars + G */}
                   <div className="flex items-center justify-between mb-4">
@@ -190,38 +208,36 @@ export function AliignspaceGoogleReviews({
                         <Star
                           key={s}
                           className={`w-3 h-3 ${s < review.rating
-                            ? "text-[#FF9900] fill-[#FF9900]"
-                            : "text-white/15 fill-white/15"
+                            ? "text-[#D4A853] fill-[#D4A853]"
+                            : "text-[#1a1720]/55 fill-white/15"
                           }`}
                         />
                       ))}
                     </div>
-                    <div className="w-5 h-5 rounded-full bg-white flex items-center justify-center flex-shrink-0">
-                      <span className="font-sans text-[9px] font-bold text-[#16141f]">G</span>
+                    <div className="w-5 h-5 rounded-full bg-[#F7F5F1] border border-[#4E2585]/15 flex items-center justify-center flex-shrink-0">
+                      <span className="font-sans text-[9px] font-bold text-[#4E2585]">G</span>
                     </div>
                   </div>
 
                   {/* Large quote mark */}
-                  <div className="font-serif text-4xl leading-none text-[#6D28D9]/20 mb-1 select-none">&ldquo;</div>
+                  <div className="font-serif text-4xl leading-none text-[#4E2585]/20 mb-1 select-none">&ldquo;</div>
 
                   {/* Review text */}
-                  <p className="font-sans text-[13px] text-white leading-relaxed flex-1 line-clamp-5 -mt-2">
-                    {review.review}
-                  </p>
+                  <ReviewText text={review.review} />
 
                   {/* Author */}
-                  <div className="flex items-center gap-2.5 mt-4 pt-4 border-t border-white/[0.07]">
-                    <div className="w-8 h-8 rounded-full bg-[#6D28D9]/10 border border-[#6D28D9]/20 flex items-center justify-center flex-shrink-0">
-                      <span className="font-sans text-[10px] font-semibold text-[#C4A2FF]">
+                  <div className="flex items-center gap-2.5 mt-4 pt-4 border-t border-[#4E2585]/10">
+                    <div className="w-8 h-8 rounded-full bg-[#4E2585]/10 border border-[#4E2585]/20 flex items-center justify-center flex-shrink-0">
+                      <span className="font-sans text-[10px] font-semibold text-[#4E2585]">
                         {getInitials(review.name)}
                       </span>
                     </div>
                     <div className="min-w-0">
-                      <p className="font-sans text-xs font-semibold text-white truncate leading-none mb-0.5">
+                      <p className="font-sans text-xs font-semibold text-[#1a1720] leading-snug mb-0.5">
                         {review.name}
                       </p>
-                      <p className="font-sans text-[10px] text-white/60">
-                        {review.location && `${review.location} · `}{review.time}
+                      <p className="font-sans text-[10px] text-[#1a1720]/70">
+                        {[review.location, review.time].filter(Boolean).join(" · ") || "Google review"}
                       </p>
                     </div>
                   </div>
@@ -234,14 +250,14 @@ export function AliignspaceGoogleReviews({
             onClick={() => scroll("right")}
             disabled={!canRight}
             aria-label="Next"
-            className="hidden sm:flex absolute -right-4 lg:-right-6 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full border border-white/20 bg-[#0B0B10] items-center justify-center text-white hover:bg-white/10 transition-colors disabled:opacity-20 disabled:cursor-not-allowed"
+            className="hidden sm:flex absolute -right-4 lg:-right-6 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full border border-[#4E2585]/20 bg-[#F7F5F1] items-center justify-center text-[#1a1720] hover:bg-[#4E2585]/10 transition-colors disabled:opacity-20 disabled:cursor-not-allowed"
           >
             <ChevronRight className="w-4 h-4" />
           </button>
         </div>
 
         {/* Mobile swipe hint */}
-        <p className="sm:hidden text-center font-sans text-[10px] text-white/25 mt-3 tracking-wide">
+        <p className="sm:hidden text-center font-sans text-[10px] text-[#1a1720]/55 mt-3 tracking-wide">
           Swipe to see more
         </p>
 
@@ -251,10 +267,10 @@ export function AliignspaceGoogleReviews({
             href="https://share.google/YpqTBRuwtfRtteI0m"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-white text-[#16141f] font-sans text-sm font-medium hover:bg-[#d9a5f7] transition-colors duration-300"
+            className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-[#16141f] text-white font-sans text-sm font-medium hover:bg-[#3B1868] transition-colors duration-300"
           >
-            <span className="w-5 h-5 rounded-full bg-[#16141f] flex items-center justify-center flex-shrink-0">
-              <span className="font-sans text-[9px] font-bold text-white">G</span>
+            <span className="w-5 h-5 rounded-full bg-white flex items-center justify-center flex-shrink-0">
+              <span className="font-sans text-[9px] font-bold text-[#16141f]">G</span>
             </span>
             Write a Google Review
           </a>
@@ -262,7 +278,7 @@ export function AliignspaceGoogleReviews({
             href="https://share.google/YpqTBRuwtfRtteI0m"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-sans text-sm text-white/40 hover:text-[#C4A2FF] transition-colors duration-300 underline underline-offset-4"
+            className="font-sans text-sm text-[#1a1720]/55 hover:text-[#4E2585] transition-colors duration-300 underline underline-offset-4"
           >
             See all reviews
           </a>

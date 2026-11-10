@@ -253,7 +253,7 @@ function MobileDrawer({
         </div>
 
         {/* Nav links */}
-        <nav className="flex-1 overflow-y-auto px-4 py-6 space-y-1">
+        <nav data-lenis-prevent className="flex-1 overflow-y-auto px-4 py-6 space-y-1">
           {NAV_LINKS.map((link) =>
             link.hasDropdown ? (
               <div key={link.label}>
@@ -317,7 +317,7 @@ function MobileDrawer({
           <Link
             href="/contact"
             onClick={onClose}
-            className="flex items-center justify-center w-full py-3 rounded-xl bg-coral-500 text-white text-sm font-semibold hover:bg-coral-600 transition-colors"
+            className="flex items-center justify-center w-full py-3 rounded-xl bg-coral-500 text-[#16141f] text-sm font-semibold hover:bg-coral-600 transition-colors"
           >
             Get Free Consultation
           </Link>
@@ -396,7 +396,7 @@ export function Header() {
               {/* CTA */}
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-coral-500 text-white text-sm font-semibold hover:bg-coral-600 active:scale-95 transition-all duration-200 shadow-[0_2px_12px_rgba(255,153,0,0.35)]"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-coral-500 text-[#16141f] text-sm font-semibold hover:bg-coral-600 active:scale-95 transition-all duration-200 shadow-[0_2px_12px_rgba(212,168,83,0.35)]"
               >
                 Get Free Consultation
               </Link>

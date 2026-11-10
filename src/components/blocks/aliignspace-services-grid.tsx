@@ -34,10 +34,10 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
 
 // Per-card accent scheme drawn from the logo palette (blue → violet → amber)
 const cardAccents = [
-  { from: "#3b4fea", to: "#8b5cd8", soft: "rgba(59,79,234,0.10)" },
-  { from: "#8b5cd8", to: "#f2a03c", soft: "rgba(139,92,216,0.10)" },
-  { from: "#f2a03c", to: "#8b5cd8", soft: "rgba(242,160,60,0.14)" },
-  { from: "#3b4fea", to: "#f2a03c", soft: "rgba(59,79,234,0.10)" },
+  { from: "#3B1868", to: "#6236A8", soft: "rgba(78,37,133,0.10)" },
+  { from: "#B8893A", to: "#E2B866", soft: "rgba(212,168,83,0.14)" },
+  { from: "#3B1868", to: "#6236A8", soft: "rgba(78,37,133,0.10)" },
+  { from: "#B8893A", to: "#E2B866", soft: "rgba(212,168,83,0.14)" },
 ];
 
 const defaultServices: Service[] = [
@@ -96,7 +96,7 @@ export function AliignspaceServicesGrid({
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-24 lg:py-32 bg-[#f7f5fb]">
+    <section className="py-24 lg:py-32 bg-[#F7F5F1]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
         {/* Header */}
         <motion.div

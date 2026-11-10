@@ -51,7 +51,7 @@ export function AliignspaceFinalCTA({
             {label}
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white leading-tight mb-6">
-            {title} <span className="text-[#C4A2FF]">{accentWord}</span>
+            {title} <em className="text-[#E2B866]">{accentWord}</em>
           </h2>
           <p className="font-sans text-white/60 max-w-2xl mx-auto mb-10 leading-relaxed">{body}</p>
         </motion.div>
@@ -69,7 +69,7 @@ export function AliignspaceFinalCTA({
                 <a
                   key={i}
                   href={btn.url}
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-[#FF9900] text-white font-sans text-sm uppercase tracking-wider hover:bg-[#CC7A00] transition-colors duration-300 rounded-full"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-[#D4A853] text-[#16141f] font-sans text-sm uppercase tracking-wider hover:bg-[#B8893A] transition-colors duration-300 rounded-full"
                 >
                   {btn.label}
                   <ArrowRight className="w-4 h-4" />
@@ -81,7 +81,7 @@ export function AliignspaceFinalCTA({
                 <a
                   key={i}
                   href={btn.url}
-                  className="inline-flex items-center gap-2 px-8 py-4 border border-[#FF9900]/60 text-[#FF9900] font-sans text-sm uppercase tracking-wider hover:bg-[#FF9900] hover:text-[#16141f] transition-colors duration-300 rounded-full"
+                  className="inline-flex items-center gap-2 px-8 py-4 border border-[#D4A853]/60 text-[#D4A853] font-sans text-sm uppercase tracking-wider hover:bg-[#D4A853] hover:text-[#16141f] transition-colors duration-300 rounded-full"
                 >
                   <Phone className="w-4 h-4" />
                   {btn.label}
@@ -94,7 +94,7 @@ export function AliignspaceFinalCTA({
                 href={btn.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-[#FF9900] text-[#16141f] font-sans text-sm font-semibold uppercase tracking-wider hover:bg-[#E68600] transition-colors duration-300 rounded-full"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-[#D4A853] text-[#16141f] font-sans text-sm font-semibold uppercase tracking-wider hover:bg-[#E2B866] transition-colors duration-300 rounded-full"
               >
                 <MessageCircle className="w-4 h-4" />
                 {btn.label}

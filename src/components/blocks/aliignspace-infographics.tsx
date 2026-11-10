@@ -290,7 +290,7 @@ export function AliignspaceInfographics({
                 {/* Number */}
                 <div
                   className="font-serif text-4xl sm:text-5xl font-medium tracking-tight mb-2"
-                  style={{ color: "#F6F5FB" }}
+                  style={{ color: "#F7F5F1" }}
                 >
                   <AnimatedCounter
                     target={stat.value}

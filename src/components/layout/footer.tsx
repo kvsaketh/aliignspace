@@ -44,7 +44,7 @@ const SOCIAL = [
     label: "Instagram",
     href: "https://instagram.com/aliignspace",
     icon: <Instagram className="w-4 h-4" />,
-    color: "hover:bg-gradient-to-br hover:from-[#f09433] hover:via-[#6D28D9] hover:to-[#bc1888]",
+    color: "hover:bg-gradient-to-br hover:from-[#f09433] hover:via-[#4E2585] hover:to-[#bc1888]",
   },
   {
     label: "Facebook",
@@ -67,9 +67,9 @@ const SOCIAL = [
 ];
 
 const AWARDS = [
-  { icon: <Award className="w-5 h-5 text-terracotta-400" />, label: "Best Interior Studio 2023" },
-  { icon: <Star className="w-5 h-5 text-terracotta-400" />, label: "5-Star Rated on Google" },
-  { icon: <Shield className="w-5 h-5 text-terracotta-400" />, label: "Trusted by 500+ Families" },
+  { icon: <Award className="w-5 h-5 text-terracotta-400" />, label: "Designing homes since 2021" },
+  { icon: <Star className="w-5 h-5 text-terracotta-400" />, label: "Rated 4.9★ on Google" },
+  { icon: <Shield className="w-5 h-5 text-terracotta-400" />, label: "50+ homes delivered" },
 ];
 
 // ─── Section Heading ─────────────────────────────────────────────────────────
@@ -211,12 +211,12 @@ export function Footer() {
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -top-40 -left-40 w-96 h-96 rounded-full opacity-5"
-        style={{ background: "radial-gradient(circle, #6D28D9 0%, transparent 70%)" }}
+        style={{ background: "radial-gradient(circle, #4E2585 0%, transparent 70%)" }}
       />
       <div
         aria-hidden="true"
         className="pointer-events-none absolute bottom-0 right-0 w-80 h-80 rounded-full opacity-5"
-        style={{ background: "radial-gradient(circle, #6D28D9 0%, transparent 70%)" }}
+        style={{ background: "radial-gradient(circle, #4E2585 0%, transparent 70%)" }}
       />
 
       {/* ── Main grid ─────────────────────────────────────────────────────── */}

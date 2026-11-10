@@ -76,7 +76,7 @@ export default async function BlogPostPage({
               </div>
             )}
             <div
-              className="font-sans text-stone-600 leading-relaxed space-y-4 [&_h2]:font-serif [&_h2]:text-2xl [&_h2]:font-medium [&_h2]:text-[#1a1720] [&_h2]:pt-4 [&_a]:text-[#6D28D9] [&_a]:hover:underline"
+              className="font-sans text-stone-600 leading-relaxed space-y-4 [&_h2]:font-serif [&_h2]:text-2xl [&_h2]:font-medium [&_h2]:text-[#1a1720] [&_h2]:pt-4 [&_a]:text-[#4E2585] [&_a]:hover:underline"
               dangerouslySetInnerHTML={{ __html: sanitizeHtml(content.html) }}
             />
           </div>

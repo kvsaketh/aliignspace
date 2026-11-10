@@ -112,7 +112,7 @@ export function PortfolioSection() {
               onClick={() => setActiveTab(cat)}
               className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
                 activeTab === cat
-                  ? "bg-coral-500 text-white shadow-soft"
+                  ? "bg-coral-500 text-[#16141f] shadow-soft"
                   : "bg-white text-slate-500 hover:bg-coral-50 hover:text-coral-600"
               }`}
             >
@@ -141,7 +141,7 @@ export function PortfolioSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
                   <div className="flex items-center gap-2 mb-3">
-                    <span className="px-3 py-1 bg-coral-500 text-white text-xs font-label tracking-wider uppercase rounded-full">
+                    <span className="px-3 py-1 bg-coral-500 text-[#16141f] text-xs font-label tracking-wider uppercase rounded-full">
                       {featuredProject.category}
                     </span>
                     {featuredProject.timeline && (

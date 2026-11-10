@@ -1,13 +1,28 @@
 import { prisma } from "@/lib/prisma";
 import { ClientStories, type Story } from "@/components/blocks/client-stories";
+import clips from "../../public/testimonials/manifest.json";
+
+// Homeowner testimonials cut from the full YouTube home tours (public/testimonials).
+// They ship with the site, so they take priority over the older Shorts stored in the CMS.
+const CLIP_STORIES: Story[] = clips.map((c) => ({
+  name: c.speaker ?? `Homeowners, ${(c.location ?? "Hyderabad").split(",")[0]}`,
+  location: (c.location ?? "Hyderabad").split(",")[0],
+  quote: c.quote,
+  thumbnail: c.poster,
+  videoUrl: c.file,
+  rating: 5,
+}));
 
 /**
  * Server wrapper for the Client Stories reel row.
+ * Uses the bundled testimonial clips when present; otherwise falls back to the CMS rows below.
  * Pulls VIDEO-type testimonials from the database (each `videoUrl` may be an
  * Instagram Reel or a YouTube Short link) and passes them to the client block,
  * which embeds them in a player modal. Managed from /admin/testimonials.
  */
 export async function ClientStoriesSection() {
+  if (CLIP_STORIES.length) return <ClientStories stories={CLIP_STORIES} />;
+
   let rows: Array<{
     name: string;
     location: string | null;

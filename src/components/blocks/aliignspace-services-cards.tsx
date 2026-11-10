@@ -68,7 +68,7 @@ export function AliignspaceServicesCards({
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-24 lg:py-32 overflow-hidden" style={{ backgroundColor: "#F6F5FB" }}>
+    <section ref={ref} className="py-24 lg:py-32 overflow-hidden" style={{ backgroundColor: "#F7F5F1" }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, i) => (
@@ -120,7 +120,7 @@ export function AliignspaceServicesCards({
                 {service.link && (
                   <Link
                     href={service.link}
-                    className="inline-flex items-center gap-2 font-sans text-sm font-medium text-[#6D28D9] group/link"
+                    className="inline-flex items-center gap-2 font-sans text-sm font-medium text-[#4E2585] group/link"
                   >
                     Explore
                     <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />

@@ -50,37 +50,37 @@ const config: Config = {
         },
         // `coral` classes -> logo AMBER ramp (spreads amber across existing usages)
         coral: {
-          50: "hsl(36, 100%, 96%)",
-          100: "hsl(36, 100%, 92%)",
-          200: "hsl(36, 100%, 86%)",
-          300: "hsl(36, 100%, 78%)",
-          400: "hsl(36, 100%, 68%)",
-          500: "#FF9900",
-          600: "hsl(36, 100%, 40%)", // #CC7A00 hover
-          700: "hsl(36, 100%, 33%)",
-          800: "hsl(36, 90%, 27%)",
-          900: "hsl(36, 80%, 22%)",
-          950: "hsl(36, 80%, 14%)",
+          50: "hsl(41, 60%, 96%)",
+          100: "hsl(41, 58%, 91%)",
+          200: "hsl(41, 58%, 84%)",
+          300: "hsl(41, 60%, 75%)",
+          400: "hsl(41, 62%, 66%)",
+          500: "#D4A853",
+          600: "#B8893A", // hover
+          700: "hsl(38, 52%, 36%)",
+          800: "hsl(37, 50%, 29%)",
+          900: "hsl(36, 48%, 22%)",
+          950: "hsl(36, 48%, 14%)",
         },
         // amber accents introduced via these tokens
-        "coral-light": "hsl(36, 100%, 50%)",
-        peach: "hsl(36, 100%, 88%)",
-        salmon: "hsl(36, 100%, 55%)",
+        "coral-light": "#E2B866",
+        peach: "hsl(41, 58%, 88%)",
+        salmon: "#E2B866",
         // `terracotta` classes -> logo violet ramp (#6D28D9), matches --primary
         // Saturation pulled down from the original 100% (electric/neon) to a
         // deeper, more premium tone — same hue (264°), softer everywhere it's used.
         terracotta: {
-          50: "hsl(264, 60%, 97%)",
-          100: "hsl(264, 55%, 94%)",
-          200: "hsl(264, 55%, 88%)",
-          300: "hsl(264, 55%, 80%)",
-          400: "hsl(264, 60%, 65%)",
-          500: "#6D28D9",
-          600: "hsl(264, 69%, 43%)", // #5B21B6-ish hover
-          700: "hsl(264, 70%, 36%)",
-          800: "hsl(264, 68%, 30%)",
-          900: "hsl(264, 65%, 24%)",
-          950: "hsl(264, 65%, 15%)",
+          50: "hsl(268, 60%, 97%)",
+          100: "hsl(268, 55%, 93%)",
+          200: "hsl(268, 50%, 86%)",
+          300: "hsl(268, 45%, 74%)",
+          400: "hsl(268, 42%, 56%)",
+          500: "#4E2585",
+          600: "#3B1868", // hover
+          700: "hsl(266, 62%, 22%)",
+          800: "hsl(266, 65%, 17%)",
+          900: "hsl(266, 70%, 12%)",
+          950: "hsl(266, 75%, 8%)",
         },
         // Neutrals: previously tinted lavender/purple site-wide (a leftover
         // "purple makeover") which made every background/border/text read as
@@ -139,12 +139,12 @@ const config: Config = {
         full: "9999px",
       },
       fontFamily: {
-        serif: ["var(--font-playfair)", "Georgia", "serif"],
-        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        label: ["var(--font-space-grotesk)", "system-ui", "sans-serif"],
+        serif: ["var(--font-display)", "Georgia", "serif"],
+        sans: ["var(--font-body)", "system-ui", "sans-serif"],
+        label: ["var(--font-body)", "system-ui", "sans-serif"],
       },
       boxShadow: {
-        soft: "0 4px 20px rgba(180, 149, 245, 0.12)",
+        soft: "0 4px 20px rgba(78, 37, 133, 0.10)",
         card: "0 8px 32px rgba(43, 45, 66, 0.12)",
         elevated: "0 16px 48px rgba(43, 45, 66, 0.16)",
       },

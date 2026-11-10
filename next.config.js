@@ -20,6 +20,8 @@ const nextConfig = {
       { source: "/services/renovation", destination: "/services/full-home-interiors", permanent: true },
       { source: "/services/modular", destination: "/services/modular-kitchen", permanent: true },
       { source: "/services/commercial", destination: "/services/office-commercial-interiors", permanent: true },
+      // Old WordPress ad landing page URL still used in live Google/Meta ads.
+      { source: "/29-october", destination: "/lp/home-interiors-hyderabad", permanent: true },
     ];
   },
   async headers() {

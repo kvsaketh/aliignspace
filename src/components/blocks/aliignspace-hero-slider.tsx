@@ -41,6 +41,17 @@ const defaultSlides: Slide[] = [
   },
 ];
 
+// Last word in brass italic — the brand's signature headline treatment.
+function AccentTitle({ text }: { text: string }) {
+  const i = text.trim().lastIndexOf(" ");
+  if (i < 0) return <>{text}</>;
+  return (
+    <>
+      {text.slice(0, i)} <em className="text-[#E2B866]">{text.slice(i + 1)}</em>
+    </>
+  );
+}
+
 const FALLBACK_IMAGE = "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1920&q=80";
 
 export function AliignspaceHeroSlider({ slides = defaultSlides, autoPlayInterval = 7000 }: Props) {
@@ -97,8 +108,9 @@ export function AliignspaceHeroSlider({ slides = defaultSlides, autoPlayInterval
       </AnimatePresence>
 
       {/* Cinematic grade: soft vignette, heavier at the base where the content sits */}
-      <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#16141f]/95 via-[#16141f]/35 to-[#16141f]/40" />
-      <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-[#16141f]/60 via-transparent to-transparent" />
+      <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#1a1720]/90 via-[#1a1720]/20 to-[#1a1720]/40" />
+      {/* Royal-violet grade from the left keeps the headline legible on any photo */}
+      <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-[#16141f]/75 via-[#16141f]/30 to-transparent" />
 
       {/* Content, anchored low: emptiness above is the luxury */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 min-h-[100dvh] flex flex-col justify-end pb-36 sm:pb-40 pt-28">
@@ -109,8 +121,8 @@ export function AliignspaceHeroSlider({ slides = defaultSlides, autoPlayInterval
             transition={{ duration: 1, delay: 0.2 }}
             className="flex items-center gap-4 mb-6"
           >
-            <span className="block w-12 h-px bg-[#FF9900]" />
-            <span className="font-sans text-[11px] uppercase tracking-[0.3em] text-[#FF9900]">
+            <span className="block w-12 h-px bg-[#D4A853]" />
+            <span className="font-sans text-[11px] uppercase tracking-[0.3em] text-[#D4A853]">
               Bespoke Interior Design
             </span>
           </motion.div>
@@ -122,9 +134,9 @@ export function AliignspaceHeroSlider({ slides = defaultSlides, autoPlayInterval
                   initial={reduce ? false : { y: "102%" }}
                   animate={{ y: "0%" }}
                   transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-                  className="font-serif font-normal text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-white leading-[1.08] pb-1"
+                  className="font-serif font-medium text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-white leading-[1.02] tracking-tight pb-2"
                 >
-                  {slide.title}
+                  <AccentTitle text={slide.title} />
                 </motion.h1>
               </div>
               <motion.p
@@ -146,7 +158,7 @@ export function AliignspaceHeroSlider({ slides = defaultSlides, autoPlayInterval
           >
             <Link
               href="/contact"
-              className="group inline-flex items-center gap-2.5 rounded-full bg-[#FF9900] px-8 py-4 font-sans text-sm font-medium text-white hover:bg-[#CC7A00] active:scale-[0.98] transition-all duration-300"
+              className="group inline-flex items-center gap-2.5 rounded-full bg-[#D4A853] px-8 py-4 font-sans text-sm font-semibold text-[#16141f] hover:bg-[#E2B866] active:scale-[0.98] transition-all duration-300"
             >
               Book a Consultation
               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -186,7 +198,7 @@ export function AliignspaceHeroSlider({ slides = defaultSlides, autoPlayInterval
                       duration: reduce ? 0 : Math.max(autoPlayInterval, 1000) / 1000,
                       ease: "linear",
                     }}
-                    className="absolute top-0 left-0 right-6 h-px bg-[#FF9900] origin-left"
+                    className="absolute top-0 left-0 right-6 h-px bg-[#D4A853] origin-left"
                   />
                 )}
               </button>
@@ -203,7 +215,7 @@ export function AliignspaceHeroSlider({ slides = defaultSlides, autoPlayInterval
               >
                 <span
                   className={`block h-px transition-all duration-500 ${
-                    i === current ? "w-10 bg-[#FF9900]" : "w-6 bg-white/30"
+                    i === current ? "w-10 bg-[#D4A853]" : "w-6 bg-white/30"
                   }`}
                 />
               </button>

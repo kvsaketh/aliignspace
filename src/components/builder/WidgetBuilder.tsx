@@ -306,7 +306,7 @@ export function WidgetBuilder({ pageId, onSave, onClose }: WidgetBuilderProps) {
             <Button
               onClick={handleSave}
               disabled={isSaving}
-              className="bg-coral-500 hover:bg-coral-600 text-white"
+              className="bg-coral-500 hover:bg-coral-600 text-[#16141f]"
             >
               {isSaving ? (
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />

@@ -109,7 +109,7 @@ export function FAQSection() {
             href="https://wa.me/919030444503"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-coral-500 text-white text-sm font-semibold rounded-xl hover:bg-coral-600 transition-all duration-300"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-coral-500 text-[#16141f] text-sm font-semibold rounded-xl hover:bg-coral-600 transition-all duration-300"
           >
             <MessageCircle className="w-4 h-4" />
             Chat with Us on WhatsApp

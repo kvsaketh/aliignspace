@@ -58,10 +58,10 @@ export function AliignspaceServicesMarquee({
   const duplicatedItems = [...items, ...items, ...items, ...items];
   const isDark = variant === "dark";
 
-  const bgClass = isDark ? "bg-[#16141f]" : "bg-[#F6F5FB]";
-  const textClass = isDark ? "text-[#F6F5FB]" : "text-[#16141f]";
-  const mutedTextClass = isDark ? "text-[#F6F5FB]/50" : "text-[#16141f]/50";
-  const shapeColor = "text-[#6D28D9]";
+  const bgClass = isDark ? "bg-[#16141f]" : "bg-[#F7F5F1]";
+  const textClass = isDark ? "text-[#F7F5F1]" : "text-[#16141f]";
+  const mutedTextClass = isDark ? "text-[#F7F5F1]/50" : "text-[#16141f]/50";
+  const shapeColor = "text-[#4E2585]";
 
   const row1Anim = direction === "left" 
     ? { animation: `marqueeLeft ${speed}s linear infinite` } 
@@ -88,8 +88,8 @@ export function AliignspaceServicesMarquee({
       <section className={`${bgClass} overflow-hidden py-16 lg:py-24`}>
         {/* Row 1: Large serif titles */}
         <div className="marquee-row relative mb-8">
-          <div className={`pointer-events-none absolute left-0 top-0 bottom-0 w-24 z-10 ${isDark ? "bg-gradient-to-r from-[#16141f] to-transparent" : "bg-gradient-to-r from-[#F6F5FB] to-transparent"}`} />
-          <div className={`pointer-events-none absolute right-0 top-0 bottom-0 w-24 z-10 ${isDark ? "bg-gradient-to-l from-[#16141f] to-transparent" : "bg-gradient-to-l from-[#F6F5FB] to-transparent"}`} />
+          <div className={`pointer-events-none absolute left-0 top-0 bottom-0 w-24 z-10 ${isDark ? "bg-gradient-to-r from-[#16141f] to-transparent" : "bg-gradient-to-r from-[#F7F5F1] to-transparent"}`} />
+          <div className={`pointer-events-none absolute right-0 top-0 bottom-0 w-24 z-10 ${isDark ? "bg-gradient-to-l from-[#16141f] to-transparent" : "bg-gradient-to-l from-[#F7F5F1] to-transparent"}`} />
           <div className="marquee-track flex whitespace-nowrap" style={row1Anim}>
             {duplicatedItems.map((item, i) => {
               const Shape = shapes[i % shapes.length];
@@ -107,8 +107,8 @@ export function AliignspaceServicesMarquee({
 
         {/* Row 2: Smaller sans descriptions */}
         <div className="marquee-row relative">
-          <div className={`pointer-events-none absolute left-0 top-0 bottom-0 w-24 z-10 ${isDark ? "bg-gradient-to-r from-[#16141f] to-transparent" : "bg-gradient-to-r from-[#F6F5FB] to-transparent"}`} />
-          <div className={`pointer-events-none absolute right-0 top-0 bottom-0 w-24 z-10 ${isDark ? "bg-gradient-to-l from-[#16141f] to-transparent" : "bg-gradient-to-l from-[#F6F5FB] to-transparent"}`} />
+          <div className={`pointer-events-none absolute left-0 top-0 bottom-0 w-24 z-10 ${isDark ? "bg-gradient-to-r from-[#16141f] to-transparent" : "bg-gradient-to-r from-[#F7F5F1] to-transparent"}`} />
+          <div className={`pointer-events-none absolute right-0 top-0 bottom-0 w-24 z-10 ${isDark ? "bg-gradient-to-l from-[#16141f] to-transparent" : "bg-gradient-to-l from-[#F7F5F1] to-transparent"}`} />
           <div className="marquee-track flex whitespace-nowrap" style={row2Anim}>
             {duplicatedItems.map((item, i) => {
               const Shape = shapes[(i + 1) % shapes.length];

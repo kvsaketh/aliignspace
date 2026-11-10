@@ -121,7 +121,7 @@ function BeforeAfterSlider({
       <div className="absolute top-4 left-4 px-3 py-1 bg-charcoal/70 text-white text-xs font-label tracking-wider uppercase rounded-full">
         Before
       </div>
-      <div className="absolute top-4 right-4 px-3 py-1 bg-coral-500 text-white text-xs font-label tracking-wider uppercase rounded-full">
+      <div className="absolute top-4 right-4 px-3 py-1 bg-coral-500 text-[#16141f] text-xs font-label tracking-wider uppercase rounded-full">
         After
       </div>
 

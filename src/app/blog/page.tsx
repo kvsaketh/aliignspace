@@ -24,7 +24,7 @@ export default async function BlogPage() {
       <main className="bg-white min-h-screen">
         <section className="pt-32 pb-16 bg-[#1a1720]">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#6D28D9] block mb-4">
+            <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#E2B866] block mb-4">
               The Journal
             </span>
             <h1 className="font-serif text-4xl sm:text-5xl font-medium text-white">Blog</h1>
@@ -56,7 +56,7 @@ export default async function BlogPage() {
                         />
                       )}
                     </div>
-                    <h2 className="font-serif text-xl font-medium text-[#1a1720] group-hover:text-[#6D28D9] transition-colors">
+                    <h2 className="font-serif text-xl font-medium text-[#1a1720] group-hover:text-[#4E2585] transition-colors">
                       {post.title}
                     </h2>
                     {post.excerpt && (

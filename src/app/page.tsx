@@ -8,8 +8,10 @@ import { AliignspaceProcessWheel } from "@/components/blocks/aliignspace-process
 import { AliignspaceGoogleReviews } from "@/components/blocks/aliignspace-google-reviews";
 import { AliignspaceFinalCTA } from "@/components/blocks/aliignspace-final-cta";
 import { HomePortfolioSection } from "@/components/home-portfolio-section";
+import { AliignspaceCraftsmanship } from "@/components/blocks/aliignspace-craftsmanship";
 import { ClientStoriesSection } from "@/components/client-stories-section";
 import { prisma } from "@/lib/prisma";
+import { GOOGLE_REVIEWS, GOOGLE_SCORE } from "@/lib/google-reviews";
 
 interface HeroSlide { image?: string; title: string; subtitle: string }
 
@@ -47,6 +49,8 @@ export default async function HomePage() {
       <Header />
       <main>
         <AliignspaceHeroSlider slides={heroSlides} />
+        <HomePortfolioSection />
+        <AliignspaceCraftsmanship />
         <AliignspaceAboutBrief
           label="Who We Are"
           title="Designing Homes That"
@@ -63,7 +67,6 @@ export default async function HomePage() {
             { number: "4.9", suffix: "★", label: "Rating" },
           ]}
         />
-        <HomePortfolioSection />
         <AliignspaceServicesGrid
           label="What We Do"
           title="Our"
@@ -92,19 +95,13 @@ export default async function HomePage() {
           title="Loved by Homeowners"
           accentWord="Across Hyderabad"
           subtitle="Real reviews from our happy clients"
-          googleScore="4.9"
+          googleScore={GOOGLE_SCORE}
           reviewCount="7+"
-          reviews={[
-            { name: "Adharvam Sree Raagav Thutupalli", rating: 5, review: "We had an amazing experience with this interior design company. From the initial consultation to the final execution, everything was handled with professionalism and creativity. They truly understood our vision and transformed our space into something beyond our expectations.", location: "Hyderabad", time: "2 months ago" },
-            { name: "Arun Rej", rating: 5, review: "We had an absolutely wonderful experience working with Samhitha and team. From the initial consultation to project completion, everything was handled exceptionally well. They truly understood our vision and transformed our space into a beautiful home.", location: "Hyderabad", time: "2 months ago" },
-            { name: "Dishirasa Konduru", rating: 5, review: "Working with Alignspace was a great experience. From the first meeting to the final installation, everything went smoothly. The team was very patient with our ideas and gave us the best possible output. Our home looks elegant and perfectly matches our style. Great experience!", location: "Hyderabad", time: "6 months ago" },
-            { name: "Satish Kondeti", rating: 5, review: "We were relocating to Hyderabad, so wanted to get our 20 year old flat fully renovated and give it a modern makeover. Alignspace was more than ready to take up the complete renovation which most other designers refused. Highly recommend!", location: "Hyderabad", time: "6 months ago" },
-            { name: "Kurmarao A", rating: 4, review: "We engaged M/s Align Space, Hyderabad, for the interior design of our residence at Vizag, and the outcome has been truly spectacular. The design approach seamlessly blended creativity with practicality, aligning perfectly with our requirements.", location: "Vizag", time: "6 months ago" },
-            { name: "Thupupalli Ravindra", rating: 4, review: "I was extremely delighted with the team work of Alignspace. Three best qualities they have: 1. Design to actual — 100%. 2. Time schedule — delivered within agreed time. 3. Reasonable pricing and documentation.", location: "Hyderabad", time: "11 months ago" },
-          ]}
+          reviews={GOOGLE_REVIEWS}
         />
         <AliignspaceFinalCTA
-          title="Ready to Transform Your Space?"
+          title="Ready to transform"
+          accentWord="your home?"
           body="Book a free consultation with our design experts today."
           buttons={[
             { label: "Get Free Consultation", url: "/contact", type: "primary" },

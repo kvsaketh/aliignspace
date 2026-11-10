@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { MessageCircle, X } from "lucide-react";
+import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
 // WhatsApp SVG icon — matches the official brand mark more closely than MessageCircle
@@ -40,7 +41,9 @@ export function FloatingWhatsApp({
   const encodedMessage = encodeURIComponent(message);
   const href = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
-  if (dismissed) return null;
+  // Ad landing pages (/lp/*) have their own sticky call/WhatsApp bar; admin has no use for it.
+  const pathname = usePathname();
+  if (dismissed || pathname?.startsWith("/lp/") || pathname?.startsWith("/admin")) return null;
 
   return (
     <div

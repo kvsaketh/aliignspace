@@ -6,7 +6,7 @@ interface Props {
 
 export function AliignspaceWhyChoose({ title = "Why Choose Us" }: Props) {
   return (
-    <section className="py-24 lg:py-32 bg-[#F6F5FB]">
+    <section className="py-24 lg:py-32 bg-[#F7F5F1]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="font-serif text-3xl text-[#16141f] text-center">{title}</h2>
       </div>

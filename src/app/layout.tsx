@@ -1,31 +1,28 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Playfair_Display, Space_Grotesk } from "next/font/google";
+import { Cormorant_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
 import { CustomCursor } from "@/components/ui/cursor";
 import { FloatingWhatsApp } from "@/components/ui/floating-whatsapp";
 import { Toaster } from "@/components/ui/toaster";
+import { SmoothScroll } from "@/components/ui/smooth-scroll";
+import { AmbientSound } from "@/components/ui/ambient-sound";
+import "lenis/dist/lenis.css";
 
 // ─── Fonts via next/font (zero-CLS, self-hosted, no external request) ─────────
 
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-const playfair = Playfair_Display({
+// Display: high-contrast Garamond for editorial luxury; body: clean geometric sans.
+const display = Cormorant_Garamond({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
-  variable: "--font-playfair",
+  variable: "--font-display",
   display: "swap",
 });
 
-const spaceGrotesk = Space_Grotesk({
+const body = Manrope({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-space-grotesk",
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-body",
   display: "swap",
 });
 
@@ -59,7 +56,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
-  themeColor: "#6D28D9",
+  themeColor: "#16141f",
 };
 
 // ─── Root layout ───────────────────────────────────────────────────────────────
@@ -70,10 +67,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${playfair.variable} ${spaceGrotesk.variable}`}
+      className={`${display.variable} ${body.variable}`}
     >
       <body className="antialiased font-sans overflow-x-hidden" suppressHydrationWarning>
         {children}
+        <SmoothScroll />
+        <AmbientSound />
         <CustomCursor />
         <FloatingWhatsApp />
         <Toaster />

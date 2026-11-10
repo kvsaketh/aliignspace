@@ -101,7 +101,7 @@ export function HeroSection() {
           >
             <Link
               href="/contact"
-              className="group inline-flex items-center gap-2 px-8 py-4 bg-coral-500 text-white text-sm font-semibold rounded-xl hover:bg-coral-600 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-elevated"
+              className="group inline-flex items-center gap-2 px-8 py-4 bg-coral-500 text-[#16141f] text-sm font-semibold rounded-xl hover:bg-coral-600 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-elevated"
             >
               Start Your Journey
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

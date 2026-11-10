@@ -97,7 +97,7 @@ export function GoogleReviewsBlock({
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8 mb-12">
           <div>
             <Reveal direction="fade">
-              <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#6D28D9] block mb-3">
+              <span className="font-sans text-xs font-semibold tracking-[0.25em] uppercase text-[#E2B866] block mb-3">
                 {subtitle}
               </span>
             </Reveal>
@@ -177,7 +177,7 @@ export function GoogleReviewsBlock({
             href="https://g.page/r/aliignspace/review"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 font-sans text-sm font-medium text-[#6D28D9] hover:text-[#7C3AED] transition-colors"
+            className="inline-flex items-center gap-2 font-sans text-sm font-medium text-[#4E2585] hover:text-[#6236A8] transition-colors"
           >
             View all reviews on Google
             <ExternalLink className="w-4 h-4" />

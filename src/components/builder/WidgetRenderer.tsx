@@ -116,7 +116,7 @@ function WidgetContent({ widget }: { widget: WidgetData }) {
     case "button": {
       const variant = (content.variant as string) || "primary";
       const variantClasses = {
-        primary: "bg-coral-500 text-white hover:bg-coral-600",
+        primary: "bg-coral-500 text-[#16141f] hover:bg-coral-600",
         secondary: "border-2 border-coral-500 text-coral-500 hover:bg-coral-500 hover:text-white",
         ghost: "text-charcoal hover:text-coral-500 underline-offset-4 hover:underline",
       };

@@ -142,7 +142,7 @@ function ProjectImageSlider({ images, title }: { images: string[]; title: string
             key={i}
             onClick={() => goTo(i)}
             className={`transition-all duration-300 rounded-full ${
-              i === current ? "w-6 h-2 bg-[#6D28D9]" : "w-2 h-2 bg-white/70 hover:bg-white"
+              i === current ? "w-6 h-2 bg-[#4E2585]" : "w-2 h-2 bg-white/70 hover:bg-white"
             }`}
             aria-label={`Go to image ${i + 1}`}
           />
@@ -211,7 +211,7 @@ function ProjectCard({
         {/* View Project button */}
         <a
           href={project.link || "#"}
-          className="inline-flex items-center gap-2 mt-2 font-sans text-sm font-medium text-[#6D28D9] hover:text-[#6D28D9] transition-colors group"
+          className="inline-flex items-center gap-2 mt-2 font-sans text-sm font-medium text-[#4E2585] hover:text-[#4E2585] transition-colors group"
         >
           View Project
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -228,7 +228,7 @@ function ProjectCard({
 
 export function AliignspaceProjectList({ projects = defaultProjects }: Props) {
   return (
-    <section className="py-24 lg:py-32 bg-[#F6F5FB]">
+    <section className="py-24 lg:py-32 bg-[#F7F5F1]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-24 lg:space-y-32">
           {projects.map((project, i) => (

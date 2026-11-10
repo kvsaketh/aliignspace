@@ -68,7 +68,7 @@ export default function TermsPage() {
             <h2 className="font-serif text-2xl font-medium text-[#1a1720] pt-4">Contact</h2>
             <p>
               Questions about these terms can be sent to{" "}
-              <a href="mailto:hello@aliignspace.com" className="text-[#6D28D9] hover:underline">hello@aliignspace.com</a> or
+              <a href="mailto:hello@aliignspace.com" className="text-[#4E2585] hover:underline">hello@aliignspace.com</a> or
               +91 90304 44503.
             </p>
           </div>

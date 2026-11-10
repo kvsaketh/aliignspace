@@ -11,8 +11,8 @@ export const metadata: Metadata = {
   description: "Browse completed interior design projects by ALIIGNSPACE — homes, kitchens, bedrooms, and villas across Hyderabad & Nellore.",
   openGraph: {
     title: "Our Work | ALIIGNSPACE Interior Design Portfolio",
-    description: "1,500+ spaces transformed across Hyderabad. Browse our full portfolio.",
-    images: [{ url: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&q=80", width: 1200, height: 630, alt: "ALIIGNSPACE Portfolio" }],
+    description: "50+ homes delivered across Hyderabad, Nellore & Vizag — browse real projects, filmed after handover.",
+    images: [{ url: "/lp/project-living-room-6.webp", width: 1200, height: 630, alt: "ALIIGNSPACE Portfolio" }],
   },
 };
 
@@ -37,7 +37,7 @@ export default async function PortfolioPage() {
         <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
-              src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1920&q=80"
+              src="/lp/project-living-room-6.webp"
               alt="Aliignspace portfolio"
               fill
               className="object-cover"
@@ -47,12 +47,12 @@ export default async function PortfolioPage() {
             <div className="absolute inset-0 bg-gradient-to-r from-[#16141f]/85 via-[#16141f]/60 to-[#16141f]/25" />
           </div>
           <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 py-24">
-            <span className="inline-block text-[#6D28D9] text-xs font-sans font-semibold tracking-[0.25em] uppercase mb-6">
+            <span className="inline-block text-[#E2B866] text-xs font-sans font-semibold tracking-[0.25em] uppercase mb-6">
               Our Portfolio
             </span>
             <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl font-medium text-white leading-tight mb-6">
               Spaces Crafted With<br className="hidden sm:block" />
-              <em className="not-italic text-[#d9a5f7]"> Intention &amp; Heart</em>
+              <em className="not-italic text-[#E2B866]"> Intention &amp; Heart</em>
             </h1>
             <p className="font-sans text-xl text-white/70 font-light max-w-2xl mx-auto leading-relaxed">
               50+ homes transformed across Hyderabad &amp; Nellore — each one a story of trust fulfilled.
@@ -66,7 +66,7 @@ export default async function PortfolioPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               {stats.map((stat) => (
                 <div key={stat.label}>
-                  <p className="font-serif text-4xl font-medium text-[#6D28D9] mb-1">{stat.value}</p>
+                  <p className="font-serif text-4xl font-medium text-[#E2B866] mb-1">{stat.value}</p>
                   <p className="font-sans text-sm text-white/60 uppercase tracking-wider">{stat.label}</p>
                 </div>
               ))}
@@ -80,19 +80,19 @@ export default async function PortfolioPage() {
         {/* CTA */}
         <section className="py-20 bg-[#f2f1f8]">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <span className="text-[#6D28D9] text-xs font-sans font-semibold tracking-[0.25em] uppercase">Your Project</span>
+            <span className="text-[#4E2585] text-xs font-sans font-semibold tracking-[0.25em] uppercase">Your Project</span>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#16141f] mt-4 mb-6">
-              Want to see your home here?<br /><em className="not-italic text-[#6D28D9]">Let&apos;s talk.</em>
+              Want to see your home here?<br /><em className="not-italic text-[#4E2585]">Let&apos;s talk.</em>
             </h2>
             <p className="font-sans text-lg text-gray-600 max-w-xl mx-auto mb-10">
               Every project in this portfolio started with a single conversation. Book your free consultation and let&apos;s start yours.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-[#16141f] hover:bg-[#6D28D9] text-white font-sans font-medium text-base transition-all duration-300 hover:-translate-y-0.5">
+              <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-[#16141f] hover:bg-[#4E2585] text-white font-sans font-medium text-base transition-all duration-300 hover:-translate-y-0.5">
                 Get Free Consultation
               </Link>
               <Link href="https://wa.me/919030444503" target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 border border-[#16141f] hover:border-[#6D28D9] text-[#16141f] hover:text-[#6D28D9] font-sans font-medium text-base transition-all duration-300">
+                className="inline-flex items-center justify-center px-8 py-4 border border-[#16141f] hover:border-[#4E2585] text-[#16141f] hover:text-[#4E2585] font-sans font-medium text-base transition-all duration-300">
                 Chat on WhatsApp
               </Link>
             </div>

@@ -61,9 +61,9 @@ const defaultFooterContent = {
     { label: "Sitemap", url: "/sitemap" },
   ],
   awards: [
-    { label: "Best Interior Studio 2023", icon: "award" },
-    { label: "5-Star Rated on Google", icon: "star" },
-    { label: "Trusted by 500+ Families", icon: "shield" },
+    { label: "Designing homes since 2021", icon: "award" },
+    { label: "Rated 4.9★ on Google", icon: "star" },
+    { label: "50+ homes delivered", icon: "shield" },
   ],
   founders: {
     text: "Founded by Ar. Samhitha Nagasudra & Ar. Murali · NOM Design & NOM Operations",

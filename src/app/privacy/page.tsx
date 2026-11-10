@@ -54,13 +54,13 @@ export default function PrivacyPage() {
             <p>
               You may request access to, correction of, or deletion of your personal data at
               any time by contacting us at{" "}
-              <a href="mailto:hello@aliignspace.com" className="text-[#6D28D9] hover:underline">hello@aliignspace.com</a>.
+              <a href="mailto:hello@aliignspace.com" className="text-[#4E2585] hover:underline">hello@aliignspace.com</a>.
             </p>
 
             <h2 className="font-serif text-2xl font-medium text-[#1a1720] pt-4">Contact</h2>
             <p>
               Questions about this policy can be sent to{" "}
-              <a href="mailto:hello@aliignspace.com" className="text-[#6D28D9] hover:underline">hello@aliignspace.com</a> or
+              <a href="mailto:hello@aliignspace.com" className="text-[#4E2585] hover:underline">hello@aliignspace.com</a> or
               +91 90304 44503.
             </p>
           </div>

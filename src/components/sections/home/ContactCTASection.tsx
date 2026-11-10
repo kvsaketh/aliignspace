@@ -45,7 +45,7 @@ export function ContactCTASection() {
       ref={ref}
       className="relative py-24 md:py-32 overflow-hidden"
       style={{
-        background: "linear-gradient(135deg, #6D28D9 0%, #b495f5 50%, #7C3AED 100%)",
+        background: "linear-gradient(135deg, #4E2585 0%, #b495f5 50%, #6236A8 100%)",
       }}
     >
       {/* Subtle pattern */}
@@ -199,7 +199,7 @@ export function ContactCTASection() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-coral-500 text-white text-sm font-semibold rounded-xl hover:bg-coral-600 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-elevated disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+                    className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-coral-500 text-[#16141f] text-sm font-semibold rounded-xl hover:bg-coral-600 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-elevated disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0"
                   >
                     {isSubmitting ? (
                       <>
